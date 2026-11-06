@@ -15,13 +15,34 @@
     "booking_link": "",
     "instagram": "https://www.instagram.com/",
     "hours": [
-      {"day": "Monday", "time": "10:00-20:00"},
-      {"day": "Tuesday", "time": "10:00-20:00"},
-      {"day": "Wednesday", "time": "10:00-20:00"},
-      {"day": "Thursday", "time": "10:00-21:00"},
-      {"day": "Friday", "time": "10:00-21:00"},
-      {"day": "Saturday", "time": "09:00-21:00"},
-      {"day": "Sunday", "time": "10:00-19:00"}
+      {
+        "day": "Monday",
+        "time": "10:00-20:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "10:00-20:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "10:00-20:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:00-21:00"
+      },
+      {
+        "day": "Friday",
+        "time": "10:00-21:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-21:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "10:00-19:00"
+      }
     ],
     "headline": "Colour, cuts and keratin from stylists who remember your hair.",
     "subline": "A bright, unhurried studio in Koramangala for women and men. Every visit starts with a proper chat about what you want.",
@@ -32,41 +53,122 @@
     ],
     "services_note": "Prices include GST. Colour depends on hair length; we confirm before we start.",
     "services": [
-      {"category": "Hair", "items": [
-        {"name": "Women's haircut", "price": "₹1,200", "note": "Wash, cut and blow-dry"},
-        {"name": "Men's haircut", "price": "₹700"},
-        {"name": "Blow-dry and styling", "price": "₹900"}
-      ]},
-      {"category": "Colour", "items": [
-        {"name": "Root touch-up", "price": "₹1,900"},
-        {"name": "Global colour", "price": "from ₹3,800"},
-        {"name": "Balayage", "price": "from ₹6,500"}
-      ]},
-      {"category": "Treatments", "items": [
-        {"name": "Keratin smoothing", "price": "from ₹6,000", "note": "Lasts 4 to 5 months"},
-        {"name": "Hair spa", "price": "₹1,500"},
-        {"name": "Scalp detox", "price": "₹1,800"}
-      ]},
-      {"category": "Grooming", "items": [
-        {"name": "Beard shape", "price": "₹350"},
-        {"name": "Threading", "price": "₹150"}
-      ]}
+      {
+        "category": "Hair",
+        "items": [
+          {
+            "name": "Women's haircut",
+            "price": "₹1,200",
+            "note": "Wash, cut and blow-dry"
+          },
+          {
+            "name": "Men's haircut",
+            "price": "₹700"
+          },
+          {
+            "name": "Blow-dry and styling",
+            "price": "₹900"
+          }
+        ]
+      },
+      {
+        "category": "Colour",
+        "items": [
+          {
+            "name": "Root touch-up",
+            "price": "₹1,900"
+          },
+          {
+            "name": "Global colour",
+            "price": "from ₹3,800"
+          },
+          {
+            "name": "Balayage",
+            "price": "from ₹6,500"
+          }
+        ]
+      },
+      {
+        "category": "Treatments",
+        "items": [
+          {
+            "name": "Keratin smoothing",
+            "price": "from ₹6,000",
+            "note": "Lasts 4 to 5 months"
+          },
+          {
+            "name": "Hair spa",
+            "price": "₹1,500"
+          },
+          {
+            "name": "Scalp detox",
+            "price": "₹1,800"
+          }
+        ]
+      },
+      {
+        "category": "Grooming",
+        "items": [
+          {
+            "name": "Beard shape",
+            "price": "₹350"
+          },
+          {
+            "name": "Threading",
+            "price": "₹150"
+          }
+        ]
+      }
     ],
     "before_after": [
-      {"title": "Balayage", "note": "Grown-out colour blended into a warm brunette."},
-      {"title": "Keratin smoothing", "note": "Frizz to glossy, in one afternoon."},
-      {"title": "Restyle", "note": "Long and heavy into a swinging lob."}
+      {
+        "title": "Balayage",
+        "note": "Grown-out colour blended into a warm brunette."
+      },
+      {
+        "title": "Keratin smoothing",
+        "note": "Frizz to glossy, in one afternoon."
+      },
+      {
+        "title": "Restyle",
+        "note": "Long and heavy into a swinging lob."
+      }
     ],
     "team": [
-      {"name": "Ritika", "role": "Founder · colour", "note": "Balayage and colour correction."},
-      {"name": "Arjun", "role": "Senior stylist", "note": "Men's cuts and textured styles."},
-      {"name": "Neha", "role": "Stylist", "note": "Blow-dries and keratin."},
-      {"name": "Sameer", "role": "Stylist", "note": "Precision cuts and beard work."}
+      {
+        "name": "Ritika",
+        "role": "Founder · colour",
+        "note": "Balayage and colour correction."
+      },
+      {
+        "name": "Arjun",
+        "role": "Senior stylist",
+        "note": "Men's cuts and textured styles."
+      },
+      {
+        "name": "Neha",
+        "role": "Stylist",
+        "note": "Blow-dries and keratin."
+      },
+      {
+        "name": "Sameer",
+        "role": "Stylist",
+        "note": "Precision cuts and beard work."
+      }
     ],
     "reviews": [
-      {"text": "Ritika fixed a colour two other salons had ruined. It's been three months and it still looks perfect.", "name": "Ananya"},
-      {"text": "Best men's cut I've had in Bengaluru. Arjun actually listens.", "name": "Karthik"},
-      {"text": "Calm, clean and they never rush you. My keratin lasted the whole monsoon.", "name": "Divya"}
+      {
+        "text": "Ritika fixed a colour two other salons had ruined. It's been three months and it still looks perfect.",
+        "name": "Ananya"
+      },
+      {
+        "text": "Best men's cut I've had in Bengaluru. Arjun actually listens.",
+        "name": "Karthik"
+      },
+      {
+        "text": "Calm, clean and they never rush you. My keratin lasted the whole monsoon.",
+        "name": "Divya"
+      }
     ],
     "accent": "#B4654A",
     "mood": "light",
@@ -85,13 +187,34 @@
     "review_count": 386,
     "maps_link": "https://maps.google.com/?q=C-Scheme+Jaipur",
     "hours": [
-      {"day": "Monday", "time": "10:30-20:30"},
-      {"day": "Tuesday", "time": "Closed"},
-      {"day": "Wednesday", "time": "10:30-20:30"},
-      {"day": "Thursday", "time": "10:30-20:30"},
-      {"day": "Friday", "time": "10:30-20:30"},
-      {"day": "Saturday", "time": "10:00-21:00"},
-      {"day": "Sunday", "time": "10:00-21:00"}
+      {
+        "day": "Monday",
+        "time": "10:30-20:30"
+      },
+      {
+        "day": "Tuesday",
+        "time": "Closed"
+      },
+      {
+        "day": "Wednesday",
+        "time": "10:30-20:30"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:30-20:30"
+      },
+      {
+        "day": "Friday",
+        "time": "10:30-20:30"
+      },
+      {
+        "day": "Saturday",
+        "time": "10:00-21:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "10:00-21:00"
+      }
     ],
     "headline": "Bridal make-up and beauty in the heart of C-Scheme.",
     "subline": "Twenty years of Jaipur weddings, from mehendi mornings to reception nights, plus everyday facials, waxing and nails.",
@@ -101,45 +224,241 @@
       "Private bridal room with its own mirror wall and lighting."
     ],
     "services": [
-      {"category": "Bridal", "items": [
-        {"name": "Bridal HD make-up"},
-        {"name": "Airbrush bridal make-up"},
-        {"name": "Engagement and reception look"}
-      ]},
-      {"category": "Skin", "items": [
-        {"name": "Gold facial"},
-        {"name": "Hydra facial"},
-        {"name": "D-tan and clean-up"}
-      ]},
-      {"category": "Hair", "items": [
-        {"name": "Bridal hairstyling"},
-        {"name": "Haircut and blow-dry"},
-        {"name": "Hair spa"}
-      ]},
-      {"category": "Hands and feet", "items": [
-        {"name": "Mehendi"},
-        {"name": "Gel nails"},
-        {"name": "Spa pedicure"}
-      ]}
+      {
+        "category": "Bridal",
+        "items": [
+          {
+            "name": "Bridal HD make-up"
+          },
+          {
+            "name": "Airbrush bridal make-up"
+          },
+          {
+            "name": "Engagement and reception look"
+          }
+        ]
+      },
+      {
+        "category": "Skin",
+        "items": [
+          {
+            "name": "Gold facial"
+          },
+          {
+            "name": "Hydra facial"
+          },
+          {
+            "name": "D-tan and clean-up"
+          }
+        ]
+      },
+      {
+        "category": "Hair",
+        "items": [
+          {
+            "name": "Bridal hairstyling"
+          },
+          {
+            "name": "Haircut and blow-dry"
+          },
+          {
+            "name": "Hair spa"
+          }
+        ]
+      },
+      {
+        "category": "Hands and feet",
+        "items": [
+          {
+            "name": "Mehendi"
+          },
+          {
+            "name": "Gel nails"
+          },
+          {
+            "name": "Spa pedicure"
+          }
+        ]
+      }
     ],
     "bridal": {
       "kicker": "For the big day",
       "title": "Bridal packages",
       "text": "One team for every function, from the roka to the reception. Each package starts with a trial, so your look is settled long before the wedding.",
       "packages": [
-        {"name": "Mehendi and haldi look"},
-        {"name": "Wedding day, HD or airbrush"},
-        {"name": "Reception look"},
-        {"name": "Family and bridesmaids"}
+        {
+          "name": "Mehendi and haldi look"
+        },
+        {
+          "name": "Wedding day, HD or airbrush"
+        },
+        {
+          "name": "Reception look"
+        },
+        {
+          "name": "Family and bridesmaids"
+        }
       ]
     },
     "reviews": [
-      {"text": "They did my make-up for all four functions and every look was different and perfect. My mother is still talking about it.", "name": "Priya"},
-      {"text": "The trial was so detailed. On the day they arrived early at the venue and stayed till the pheras.", "name": "Shruti"},
-      {"text": "My go-to for facials for years. Clean, honest and never pushy.", "name": "Meenakshi"}
+      {
+        "text": "They did my make-up for all four functions and every look was different and perfect. My mother is still talking about it.",
+        "name": "Priya"
+      },
+      {
+        "text": "The trial was so detailed. On the day they arrived early at the venue and stayed till the pheras.",
+        "name": "Shruti"
+      },
+      {
+        "text": "My go-to for facials for years. Clean, honest and never pushy.",
+        "name": "Meenakshi"
+      }
     ],
     "accent": "#8C3B46",
     "mood": "dark",
     "photos": 5
+  },
+  {
+    "slug": "the-cut-co",
+    "name": "The Cut Co",
+    "type": "Hair salon",
+    "area": "Karangahape Road",
+    "address": "125 Karangahape Road",
+    "city": "Auckland",
+    "country": "New Zealand",
+    "lang": "en-NZ",
+    "monogram": "TC",
+    "rating": 5.0,
+    "review_count": 791,
+    "review_source": "Fresha",
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=The%20Cut%20Co%20125%20Karangahape%20Road%20Auckland",
+    "booking_link": "https://www.fresha.com/a/the-cut-co-auckland-125-karangahape-road-vmmb6fy8",
+    "booking_label": "Book on Fresha",
+    "instagram": "https://www.instagram.com/remichak/",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "10:30-18:30"
+      },
+      {
+        "day": "Tuesday",
+        "time": "10:30-18:30"
+      },
+      {
+        "day": "Wednesday",
+        "time": "10:30-18:30"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:30-18:30"
+      },
+      {
+        "day": "Friday",
+        "time": "10:30-18:30"
+      },
+      {
+        "day": "Saturday",
+        "time": "10:00-17:30"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Precision cuts and creative colour on K Road.",
+    "subline": "Remi Chak's salon in central Auckland for short cuts, layers, wolf cuts and bold colour, for women and men. Book online any time.",
+    "highlights": [
+      "Rated 5.0 from 791 client reviews on Fresha.",
+      "Short cuts, wolf cuts, layers and bobs, cut with precision.",
+      "Creative colour, from soft balayage to bright greens, pinks and colour-block designs."
+    ],
+    "services_note": "Prices in NZD, from the salon's online booking. Colour and perms are priced after a quick consultation.",
+    "services": [
+      {
+        "category": "Ladies cuts",
+        "items": [
+          {
+            "name": "Ladies cut restyle",
+            "price": "$70",
+            "note": "Layer cuts, bob cuts · 40 min"
+          },
+          {
+            "name": "Wash, cut and blow-dry",
+            "price": "$105",
+            "note": "1 hour"
+          },
+          {
+            "name": "Long hair trim",
+            "price": "from $60",
+            "note": "Ends trimming · 30 min"
+          },
+          {
+            "name": "Ladies clipper cut",
+            "price": "from $55",
+            "note": "25 min"
+          }
+        ]
+      },
+      {
+        "category": "Men's cuts",
+        "items": [
+          {
+            "name": "Men's restyle",
+            "price": "from $55",
+            "note": "Scissor cut or undercut · 35 min"
+          },
+          {
+            "name": "Men's cut",
+            "price": "from $50",
+            "note": "Short back and sides, short on top · 25 min"
+          }
+        ]
+      },
+      {
+        "category": "Colour",
+        "items": [
+          {
+            "name": "Highlights"
+          },
+          {
+            "name": "Bleach and balayage"
+          },
+          {
+            "name": "Creative colour",
+            "note": "Greens, pinks, pastels and colour-block designs"
+          }
+        ]
+      },
+      {
+        "category": "Perms",
+        "items": [
+          {
+            "name": "Ladies perm"
+          },
+          {
+            "name": "Men's perm"
+          }
+        ]
+      }
+    ],
+    "gallery_title": "Recent work",
+    "gallery_text": "A few favourites from @remichak. Tap any photo to see it larger.",
+    "reviews": [
+      {
+        "text": "It was a pleasant experience. Remi was so nice, friendly, easy to talk to and very skilful indeed.",
+        "name": "Mio"
+      },
+      {
+        "text": "Delightful Remi is a precision artist",
+        "name": "Aaron"
+      },
+      {
+        "text": "Always a great and professional service. Highly recommend!",
+        "name": "Bev"
+      }
+    ],
+    "accent": "#2E9D5C",
+    "mood": "dark",
+    "photos": 8
   }
 ]

@@ -35,8 +35,12 @@ def check(page, slug):
         page.set_viewport_size({"width": w, "height": h})
         page.goto(url, wait_until="load")
         page.wait_for_timeout(600)
-        # load lazy images before the full-page shot
-        page.evaluate("document.querySelectorAll('img[loading=lazy]').forEach(i=>i.loading='eager')")
+        # scroll through so lazy images load before the full-page shot
+        height = page.evaluate("document.body.scrollHeight")
+        for y in range(0, height, h // 2):
+            page.evaluate(f"scrollTo(0,{y})")
+            page.wait_for_timeout(120)
+        page.evaluate("scrollTo(0,0)")
         page.wait_for_timeout(400)
         broken = page.evaluate("[...document.images].filter(i=>i.closest('main:not([hidden])')&&i.complete&&!i.naturalWidth).map(i=>i.getAttribute('src'))")
         problems += [f"broken image at {w}px: {b}" for b in broken]

@@ -24,7 +24,7 @@ DEMOS = ROOT / "demos"
 DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 REQUIRED = {
     "slug": str, "name": str, "type": str, "area": str, "city": str, "country": str,
-    "phone": str, "whatsapp": str, "rating": (int, float), "review_count": int,
+    "rating": (int, float), "review_count": int,
     "maps_link": str, "hours": list, "headline": str, "subline": str,
     "highlights": list, "services": list, "reviews": list,
     "accent": str, "mood": str, "photos": int,
@@ -142,6 +142,11 @@ def validate(lead, folder):
             problems.append(f"missing required field '{key}'")
         elif not isinstance(lead[key], typ) or isinstance(lead[key], bool):
             problems.append(f"field '{key}' has the wrong type ({type(lead[key]).__name__})")
+    if not lead.get("whatsapp") and not lead.get("booking_link"):
+        problems.append("needs 'whatsapp' or 'booking_link' (or both) so clients can book")
+    for key in ("phone", "whatsapp", "booking_link", "address", "review_source"):
+        if key in lead and not isinstance(lead[key], str):
+            problems.append(f"field '{key}' must be text")
     if problems:
         raise LeadError(f"[{slug}] " + "; ".join(problems))
 
@@ -344,7 +349,7 @@ def sec_gallery(lead):
 def sec_reviews(lead):
     star = '<svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.7-5.4 4.8 1.6 7L12 17.5 5.6 21.1l1.6-7L1.8 9.3 9 8.6z"/></svg>'
     q = "".join(
-        f'<blockquote><p>“{e(r["text"])}”</p><footer>{e(r["name"])} · Google review</footer></blockquote>'
+        f'<blockquote><p>“{e(r["text"])}”</p><footer>{e(r["name"])} · {e(lead.get("review_source") or "Google")} review</footer></blockquote>'
         for r in lead["reviews"]
     )
     rating = f'{float(lead["rating"]):.1f}'
@@ -352,7 +357,7 @@ def sec_reviews(lead):
 <section id="reviews" class="wrap block">
   <div class="rating">
     <b>{rating}</b>
-    <div><div class="stars" aria-hidden="true">{star * 5}</div><span>from {lead["review_count"]:,} Google reviews</span></div>
+    <div><div class="stars" aria-hidden="true">{star * 5}</div><span>from {lead["review_count"]:,} {e(lead.get("review_source") or "Google")} reviews</span></div>
   </div>
   <div class="quotes">{q}</div>
   <div class="rv-cta"><a class="btn ghost" href="#review">Been in recently? Leave a review</a></div>
@@ -397,6 +402,87 @@ def chips(lead, pressed_first=False):
     return names
 
 
+def contact_blocks(lead):
+    """Buttons and booking card, depending on whether the salon books by link, WhatsApp or both."""
+    wa = wa_number(lead.get("whatsapp", ""))
+    wa_link = f"https://wa.me/{wa}" if wa else ""
+    phone = lead.get("phone", "")
+    link = lead.get("booking_link", "")
+    label = lead.get("booking_label") or "Book online"
+    ext = 'target="_blank" rel="noopener"'
+    maps = e(lead["maps_link"])
+
+    hero = '<a class="btn solid" href="#book">Book an appointment</a>'
+    if wa_link:
+        hero += f'<a class="btn ghost" href="{wa_link}" {ext}>WhatsApp us</a>'
+    else:
+        hero += '<a class="btn ghost" href="#services">See services</a>'
+
+    contact = f'<a class="btn ghost" href="{maps}" {ext}>Get directions</a>'
+    if phone:
+        contact += f'<a class="btn ghost" href="tel:{tel(phone)}">Call {e(phone)}</a>'
+    elif wa_link:
+        contact += f'<a class="btn ghost" href="{wa_link}" {ext}>WhatsApp us</a>'
+
+    if link:
+        rows = ""
+        for c in lead["services"]:
+            for it in c["items"]:
+                if it.get("price") and rows.count("<li>") < 4:
+                    rows += f'<li><span>{e(it["name"])}</span><b>{e(it["price"])}</b></li>'
+        rows = f'<ul class="book-list">{rows}</ul>' if rows else ""
+        alt = f' or <a href="{wa_link}" {ext}>message us on WhatsApp</a>' if wa_link else ""
+        book = f'''<div class="book" id="book">
+      <h3>Book an appointment</h3>
+      <p>Pick your service, stylist and time online. Your booking is confirmed straight away.</p>
+      {rows}
+      <a class="btn solid" href="{e(link)}" {ext}>{e(label)}</a>
+      <small>Free to book, pay in the salon{alt}.</small>
+    </div>'''
+    else:
+        book = f'''<div class="book" id="book">
+      <h3>Book an appointment</h3>
+      <p>Pick a service and a time. This opens WhatsApp with your request, and the salon confirms your slot.</p>
+      <form id="bookForm" novalidate>
+        <div class="field full"><label for="bService">Service</label><select id="bService" required><option value="">Choose a service</option>{service_options(lead)}</select></div>
+        <div class="field"><label for="bDate">Date</label><input id="bDate" type="date" required></div>
+        <div class="field"><label for="bTime">Time</label><select id="bTime" required><option value="">Pick a date first</option></select></div>
+        <div class="field full"><label for="bName">Your name</label><input id="bName" autocomplete="given-name" required></div>
+        <p class="form-err" id="bErr" role="alert"></p>
+        <button class="btn solid" type="submit">Send booking request on WhatsApp</button>
+      </form>
+      <small>No payment needed to book.</small>
+    </div>'''
+
+    foot = ""
+    if phone:
+        foot += f'<div><h4>Call</h4><p><a href="tel:{tel(phone)}">{e(phone)}</a></p></div>'
+    if wa_link:
+        foot += f'<div><h4>WhatsApp</h4><p><a href="{wa_link}" {ext}>Message the salon</a></p></div>'
+    if link:
+        foot += f'<div><h4>Book</h4><p><a href="{e(link)}" {ext}>{e(label)}</a></p></div>'
+    if not phone:
+        foot += f'<div><h4>Find us</h4><p><a href="{maps}" {ext}>Get directions</a></p></div>'
+
+    # mobile bar: two buttons
+    first = f'<a class="btn ghost" href="tel:{tel(phone)}">Call</a>' if phone else f'<a class="btn ghost" href="{maps}" {ext}>Directions</a>'
+    if link:
+        second = f'<a class="btn solid" href="{e(link)}" {ext}>Book</a>'
+    else:
+        second = f'<a class="btn solid" href="{wa_link}" {ext}>WhatsApp</a>'
+
+    private = ""
+    if wa_link:
+        private = '''<div class="rv-or">or send a private note to the salon</div>
+          <label class="sr" for="rvNote">A private note to the salon</label>
+          <textarea class="note" id="rvNote" placeholder="Anything you loved, or anything we could do better. This goes straight to us, not online."></textarea>
+          <button class="btn ghost" type="button" id="rvSend" style="width:100%">Send on WhatsApp</button>'''
+    return {
+        "hero_ctas": hero, "contact_buttons": contact, "book_block": book,
+        "footer_contact": foot, "mbar_buttons": first + second, "rv_private": private,
+    }
+
+
 # ---------------------------------------------------------------- render
 def render(lead):
     slug = lead["slug"]
@@ -406,7 +492,7 @@ def render(lead):
     parsed = parse_hours(lead["hours"])
     name = lead["name"]
     place = f'{lead["area"]}, {lead["city"]}'
-    wa = wa_number(lead["whatsapp"])
+    wa = wa_number(lead.get("whatsapp", ""))
     names = chips(lead)
 
     review_chips = "".join(f'<button class="chip" type="button" aria-pressed="false">{e(n)}</button>' for n in names)
@@ -440,6 +526,8 @@ def render(lead):
         "area": e(lead["area"]),
         "city": e(lead["city"]),
         "place": e(place),
+        "address_line": e(lead.get("address") or lead["area"]),
+        "review_source": e(lead.get("review_source") or "Google"),
         "headline": e(lead["headline"]),
         "subline": e(lead["subline"]),
         "initials": e(lead.get("monogram") or initials(name)),
@@ -447,12 +535,8 @@ def render(lead):
         "review_count": f'{lead["review_count"]:,}',
         "badge_text": e(f'{lead["area"]} · {lead["city"]} · {days_open_phrase(parsed).lower()} ·'),
         "days_open": e(days_open_phrase(parsed)),
-        "phone": e(lead["phone"]),
-        "tel": tel(lead["phone"]),
-        "wa_link": f"https://wa.me/{wa}",
         "maps_link": e(lead["maps_link"]),
         "map_embed": f"https://www.google.com/maps?q={q}&output=embed",
-        "book_link": e(lead.get("booking_link") or "#book"),
         "nav": "".join(f'<a href="{h}">{t}</a>' for h, t in nav),
         "highlights": sec_highlights(lead),
         "before_after": sec_before_after(lead),
@@ -462,13 +546,13 @@ def render(lead):
         "reviews": sec_reviews(lead),
         "team": sec_team(lead),
         "hours_rows": sec_hours_rows(parsed),
-        "service_options": service_options(lead),
         "review_chips_block": f'<div class="rv-q">Who looked after you?</div><div class="chips" id="rvWho">{review_chips}</div>' if names else "",
         "kit_chips_block": f'<p>Who is sending it?</p><div class="chips left" id="kitWho">{kit_chips}</div>' if names else "",
         "instagram_link": f' · <a href="{e(lead["instagram"])}" target="_blank" rel="noopener">Instagram</a>' if lead.get("instagram") else "",
         "year": str(datetime.date.today().year),
         "data_json": json.dumps(data, ensure_ascii=False).replace("</", "<\\/"),
     }
+    values.update(contact_blocks(lead))
     for k, v in p.items():
         values["c_" + k] = v
 

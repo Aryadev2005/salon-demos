@@ -21,7 +21,8 @@ stay out of search results.
   photo; a dark bridal band with a chalkboard sign (optional); a photo gallery with
   a full-screen lightbox (swipe row on mobile); three Google reviews; the team
   (optional); visit section with hours (today highlighted), map and directions.
-- **Booking**: service, date, time and name. Time slots come from that day's
+- **Booking**: if the lead has a `booking_link`, a card with the top prices and a
+  button to the salon's booking page. Otherwise a WhatsApp form: service, date, time and name. Time slots come from that day's
   opening hours, closed days are refused, and submitting opens WhatsApp with
   *"Hi, I'd like to book <service> at <salon> on <day date> at <time>. My name is <name>."*
 - **`#review`**: a page the salon sends to clients after a visit. 4–5 stars go to
@@ -29,7 +30,7 @@ stay out of search results.
   `#review?s=<stylist>` pre-selects the stylist.
 - **`#review-kit`**: a page for the salon team: a review link per stylist, a ready
   message to send by WhatsApp or SMS, and a printable counter card with a QR code.
-- **Mobile**: a slim sticky bar with Call and WhatsApp.
+- **Mobile**: a slim sticky bar with Call (or Directions) and WhatsApp (or Book).
 - **Footer**: phone, WhatsApp, today's hours, and a small "Demo site" note.
 
 The whole palette comes from the lead's `accent` and `mood`: `light` is a warm
@@ -50,7 +51,9 @@ logos.
 | `name` | yes | salon name as on Google |
 | `type` | yes | e.g. "Hair studio", "Bridal & beauty parlour", "Unisex salon" |
 | `area`, `city`, `country` | yes | area is the locality, e.g. "Koramangala 5th Block" |
-| `phone`, `whatsapp` | yes | any format; digits are extracted for links |
+| `phone` | no | any format; adds Call buttons |
+| `whatsapp` | one of these two | any format; turns on the WhatsApp booking form and WhatsApp buttons |
+| `booking_link` | one of these two | the salon's own booking page (Fresha, Booksy…). When set, the booking card links there instead of showing the WhatsApp form |
 | `rating` | yes | Google rating, e.g. `4.8` |
 | `review_count` | yes | integer |
 | `maps_link` | yes | the Google Maps link; used for directions and, if no `google_review_link`, for reviews |
@@ -63,7 +66,10 @@ logos.
 | `mood` | yes | `"light"` or `"dark"` |
 | `photos` | yes | number of gallery images, at least 4 (`g1` sits beside the services, `g2`…`gN` fill the gallery; 3 to 7 gallery photos get a hand-made layout) |
 | `google_review_link` | no | `https://search.google.com/local/writereview?placeid=<PLACE_ID>` |
-| `booking_link` | no | reserved for a real booking page; the demo books through WhatsApp |
+| `booking_label` | no | button text for `booking_link`, e.g. "Book on Fresha" (default "Book online") |
+| `review_source` | no | where `rating`/`review_count`/`reviews` come from, e.g. "Fresha" (default "Google") |
+| `address` | no | street line for the Visit section (defaults to `area`) |
+| `lang` | no | page language, e.g. `en-NZ` (default `en`) |
 | `instagram` | no | profile URL |
 | `services_note` | no | line under the Services heading |
 | `before_after` | no | up to 3 `{title, note?}` |
@@ -142,3 +148,9 @@ The site root has no index on purpose, so nobody can browse the list of demos.
   closed on Tuesdays.
 
 Both use generated placeholder images and made-up details.
+
+## Live demos
+
+- `the-cut-co`: The Cut Co, 125 Karangahape Road, Auckland (Remi Chak, @remichak).
+  Details, prices, hours and reviews come from their Fresha listing; photos are
+  cropped from their Instagram grid. Books through Fresha (no WhatsApp/phone found).

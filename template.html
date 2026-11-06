@@ -232,6 +232,10 @@ table.hours tr.today td:first-child::before{content:"";display:inline-block;widt
 .field input:hover,.field select:hover{border-color:var(--muted)}
 .field input:focus,.field select:focus{outline:none;border-color:var(--accent)}
 .book .btn{grid-column:1/-1;margin-top:6px}
+.book-list{list-style:none;margin:0 0 24px;padding:0;border-top:1px solid var(--line)}
+.book-list li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);font-size:16px}
+.book-list b{font-weight:500;color:var(--accent);white-space:nowrap}
+.book > .btn{width:100%}
 .form-err{grid-column:1/-1;min-height:1.4em;margin:0;color:#C0533A;font-size:14px}
 .book small{display:block;margin-top:14px;color:var(--muted);font-size:14px}
 @media (max-width:900px){.visit{grid-template-columns:1fr;gap:56px}#visit{padding:84px 0}.book{position:static}}
@@ -347,11 +351,10 @@ textarea.note:focus{outline:none;border-color:var(--accent)}
       <h1>{{headline}}</h1>
       <p class="lede">{{subline}}</p>
       <div class="ctas">
-        <a class="btn solid" href="#book">Book an appointment</a>
-        <a class="btn ghost" href="{{wa_link}}" target="_blank" rel="noopener">WhatsApp us</a>
+        {{hero_ctas}}
       </div>
       <div class="pills">
-        <a class="pill-s" href="#reviews"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.6 7.2.7-5.4 4.8 1.6 7L12 17.5 5.6 21.1l1.6-7L1.8 9.3 9 8.6z"/></svg>{{rating}} · {{review_count}} Google reviews</a>
+        <a class="pill-s" href="#reviews"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.6 7.2.7-5.4 4.8 1.6 7L12 17.5 5.6 21.1l1.6-7L1.8 9.3 9 8.6z"/></svg>{{rating}} · {{review_count}} {{review_source}} reviews</a>
         <span class="pill-s" id="openPill"><i></i><span>{{days_open}}</span></span>
       </div>
     </div>
@@ -377,10 +380,9 @@ textarea.note:focus{outline:none;border-color:var(--accent)}
   <div class="wrap visit">
     <div>
       <div class="head" style="margin-bottom:24px"><h2>Visit us</h2></div>
-      <address>{{area}}<br>{{city}}</address>
+      <address>{{address_line}}<br>{{city}}</address>
       <div class="contact">
-        <a class="btn ghost" href="{{maps_link}}" target="_blank" rel="noopener">Get directions</a>
-        <a class="btn ghost" href="tel:{{tel}}">Call {{phone}}</a>
+        {{contact_buttons}}
       </div>
       <div class="hours">
         <h3>Opening hours</h3>
@@ -388,19 +390,7 @@ textarea.note:focus{outline:none;border-color:var(--accent)}
       </div>
       <div class="map"><iframe src="{{map_embed}}" title="Map showing {{name}}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </div>
-    <div class="book" id="book">
-      <h3>Book an appointment</h3>
-      <p>Pick a service and a time. This opens WhatsApp with your request, and the salon confirms your slot.</p>
-      <form id="bookForm" novalidate>
-        <div class="field full"><label for="bService">Service</label><select id="bService" required><option value="">Choose a service</option>{{service_options}}</select></div>
-        <div class="field"><label for="bDate">Date</label><input id="bDate" type="date" required></div>
-        <div class="field"><label for="bTime">Time</label><select id="bTime" required><option value="">Pick a date first</option></select></div>
-        <div class="field full"><label for="bName">Your name</label><input id="bName" autocomplete="given-name" required></div>
-        <p class="form-err" id="bErr" role="alert"></p>
-        <button class="btn solid" type="submit">Send booking request on WhatsApp</button>
-      </form>
-      <small>No payment needed to book.</small>
-    </div>
+    {{book_block}}
   </div>
 </section>
 </main>
@@ -422,10 +412,7 @@ textarea.note:focus{outline:none;border-color:var(--accent)}
           <p id="rvText">Reviews help people nearby find us. Your own words are the best ones.</p>
           <div class="rv-tips"><b>You could mention:</b> who looked after you, what you had done, and how your hair feels now.</div>
           <a class="btn solid" id="rvGoogle" href="#" target="_blank" rel="noopener">Write a Google review</a>
-          <div class="rv-or">or send a private note to the salon</div>
-          <label class="sr" for="rvNote">A private note to the salon</label>
-          <textarea class="note" id="rvNote" placeholder="Anything you loved, or anything we could do better. This goes straight to us, not online."></textarea>
-          <button class="btn ghost" type="button" id="rvSend" style="width:100%">Send on WhatsApp</button>
+          {{rv_private}}
         </div>
       </div>
       <div class="rv-thanks" id="rvThanks"><b>Thank you!</b><p class="sub" style="margin:0">We really appreciate you taking the time.</p></div>
@@ -475,8 +462,7 @@ textarea.note:focus{outline:none;border-color:var(--accent)}
   <div class="wrap">
     <div class="foot">
       <div><span class="mono"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#monogram"/></svg>{{name}}</span><p>{{type}} in {{place}}.</p></div>
-      <div><h4>Call</h4><p><a href="tel:{{tel}}">{{phone}}</a></p></div>
-      <div><h4>WhatsApp</h4><p><a href="{{wa_link}}" target="_blank" rel="noopener">Message the salon</a></p></div>
+      {{footer_contact}}
       <div><h4>Hours</h4><p id="footHours">{{days_open}}</p></div>
     </div>
     <div class="fine">
@@ -487,8 +473,7 @@ textarea.note:focus{outline:none;border-color:var(--accent)}
 </footer>
 
 <div class="mbar" id="mbar">
-  <a class="btn ghost" href="tel:{{tel}}">Call</a>
-  <a class="btn solid" href="{{wa_link}}" target="_blank" rel="noopener">WhatsApp</a>
+  {{mbar_buttons}}
 </div>
 
 <dialog class="lb" id="lb" aria-label="Photo viewer">
@@ -560,6 +545,7 @@ textarea.note:focus{outline:none;border-color:var(--accent)}
   lb.addEventListener('touchend',function(ev){if(sx===null)return;var dx=ev.changedTouches[0].clientX-sx;if(Math.abs(dx)>40)show(cur+(dx<0?1:-1));sx=null});
 
   // booking form -> WhatsApp
+  if($('#bookForm')){
   var bDate=$('#bDate'),bTime=$('#bTime'),bErr=$('#bErr');
   var today=new Date();today.setMinutes(today.getMinutes()-today.getTimezoneOffset());bDate.min=today.toISOString().slice(0,10);
   function dateObj(v){var p=v.split('-');return new Date(+p[0],+p[1]-1,+p[2])}
@@ -584,6 +570,7 @@ textarea.note:focus{outline:none;border-color:var(--accent)}
     var msg='Hi, I’d like to book '+s+' at '+D.name+' on '+d+' at '+bTime.value+'. My name is '+n+'.';
     window.open(WA+'?text='+encodeURIComponent(msg),'_blank','noopener');
   });
+  }
 
   // router
   var titles={home:document.title,review:'Leave a review · '+D.name,kit:'Review kit · '+D.name};
@@ -623,14 +610,14 @@ textarea.note:focus{outline:none;border-color:var(--accent)}
     c.setAttribute('aria-pressed',String(on));who=on?c.textContent:'';
   })});
   $('#rvGoogle').addEventListener('click',function(){setTimeout(function(){$('#rvThanks').classList.add('show')},400)});
-  $('#rvSend').addEventListener('click',function(){
+  if($('#rvSend'))$('#rvSend').addEventListener('click',function(){
     var note=$('#rvNote').value.trim();
     var txt='Hi '+D.name+', feedback from my visit'+(who?' (with '+who+')':'')+(rating?': '+rating+'/5':'')+'.'+(note?'\n\n'+note:'');
     window.open(WA+'?text='+encodeURIComponent(txt),'_blank','noopener');
     $('#rvThanks').classList.add('show');
   });
   function resetReview(s){
-    rating=0;paint(0);$('#rvLabel').textContent='';$('#rvNext').classList.remove('show');$('#rvThanks').classList.remove('show');$('#rvNote').value='';
+    rating=0;paint(0);$('#rvLabel').textContent='';$('#rvNext').classList.remove('show');$('#rvThanks').classList.remove('show');if($('#rvNote'))$('#rvNote').value='';
     who='';$$('#rvWho .chip').forEach(function(x){var m=s&&x.textContent===s;x.setAttribute('aria-pressed',m?'true':'false');if(m)who=s});
   }
 
