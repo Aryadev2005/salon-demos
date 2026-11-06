@@ -153,6 +153,13 @@ Both use generated placeholder images and made-up details.
 
 ## Live demos
 
+- `her-salons`: HER Salons, Perth (423 Oxford St, Mount Hawthorn) and Melbourne
+  (287 High St, Prahran). A bespoke, hand-built page (not from `template.html`)
+  because it covers two salons and a product shop: split hero film, salons with
+  hours, hair menu, spa rituals, a 12-product shop with a bag that sends the order
+  to the salon by email, lookbook, press quotes and FAQ. Details from
+  hersalons.com.au and their Phorest store; photos and films from @her_salons.
+
 - `the-cut-co`: The Cut Co, 125 Karangahape Road, Auckland (Remi Chak, @remichak).
   Details, prices, hours and reviews come from their Fresha listing; photos and
   the hero video are their own Instagram work (two gallery tiles are still screenshot crops). Books through Fresha (no WhatsApp/phone found).

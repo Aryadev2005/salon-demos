@@ -1,0 +1,846 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>HER Salons · The home of beautiful hair · Perth &amp; Melbourne</title>
+<meta name="description" content="Award-winning colour, bespoke cutting and scalp care at HER Perth (Mount Hawthorn) and HER Melbourne (Prahran). Book online or shop the HER edit.">
+<meta name="theme-color" content="#F5F1EB">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="film/film-blowout.jpg">
+<!-- Bespoke demo for HER Salons (built by hand, not from template.html). Details from hersalons.com.au,
+     their Instagram (@her_salons) and their Phorest online store. -->
+<style>
+:root{
+  --ivory:#F5F1EB; --paper:#FBF9F6; --stone:#ECE5DB; --sand:#E2D8CB;
+  --ink:#151311; --ink-2:#2A2622; --muted:#6B625A; --line:#D8CEC1;
+  --blush:#EBCFC7; --night:#1A1816; --night-2:#24211E; --cream:#EFE8DE; --cream-dim:#B9AFA3;
+  --serif:"Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+  --sans:"Jost", "Helvetica Neue", Arial, sans-serif;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  --wrap:1320px; --pad:clamp(20px,4vw,56px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ivory);color:var(--ink);font:300 17px/1.7 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:1.5px solid var(--ink);outline-offset:3px}
+.wrap{max-width:calc(var(--wrap) + 2*var(--pad));margin:0 auto;padding:0 var(--pad)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.label{font:400 12px/1.4 var(--sans);letter-spacing:.24em;text-transform:uppercase}
+.muted{color:var(--muted)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(40px,5vw,72px);line-height:1.02}
+h2 em,h1 em{font-style:italic}
+.frame{display:block;position:relative;overflow:hidden;background:var(--sand)}
+.frame img,.frame video{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease)}
+a.frame:hover img,.zoom:hover img{transform:scale(1.03)}
+
+/* ---------- buttons & links ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;height:54px;padding:0 30px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);font:400 12px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background .3s,color .3s,transform .25s var(--ease),border-color .3s;white-space:nowrap}
+.btn:hover{background:transparent;color:var(--ink);transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.985)}
+.btn.line{background:transparent;color:var(--ink)}
+.btn.line:hover{background:var(--ink);color:var(--paper)}
+.btn.light{background:var(--cream);color:var(--night);border-color:var(--cream)}
+.btn.light:hover{background:transparent;color:var(--cream)}
+.btn.light.line{background:transparent;color:var(--cream)}
+.btn.light.line:hover{background:var(--cream);color:var(--night)}
+.btn .arr{transition:transform .3s var(--ease)}
+.btn:hover .arr{transform:translateX(4px)}
+.ulink{text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 100%/100% 1px no-repeat;padding-bottom:3px;transition:background-size .4s var(--ease)}
+.ulink:hover{background-size:0 1px;background-position:100% 100%}
+.dlink{text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;padding-bottom:2px;transition:background-size .4s var(--ease)}
+.dlink:hover{background-size:100% 1px}
+
+/* ---------- announcement + header ---------- */
+.announce{background:var(--ink);color:var(--cream);text-align:center;padding:10px 16px;font:400 11px/1.4 var(--sans);letter-spacing:.2em;text-transform:uppercase}
+.announce a{color:inherit}
+header.site{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--ivory) 92%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .3s}
+header.site.scrolled{border-bottom-color:var(--line)}
+.hbar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:88px}
+.hnav{display:flex;gap:34px}
+.hnav a{text-decoration:none;font:400 12px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase}
+.hnav a{background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;padding:6px 0;transition:background-size .35s var(--ease)}
+.hnav a:hover{background-size:100% 1px}
+.wordmark{display:flex;flex-direction:column;align-items:center;text-decoration:none;line-height:1}
+.wordmark b{font:400 44px/1 var(--serif);letter-spacing:.02em}
+.wordmark small{font:400 8.5px/1 var(--sans);letter-spacing:.32em;margin-top:6px;white-space:nowrap}
+.hright{display:flex;justify-content:flex-end;align-items:center;gap:26px}
+.bagbtn{background:none;border:0;cursor:pointer;display:inline-flex;align-items:center;gap:8px;font:400 12px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;padding:8px 0}
+.bagbtn .count{display:inline-grid;place-items:center;min-width:22px;height:22px;border-radius:11px;background:var(--ink);color:var(--paper);font-size:11px;letter-spacing:0;padding:0 6px;transition:transform .3s var(--ease)}
+.bagbtn.bump .count{transform:scale(1.25)}
+.hright .btn{height:44px;padding:0 22px}
+.menu-toggle{display:none;background:none;border:0;cursor:pointer;width:44px;height:44px;padding:0}
+.menu-toggle span{display:block;width:24px;height:1px;background:var(--ink);margin:6px auto;transition:transform .3s}
+
+/* ---------- hero ---------- */
+.hero{display:grid;grid-template-columns:1.12fr .88fr;min-height:calc(100svh - 124px);border-bottom:1px solid var(--line)}
+.hero-copy{display:flex;flex-direction:column;justify-content:space-between;padding:clamp(40px,6vh,72px) var(--pad) clamp(36px,5vh,56px) max(var(--pad),calc((100vw - var(--wrap))/2))}
+.hero h1{font-size:clamp(64px,8.6vw,148px);line-height:.92;letter-spacing:-.025em;margin:28px 0 30px}
+.hero .lede{font-size:19px;max-width:30em;color:var(--ink-2);margin:0 0 38px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-meta{display:flex;gap:36px;flex-wrap:wrap;padding-top:40px;margin-top:40px;border-top:1px solid var(--line)}
+.hero-meta div{display:flex;flex-direction:column;gap:6px}
+.hero-meta b{font:400 30px/1 var(--serif)}
+.hero-media{position:relative;min-height:520px}
+.hero-media video,.hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.vctl{position:absolute;right:20px;bottom:20px;z-index:2;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.6);background:rgba(21,19,17,.35);backdrop-filter:blur(6px);color:#fff;cursor:pointer;display:grid;place-items:center;transition:background .3s,transform .25s var(--ease)}
+.vctl:hover{background:rgba(21,19,17,.6);transform:scale(1.05)}
+.vctl svg{width:14px;height:14px;fill:currentColor}
+
+/* ---------- statement ---------- */
+.statement{padding:150px 0 140px}
+.statement .grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(40px,6vw,110px);align-items:end}
+.statement blockquote{margin:0}
+.statement blockquote p{font:400 clamp(34px,3.6vw,56px)/1.12 var(--serif);margin:0 0 34px;letter-spacing:-.01em}
+.statement blockquote p em{font-style:italic}
+.statement cite{font-style:normal}
+.statement .pics{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:end}
+.statement .pics .frame:first-child{aspect-ratio:3/4.1}
+.statement .pics .frame:last-child{aspect-ratio:3/3.6;margin-bottom:-60px}
+.statement .body{max-width:34em;margin:34px 0 0;color:var(--ink-2)}
+
+/* ---------- section heads ---------- */
+.shead{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:56px}
+.shead .label{display:block;margin-bottom:22px}
+.shead p{max-width:28em;margin:0;color:var(--ink-2)}
+
+/* ---------- salons ---------- */
+.salons{padding:120px 0 140px;background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.salon-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,3vw,48px)}
+.salon .frame{aspect-ratio:4/3.1;margin-bottom:34px}
+.salon .city{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--ink);padding-bottom:16px;margin-bottom:22px}
+.salon .city h3{font-size:clamp(40px,4vw,60px);line-height:1}
+.salon .city h3 em{font-style:italic}
+.salon .cols{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.salon address{font-style:normal}
+.salon .note{color:var(--muted);font-size:15px;margin:12px 0 0}
+.hours{width:100%;border-collapse:collapse;font-size:15px}
+.hours td{padding:5px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right}
+.hours tr.closed td{color:var(--muted)}
+.hours tr.today td{font-weight:500}
+.hours tr.today td:first-child::after{content:" · today";font-weight:300;color:var(--muted)}
+.salon .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+
+/* ---------- menu ---------- */
+.menu{padding:140px 0}
+.menu-grid{display:grid;grid-template-columns:4fr 8fr;gap:clamp(40px,6vw,100px);align-items:start}
+.menu-grid .frame{aspect-ratio:3/4.3;position:sticky;top:120px}
+.menu-cols{display:grid;grid-template-columns:1fr 1fr;gap:56px 56px}
+.mcat h3{font-size:30px;font-style:italic;margin-bottom:8px}
+.mcat ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.mcat li{padding:18px 0;border-bottom:1px solid var(--line);transition:padding .35s var(--ease)}
+.mcat li:hover{padding-left:8px}
+.mcat li b{display:block;font:400 21px/1.3 var(--serif)}
+.mcat li span{display:block;font-size:15px;color:var(--muted);margin-top:4px}
+.menu-note{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;background:var(--stone);padding:28px 32px}
+.menu-note p{margin:0;max-width:40em}
+
+/* ---------- signatures ---------- */
+.sig{padding:0 0 140px}
+.sig-grid{display:grid;grid-template-columns:1.25fr 1fr 1fr;grid-template-rows:auto auto;gap:18px}
+.sig-grid .frame{aspect-ratio:3/4}
+.sig-grid .big{grid-row:span 2;aspect-ratio:auto}
+.sig-grid figure{margin:0;display:flex;flex-direction:column;gap:14px}
+.sig-grid figure .frame{flex:1}
+.sig-grid h3{font-size:24px;font-style:italic}
+
+/* ---------- rituals ---------- */
+.rituals{background:var(--night);color:var(--cream);padding:140px 0}
+.rituals .label{color:var(--cream-dim)}
+.rit-grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(40px,6vw,110px);align-items:center}
+.rit-pics{position:relative;padding-bottom:80px}
+.rit-pics .frame:first-child{aspect-ratio:3/4}
+.rit-pics .frame:last-child{position:absolute;right:-30px;bottom:0;width:48%;aspect-ratio:1;border:10px solid var(--night)}
+.rit-list{list-style:none;margin:44px 0 44px;padding:0;border-top:1px solid rgba(239,232,222,.2)}
+.rit-list li{display:grid;grid-template-columns:60px 1fr;gap:10px 20px;padding:24px 0;border-bottom:1px solid rgba(239,232,222,.2);transition:padding .35s var(--ease)}
+.rit-list li:hover{padding-left:8px}
+.rit-list .n{grid-column:1;grid-row:1/3;font:400 13px/2.6 var(--sans);letter-spacing:.2em;color:var(--cream-dim)}
+.rit-list b{grid-column:2;font:400 italic clamp(28px,2.8vw,40px)/1.05 var(--serif)}
+.rit-list span{grid-column:2;color:var(--cream-dim);font-size:16px}
+.rituals .actions{display:flex;gap:14px;flex-wrap:wrap}
+
+/* ---------- film ---------- */
+.film{padding:140px 0 0}
+.film-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;align-items:stretch}
+.film-grid .frame{aspect-ratio:1/1.12}
+.film-grid .vwrap{position:relative}
+
+/* ---------- shop ---------- */
+.shop{padding:140px 0 150px}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:40px}
+.filters button{height:42px;padding:0 20px;border:1px solid var(--line);background:transparent;cursor:pointer;font:400 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;transition:border-color .3s,background .3s,color .3s}
+.filters button:hover{border-color:var(--ink)}
+.filters button[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:44px 22px}
+.product{display:flex;flex-direction:column}
+.product[hidden]{display:none}
+.pimg{position:relative;aspect-ratio:1/1.12;background:var(--paper);overflow:hidden;margin-bottom:18px;border:1px solid transparent;transition:border-color .4s}
+.product:hover .pimg{border-color:var(--line)}
+.pimg img{position:absolute;inset:6% 8%;width:84%;height:88%;object-fit:contain;mix-blend-mode:multiply;transition:transform 1s var(--ease)}
+.product:hover .pimg img{transform:scale(1.04)}
+.pimg .add{position:absolute;left:14px;right:14px;bottom:14px;height:48px;border:0;background:var(--ink);color:var(--paper);cursor:pointer;font:400 11px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;transform:translateY(calc(100% + 16px));transition:transform .45s var(--ease),background .3s}
+.product:hover .add,.add:focus-visible{transform:none}
+.pimg .add:hover{background:var(--ink-2)}
+.pimg .add.added{background:#3B5B45}
+.product .brand{color:var(--muted)}
+.product h3{font-size:21px;line-height:1.25;margin:8px 0 4px}
+.product p{margin:0;font-size:15px;color:var(--muted)}
+.product .price{margin-top:10px;font-weight:400}
+.shop-foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:56px;padding-top:28px;border-top:1px solid var(--line)}
+.shop-foot p{margin:0}
+
+/* ---------- lookbook ---------- */
+.look{padding:0 0 140px}
+.look-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:start}
+.look-col{display:flex;flex-direction:column;gap:18px}
+.look-grid button{border:0;padding:0;cursor:zoom-in;width:100%}
+.r34{aspect-ratio:3/4}.r45{aspect-ratio:4/5}.r11{aspect-ratio:1/1}
+dialog.lb{border:0;padding:0;margin:0;width:100vw;height:100vh;max-width:none;max-height:none;background:rgba(21,19,17,.96);color:#fff}
+dialog.lb::backdrop{background:rgba(21,19,17,.96)}
+.lb figure{margin:0;position:absolute;inset:70px 90px;display:grid;place-items:center}
+.lb img{max-width:100%;max-height:100%;object-fit:contain}
+.lb button{position:absolute;width:54px;height:54px;border:1px solid rgba(255,255,255,.35);border-radius:50%;background:transparent;color:#fff;cursor:pointer;font-size:20px;transition:background .3s}
+.lb button:hover{background:rgba(255,255,255,.12)}
+.lb .x{top:18px;right:18px}.lb .prev{left:18px;top:calc(50% - 27px)}.lb .next{right:18px;top:calc(50% - 27px)}
+.lb .cnt{position:absolute;bottom:22px;left:0;right:0;text-align:center}
+
+/* ---------- praise ---------- */
+.praise{padding:130px 0;background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.praise-grid{display:grid;grid-template-columns:4fr 8fr;gap:clamp(40px,6vw,100px);align-items:start}
+.score b{display:block;font:400 clamp(110px,12vw,190px)/.85 var(--serif);letter-spacing:-.04em}
+.score .stars{letter-spacing:.3em;margin:18px 0 10px;font-size:15px}
+.quotes{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.quotes blockquote{margin:0;padding:34px 34px 34px 0;border-top:1px solid var(--line)}
+.quotes blockquote:nth-child(odd){padding-right:44px;border-right:1px solid var(--line)}
+.quotes blockquote:nth-child(even){padding-left:44px}
+.quotes p{font:400 26px/1.25 var(--serif);margin:0 0 20px}
+.quotes p::before{content:"“"}.quotes p::after{content:"”"}
+
+/* ---------- faq ---------- */
+.faq{padding:140px 0}
+.faq-grid{display:grid;grid-template-columns:4fr 8fr;gap:clamp(40px,6vw,100px)}
+details{border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:1px solid var(--ink)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;padding:24px 0;font:400 23px/1.3 var(--serif)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:300 26px/1 var(--sans);transition:transform .35s var(--ease)}
+details[open] summary::after{transform:rotate(45deg)}
+summary:hover{opacity:.75}
+details p{margin:0 0 26px;max-width:42em;color:var(--ink-2)}
+
+/* ---------- closing ---------- */
+.closing{background:var(--night);color:var(--cream);padding:130px 0;border-bottom:1px solid rgba(239,232,222,.15)}
+.closing .wrap{display:grid;grid-template-columns:6fr 6fr;gap:clamp(40px,6vw,100px);align-items:center}
+.closing .label{color:var(--cream-dim)}
+.closing h2{font-size:clamp(56px,7vw,116px);line-height:.95;margin:22px 0 40px}
+.closing .actions{display:flex;gap:14px;flex-wrap:wrap}
+.closing .pair{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:end}
+.closing .pair .frame:first-child{aspect-ratio:3/4.2}
+.closing .pair .frame:last-child{aspect-ratio:3/3.7;margin-bottom:-50px}
+@media (max-width:960px){.closing .wrap{grid-template-columns:1fr}.closing{padding:96px 0 120px}}
+
+/* ---------- footer ---------- */
+footer.site{background:var(--night);color:var(--cream-dim);padding:100px 0 40px;font-size:15px}
+.fgrid{display:grid;grid-template-columns:5fr 3fr 3fr 3fr;gap:40px;padding-bottom:70px;border-bottom:1px solid rgba(239,232,222,.15)}
+footer .wordmark{align-items:flex-start;color:var(--cream)}
+footer .wordmark b{font-size:76px}
+footer h4{margin:0 0 18px;color:var(--cream)}
+footer a{color:var(--cream);text-decoration:none}
+footer p{margin:0 0 6px}
+.fine{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;padding-top:28px;font-size:13px}
+.demo-note{border:1px solid rgba(239,232,222,.25);padding:4px 12px;color:var(--cream)}
+
+/* ---------- bag drawer ---------- */
+.scrim{position:fixed;inset:0;background:rgba(21,19,17,.45);opacity:0;pointer-events:none;transition:opacity .4s;z-index:60}
+.scrim.on{opacity:1;pointer-events:auto}
+.bag{position:fixed;top:0;right:0;bottom:0;width:min(460px,100vw);background:var(--paper);z-index:61;transform:translateX(100%);transition:transform .5s var(--ease);display:flex;flex-direction:column}
+.bag.on{transform:none}
+.bag-head{display:flex;justify-content:space-between;align-items:center;padding:26px 30px;border-bottom:1px solid var(--line)}
+.bag-head h3{font-size:30px}
+.bag-head button{background:none;border:0;cursor:pointer;font-size:24px;line-height:1;padding:6px}
+.ship{padding:18px 30px;border-bottom:1px solid var(--line);font-size:14px}
+.ship .bar{height:3px;background:var(--stone);margin-top:10px;overflow:hidden}
+.ship .bar i{display:block;height:100%;background:var(--ink);width:0;transition:width .5s var(--ease)}
+.bag-items{flex:1;overflow:auto;padding:8px 30px}
+.bag-empty{padding:60px 0;text-align:center;color:var(--muted)}
+.bi{display:grid;grid-template-columns:76px 1fr auto;gap:16px;padding:20px 0;border-bottom:1px solid var(--line);align-items:center}
+.bi .thumb{width:76px;height:86px;background:var(--ivory);display:grid;place-items:center}
+.bi .thumb img{max-width:70%;max-height:80%;mix-blend-mode:multiply}
+.bi h4{margin:0;font:400 17px/1.25 var(--serif)}
+.bi small{color:var(--muted)}
+.qty{display:inline-flex;align-items:center;border:1px solid var(--line);margin-top:8px}
+.qty button{width:30px;height:30px;border:0;background:none;cursor:pointer}
+.qty span{min-width:24px;text-align:center;font-size:14px}
+.bi .rm{background:none;border:0;cursor:pointer;color:var(--muted);font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-top:8px}
+.bi .rm:hover{color:var(--ink)}
+.bag-foot{padding:24px 30px 30px;border-top:1px solid var(--line)}
+.bag-foot .row{display:flex;justify-content:space-between;margin-bottom:14px}
+.bag-foot .row b{font:400 24px/1 var(--serif)}
+.bag-foot label{display:block;margin-bottom:6px}
+.bag-foot select{width:100%;height:48px;border:1px solid var(--line);background:var(--paper);padding:0 12px;margin-bottom:16px}
+.bag-foot .btn{width:100%}
+.bag-foot small{display:block;margin-top:12px;color:var(--muted);font-size:13px}
+
+/* ---------- toast + mobile bar ---------- */
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);opacity:0;background:var(--ink);color:var(--paper);padding:14px 22px;z-index:70;font-size:14px;transition:opacity .3s,transform .3s var(--ease);pointer-events:none}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.mbar{display:none}
+.bag.on ~ .toast{opacity:0!important}
+
+/* ---------- responsive ---------- */
+@media (max-width:1100px){
+  .products{grid-template-columns:repeat(3,1fr)}
+  .hnav{gap:22px}
+}
+@media (max-width:960px){
+  .hnav,.hright .btn,.hright .gift{display:none}
+  .menu-toggle{display:block}
+  .hbar{height:72px}
+  .wordmark b{font-size:36px}
+  header.site.open{height:100svh;background:var(--ivory)}
+  header.site.open .hnav{display:flex;position:absolute;top:72px;left:0;right:0;flex-direction:column;gap:0;padding:20px var(--pad)}
+  header.site.open .hnav a{font:400 40px/1.2 var(--serif);letter-spacing:0;text-transform:none;padding:14px 0;border-bottom:1px solid var(--line);background:none}
+  .hero{grid-template-columns:1fr;min-height:0}
+  .hero-copy{padding:36px var(--pad) 40px}
+  .hero-media{min-height:0;aspect-ratio:4/5}
+  .statement{padding:100px 0}
+  .statement .grid,.menu-grid,.rit-grid,.praise-grid,.faq-grid{grid-template-columns:1fr}
+  .statement .pics .frame:last-child{margin-bottom:0}
+  .salon-grid{grid-template-columns:1fr;gap:80px}
+  .menu-grid .frame{position:relative;top:0;aspect-ratio:16/11}
+  .sig-grid{grid-template-columns:1fr 1fr}
+  .sig-grid .big{grid-row:auto;grid-column:1/-1;aspect-ratio:4/3}
+  .rit-pics .frame:last-child{right:0}
+  .film-grid{grid-template-columns:1fr 1fr}
+  .film-grid > :last-child{grid-column:1/-1}
+  .film-grid > :last-child .frame{aspect-ratio:16/10}
+  .shead{flex-direction:column;align-items:flex-start}
+  .fgrid{grid-template-columns:1fr 1fr}
+  .salons,.menu,.rituals,.shop,.praise,.faq{padding:96px 0}
+  .film{padding-top:96px}.sig,.look{padding-bottom:96px}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .announce{font-size:10px;letter-spacing:.14em}
+  .hero h1{font-size:clamp(54px,15vw,80px)}
+  .hero .ctas .btn{flex:1 1 100%}
+  .hero-meta{gap:28px}
+  .salon .cols,.menu-cols,.quotes{grid-template-columns:1fr}
+  .quotes blockquote,.quotes blockquote:nth-child(odd),.quotes blockquote:nth-child(even){padding:28px 0;border-right:0}
+  .sig-grid{grid-template-columns:1fr}
+  .film-grid{grid-template-columns:1fr}
+  .film-grid > :last-child .frame{aspect-ratio:1/1.12}
+  .products{grid-template-columns:1fr 1fr;gap:34px 14px}
+  .pimg .add{transform:none;height:40px;left:8px;right:8px;bottom:8px;font-size:10px;letter-spacing:.16em}
+  .product h3{font-size:17px}
+  .look-grid{grid-template-columns:1fr 1fr;gap:10px}
+  .look-col{display:contents}
+  .look-grid button{aspect-ratio:3/4!important}
+  .fgrid{grid-template-columns:1fr}
+  .salon .actions .btn,.closing .actions .btn,.rituals .actions .btn{flex:1 1 100%}
+  .menu-note{padding:24px 20px}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--paper);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+  .mbar a,.mbar button{height:58px;display:flex;align-items:center;justify-content:center;gap:8px;border:0;background:none;font:400 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;text-decoration:none;cursor:pointer}
+  .mbar a{background:var(--ink);color:var(--paper)}
+  footer.site{padding-bottom:100px}
+  .toast{bottom:76px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<div class="announce">Free shipping on product orders over $120 &nbsp;·&nbsp; <a class="dlink" href="https://gift-cards.phorest.com/salons/heronoxford" target="_blank" rel="noopener">Gift vouchers</a></div>
+
+<header class="site" id="hdr">
+  <div class="wrap hbar">
+    <nav class="hnav" aria-label="Main">
+      <a href="#salons">Salons</a><a href="#menu">Hair menu</a><a href="#rituals">Spa rituals</a><a href="#shop">Shop</a>
+    </nav>
+    <a class="wordmark" href="#top" aria-label="HER Salons, back to top"><b>HER</b><small>PERTH · MELBOURNE</small></a>
+    <div class="hright">
+      <a class="gift dlink label" href="https://gift-cards.phorest.com/salons/heronoxford" target="_blank" rel="noopener">Gift vouchers</a>
+      <button class="bagbtn" type="button" id="bagOpen" aria-label="Open your bag">Bag <span class="count" id="bagCount">0</span></button>
+      <a class="btn" href="#salons">Book</a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="label muted">Est. 2020 &nbsp;·&nbsp; Perth &amp; Melbourne</span>
+      <div>
+        <h1>The home of <em>beautiful</em> hair.</h1>
+        <p class="lede">Award-winning colour, bespoke cutting and a holistic approach to hair health, tailored to your natural texture and colour. In Mount Hawthorn and Prahran.</p>
+        <div class="ctas">
+          <a class="btn" href="https://phorest.com/book/salons/heronoxford" target="_blank" rel="noopener">Book in Perth <span class="arr">→</span></a>
+          <a class="btn line" href="https://www.phorest.com/salon/hersalonsmelbourne" target="_blank" rel="noopener">Book in Melbourne <span class="arr">→</span></a>
+        </div>
+      </div>
+      <div class="hero-meta">
+        <div><b>5.0</b><span class="label muted">660+ Google reviews, Perth</span></div>
+        <div><b>2</b><span class="label muted">Salons, one standard</span></div>
+        <div><b>$50</b><span class="label muted">Consultation, credited back</span></div>
+      </div>
+    </div>
+    <div class="hero-media">
+      <video id="heroVid" src="film/film-blowout.mp4" poster="film/film-blowout.jpg" autoplay muted loop playsinline preload="auto" aria-label="A HER stylist finishing a soft, lived-in blowout"></video>
+      <button class="vctl" type="button" id="heroCtl" aria-label="Pause film"><svg viewBox="0 0 14 14"><rect x="2" y="1" width="3.5" height="12"/><rect x="8.5" y="1" width="3.5" height="12"/></svg></button>
+    </div>
+  </section>
+
+  <!-- STATEMENT -->
+  <section class="statement">
+    <div class="wrap grid">
+      <div>
+        <span class="label muted">The HER philosophy</span>
+        <blockquote style="margin-top:28px">
+          <p>“The future of hair isn’t just aesthetic. It’s <em>intelligent.</em> It’s <em>biological.</em> It’s <em>emotional.</em>”</p>
+          <cite class="label">Faye Redfern, Founder &amp; Creative Director</cite>
+        </blockquote>
+        <p class="body">Faye opened HER on Oxford Street in June 2020, then brought HER to Melbourne. Every visit starts with a real consultation, and every look is built around your complexion, your texture and the way you actually live.</p>
+      </div>
+      <div class="pics">
+        <div class="frame zoom"><img src="img/consult.jpg" alt="A HER stylist assessing a client's hair before a cut" loading="lazy"></div>
+        <div class="frame zoom"><img src="img/bob.jpg" alt="A glossy brunette bob" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SALONS -->
+  <section class="salons" id="salons">
+    <div class="wrap">
+      <div class="shead">
+        <div><span class="label muted">Our salons</span><h2>Two homes, <em>one standard.</em></h2></div>
+        <p>Book online in seconds, or call the salon. New to HER? Send a current photo of your hair and what you'd love it to do.</p>
+      </div>
+      <div class="salon-grid">
+        <article class="salon">
+          <a class="frame" href="https://phorest.com/book/salons/heronoxford" target="_blank" rel="noopener" aria-label="Book at HER Perth"><img src="img/shelves.jpg" alt="Inside HER: white shelves of haircare against a pale wall" loading="lazy"></a>
+          <div class="city"><h3>HER <em>Perth</em></h3><span class="label muted">Mount Hawthorn</span></div>
+          <div class="cols">
+            <div>
+              <address>423 Oxford Street<br>Mount Hawthorn WA 6016</address>
+              <p class="note">Look for the pink door on the corner of Oxford Street and Scarborough Beach Road. Longer visits: park at The Mezz.</p>
+              <p style="margin:16px 0 0"><a class="dlink" href="tel:+61451645423">0451 645 423</a><br><a class="dlink" href="mailto:perth@hersalons.com.au">perth@hersalons.com.au</a></p>
+            </div>
+            <table class="hours" data-hours="perth"><tbody>
+              <tr data-d="1"><td>Monday</td><td>Closed</td></tr>
+              <tr data-d="2"><td>Tuesday</td><td>10am – 8pm</td></tr>
+              <tr data-d="3"><td>Wednesday</td><td>10am – 8pm</td></tr>
+              <tr data-d="4"><td>Thursday</td><td>10am – 8pm</td></tr>
+              <tr data-d="5"><td>Friday</td><td>9am – 6pm</td></tr>
+              <tr data-d="6"><td>Saturday</td><td>Closed</td></tr>
+              <tr data-d="0"><td>Sunday</td><td>Closed</td></tr>
+            </tbody></table>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://phorest.com/book/salons/heronoxford" target="_blank" rel="noopener">Book Perth <span class="arr">→</span></a>
+            <a class="btn line" href="https://www.google.com/maps/search/?api=1&amp;query=HER%20on%20Oxford%20423%20Oxford%20St%20Mount%20Hawthorn%20WA" target="_blank" rel="noopener">Directions</a>
+          </div>
+        </article>
+        <article class="salon">
+          <a class="frame" href="https://www.phorest.com/salon/hersalonsmelbourne" target="_blank" rel="noopener" aria-label="Book at HER Melbourne"><img src="img/sign.jpg" alt="The HER Perth · Melbourne sign inside the salon" loading="lazy"></a>
+          <div class="city"><h3>HER <em>Melbourne</em></h3><span class="label muted">Prahran</span></div>
+          <div class="cols">
+            <div>
+              <address>287 High Street<br>Prahran VIC 3181</address>
+              <p class="note">Home of the HER Spa Rituals, our scalp and hair wellness add-ons.</p>
+              <p style="margin:16px 0 0"><a class="dlink" href="tel:+61452107287">0452 107 287</a><br><a class="dlink" href="mailto:melbourne@hersalons.com.au">melbourne@hersalons.com.au</a></p>
+            </div>
+            <table class="hours" data-hours="melbourne"><tbody>
+              <tr data-d="1"><td>Monday</td><td>Closed</td></tr>
+              <tr data-d="2"><td>Tuesday</td><td>9am – 1pm</td></tr>
+              <tr data-d="3"><td>Wednesday</td><td>10am – 8pm</td></tr>
+              <tr data-d="4"><td>Thursday</td><td>10am – 8pm</td></tr>
+              <tr data-d="5"><td>Friday</td><td>9am – 6pm</td></tr>
+              <tr data-d="6"><td>Saturday</td><td>8am – 4pm</td></tr>
+              <tr data-d="0"><td>Sunday</td><td>Closed</td></tr>
+            </tbody></table>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://www.phorest.com/salon/hersalonsmelbourne" target="_blank" rel="noopener">Book Melbourne <span class="arr">→</span></a>
+            <a class="btn line" href="https://www.google.com/maps/search/?api=1&amp;query=HER%20Salons%20287%20High%20Street%20Prahran%20VIC" target="_blank" rel="noopener">Directions</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HAIR MENU -->
+  <section class="menu" id="menu">
+    <div class="wrap menu-grid">
+      <div class="frame"><img src="img/brush.jpg" alt="A round-brush blowout in progress" loading="lazy"></div>
+      <div>
+        <div class="shead" style="margin-bottom:48px">
+          <div><span class="label muted">Hair menu</span><h2>Considered <em>colour,</em> bespoke cuts.</h2></div>
+        </div>
+        <div class="menu-cols">
+          <div class="mcat">
+            <h3>Cut &amp; style</h3>
+            <ul>
+              <li><b>Bespoke haircut</b><span>Cut wet and dry for a longer-lasting shape. Blow-dry always included.</span></li>
+              <li><b>Restyle or thick hair</b><span>Extra time for a full change of shape or very dense hair.</span></li>
+              <li><b>The Butterfly Cut</b><span>Soft, face-framing layers with movement through the lengths.</span></li>
+              <li><b>Blowout</b><span>Glossy, bouncy, lived-in volume for an event or just because.</span></li>
+            </ul>
+          </div>
+          <div class="mcat">
+            <h3>Colour</h3>
+            <ul>
+              <li><b>Lived-in colour</b><span>Soft, grown-out-friendly colour that HER is known for.</span></li>
+              <li><b>Blonde</b><span>Bright, creamy or honey blondes, built with hair health first.</span></li>
+              <li><b>Brunette &amp; gloss</b><span>Rich brunettes and glossing for shine and tone.</span></li>
+              <li><b>Colour repair</b><span>Correction and recovery for colour that's gone off course.</span></li>
+            </ul>
+          </div>
+          <div class="mcat">
+            <h3>Hair health</h3>
+            <ul>
+              <li><b>Scalp &amp; hair-loss consultation</b><span>Support through thinning, postpartum and hormonal change.</span></li>
+              <li><b>HER Spa Rituals</b><span>Scalp and hair wellness, added to any Melbourne visit.</span></li>
+            </ul>
+          </div>
+          <div class="mcat">
+            <h3>Enhancement</h3>
+            <ul>
+              <li><b>Natural hair enhancement</b><span>Extensions blended for length and fullness that look like yours.</span></li>
+              <li><b>Occasion &amp; bridal styling</b><span>Polished, wearable styling for the big day.</span></li>
+            </ul>
+          </div>
+          <div class="menu-note">
+            <p><b style="font-weight:500">Not sure what to book?</b> A $50 consultation is credited to your next service. Every haircut is one price, whatever the length.</p>
+            <a class="btn line" href="#salons">Choose a salon</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURES -->
+  <section class="sig">
+    <div class="wrap">
+      <div class="shead">
+        <div><span class="label muted">Signatures</span><h2>Hair that looks like <em>you,</em> only more so.</h2></div>
+        <p>A few of the looks HER clients ask for by name.</p>
+      </div>
+      <div class="sig-grid">
+        <figure class="big"><div class="frame zoom"><img src="img/white-tee.jpg" alt="Long, glossy brunette lengths" loading="lazy"></div><h3>Glossed brunette</h3></figure>
+        <figure><div class="frame zoom"><img src="img/copper.jpg" alt="Soft copper waves" loading="lazy"></div><h3>Strawberry copper</h3></figure>
+        <figure><div class="frame zoom"><img src="img/bronde.jpg" alt="Honey bronde waves" loading="lazy"></div><h3>Honey bronde</h3></figure>
+        <figure><div class="frame zoom"><img src="img/blonde.jpg" alt="Creamy blonde lengths" loading="lazy"></div><h3>Creamy blonde</h3></figure>
+        <figure><div class="frame zoom"><img src="img/curls.jpg" alt="A voluminous, curled blowout" loading="lazy"></div><h3>The big blowout</h3></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- RITUALS -->
+  <section class="rituals" id="rituals">
+    <div class="wrap rit-grid">
+      <div class="rit-pics">
+        <div class="frame"><img src="img/wash.jpg" alt="A rinse at the basin during a HER Spa Ritual" loading="lazy"></div>
+        <div class="frame"><img src="img/tray.jpg" alt="A HER card and a drink on a silver tray" loading="lazy"></div>
+      </div>
+      <div>
+        <span class="label">HER Spa Rituals · Melbourne</span>
+        <h2 style="margin-top:22px">Slow down. <em>Start at the scalp.</em></h2>
+        <ul class="rit-list">
+          <li><span class="n">01</span><b>Repair Restore Spa</b><span>For hair that's been through colour, heat and everything in between.</span></li>
+          <li><span class="n">02</span><b>Colour Prep Spa</b><span>Readies hair and scalp before colour, so results sit better and last longer.</span></li>
+          <li><span class="n">03</span><b>Hydration Restore Spa</b><span>Moisture back into dry, brittle or sun-tired lengths.</span></li>
+          <li><span class="n">04</span><b>Scalp Balance Spa</b><span>A reset for an oily, dry or irritated scalp.</span></li>
+        </ul>
+        <div class="actions">
+          <a class="btn light" href="https://www.phorest.com/salon/hersalonsmelbourne" target="_blank" rel="noopener">Add a ritual to your visit <span class="arr">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILM -->
+  <section class="film">
+    <div class="wrap">
+      <div class="shead">
+        <div><span class="label muted">On the floor</span><h2>From the <em>chair.</em></h2></div>
+        <p>Real clients, finished in the salon. More every week on <a class="ulink" href="https://www.instagram.com/her_salons" target="_blank" rel="noopener">@her_salons</a>.</p>
+      </div>
+      <div class="film-grid">
+        <div class="vwrap"><div class="frame"><video class="lazyv" data-src="film/film-bronde.mp4" poster="film/film-bronde.jpg" muted loop playsinline preload="none" aria-label="A finished honey bronde blowout"></video></div></div>
+        <div class="frame zoom"><img src="img/brunette-blowout.jpg" alt="A HER stylist shaping a dark brunette blowout" loading="lazy"></div>
+        <div class="frame zoom"><img src="img/hands.jpg" alt="A stylist running fingers through finished brunette waves" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOP -->
+  <section class="shop" id="shop">
+    <div class="wrap">
+      <div class="shead">
+        <div><span class="label muted">The HER edit</span><h2>Take the salon <em>home.</em></h2></div>
+        <p>The professional haircare our stylists use on the floor. Free shipping over $120, or collect from either salon.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filter by brand">
+        <button type="button" aria-pressed="true" data-f="all">All</button>
+        <button type="button" aria-pressed="false" data-f="Kevin Murphy">Kevin Murphy</button>
+        <button type="button" aria-pressed="false" data-f="K18">K18</button>
+        <button type="button" aria-pressed="false" data-f="Wella Professionals">Wella Professionals</button>
+      </div>
+      <div class="products" id="products"></div>
+      <div class="shop-foot">
+        <p class="muted">All prices in AUD and include GST. More in store, ask your stylist what your hair needs.</p>
+        <button class="btn line" type="button" id="bagOpen2">View bag</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOOKBOOK -->
+  <section class="look">
+    <div class="wrap">
+      <div class="shead">
+        <div><span class="label muted">Lookbook</span><h2>Recent <em>work.</em></h2></div>
+        <p>Tap any photo to see it larger.</p>
+      </div>
+      <div class="look-grid" id="look">
+        <div class="look-col">
+          <button class="frame zoom r34" data-i="0"><img src="img/blouse.jpg" alt="Long brunette layers in the salon" loading="lazy"></button>
+          <button class="frame zoom r45" data-i="3"><img src="img/brunette-blowout.jpg" alt="A dark brunette blowout" loading="lazy"></button>
+          <button class="frame zoom r11" data-i="6"><img src="img/bob.jpg" alt="A glossy brunette bob" loading="lazy"></button>
+        </div>
+        <div class="look-col">
+          <button class="frame zoom r11" data-i="1"><img src="img/lips.jpg" alt="Close-up of soft brunette waves" loading="lazy"></button>
+          <button class="frame zoom r34" data-i="4"><img src="img/copper-smile.jpg" alt="Copper waves being finished" loading="lazy"></button>
+          <button class="frame zoom r45" data-i="7"><img src="img/curls.jpg" alt="A voluminous curled blowout" loading="lazy"></button>
+        </div>
+        <div class="look-col">
+          <button class="frame zoom r34" data-i="2"><img src="img/waves.jpg" alt="Brunette balayage waves" loading="lazy"></button>
+          <button class="frame zoom r11" data-i="5"><img src="img/blonde.jpg" alt="Creamy blonde lengths" loading="lazy"></button>
+          <button class="frame zoom r45" data-i="8"><img src="img/white-tee.jpg" alt="Long glossy brunette hair" loading="lazy"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRAISE -->
+  <section class="praise">
+    <div class="wrap praise-grid">
+      <div class="score">
+        <span class="label muted">HER Perth on Google</span>
+        <b>5.0</b>
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p class="muted" style="margin:0">From 660+ reviews. The most-reviewed salon in Mount Hawthorn.</p>
+      </div>
+      <div class="quotes">
+        <blockquote><p>One of Perth's most beautiful and sought-after hair destinations.</p><span class="label muted">The Urban List</span></blockquote>
+        <blockquote><p>At Her, you're in the best possible hands.</p><span class="label muted">Fashion Journal</span></blockquote>
+        <blockquote><p>Like a breath of fresh air.</p><span class="label muted">Perth Is OK!</span></blockquote>
+        <blockquote><p>The ultimate hair experience for the modern woman.</p><span class="label muted">Sitchu</span></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="wrap faq-grid">
+      <div><span class="label muted">Good to know</span><h2 style="margin-top:22px">Before your <em>visit.</em></h2></div>
+      <div>
+        <details><summary>I'm new. What should I prepare?</summary><p>Send the salon a current photo of your hair and a few words about what you'd like to achieve. If you're unsure what to book, ask and the team will recommend the right services.</p></details>
+        <details><summary>Can I book a consultation first?</summary><p>Yes, and we strongly recommend it. A consultation is $50, and it's deducted from your next booking.</p></details>
+        <details><summary>Is a trim the same price as a haircut?</summary><p>Yes, every haircut length is the same price. If you need extra time for a restyle or very thick hair, choose the restyle option. A blow-dry is included with every haircut.</p></details>
+        <details><summary>What's the cancellation policy?</summary><p>Reschedule up to 48 hours before and your deposit moves with you. Cancellations within 48 hours are charged 30%, and within 24 hours or no-shows are charged in full.</p></details>
+        <details><summary>Where do I park in Perth?</summary><p>For about an hour, street parking on Oxford Street and around Mount Hawthorn. For two to three hours, The Mezz, 148 Scarborough Beach Road.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="closing">
+    <div class="wrap">
+      <div>
+        <span class="label">Your next appointment</span>
+        <h2>Come home to <em>HER.</em></h2>
+        <div class="actions">
+          <a class="btn light" href="https://phorest.com/book/salons/heronoxford" target="_blank" rel="noopener">Book Perth <span class="arr">→</span></a>
+          <a class="btn light line" href="https://www.phorest.com/salon/hersalonsmelbourne" target="_blank" rel="noopener">Book Melbourne <span class="arr">→</span></a>
+          <a class="btn light line" href="https://gift-cards.phorest.com/salons/heronoxford" target="_blank" rel="noopener">Gift vouchers</a>
+        </div>
+      </div>
+      <div class="pair">
+        <div class="frame zoom"><img src="img/copper.jpg" alt="Soft copper waves" loading="lazy"></div>
+        <div class="frame zoom"><img src="img/hands.jpg" alt="Finished brunette waves" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a class="wordmark" href="#top"><b>HER</b><small>PERTH · MELBOURNE</small></a>
+        <p style="margin-top:26px;max-width:24em">An award-winning hair salon family, est. 2020. Colour, cutting, scalp health and natural hair enhancement.</p>
+      </div>
+      <div><h4 class="label">Perth</h4><p>423 Oxford Street</p><p>Mount Hawthorn WA 6016</p><p><a class="dlink" href="tel:+61451645423">0451 645 423</a></p><p><a class="dlink" href="mailto:perth@hersalons.com.au">perth@hersalons.com.au</a></p></div>
+      <div><h4 class="label">Melbourne</h4><p>287 High Street</p><p>Prahran VIC 3181</p><p><a class="dlink" href="tel:+61452107287">0452 107 287</a></p><p><a class="dlink" href="mailto:melbourne@hersalons.com.au">melbourne@hersalons.com.au</a></p></div>
+      <div><h4 class="label">Explore</h4><p><a class="dlink" href="#shop">Shop the edit</a></p><p><a class="dlink" href="https://gift-cards.phorest.com/salons/heronoxford" target="_blank" rel="noopener">Gift vouchers</a></p><p><a class="dlink" href="https://www.instagram.com/her_salons" target="_blank" rel="noopener">Instagram</a></p><p><a class="dlink" href="https://www.facebook.com/hersalons" target="_blank" rel="noopener">Facebook</a></p></div>
+    </div>
+    <div class="fine">
+      <span>© <span id="yr"></span> HER Group Pty Ltd</span>
+      <span class="demo-note">Demo site, made to show HER Salons a new website</span>
+    </div>
+  </div>
+</footer>
+
+<!-- bag -->
+<div class="scrim" id="scrim"></div>
+<aside class="bag" id="bag" aria-label="Your bag" aria-hidden="true">
+  <div class="bag-head"><h3>Your bag</h3><button type="button" id="bagClose" aria-label="Close bag">✕</button></div>
+  <div class="ship"><span id="shipMsg">Free shipping on orders over $120</span><div class="bar"><i id="shipBar"></i></div></div>
+  <div class="bag-items" id="bagItems"></div>
+  <div class="bag-foot">
+    <div class="row"><span class="label">Subtotal</span><b id="bagTotal">$0.00</b></div>
+    <label class="label muted" for="fulfil">Delivery</label>
+    <select id="fulfil">
+      <option value="ship">Ship to me</option>
+      <option value="perth">Collect from HER Perth, Mount Hawthorn</option>
+      <option value="melbourne">Collect from HER Melbourne, Prahran</option>
+    </select>
+    <button class="btn" type="button" id="checkout">Place order</button>
+    <small>Demo checkout: your order is sent to the salon by email and the team confirms payment and delivery.</small>
+  </div>
+</aside>
+
+<dialog class="lb" id="lb" aria-label="Photo viewer">
+  <figure><img id="lbImg" alt=""></figure>
+  <button class="x" type="button" aria-label="Close">✕</button>
+  <button class="prev" type="button" aria-label="Previous photo">←</button>
+  <button class="next" type="button" aria-label="Next photo">→</button>
+  <div class="cnt label" id="lbCnt"></div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<nav class="mbar" aria-label="Quick actions">
+  <button type="button" id="bagOpen3">Bag (<span id="bagCount2">0</span>)</button>
+  <a href="#salons">Book</a>
+</nav>
+
+<script>
+(function(){
+  var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------------- products (from the HER Salons Perth online store) ---------------- */
+  var P=[
+    {id:'bedroom-hair',brand:'Kevin Murphy',name:'Bedroom Hair',desc:'Flexible texture hairspray',price:47.95,img:'kevin-murphy-bedroom-hair'},
+    {id:'body-builder',brand:'Kevin Murphy',name:'Body Builder',desc:'Volumising mousse',price:45.00,img:'kevin-murphy-body-builder'},
+    {id:'doo-over',brand:'Kevin Murphy',name:'Doo Over',desc:'Dry powder finishing spray',price:48.00,img:'kevin-murphy-doo-over'},
+    {id:'fresh-hair',brand:'Kevin Murphy',name:'Fresh Hair',desc:'Dry shampoo',price:44.95,img:'kevin-murphy-fresh-hair'},
+    {id:'hair-resort',brand:'Kevin Murphy',name:'Hair Resort Spray',desc:'Beach texture spray',price:39.95,img:'kevin-murphy-hair-resort-spray'},
+    {id:'session-flex',brand:'Kevin Murphy',name:'Session Spray Flex',desc:'Light, flexible-hold hairspray',price:44.00,img:'kevin-murphy-session-spray-flex'},
+    {id:'touchable',brand:'Kevin Murphy',name:'Touchable',desc:'Texturising finishing spray',price:47.95,img:'kevin-murphy-touchable'},
+    {id:'k18-mask',brand:'K18',name:'Leave-in Molecular Repair Mask',desc:'50 ml',price:98.00,img:'k18-leave-in-mask'},
+    {id:'sp-color-save',brand:'Wella Professionals',name:'SP Color Save Shampoo',desc:'System Professional, 250 ml',price:45.00,img:'wella-sp-color-save-shampoo'},
+    {id:'sp-hydrate',brand:'Wella Professionals',name:'SP Hydrate Conditioner',desc:'System Professional, 200 ml',price:46.00,img:'wella-sp-hydrate-conditioner'},
+    {id:'ur-cond',brand:'Wella Professionals',name:'Ultimate Repair Conditioner',desc:'200 ml',price:53.00,img:'wella-ultimate-repair-conditioner'},
+    {id:'ur-mask',brand:'Wella Professionals',name:'Ultimate Repair Mask',desc:'150 ml',price:53.00,img:'wella-ultimate-repair-mask'}
+  ];
+  var FREE=120, money=function(n){return '$'+n.toFixed(2)};
+  var grid=$('#products');
+  grid.innerHTML=P.map(function(p){return '<article class="product" data-brand="'+p.brand+'">'+
+    '<div class="pimg"><img src="img/shop/'+p.img+'.jpg" alt="'+p.brand+' '+p.name+'" loading="lazy">'+
+    '<button class="add" type="button" data-id="'+p.id+'">Add to bag</button></div>'+
+    '<span class="label brand">'+p.brand+'</span><h3>'+p.name+'</h3><p>'+p.desc+'</p><span class="price">'+money(p.price)+'</span></article>'}).join('');
+
+  $$('.filters button').forEach(function(b){b.addEventListener('click',function(){
+    $$('.filters button').forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');
+    var f=b.dataset.f;$$('.product').forEach(function(el){el.hidden=!(f==='all'||el.dataset.brand===f)});
+  })});
+
+  /* ---------------- bag ---------------- */
+  var bag={};try{bag=JSON.parse(localStorage.getItem('her-bag')||'{}')||{}}catch(e){bag={}}
+  function save(){try{localStorage.setItem('her-bag',JSON.stringify(bag))}catch(e){}}
+  function find(id){for(var i=0;i<P.length;i++)if(P[i].id===id)return P[i]}
+  function count(){var n=0;for(var k in bag)n+=bag[k];return n}
+  function total(){var t=0;for(var k in bag){var p=find(k);if(p)t+=p.price*bag[k]}return t}
+  function render(){
+    var n=count(),t=total();
+    $('#bagCount').textContent=n;$('#bagCount2').textContent=n;
+    $('#bagTotal').textContent=money(t);
+    var left=FREE-t;
+    $('#shipMsg').textContent=t===0?'Free shipping on orders over $120':left>0?'You’re '+money(left)+' away from free shipping':'You’ve unlocked free shipping';
+    $('#shipBar').style.width=Math.min(100,t/FREE*100)+'%';
+    var ids=Object.keys(bag);
+    $('#bagItems').innerHTML=ids.length?ids.map(function(id){var p=find(id);if(!p)return '';return '<div class="bi"><div class="thumb"><img src="img/shop/'+p.img+'.jpg" alt=""></div>'+
+      '<div><small class="label">'+p.brand+'</small><h4>'+p.name+'</h4><div class="qty"><button type="button" data-q="-1" data-id="'+id+'" aria-label="Fewer">−</button><span>'+bag[id]+'</span><button type="button" data-q="1" data-id="'+id+'" aria-label="More">+</button></div><br><button class="rm" type="button" data-rm="'+id+'">Remove</button></div>'+
+      '<b style="font-weight:400">'+money(p.price*bag[id])+'</b></div>'}).join(''):'<div class="bag-empty">Your bag is empty.<br><a class="ulink" href="#shop" id="toShop">Shop the edit</a></div>';
+    $('#checkout').disabled=!ids.length;$('#checkout').style.opacity=ids.length?1:.4;
+    save();
+  }
+  function toast(msg){var t=$('#toast');t.textContent=msg;t.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(function(){t.classList.remove('on')},2200)}
+  grid.addEventListener('click',function(e){var b=e.target.closest('.add');if(!b)return;var id=b.dataset.id;bag[id]=(bag[id]||0)+1;render();
+    b.textContent='Added';b.classList.add('added');setTimeout(function(){b.textContent='Add to bag';b.classList.remove('added')},1400);
+    var bb=$('#bagOpen');bb.classList.add('bump');setTimeout(function(){bb.classList.remove('bump')},300);toast(find(id).name+' added to your bag')});
+  $('#bagItems').addEventListener('click',function(e){var q=e.target.closest('[data-q]'),r=e.target.closest('[data-rm]');
+    if(q){var id=q.dataset.id;bag[id]+= +q.dataset.q;if(bag[id]<=0)delete bag[id];render()}
+    if(r){delete bag[r.dataset.rm];render()}
+    if(e.target.id==='toShop')closeBag()});
+  function openBag(){$('#bag').classList.add('on');$('#scrim').classList.add('on');$('#bag').setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}
+  function closeBag(){$('#bag').classList.remove('on');$('#scrim').classList.remove('on');$('#bag').setAttribute('aria-hidden','true');document.body.style.overflow=''}
+  ['#bagOpen','#bagOpen2','#bagOpen3'].forEach(function(s){$(s).addEventListener('click',openBag)});
+  $('#bagClose').addEventListener('click',closeBag);$('#scrim').addEventListener('click',closeBag);
+  addEventListener('keydown',function(e){if(e.key==='Escape')closeBag()});
+  $('#checkout').addEventListener('click',function(){
+    var f=$('#fulfil').value,to=f==='melbourne'?'melbourne@hersalons.com.au':'perth@hersalons.com.au';
+    var lines=Object.keys(bag).map(function(id){var p=find(id);return bag[id]+' x '+p.brand+' '+p.name+' ('+money(p.price*bag[id])+')'});
+    var how=f==='ship'?'Please ship to me.':'I’ll collect from HER '+(f==='perth'?'Perth':'Melbourne')+'.';
+    var body='Hi HER,\n\nI’d like to order:\n'+lines.join('\n')+'\n\nSubtotal: '+money(total())+'\n'+how+'\n\nName:\nPhone:\nAddress (if shipping):\n';
+    location.href='mailto:'+to+'?subject='+encodeURIComponent('Product order from the website')+'&body='+encodeURIComponent(body);
+  });
+  render();
+
+  /* ---------------- header, menu, hours ---------------- */
+  var hdr=$('#hdr');addEventListener('scroll',function(){hdr.classList.toggle('scrolled',scrollY>10)},{passive:true});
+  var mt=$('.menu-toggle');mt.addEventListener('click',function(){var o=hdr.classList.toggle('open');mt.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''});
+  $$('.hnav a').forEach(function(a){a.addEventListener('click',function(){hdr.classList.remove('open');document.body.style.overflow=''})});
+  var d=new Date().getDay();
+  $$('.hours tr').forEach(function(tr){if(/Closed/.test(tr.textContent))tr.classList.add('closed');if(+tr.dataset.d===d)tr.classList.add('today')});
+
+  /* ---------------- video ---------------- */
+  var hv=$('#heroVid'),hc=$('#heroCtl');
+  var PAUSE='<svg viewBox="0 0 14 14"><rect x="2" y="1" width="3.5" height="12"/><rect x="8.5" y="1" width="3.5" height="12"/></svg>',PLAY='<svg viewBox="0 0 14 14"><path d="M3 1.5v11l9.5-5.5z"/></svg>';
+  function sync(){hc.innerHTML=hv.paused?PLAY:PAUSE;hc.setAttribute('aria-label',hv.paused?'Play film':'Pause film')}
+  if(reduce){hv.removeAttribute('autoplay');hv.pause()}
+  hc.addEventListener('click',function(){hv.paused?hv.play():hv.pause()});hv.addEventListener('play',sync);hv.addEventListener('pause',sync);sync();
+  $$('video.lazyv').forEach(function(v){
+    if(!('IntersectionObserver' in window)){v.src=v.dataset.src;return}
+    new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){if(!v.src){v.src=v.dataset.src}if(!reduce){var p=v.play();if(p&&p.catch)p.catch(function(){})}}else{v.pause()}
+    })},{threshold:.3}).observe(v);
+  });
+
+  /* ---------------- lightbox ---------------- */
+  var lb=$('#lb'),tiles=$$('#look button').sort(function(a,b){return a.dataset.i-b.dataset.i}),cur=0;
+  function show(i){cur=(i+tiles.length)%tiles.length;var im=tiles[cur].querySelector('img');$('#lbImg').src=im.src;$('#lbImg').alt=im.alt;$('#lbCnt').textContent=(cur+1)+' / '+tiles.length}
+  tiles.forEach(function(t){t.addEventListener('click',function(){show(+t.dataset.i);lb.showModal?lb.showModal():lb.setAttribute('open','')})});
+  $('.lb .x').addEventListener('click',function(){lb.close()});$('.lb .prev').addEventListener('click',function(){show(cur-1)});$('.lb .next').addEventListener('click',function(){show(cur+1)});
+  lb.addEventListener('click',function(e){if(e.target===lb||e.target.tagName==='FIGURE')lb.close()});
+  lb.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1)});
+  var sx=null;lb.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});
+  lb.addEventListener('touchend',function(e){if(sx===null)return;var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>40)show(cur+(dx<0?1:-1));sx=null});
+
+  $('#yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
