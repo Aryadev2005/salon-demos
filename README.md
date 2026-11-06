@@ -153,6 +153,14 @@ Both use generated placeholder images and made-up details.
 
 ## Live demos
 
+- `beyond-salon`: Beyond Beauty Salon by Ahmed Batekha, Egypt (Sheikh Zayed at The Lane
+  Mall Palm Hills, Zamalek, Sahel). Bespoke page with a built-in 5-step booking engine
+  (branch, services, stylist, date/time, details), booking reference, .ics calendar file,
+  My bookings with cancel, and a salon dashboard view (bookings stored in the browser
+  for the demo). SEO/AEO: Organization + 3 BeautySalon locations with ReserveAction,
+  OfferCatalog and FAQPage JSON-LD, answer-first FAQ, hreflang en/ar, and `llms.txt`.
+  Opening hours in the booking engine (11am to 10pm, Sahel 12 to 11pm) are assumed.
+
 - `her-salons`: HER Salons, Perth (423 Oxford St, Mount Hawthorn) and Melbourne
   (287 High St, Prahran). A bespoke, hand-built page (not from `template.html`)
   because it covers two salons and a product shop: split hero film, salons with
