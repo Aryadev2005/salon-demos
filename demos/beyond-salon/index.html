@@ -120,6 +120,7 @@ header.site.scrolled{border-bottom-color:var(--line)}
 .hnav{display:flex;gap:32px}
 .hnav a{text-decoration:none;font:500 11.5px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;background:linear-gradient(var(--gold),var(--gold)) 0 100%/0 1px no-repeat;padding:6px 0;transition:background-size .35s var(--ease)}
 .hnav a:hover{background-size:100% 1px}
+.hnav .mbook{display:none}
 .wordmark{display:flex;flex-direction:column;align-items:center;text-decoration:none;line-height:1}
 .wordmark b{font:500 42px/1 var(--serif);letter-spacing:.01em}
 .wordmark small{font:500 8.5px/1 var(--sans);letter-spacing:.38em;margin-top:5px;color:var(--gold);white-space:nowrap}
@@ -348,8 +349,13 @@ footer p{margin:0 0 6px}
 @media (max-width:1100px){.slots{grid-template-columns:repeat(4,1fr)}.choices{grid-template-columns:1fr 1fr 1fr}}
 @media (max-width:960px){
   .hnav,.hright .btn,.hright .mytrig,.topbar .hide-m{display:none}
-  .menu-toggle{display:block}
-  .hbar{height:74px}
+  .menu-toggle{display:block;margin-right:-10px}
+  .hbar{height:74px;display:flex;justify-content:space-between}
+  .wordmark{align-items:flex-start}
+  .menu-toggle span{transition:transform .3s var(--ease)}
+  header.site.open .menu-toggle span:first-child{transform:translateY(3.5px) rotate(45deg)}
+  header.site.open .menu-toggle span:last-child{transform:translateY(-3.5px) rotate(-45deg)}
+  header.site.open .hnav .mbook{display:inline-flex;margin-top:28px;border:0;color:var(--chalk);font:500 11.5px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;padding:0 30px;height:56px;line-height:1;align-items:center;justify-content:center;background:var(--olive)}
   .wordmark b{font-size:34px}
   header.site.open{height:100svh;background:var(--cream)}
   header.site.open .hnav{display:flex;position:absolute;top:74px;left:0;right:0;flex-direction:column;gap:0;padding:20px var(--pad)}
@@ -379,7 +385,20 @@ footer p{margin:0 0 6px}
   .topbar .wrap{gap:14px;font-size:10px}
   .hero h1{font-size:clamp(52px,15vw,78px)}
   .ctas .btn{flex:1 1 100%}
-  .branches-mini b{font-size:21px}
+  .branches-mini{grid-template-columns:1fr;margin-top:36px}
+  .branches-mini a,.branches-mini a + a{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:16px 0;border-left:0;border-bottom:1px solid var(--line)}
+  .branches-mini b{font-size:24px}
+  .branches-mini span{text-align:right}
+  .trust div,.trust div:first-child,.trust div:nth-child(3){padding:24px 14px 24px 0}
+  .trust div:nth-child(even){padding-left:16px}
+  .trust b{font-size:32px}
+  .stepname{flex-direction:column-reverse;align-items:flex-start;gap:8px}
+  .stepname h3{font-size:34px}
+  .svc-list li{display:grid;grid-template-columns:1fr auto;gap:6px 12px;align-items:center}
+  .svc-list li .addsvc{grid-column:1/-1;justify-self:start}
+  .bk-nav .btn{padding:0 24px}
+  .toast{bottom:auto;top:84px;white-space:nowrap;text-align:center;font-size:13px}
+  .done h3{font-size:40px}
   .choices,.stylists,.svc-picks,.fields{grid-template-columns:1fr}
   .slots{grid-template-columns:repeat(3,1fr)}
   .svc-tabs{flex-wrap:nowrap;overflow-x:auto;margin:0 calc(-1*var(--pad)) 34px;padding:0 var(--pad) 4px;scrollbar-width:none}
@@ -390,7 +409,7 @@ footer p{margin:0 0 6px}
   .mbar a,.mbar button{height:58px;display:flex;align-items:center;justify-content:center;border:0;background:none;font:500 10.5px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;text-decoration:none;cursor:pointer}
   .mbar a.book{background:var(--olive);color:var(--chalk)}
   footer.site{padding-bottom:100px}
-  .toast{bottom:76px}
+
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
 </style>
@@ -405,7 +424,7 @@ footer p{margin:0 0 6px}
 
 <header class="site" id="hdr">
   <div class="wrap hbar">
-    <nav class="hnav" aria-label="Main"><a href="#services">Services</a><a href="#bridal">Bridal</a><a href="#branches">Branches</a><a href="#work">Work</a></nav>
+    <nav class="hnav" aria-label="Main"><a href="#services">Services</a><a href="#bridal">Bridal</a><a href="#branches">Branches</a><a href="#work">Work</a><a class="mbook" href="#book">Book an appointment</a></nav>
     <a class="wordmark" href="#top" aria-label="Beyond Beauty Salon, back to top"><b>Beyond</b><small>BY AHMED BATEKHA</small></a>
     <div class="hright">
       <button class="mytrig" type="button" id="myOpen">My bookings<span class="dot"></span></button>
@@ -771,6 +790,9 @@ footer p{margin:0 0 6px}
     $('#nextBtn').disabled=!canNext();
     if(n===4){renderDates();renderSlots()}
     summary();
+    var card=$('.bk-main'),r=card.getBoundingClientRect();
+    if(go.ready&&(r.top<0||r.top>innerHeight*.6))scrollTo({top:scrollY+r.top-90,behavior:reduce?'auto':'smooth'});
+    go.ready=true;
   }
   function pick(container,multi,key){
     $(container).addEventListener('click',function(e){var c=e.target.closest('.choice');if(!c)return;
@@ -798,7 +820,7 @@ footer p{margin:0 0 6px}
     $('#doneWhen').textContent=dateLabel(bk.date)+' · '+fmtTime(bk.time)+' · '+b.name;
     $('#doneText').textContent='Thank you, '+bk.name.split(' ')[0]+'. Your booking at Beyond '+b.name+' is confirmed. We’ll message '+bk.phone+' with a confirmation'+($('#fRemind').checked?' and a reminder the day before':'')+'. Need to change something? Open My bookings, or call '+b.phone+'.';
     $('#calBtn').href=ics(bk);
-    go(6);markMy();toast('Booking '+ref+' confirmed');
+    go(6);markMy();
   });
   $('#againBtn').addEventListener('click',function(){st={step:1,branch:null,svcs:[],stylist:'any',date:null,time:null};$('#details').reset();$$('.choice').forEach(function(c){c.setAttribute('aria-pressed',c.dataset.v==='any')});go(1)});
   function ics(bk){
@@ -814,7 +836,7 @@ footer p{margin:0 0 6px}
   document.addEventListener('click',function(e){var a=e.target.closest('[data-svc]');if(!a)return;
     if(st.svcs.indexOf(a.dataset.svc)===-1)st.svcs.push(a.dataset.svc);
     $$('#svcPicks .choice').forEach(function(c){c.setAttribute('aria-pressed',st.svcs.indexOf(c.dataset.v)>-1)});
-    go(st.branch?2:1);if(a.tagName==='BUTTON')location.hash='book';toast(a.dataset.svc+' added to your booking')});
+    go.ready=false;go(st.branch?2:1);go.ready=true;e.preventDefault();var r=$('.bk-main').getBoundingClientRect();scrollTo({top:scrollY+r.top-90,behavior:reduce?'auto':'smooth'});toast(a.dataset.svc+' added to your booking')});
   var q=new URLSearchParams(location.search).get('branch');if(q&&BRANCHES[q]){st.branch=q;$$('#brChoices .choice').forEach(function(c){c.setAttribute('aria-pressed',c.dataset.v===q)})}
   go(st.branch?2:1);
 
