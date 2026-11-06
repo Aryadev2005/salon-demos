@@ -553,6 +553,11 @@ def render(lead):
         "data_json": json.dumps(data, ensure_ascii=False).replace("</", "<\\/"),
     }
     values.update(contact_blocks(lead))
+    if (folder / "img" / "hero.mp4").is_file():
+        values["hero_media"] = (f'<video src="img/hero.mp4" poster="img/hero.jpg" autoplay muted loop playsinline '
+                                f'preload="metadata" aria-label="{e(lead.get("hero_alt") or "Recent work at " + name)}"></video>')
+    else:
+        values["hero_media"] = f'<img src="img/hero.jpg" alt="{e(lead.get("hero_alt") or "Inside " + name)}" fetchpriority="high">'
     for k, v in p.items():
         values["c_" + k] = v
 

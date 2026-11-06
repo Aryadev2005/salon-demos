@@ -77,6 +77,7 @@ logos.
 | `bridal` | no | `{kicker?, title, text, packages?: [{name, price?}]}` |
 | `gallery_title`, `gallery_text` | no | defaults to "Recent looks" |
 | `monogram` | no | 1–2 letters; defaults to the initials of `name` |
+| `hero_alt` | no | description of the hero photo or video for screen readers |
 
 ### Images (`demos/<slug>/img/`)
 
@@ -86,6 +87,7 @@ logos.
 | `g1.jpg` … `gN.jpg` | always, N = `photos` |
 | `ba1-before.jpg`, `ba1-after.jpg`, … | one pair per `before_after` entry |
 | `bridal.jpg` | if `bridal` is set |
+| `hero.mp4` | optional: a short muted loop (5–10 s, ~540px wide, H.264, under ~1 MB) that replaces the hero photo; `hero.jpg` becomes its poster |
 
 Keep photos around 1200–1600px on the long side and under ~300 KB each (JPEG,
 quality ~75). Everything except the hero is lazy-loaded.
@@ -152,5 +154,5 @@ Both use generated placeholder images and made-up details.
 ## Live demos
 
 - `the-cut-co`: The Cut Co, 125 Karangahape Road, Auckland (Remi Chak, @remichak).
-  Details, prices, hours and reviews come from their Fresha listing; photos are
-  cropped from their Instagram grid. Books through Fresha (no WhatsApp/phone found).
+  Details, prices, hours and reviews come from their Fresha listing; photos and
+  the hero video are their own Instagram work (two gallery tiles are still screenshot crops). Books through Fresha (no WhatsApp/phone found).

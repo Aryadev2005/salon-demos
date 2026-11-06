@@ -73,7 +73,8 @@ nav.links a:hover{color:var(--ink);background-size:100% 1.5px}
 a.pill-s:hover{border-color:var(--accent)}
 .arch{position:relative;justify-self:center;width:min(100%,450px)}
 .arch .frame{position:relative;aspect-ratio:3/4.3;border-radius:999px 999px 18px 18px;overflow:hidden;box-shadow:0 40px 60px -30px rgba(0,0,0,.45);border:8px solid var(--paper-2)}
-.arch .frame img{width:100%;height:100%;object-fit:cover;animation:slowzoom 24s var(--ease) both}
+.arch .frame img,.arch .frame video{width:100%;height:100%;object-fit:cover;display:block}
+.arch .frame img{animation:slowzoom 24s var(--ease) both}
 @keyframes slowzoom{from{transform:scale(1.12)}to{transform:scale(1)}}
 .arch .badge{position:absolute;left:-38px;bottom:64px;width:136px;height:136px}
 .arch .badge svg{width:100%;height:100%;animation:spin 40s linear infinite}
@@ -359,7 +360,7 @@ textarea.note:focus{outline:none;border-color:var(--accent)}
       </div>
     </div>
     <div class="arch">
-      <div class="frame"><img src="img/hero.jpg" alt="Inside {{name}}" fetchpriority="high"></div>
+      <div class="frame">{{hero_media}}</div>
       <div class="badge" aria-hidden="true">
         <svg viewBox="0 0 140 140"><defs><path id="circ" d="M70 70m-54 0a54 54 0 1 1 108 0a54 54 0 1 1-108 0"/></defs><circle cx="70" cy="70" r="69" fill="{{c_paper2}}" stroke="{{c_line}}"/><text font-family="Jost, sans-serif" font-size="11.5" letter-spacing="2" fill="{{c_accent}}" textLength="335"><textPath href="#circ">{{badge_text}}</textPath></text></svg>
         <b>{{initials}}</b>
@@ -521,6 +522,9 @@ textarea.note:focus{outline:none;border-color:var(--accent)}
     var row=$('tr[data-d="'+now.getDay()+'"]');if(row)row.classList.add('today');
     $('#footHours').textContent=h.open?'Today '+fmt(toMin(h.open))+' to '+fmt(toMin(h.close)):'Closed today';
   })();
+
+  // hero video: no motion for people who ask for less
+  var hv=$('.arch video');if(hv&&matchMedia('(prefers-reduced-motion: reduce)').matches){hv.removeAttribute('autoplay');hv.pause();}
 
   // before / after
   $$('.ba .stage').forEach(function(s){var r=s.querySelector('input');var set=function(){s.style.setProperty('--pos',r.value+'%')};r.addEventListener('input',set);set();});
