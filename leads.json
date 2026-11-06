@@ -1,1 +1,145 @@
-[]
+[
+  {
+    "slug": "example-hair-studio",
+    "name": "Marigold Hair Studio",
+    "type": "Hair studio",
+    "area": "Koramangala 5th Block",
+    "city": "Bengaluru",
+    "country": "India",
+    "phone": "+91 90000 00001",
+    "whatsapp": "+91 90000 00001",
+    "rating": 4.8,
+    "review_count": 214,
+    "maps_link": "https://maps.google.com/?q=Koramangala+5th+Block+Bengaluru",
+    "google_review_link": "",
+    "booking_link": "",
+    "instagram": "https://www.instagram.com/",
+    "hours": [
+      {"day": "Monday", "time": "10:00-20:00"},
+      {"day": "Tuesday", "time": "10:00-20:00"},
+      {"day": "Wednesday", "time": "10:00-20:00"},
+      {"day": "Thursday", "time": "10:00-21:00"},
+      {"day": "Friday", "time": "10:00-21:00"},
+      {"day": "Saturday", "time": "09:00-21:00"},
+      {"day": "Sunday", "time": "10:00-19:00"}
+    ],
+    "headline": "Colour, cuts and keratin from stylists who remember your hair.",
+    "subline": "A bright, unhurried studio in Koramangala for women and men. Every visit starts with a proper chat about what you want.",
+    "highlights": [
+      "Colour formulas kept on file, so every touch-up matches.",
+      "Keratin that lasts through the monsoon, with aftercare to take home.",
+      "Open seven days, late until 9pm Thursday to Saturday."
+    ],
+    "services_note": "Prices include GST. Colour depends on hair length; we confirm before we start.",
+    "services": [
+      {"category": "Hair", "items": [
+        {"name": "Women's haircut", "price": "₹1,200", "note": "Wash, cut and blow-dry"},
+        {"name": "Men's haircut", "price": "₹700"},
+        {"name": "Blow-dry and styling", "price": "₹900"}
+      ]},
+      {"category": "Colour", "items": [
+        {"name": "Root touch-up", "price": "₹1,900"},
+        {"name": "Global colour", "price": "from ₹3,800"},
+        {"name": "Balayage", "price": "from ₹6,500"}
+      ]},
+      {"category": "Treatments", "items": [
+        {"name": "Keratin smoothing", "price": "from ₹6,000", "note": "Lasts 4 to 5 months"},
+        {"name": "Hair spa", "price": "₹1,500"},
+        {"name": "Scalp detox", "price": "₹1,800"}
+      ]},
+      {"category": "Grooming", "items": [
+        {"name": "Beard shape", "price": "₹350"},
+        {"name": "Threading", "price": "₹150"}
+      ]}
+    ],
+    "before_after": [
+      {"title": "Balayage", "note": "Grown-out colour blended into a warm brunette."},
+      {"title": "Keratin smoothing", "note": "Frizz to glossy, in one afternoon."},
+      {"title": "Restyle", "note": "Long and heavy into a swinging lob."}
+    ],
+    "team": [
+      {"name": "Ritika", "role": "Founder · colour", "note": "Balayage and colour correction."},
+      {"name": "Arjun", "role": "Senior stylist", "note": "Men's cuts and textured styles."},
+      {"name": "Neha", "role": "Stylist", "note": "Blow-dries and keratin."},
+      {"name": "Sameer", "role": "Stylist", "note": "Precision cuts and beard work."}
+    ],
+    "reviews": [
+      {"text": "Ritika fixed a colour two other salons had ruined. It's been three months and it still looks perfect.", "name": "Ananya"},
+      {"text": "Best men's cut I've had in Bengaluru. Arjun actually listens.", "name": "Karthik"},
+      {"text": "Calm, clean and they never rush you. My keratin lasted the whole monsoon.", "name": "Divya"}
+    ],
+    "accent": "#B4654A",
+    "mood": "light",
+    "photos": 7
+  },
+  {
+    "slug": "example-bridal-parlour",
+    "name": "Rangmahal Beauty Parlour",
+    "type": "Bridal & beauty parlour",
+    "area": "C-Scheme",
+    "city": "Jaipur",
+    "country": "India",
+    "phone": "+91 90000 00002",
+    "whatsapp": "+91 90000 00002",
+    "rating": 4.9,
+    "review_count": 386,
+    "maps_link": "https://maps.google.com/?q=C-Scheme+Jaipur",
+    "hours": [
+      {"day": "Monday", "time": "10:30-20:30"},
+      {"day": "Tuesday", "time": "Closed"},
+      {"day": "Wednesday", "time": "10:30-20:30"},
+      {"day": "Thursday", "time": "10:30-20:30"},
+      {"day": "Friday", "time": "10:30-20:30"},
+      {"day": "Saturday", "time": "10:00-21:00"},
+      {"day": "Sunday", "time": "10:00-21:00"}
+    ],
+    "headline": "Bridal make-up and beauty in the heart of C-Scheme.",
+    "subline": "Twenty years of Jaipur weddings, from mehendi mornings to reception nights, plus everyday facials, waxing and nails.",
+    "highlights": [
+      "A trial session with every bridal package, weeks before the wedding.",
+      "We travel to the venue for the bride and family on the day.",
+      "Private bridal room with its own mirror wall and lighting."
+    ],
+    "services": [
+      {"category": "Bridal", "items": [
+        {"name": "Bridal HD make-up"},
+        {"name": "Airbrush bridal make-up"},
+        {"name": "Engagement and reception look"}
+      ]},
+      {"category": "Skin", "items": [
+        {"name": "Gold facial"},
+        {"name": "Hydra facial"},
+        {"name": "D-tan and clean-up"}
+      ]},
+      {"category": "Hair", "items": [
+        {"name": "Bridal hairstyling"},
+        {"name": "Haircut and blow-dry"},
+        {"name": "Hair spa"}
+      ]},
+      {"category": "Hands and feet", "items": [
+        {"name": "Mehendi"},
+        {"name": "Gel nails"},
+        {"name": "Spa pedicure"}
+      ]}
+    ],
+    "bridal": {
+      "kicker": "For the big day",
+      "title": "Bridal packages",
+      "text": "One team for every function, from the roka to the reception. Each package starts with a trial, so your look is settled long before the wedding.",
+      "packages": [
+        {"name": "Mehendi and haldi look"},
+        {"name": "Wedding day, HD or airbrush"},
+        {"name": "Reception look"},
+        {"name": "Family and bridesmaids"}
+      ]
+    },
+    "reviews": [
+      {"text": "They did my make-up for all four functions and every look was different and perfect. My mother is still talking about it.", "name": "Priya"},
+      {"text": "The trial was so detailed. On the day they arrived early at the venue and stayed till the pheras.", "name": "Shruti"},
+      {"text": "My go-to for facials for years. Clean, honest and never pushy.", "name": "Meenakshi"}
+    ],
+    "accent": "#8C3B46",
+    "mood": "dark",
+    "photos": 5
+  }
+]
