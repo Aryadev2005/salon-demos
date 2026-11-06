@@ -153,6 +153,11 @@ Both use generated placeholder images and made-up details.
 
 ## Live demos
 
+- `house-of-henshaw`: House of Henshaw, 303 Aigburth Road, Liverpool L17. Bespoke page in their
+  cream-and-gold brand with H monogram: lived-in colour hero film, Serenity headspa and testing,
+  "Wife Day Care" reel, gift vouchers and shop, team, reviews, built-in 4-step booking (closed
+  Sundays, real opening hours), HairSalon + FAQ JSON-LD. Photos and films are the salon's own.
+
 - `beyond-salon`: Beyond Beauty Salon by Ahmed Batekha, Egypt (Sheikh Zayed at The Lane
   Mall Palm Hills, Zamalek, Sahel). Bespoke page with a built-in 5-step booking engine
   (branch, services, stylist, date/time, details), booking reference, .ics calendar file,
