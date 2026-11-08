@@ -160,8 +160,13 @@ Both use generated placeholder images and made-up details.
   brush for colour): "Barber's scissors" by DUCK_ (CC BY 4.0), "HAIR DRYER" by saud_artist (CC BY-SA 4.0,
   simplified from 6.3 MB to 0.4 MB, so the slimmed file stays CC BY-SA) and "hair bush" by pibini modeling
   (CC BY 4.0, simplified to 0.75 MB). All credited in the footer. Real prices from their price list (short/long toggle),
-  their own salon and colour photos, named reviews, stylist mirrors in their frame style, and a 4-step booking
-  drawer (request only, no payment; skin-test reminder on colour). The 3D source lives outside this repo: rebuild
+  their own salon and colour photos, named reviews, stylist mirrors in their frame style, a "Recent work" photo reel,
+  and an in-page booking system (no server): service, stylist, live slots per stylist (Gill, Kerry, or first free),
+  details with a skin-test check for colour, a 10-minute chair hold with countdown, a £10 deposit, then a fixed
+  slot with a booking reference, .ics file and cancel. Bookings live in localStorage, so a taken slot is only
+  taken in that browser; `#salon` opens the salon view of those bookings. Set `CONFIG.stripeLink` in the page to a
+  Stripe Payment Link for a £10 product to take real deposits (the reference is passed as `client_reference_id`);
+  left empty, the checkout is a clearly labelled demo. Shared slots across all visitors need a small backend. The 3D source lives outside this repo: rebuild
   `assets/site.js` with esbuild from three.js r187 (`three` + `GLTFLoader` + `HDRLoader`). `assets/studio.hdr` is the
   1K EXR downsampled to 512x256. `assets/chair-poster.webp` shows while WebGL loads.
 

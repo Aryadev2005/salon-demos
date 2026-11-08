@@ -175,13 +175,33 @@ h2.big em{font-style:italic;color:var(--gold)}
 .colour{padding:clamp(100px,13vw,170px) 0;overflow:hidden}
 .colour .grid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(30px,6vw,90px);align-items:center}
 .pair{position:relative;height:clamp(460px,52vw,640px)}
-.pair .ph{position:absolute;width:58%;aspect-ratio:380/457;box-shadow:0 40px 80px -30px rgba(40,25,10,.35)}
+.pair .ph{position:absolute;width:56%;aspect-ratio:3/4;box-shadow:0 40px 80px -30px rgba(40,25,10,.35)}
 .pair .a{left:0;top:0}
 .pair .b{right:0;bottom:0}
 .pair .seal{position:absolute;left:52%;top:46%;width:118px;height:118px;transform:translate(-50%,-50%);z-index:2;animation:spin 22s linear infinite}
 @keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
 .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}
 .chips span{border:1px solid var(--line);border-radius:99px;padding:9px 14px;font-size:14px;background:var(--white)}
+
+/* work */
+.work{padding:clamp(90px,12vw,150px) 0 clamp(90px,12vw,150px);background:var(--white);border-top:1px solid var(--line);overflow:hidden}
+.whead{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:50px;flex-wrap:wrap}
+.wnav{display:flex;gap:8px;align-items:center}
+.wnav span{color:var(--mute);margin-right:10px}
+.wnav button{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:var(--white)}
+.wnav button:hover{border-color:var(--ink)}
+.reel{display:flex;gap:clamp(12px,1.6vw,22px);overflow-x:auto;scroll-snap-type:x mandatory;padding:0 clamp(20px,4vw,56px) 10px;scrollbar-width:none;cursor:grab}
+.reel::-webkit-scrollbar{display:none}
+.reel.drag{cursor:grabbing;scroll-snap-type:none}
+.shot{flex:none;width:clamp(240px,27vw,380px);margin:0;scroll-snap-align:start;position:relative}
+.shot img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 70%;border-radius:20px;background:var(--paper3);pointer-events:none;transition:transform 1.2s var(--ease)}
+.shot:nth-child(even){margin-top:46px}
+.shot figcaption{display:flex;justify-content:space-between;gap:10px;margin-top:14px;align-items:baseline}
+.shot figcaption b{font:400 26px/1 var(--serif)}
+.shot figcaption span{font:500 10.5px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.shot.end{display:flex;flex-direction:column;justify-content:center;gap:24px;padding:30px;border:1px dashed var(--line);border-radius:20px;aspect-ratio:3/4;height:auto;align-self:flex-start}
+.shot.end p{margin:0;font:400 46px/1 var(--serif)}
+.shot.end em{color:var(--gold)}
 
 /* team */
 .team{padding:clamp(100px,13vw,170px) 0;background:var(--paper2);border-top:1px solid var(--line)}
@@ -306,6 +326,37 @@ textarea.field{min-height:84px;resize:vertical}
 .doneacts a,.doneacts button{border:1px solid var(--line);background:var(--white);border-radius:99px;padding:11px 16px;font-size:14px;text-decoration:none}
 .doneacts .p{background:var(--ink);color:var(--white);border-color:var(--ink)}
 
+.check{display:flex;gap:12px;align-items:flex-start;margin-top:16px;background:#f6efe2;border-radius:14px;padding:14px 16px;font-size:14px;color:#5d4a26;cursor:pointer}
+.check input{margin-top:3px;width:18px;height:18px;accent-color:var(--ink);flex:none}
+.check b{color:var(--ink)}
+.slot.taken{background:var(--paper);color:#b9b4ab;border-color:transparent;cursor:not-allowed}
+.holdbar{display:flex;justify-content:space-between;align-items:center;background:var(--ink);color:var(--white);border-radius:14px;padding:14px 18px;margin:4px 0 8px}
+.holdbar span{font:500 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#bdb9b1}
+.holdbar b{font:400 28px/1 var(--serif);font-variant-numeric:tabular-nums}
+.summary b{font-weight:600}
+.fine{color:var(--ink2);font-size:14px;margin:16px 0}
+.fine2{color:var(--mute);margin-top:14px;line-height:1.6}
+.paybtn{width:100%;display:flex;justify-content:space-between;align-items:center;border:0;border-radius:16px;background:var(--gold);color:#fff;padding:18px 20px;font:500 17px/1 var(--sans);transition:background .3s,transform .2s}
+.paybtn:hover{background:#94753c}
+.paybtn:active{transform:scale(.99)}
+.paybtn i{font-style:normal;font-size:20px}
+.paybtn.busy{background:var(--ink2)}
+.paybtn.busy i{animation:spin2 .8s linear infinite}
+@keyframes spin2{to{transform:rotate(360deg)}}
+.methods{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+.methods span{border:1px solid var(--line);border-radius:8px;padding:5px 9px;font:500 11px/1 var(--sans);color:var(--ink2);background:var(--white)}
+.ticket{margin:18px 0 6px;border:1.5px dashed var(--gold);border-radius:14px;padding:14px 18px;display:flex;justify-content:space-between;align-items:center;background:#fbf7ef}
+.ticket .mono{color:var(--mute)}
+.ticket b{font:500 20px/1 var(--mono);letter-spacing:.08em}
+.salon{position:fixed;inset:0;z-index:70;background:rgba(30,26,20,.35);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);display:grid;place-items:center;padding:16px}
+.salon[hidden]{display:none}
+.sbox{background:var(--white);border-radius:24px;width:min(720px,100%);max-height:88vh;overflow:auto;padding:26px;box-shadow:0 40px 100px -20px rgba(30,20,10,.35)}
+.srow{display:grid;grid-template-columns:70px 1fr auto;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.srow b{font:400 22px/1 var(--serif)}
+.srow small{display:block;color:var(--mute);font-size:12.5px;margin-top:3px}
+.srow button{border:1px solid var(--line);background:var(--white);border-radius:99px;padding:8px 14px;font-size:13px}
+.srow button:hover{border-color:#b4553b;color:#b4553b}
+
 .mbar{display:none}
 @media (max-width:960px){
   .nav nav{display:none}
@@ -341,7 +392,7 @@ textarea.field{min-height:84px;resize:vertical}
 
 <header class="nav" id="nav">
   <a class="brand" href="#top" aria-label="Luke James Hairdressing, home"><b>LUKE JAMES</b><span>Hairdressing</span></a>
-  <nav aria-label="Sections"><a href="#inside">The salon</a><a href="#menu">Prices</a><a href="#colour">Colour</a><a href="#stylists">Stylists</a><a href="#reviews">Reviews</a><a href="#visit">Visit</a></nav>
+  <nav aria-label="Sections"><a href="#inside">The salon</a><a href="#menu">Prices</a><a href="#colour">Colour</a><a href="#work">Work</a><a href="#stylists">Stylists</a><a href="#reviews">Reviews</a><a href="#visit">Visit</a></nav>
   <button class="btn ink" type="button" data-book>Book <i>→</i></button>
 </header>
 
@@ -381,8 +432,8 @@ textarea.field{min-height:84px;resize:vertical}
     </div>
     <div class="strip">
       <figure class="ph reveal"><img src="img/salon-chairs.jpg" alt="Grey styling chairs facing black-framed mirrors" loading="lazy" width="380" height="457"><figcaption>The chairs</figcaption></figure>
-      <figure class="ph reveal"><img src="img/salon-lounge.jpg" alt="Leather sofa, black slatted wall and backwash chairs" loading="lazy" width="380" height="457"><figcaption>The lounge</figcaption></figure>
-      <figure class="ph reveal"><img src="img/salon-clients.jpg" alt="Two clients in styling chairs during colour" loading="lazy" width="380" height="457"><figcaption>A Saturday</figcaption></figure>
+      <figure class="ph reveal"><img src="img/salon-lounge.jpg" alt="Leather sofa, black slatted wall and backwash chairs" loading="lazy" width="1000" height="1333"><figcaption>The lounge</figcaption></figure>
+      <figure class="ph reveal"><img src="img/salon-backwash.jpg" alt="Backwash basin, chair and product trolley against the slatted wall" loading="lazy" width="768" height="1024"><figcaption>The backwash</figcaption></figure>
     </div>
     <div class="facts reveal">
       <div><b>Matrix colour</b><span>The salon's professional colour line.</span></div>
@@ -429,8 +480,8 @@ textarea.field{min-height:84px;resize:vertical}
 <section class="colour" id="colour">
   <div class="wrap grid">
     <div class="pair">
-      <figure class="ph a reveal"><img src="img/colour-1.jpg" alt="Long, glossy copper-red colour from the back" loading="lazy" width="380" height="457"></figure>
-      <figure class="ph b reveal"><img src="img/colour-2.jpg" alt="Copper-red colour, side view in the salon" loading="lazy" width="380" height="457"></figure>
+      <figure class="ph a reveal"><img src="img/look-copper.jpg" alt="Long, glossy copper-red colour from the back" loading="lazy" width="1000" height="1333"></figure>
+      <figure class="ph b reveal"><img src="img/look-blonde-highlights.jpg" alt="Bright blonde highlights, side view" loading="lazy" width="1000" height="1333"></figure>
       <svg class="seal" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="c" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs><circle cx="60" cy="60" r="59" fill="#fbfaf8"/><text font-family="JetBrains Mono, monospace" font-size="9.6" letter-spacing="3.1" fill="#151515"><textPath href="#c">MATRIX COLOUR · LUKE JAMES · WOOLTON ·</textPath></text><circle cx="60" cy="60" r="16" fill="#a8874a"/></svg>
     </div>
     <div class="reveal">
@@ -443,9 +494,27 @@ textarea.field{min-height:84px;resize:vertical}
   </div>
 </section>
 
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="whead">
+      <div class="reveal"><p class="mono kick">04 · Recent work</p><h2 class="big">Straight from <em>the chair.</em></h2></div>
+      <div class="wnav reveal"><span class="mono" id="wcount">01 / 06</span><button type="button" id="wprev" aria-label="Previous photo">←</button><button type="button" id="wnext" aria-label="Next photo">→</button></div>
+    </div>
+  </div>
+  <div class="reel" id="reel" tabindex="0" aria-label="Recent work, scroll sideways">
+    <figure class="shot"><img src="img/look-copper.jpg" alt="Long copper-red colour" loading="lazy" width="1000" height="1333"><figcaption><b>Copper red</b><span>Matrix colour · long</span></figcaption></figure>
+    <figure class="shot"><img src="img/look-blonde-highlights.jpg" alt="Blonde highlights with a long fringe" loading="lazy" width="1000" height="1333"><figcaption><b>Bright blonde</b><span>Highlights · cut &amp; finish</span></figcaption></figure>
+    <figure class="shot"><img src="img/look-brunette.jpg" alt="Glossy brunette, blunt mid-length cut" loading="lazy" width="1000" height="1333"><figcaption><b>Glossy brunette</b><span>Colour · blunt cut</span></figcaption></figure>
+    <figure class="shot"><img src="img/look-gents.jpg" alt="Men's swept-back restyle" loading="lazy" width="735" height="987"><figcaption><b>Swept back</b><span>Gents restyle</span></figcaption></figure>
+    <figure class="shot"><img src="img/look-soft-blonde.jpg" alt="Soft honey blonde, long layers" loading="lazy" width="583" height="929"><figcaption><b>Honey blonde</b><span>Highlights · long layers</span></figcaption></figure>
+    <figure class="shot"><img src="img/colour-1.jpg" alt="Copper red from behind in the salon" loading="lazy" width="380" height="457"><figcaption><b>Copper, again</b><span>Matrix colour</span></figcaption></figure>
+    <div class="shot end"><p>Your hair, <em>next.</em></p><button class="btn ink" type="button" data-book>Book a chair <i>→</i></button></div>
+  </div>
+</section>
+
 <section class="team" id="stylists">
   <div class="wrap">
-    <p class="mono kick reveal">04 · The chairs</p>
+    <p class="mono kick reveal">05 · The chairs</p>
     <h2 class="big reveal">Three mirrors. <em>Pick yours.</em></h2>
     <div class="mirrors reveal" id="mirrors">
       <button class="mirror on" type="button" data-stylist="First free chair"><div class="frame"><div class="glass"><b>✦</b></div></div>
@@ -462,7 +531,7 @@ textarea.field{min-height:84px;resize:vertical}
 
 <section class="reviews" id="reviews">
   <div class="wrap grid">
-    <div class="reveal"><p class="mono kick">05 · Said in the chair</p><p class="score">5<em>.</em>0<small>★★★★★ · 108 reviews on Treatwell<br>5-star rated on Google</small></p></div>
+    <div class="reveal"><p class="mono kick">06 · Said in the chair</p><p class="score">5<em>.</em>0<small>★★★★★ · 108 reviews on Treatwell<br>5-star rated on Google</small></p></div>
     <div class="reveal">
       <div class="cards" id="cards"></div>
       <div class="revnav"><button type="button" id="rprev" aria-label="Previous review">←</button><button type="button" id="rnext" aria-label="Next review">→</button><span class="mono" id="rcount"></span></div>
@@ -474,7 +543,7 @@ textarea.field{min-height:84px;resize:vertical}
   <div class="wrap">
     <div class="grid">
       <div class="reveal">
-        <p class="mono kick">06 · Visit</p>
+        <p class="mono kick">07 · Visit</p>
         <h2 class="big">Hours, map, <em>answers.</em></h2>
         <table class="hours" id="hours" aria-label="Opening hours"></table>
         <div class="faq">
@@ -500,7 +569,7 @@ textarea.field{min-height:84px;resize:vertical}
 
 <div class="scrim" id="scrim"></div>
 <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="dtitle" aria-hidden="true">
-  <div class="dhead"><div><span class="mono" id="dstep">Step 1 of 4</span><h3 id="dtitle">Pick a service</h3></div><button class="x" type="button" id="dclose" aria-label="Close booking">✕</button></div>
+  <div class="dhead"><div><span class="mono" id="dstep">Step 1 of 5</span><h3 id="dtitle">Pick a service</h3></div><button class="x" type="button" id="dclose" aria-label="Close booking">✕</button></div>
   <div class="bar"><i id="dbar"></i></div>
   <div class="dbody">
     <div class="step on" data-s="0"><div class="len" id="blen" style="margin-top:4px"><i></i><button type="button" class="on" data-l="s">Short hair</button><button type="button" data-l="l">Long hair</button></div><div id="s0"></div></div>
@@ -508,15 +577,22 @@ textarea.field{min-height:84px;resize:vertical}
     <div class="step" data-s="2"><div class="days" id="days"></div><div class="slots" id="slots"></div><p class="notebox" id="slotnote"></p></div>
     <div class="step" data-s="3">
       <label class="dlabel" for="fname">Name</label><input class="field" id="fname" autocomplete="name" placeholder="Your name">
-      <label class="dlabel" for="fphone">Mobile, for the confirmation text</label><input class="field" id="fphone" type="tel" autocomplete="tel" placeholder="07…">
+      <label class="dlabel" for="fphone">Mobile</label><input class="field" id="fphone" type="tel" autocomplete="tel" placeholder="07…">
+      <label class="dlabel" for="femail">Email, for your receipt <span style="text-transform:none;letter-spacing:0">(optional)</span></label><input class="field" id="femail" type="email" autocomplete="email" placeholder="you@example.com">
       <label class="dlabel" for="fnote">Anything we should know? <span style="text-transform:none;letter-spacing:0">(optional)</span></label><textarea class="field" id="fnote" placeholder="Current colour, the shade you're after, first visit…"></textarea>
-      <div class="notebox gold" id="skinnote"><b>Colour booking:</b> a skin test is needed 48 hours before. The salon will arrange it when they confirm.</div>
-      <div class="notebox"><b>No card, no deposit.</b> This sends a request. The salon checks the chair and confirms by text.</div>
+      <label class="check" id="skinwrap"><input type="checkbox" id="fskin"><span><b>Skin test.</b> I've had one at Luke James in the last 6 months, or I'll pop in for one at least 48 hours before.</span></label>
     </div>
     <div class="step" data-s="4" id="s4"></div>
+    <div class="step" data-s="5" id="s5"></div>
   </div>
   <div class="dfoot"><span class="sum" id="dsum"></span><div class="btns"><button class="dbtn back" type="button" id="dback">Back</button><button class="dbtn" type="button" id="dnext" disabled>Continue</button></div></div>
 </aside>
+<div class="salon" id="salon" role="dialog" aria-modal="true" aria-labelledby="stitle" hidden>
+  <div class="sbox">
+    <div class="dhead" style="padding:0"><div><span class="mono">Salon view · this browser</span><h3 id="stitle">Bookings</h3></div><button class="x" type="button" id="sclose" aria-label="Close salon view">✕</button></div>
+    <div id="slist"></div>
+  </div>
+</div>
 <div class="mbar" id="mbar"><a href="tel:+441514283636">Call</a><button type="button" data-book>Book a chair</button></div>
 
 <script>
@@ -648,21 +724,51 @@ function showRev(n){ const cs = $$('.card', cards), N = cs.length; ri = (n + N) 
 showRev(0); $('#rnext').onclick = () => showRev(ri+1); $('#rprev').onclick = () => showRev(ri-1);
 let rt = setInterval(() => showRev(ri+1), 5600); cards.addEventListener('pointerenter', () => clearInterval(rt));
 
+/* ---------- recent work reel */
+(function(){
+  const reel = $('#reel'), shots = $$('.shot', reel).filter(x => !x.classList.contains('end'));
+  const step = () => shots[0].getBoundingClientRect().width + parseFloat(getComputedStyle(reel).gap || 16);
+  $('#wnext').onclick = () => reel.scrollBy({left: step(), behavior: 'smooth'});
+  $('#wprev').onclick = () => reel.scrollBy({left: -step(), behavior: 'smooth'});
+  reel.addEventListener('scroll', () => { const i = Math.min(shots.length, Math.round(reel.scrollLeft / step()) + 1); $('#wcount').textContent = String(i).padStart(2,'0') + ' / ' + String(shots.length).padStart(2,'0'); }, {passive:true});
+  let down = false, sx = 0, sl = 0;
+  reel.addEventListener('pointerdown', e => { if (e.pointerType !== 'mouse') return; down = true; sx = e.clientX; sl = reel.scrollLeft; reel.classList.add('drag'); });
+  addEventListener('pointermove', e => { if (down) reel.scrollLeft = sl - (e.clientX - sx); });
+  addEventListener('pointerup', () => { if (!down) return; down = false; reel.classList.remove('drag'); });
+})();
+
 /* ---------- reveal */
 const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.1});
 $$('.reveal').forEach(el => io.observe(el));
 
-/* ---------- booking */
-const B = {svc:null, stylist:null, date:null, time:null};
+/* ---------- booking: in-page, deposit, fixed slots ---------- */
+// CONFIG: paste the salon's Stripe Payment Link (a £10 product) to take real deposits.
+// Leave empty to run the clearly-labelled demo checkout.
+const CONFIG = { deposit: 10, stripeLink: '', holdMinutes: 10, staff: ['Gill', 'Kerry'] };
+const STORE = 'lj-bookings-v1';
+const load = () => { try { return JSON.parse(localStorage.getItem(STORE)) || []; } catch (e) { return []; } };
+const save = list => { try { localStorage.setItem(STORE, JSON.stringify(list)); } catch (e) {} };
+const live = () => load().filter(b => b.status === 'confirmed' || (b.status === 'held' && b.until > Date.now()));
+const B = {svc:null, stylist:null, date:null, time:null, ref:null};
 const drawer = $('#drawer'), scrim = $('#scrim');
-const TITLES = ['Pick a service','Pick your stylist','Pick a time','Hold the chair','Request sent'];
-let step = 0, lastFocus = null;
+const TITLES = ['Pick a service','Pick your stylist','Pick a time','Your details','Pay the deposit','You’re booked'];
+let step = 0, lastFocus = null, timer = 0;
+const newRef = () => 'LJ-' + Array.from(crypto.getRandomValues(new Uint8Array(3)), x => 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'[x % 32]).join('') + String(Date.now() % 1000).padStart(3, '0');
+// who is free at [t, t+m) on a date (excluding a booking ref)
+function freeStaff(date, t, m, exclude){
+  const bs = live().filter(b => b.date === date && b.ref !== exclude && b.start < t + m && b.end > t);
+  return CONFIG.staff.filter(s => !bs.some(b => b.staff === s));
+}
+function slotState(date, t){
+  const m = byId(B.svc).m, free = freeStaff(date, t, m, B.ref);
+  return B.stylist === 'First free chair' ? free.length > 0 : free.includes(B.stylist);
+}
 function renderServices(){
   $('#s0').innerHTML = MENU.map(c => `<p class="grp">${c.cat}</p>` + c.items.map(it => `<button class="opt${B.svc === it.id ? ' sel' : ''}" type="button" data-v="${it.id}"><span class="ic">${it.name[0]}</span><span><b>${it.name}</b><small>${it.sub}${it.d ? ' · ' + dur(it.m) : ''}</small></span><span class="r">${price(it, L)}</span></button>`).join('')).join('');
   $$('#s0 .opt').forEach(b => b.onclick = () => { B.svc = b.dataset.v; B.time = null; renderServices(); go(1); });
 }
 $('#s1').innerHTML = STYLISTS.map(s => `<button class="opt" type="button" data-v="${s.id}"><span class="ic">${s.ic}</span><span><b>${s.id}</b><small>${s.sub}</small></span><span class="r">→</span></button>`).join('');
-$$('#s1 .opt').forEach(b => b.onclick = () => { B.stylist = b.dataset.v; $$('#s1 .opt').forEach(x => x.classList.toggle('sel', x === b)); go(2); });
+$$('#s1 .opt').forEach(b => b.onclick = () => { B.stylist = b.dataset.v; B.time = null; $$('#s1 .opt').forEach(x => x.classList.toggle('sel', x === b)); go(2); });
 const todayKey = new Date(Date.UTC(now.y, now.m-1, now.d)).toISOString().slice(0,10);
 function slotsFor(key, dow){
   const h = HOURS[dow]; if (!h || !B.svc) return [];
@@ -673,9 +779,9 @@ function slotsFor(key, dow){
 function buildDays(){
   const days = $('#days'); days.innerHTML = '';
   const base = new Date(todayKey + 'T12:00:00Z');
-  for (let i = 0; i < 21; i++) {
+  for (let i = 0; i < 28; i++) {
     const dt = new Date(base); dt.setUTCDate(base.getUTCDate() + i);
-    const dow = dt.getUTCDay(), key = dt.toISOString().slice(0,10), ok = slotsFor(key, dow).length > 0;
+    const dow = dt.getUTCDay(), key = dt.toISOString().slice(0,10), ok = slotsFor(key, dow).some(t => slotState(key, t));
     const b = document.createElement('button'); b.type = 'button'; b.className = 'day' + (B.date === key ? ' sel' : ''); b.disabled = !ok;
     b.innerHTML = `<small>${i === 0 ? 'Today' : DAYN[dow].slice(0,3)}</small><b>${dt.getUTCDate()}</b><small>${dt.toLocaleString('en-GB',{month:'short',timeZone:'UTC'})}</small>`;
     b.onclick = () => { B.date = key; B.time = null; buildDays(); buildSlots(); refresh(); };
@@ -687,69 +793,145 @@ function buildDays(){
 function buildSlots(){
   const s = $('#slots'); s.innerHTML = '';
   const dow = new Date(B.date + 'T12:00:00Z').getUTCDay(), list = slotsFor(B.date, dow), it = byId(B.svc);
-  list.forEach(t => { const b = document.createElement('button'); b.type = 'button'; b.className = 'slot' + (B.time === t ? ' sel' : ''); b.textContent = fmt(t);
+  let open = 0;
+  list.forEach(t => { const ok = slotState(B.date, t); if (ok) open++;
+    const b = document.createElement('button'); b.type = 'button'; b.className = 'slot' + (B.time === t ? ' sel' : '') + (ok ? '' : ' taken'); b.disabled = !ok;
+    b.innerHTML = ok ? fmt(t) : `<s>${fmt(t)}</s>`; b.setAttribute('aria-label', fmt(t) + (ok ? '' : ', booked'));
     b.onclick = () => { B.time = t; $$('.slot', s).forEach(x => x.classList.toggle('sel', x === b)); refresh(); }; s.appendChild(b); });
-  $('#slotnote').innerHTML = it.d ? `<b>${dur(it.m)}</b> blocked out, so the last start is ${fmt(list[list.length-1])}. Closed Sunday and Monday.` : `The salon confirms how long to allow when they text you. Closed Sunday and Monday.`;
+  $('#slotnote').innerHTML = `<b>${open} of ${list.length}</b> times free with ${B.stylist === 'First free chair' ? 'any stylist' : B.stylist}. ` + (it.d ? `${dur(it.m)} is blocked out for this service.` : `The salon blocks out about ${dur(it.m)} for this.`);
 }
-const dateLabel = () => new Date(B.date + 'T12:00:00Z').toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',timeZone:'UTC'});
+const dateLabel = d => new Date(d + 'T12:00:00Z').toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',timeZone:'UTC'});
+const balance = it => { const v = it.p[L === 'l' ? 1 : 0]; return typeof v === 'number' ? 'from £' + (v - CONFIG.deposit) : 'agreed at consultation'; };
+function detailsOk(){
+  const ok = $('#fname').value.trim().length > 1 && $('#fphone').value.replace(/\D/g,'').length >= 10;
+  const em = $('#femail').value.trim(); const emOk = !em || /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em);
+  return ok && emOk && (!byId(B.svc).colour || $('#fskin').checked);
+}
 function refresh(){
-  const ok = [!!B.svc, !!B.stylist, B.time != null, $('#fname').value.trim().length > 1 && $('#fphone').value.replace(/\D/g,'').length >= 10][step];
-  const nb = $('#dnext'); nb.disabled = !ok; nb.textContent = step === 3 ? 'Send request' : 'Continue';
+  const ok = [!!B.svc, !!B.stylist, B.time != null, detailsOk(), false, true][step];
+  const nb = $('#dnext'); nb.disabled = !ok; nb.textContent = step === 3 ? 'Hold my chair' : 'Continue';
+  nb.style.display = step >= 4 ? 'none' : '';
   const parts = []; if (B.svc) parts.push(byId(B.svc).name + ' · ' + price(byId(B.svc), L)); if (B.stylist) parts.push(B.stylist); if (B.time != null) parts.push(fmt(B.time));
   $('#dsum').textContent = parts.join(' · ');
 }
-['fname','fphone'].forEach(id => $('#' + id).addEventListener('input', refresh));
+['fname','fphone','femail'].forEach(id => $('#' + id).addEventListener('input', refresh)); $('#fskin').addEventListener('change', refresh);
 function go(n){
-  step = n;
+  step = n; clearInterval(timer);
   $$('.step', drawer).forEach(s => s.classList.toggle('on', +s.dataset.s === n));
-  $('#dtitle').textContent = TITLES[n]; $('#dstep').textContent = n < 4 ? `Step ${n+1} of 4` : 'Done';
-  $('#dbar').style.width = ((Math.min(n,3)+1)/4*100) + '%';
-  $('#dback').style.visibility = n === 0 || n === 4 ? 'hidden' : 'visible';
-  $('.dfoot').style.display = n === 4 ? 'none' : 'flex';
+  $('#dtitle').textContent = TITLES[n]; $('#dstep').textContent = n < 5 ? `Step ${n+1} of 5` : 'Confirmed';
+  $('#dbar').style.width = ((Math.min(n,4)+1)/5*100) + '%';
+  $('#dback').style.visibility = n === 0 || n === 5 ? 'hidden' : 'visible';
+  $('.dfoot').style.display = n === 5 ? 'none' : 'flex';
+  if (n < 4) release();
   if (n === 0) renderServices();
   if (n === 2) { buildDays(); if (B.date) buildSlots(); }
-  if (n === 3) $('#skinnote').style.display = byId(B.svc).colour ? 'block' : 'none';
-  if (n === 4) done();
+  if (n === 3) $('#skinwrap').style.display = byId(B.svc).colour ? 'flex' : 'none';
+  if (n === 4) hold();
+  if (n === 5) confirmed();
   refresh();
+}
+/* hold the chair for a few minutes while the deposit is paid */
+function release(){ if (!B.ref) return; const l = load(), b = l.find(x => x.ref === B.ref); if (b && b.status === 'held') { save(l.filter(x => x.ref !== B.ref)); } B.ref = null; }
+function hold(){
+  const it = byId(B.svc), free = freeStaff(B.date, B.time, it.m, null);
+  const staff = B.stylist === 'First free chair' ? free[0] : (free.includes(B.stylist) ? B.stylist : null);
+  if (!staff) { $('#s4').innerHTML = '<div class="notebox gold"><b>Sorry, that time has just gone.</b> Please pick another.</div>'; setTimeout(() => go(2), 1600); return; }
+  B.ref = newRef();
+  const rec = { ref:B.ref, svc:it.id, name:$('#fname').value.trim(), phone:$('#fphone').value.trim(), email:$('#femail').value.trim(), note:$('#fnote').value.trim(),
+    len:L, stylist:B.stylist, staff, date:B.date, start:B.time, end:B.time + it.m, status:'held', until:Date.now() + CONFIG.holdMinutes*60000, deposit:CONFIG.deposit, made:Date.now() };
+  save(load().concat(rec));
+  const stripe = !!CONFIG.stripeLink;
+  $('#s4').innerHTML = `
+    <div class="holdbar"><span>Chair held for you</span><b id="hcount">${CONFIG.holdMinutes}:00</b></div>
+    <div class="summary">
+      <div><span>Service</span>${it.name}</div><div><span>With</span>${B.stylist === 'First free chair' ? staff + ' (first free)' : staff}</div>
+      <div><span>When</span>${dateLabel(B.date)}, ${fmt(B.time)}</div>
+      <div><span>Deposit today</span><b>£${CONFIG.deposit.toFixed(2)}</b></div><div><span>Pay at the salon</span>${balance(it)}</div></div>
+    <p class="fine">The deposit comes off your bill on the day and fixes your slot, so nobody else can take it.</p>
+    <button class="paybtn" type="button" id="paybtn"><span>Pay £${CONFIG.deposit} deposit</span><i>→</i></button>
+    <div class="methods" aria-hidden="true"><span>Apple Pay</span><span>Google Pay</span><span>Visa</span><span>Mastercard</span><span>Amex</span></div>
+    <p class="mono fine2">${stripe ? 'Secure checkout by Stripe opens in a new tab.' : 'Demo checkout · no card needed, nothing is charged. With a Stripe Payment Link added, this button takes real deposits.'}</p>`;
+  const end = rec.until;
+  const tick = () => { const left = Math.max(0, end - Date.now()), mm = Math.floor(left/60000), ss = Math.floor(left%60000/1000);
+    const el = $('#hcount'); if (el) el.textContent = mm + ':' + String(ss).padStart(2,'0');
+    if (!left) { clearInterval(timer); release(); $('#s4').innerHTML = '<div class="notebox gold"><b>Your hold ran out.</b> The time is free again. Pick it once more to continue.</div>'; setTimeout(() => go(2), 2000); } };
+  tick(); timer = setInterval(tick, 1000);
+  $('#paybtn').onclick = () => {
+    const btn = $('#paybtn');
+    if (stripe) {
+      const u = new URL(CONFIG.stripeLink); u.searchParams.set('client_reference_id', B.ref); if (rec.email) u.searchParams.set('prefilled_email', rec.email);
+      open(u.href, '_blank', 'noopener');
+      btn.outerHTML = '<p class="notebox">Finish paying in the Stripe tab. The salon matches your payment to <b>' + B.ref + '</b> and texts to confirm.</p><button class="paybtn" type="button" id="paidbtn"><span>I’ve paid</span><i>→</i></button>';
+      $('#paidbtn').onclick = () => finish('pending');
+      return;
+    }
+    btn.disabled = true; btn.classList.add('busy'); btn.querySelector('span').textContent = 'Processing…';
+    setTimeout(() => finish('paid'), 1400);
+  };
+}
+function finish(pay){
+  clearInterval(timer);
+  const l = load(), b = l.find(x => x.ref === B.ref); if (!b) return go(2);
+  b.status = 'confirmed'; b.paid = pay; b.until = 0; save(l); go(5);
+}
+function confirmed(){
+  const b = load().find(x => x.ref === B.ref), it = byId(b.svc);
+  const [y, mo, d] = b.date.split('-'), p2 = n => String(n).padStart(2,'0'), stamp = m => `${y}${mo}${d}T${p2(Math.floor(m/60))}${p2(m%60)}00`;
+  const ics = ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Luke James Hairdressing//Booking//EN','BEGIN:VEVENT',`UID:${b.ref}@lukejames`,`DTSTAMP:${new Date().toISOString().replace(/[-:]/g,'').slice(0,15)}Z`,
+    `DTSTART;TZID=Europe/London:${stamp(b.start)}`,`DTEND;TZID=Europe/London:${stamp(b.end)}`,`SUMMARY:${it.name} at Luke James`,'LOCATION:148 Hunts Cross Ave\\, Woolton\\, Liverpool L25 8SQ',
+    `DESCRIPTION:Booking ${b.ref} with ${b.staff}. £${b.deposit} deposit paid. Tel 0151 428 3636.`,'END:VEVENT','END:VCALENDAR'].join('\r\n');
+  const href = URL.createObjectURL(new Blob([ics], {type:'text/calendar'}));
+  $('#s5').innerHTML = `<svg class="done-mark" viewBox="0 0 70 28" fill="none"><path d="M3 22 C 22 22, 40 6, 67 5" stroke="#a8874a" stroke-width="2" stroke-linecap="round"/></svg>
+    <p style="margin:0 0 6px;font:400 30px/1.1 var(--serif)">See you ${new Date(b.date + 'T12:00:00Z').toLocaleDateString('en-GB',{weekday:'long',timeZone:'UTC'})}, ${esc(b.name.split(/\s+/)[0])}.</p>
+    <p style="margin:0;color:var(--mute);font-size:14.5px">${b.paid === 'pending' ? 'Your slot is held while the salon matches your deposit.' : 'Deposit paid. Your slot is fixed.'}</p>
+    <div class="ticket"><span class="mono">Booking reference</span><b>${b.ref}</b></div>
+    <div class="summary">
+      <div><span>Service</span>${it.name}</div><div><span>Stylist</span>${b.staff}</div>
+      <div><span>When</span>${dateLabel(b.date)}, ${fmt(b.start)} – ${fmt(b.end)}</div>
+      <div><span>Deposit</span>£${b.deposit.toFixed(2)} ${b.paid === 'pending' ? '(checking)' : 'paid'}</div><div><span>At the salon</span>${balance(it)}</div></div>
+    ${it.colour ? '<div class="notebox gold"><b>Skin test:</b> 48 hours before your colour, if you haven’t had one here in the last 6 months.</div>' : ''}
+    <div class="doneacts"><a class="p" href="${href}" download="luke-james-${b.ref}.ics">Add to calendar</a><a href="tel:+441514283636">Call the salon</a><button type="button" id="dcancel">Cancel booking</button></div>
+    <p class="mono" style="color:var(--mute);margin-top:22px">Demo · bookings are kept in this browser. Open #salon to see the salon view.</p>`;
+  $('#dcancel').onclick = () => { if (!confirm('Cancel booking ' + b.ref + '?')) return; save(load().filter(x => x.ref !== b.ref)); B.ref = null; closeBook(true); };
 }
 function openBook(pre = {}){
   lastFocus = document.activeElement;
   if (pre.svc) { B.svc = pre.svc; B.time = null; }
-  if (pre.stylist) B.stylist = pre.stylist;
+  if (pre.stylist) { B.stylist = pre.stylist; B.time = null; }
   $$('#s1 .opt').forEach(x => x.classList.toggle('sel', x.dataset.v === B.stylist));
   drawer.classList.add('on'); scrim.classList.add('on'); drawer.setAttribute('aria-hidden','false'); document.body.style.overflow = 'hidden';
   go(!B.svc ? 0 : !B.stylist ? 1 : 2);
   setTimeout(() => $('#dclose').focus(), 60);
 }
-function closeBook(){
+function closeBook(reset){
+  if (step === 4) release();
+  clearInterval(timer);
   drawer.classList.remove('on'); scrim.classList.remove('on'); drawer.setAttribute('aria-hidden','true'); document.body.style.overflow = '';
-  if (step === 4) { Object.assign(B, {svc:null, stylist:null, date:null, time:null}); ['fname','fphone','fnote'].forEach(id => $('#' + id).value = ''); }
+  if (step === 5 || reset === true) { Object.assign(B, {svc:null, stylist:null, date:null, time:null, ref:null}); ['fname','fphone','femail','fnote'].forEach(id => $('#' + id).value = ''); $('#fskin').checked = false; }
   if (lastFocus) lastFocus.focus();
 }
 document.addEventListener('click', e => { const t = e.target.closest('[data-book]'); if (!t) return; e.preventDefault(); openBook({svc: t.dataset.svc}); });
 $('#dclose').onclick = closeBook; scrim.onclick = closeBook;
-addEventListener('keydown', e => { if (e.key === 'Escape' && drawer.classList.contains('on')) closeBook(); });
+addEventListener('keydown', e => { if (e.key === 'Escape') { if (!$('#salon').hidden) closeSalon(); else if (drawer.classList.contains('on')) closeBook(); } });
 $('#dback').onclick = () => go(Math.max(0, step - 1)); $('#dnext').onclick = () => go(step + 1);
-function done(){
-  const it = byId(B.svc), first = $('#fname').value.trim().split(/\s+/)[0];
-  const [y, mo, d] = B.date.split('-'), st = B.time, en = B.time + it.m;
-  const p2 = n => String(n).padStart(2,'0'), stamp = m => `${y}${mo}${d}T${p2(Math.floor(m/60))}${p2(m%60)}00`;
-  const ics = ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Luke James Hairdressing//Demo//EN','BEGIN:VEVENT',`UID:${Date.now()}@lukejames-demo`,`DTSTAMP:${new Date().toISOString().replace(/[-:]/g,'').slice(0,15)}Z`,
-    `DTSTART;TZID=Europe/London:${stamp(st)}`,`DTEND;TZID=Europe/London:${stamp(en)}`,`SUMMARY:${it.name} at Luke James (requested)`,'LOCATION:148 Hunts Cross Ave\\, Woolton\\, Liverpool L25 8SQ',
-    `DESCRIPTION:With ${B.stylist}. Waiting for the salon to confirm by text.`,'END:VEVENT','END:VCALENDAR'].join('\r\n');
-  const href = URL.createObjectURL(new Blob([ics], {type:'text/calendar'}));
-  $('#s4').innerHTML = `<svg class="done-mark" viewBox="0 0 70 28" fill="none"><path d="M3 22 C 22 22, 40 6, 67 5" stroke="#a8874a" stroke-width="2" stroke-linecap="round"/></svg>
-    <p style="margin:0 0 6px;font:400 28px/1.1 var(--serif)">Thanks ${esc(first)}. Your chair is requested.</p>
-    <p style="margin:0;color:var(--mute);font-size:14.5px">The salon will text <b style="color:var(--ink);font-weight:500">${esc($('#fphone').value)}</b> to confirm. Nothing is charged.</p>
-    <div class="summary" style="margin-top:14px">
-      <div><span>Service</span>${it.name}</div><div><span>Price</span>${typeof it.p[L === 'l' ? 1 : 0] === 'number' ? 'from ' : ''}${price(it, L)} · ${L === 'l' ? 'long' : 'short'} hair</div>
-      <div><span>Stylist</span>${B.stylist}</div><div><span>When</span>${dateLabel()}, ${fmt(st)}</div>
-      <div><span>Where</span>148 Hunts Cross Ave, L25</div></div>
-    ${it.colour ? '<div class="notebox gold"><b>Skin test:</b> needed 48 hours before your colour. The salon will sort a time with you.</div>' : ''}
-    <div class="doneacts"><a class="p" href="${href}" download="luke-james-appointment.ics">Add to calendar</a><a href="tel:+441514283636">Call the salon</a><button type="button" id="dfin">Done</button></div>
-    <p class="mono" style="color:var(--mute);margin-top:26px">Demo · in the live site this request lands on the salon's phone.</p>`;
-  $('#dfin').onclick = closeBook;
+
+/* ---------- salon view (#salon): the fixed slots in this browser */
+function renderSalon(){
+  const list = live().filter(b => b.date >= todayKey).sort((a, b) => (a.date + a.start).localeCompare(b.date + b.start));
+  if (!list.length) { $('#slist').innerHTML = '<p class="notebox" style="margin-top:20px">No bookings yet. Make one from the Book button and it appears here.</p>'; return; }
+  let html = '', day = '';
+  list.forEach(b => { const it = byId(b.svc);
+    if (b.date !== day) { day = b.date; html += `<p class="grp">${dateLabel(b.date)}</p>`; }
+    html += `<div class="srow"><b>${fmt(b.start)}</b><span><strong>${esc(b.name)}</strong> · ${it ? it.name : b.svc}<small>${b.staff} · ${esc(b.phone)} · ${b.ref} · ${b.status === 'held' ? 'held, unpaid' : b.paid === 'pending' ? 'deposit to check' : '£' + b.deposit + ' paid'}</small></span><button type="button" data-cancel="${b.ref}">Cancel</button></div>`; });
+  $('#slist').innerHTML = html;
+  $$('[data-cancel]', $('#slist')).forEach(x => x.onclick = () => { if (confirm('Cancel ' + x.dataset.cancel + '? The slot opens up again.')) { save(load().filter(b => b.ref !== x.dataset.cancel)); renderSalon(); } });
 }
+function openSalon(){ renderSalon(); $('#salon').hidden = false; document.body.style.overflow = 'hidden'; }
+function closeSalon(){ $('#salon').hidden = true; document.body.style.overflow = ''; if (location.hash === '#salon') history.replaceState(null, '', location.pathname); }
+$('#sclose').onclick = closeSalon;
+$('#salon').addEventListener('click', e => { if (e.target.id === 'salon') closeSalon(); });
+const chk = () => { if (location.hash === '#salon') openSalon(); };
+addEventListener('hashchange', chk); chk();
 })();
 </script>
 <script type="module" src="assets/site.js"></script>
