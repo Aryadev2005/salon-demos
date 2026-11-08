@@ -141,42 +141,73 @@ export async function heroChair(stage, opts = {}) {
   return { renderer: r };
 }
 
-/* ------------------------------------------------------------------ menu brush */
-export async function menuBrush(stage) {
+/* ------------------------------------------------------------------ menu tools (brush, dryer, scissors) */
+const TOOLS = {
+  scissors: { file: 'assets/scissors.glb', size: 1.38, rot: [.2, .35, -.65], fix(mt) { mt.metalness = 1; mt.roughness = .16; mt.color = new Color('#e4e4e4'); } },
+  dryer:    { file: 'assets/dryer.glb',    size: 1.3,  rot: [.12, .95, .05],  fix(mt) { if (mt.roughness < .1) mt.roughness = .14; } },
+  brush:    { file: 'assets/brush.glb',    size: 1.6,  rot: [.35, .5, -.45], fix(mt) {
+      if (/Aluminum/i.test(mt.name)) { mt.metalness = 1; mt.roughness = .12; mt.color = new Color('#d9d9d9'); }
+      if (/Glossy_Black/i.test(mt.name)) { mt.roughness = .18; mt.color = new Color('#0d0d0d'); }
+      if (/Matte/i.test(mt.name)) mt.roughness = .7; } },
+};
+export async function menuTools(stage, first = 'scissors') {
   const canvas = stage.querySelector('canvas');
   const r = makeRenderer(canvas);
   const scene = new Scene();
   const cam = new PerspectiveCamera(28, 1, .05, 50); cam.position.set(0, 0, 4.2);
-  const [env, gltf] = await Promise.all([envFor(r), loader.loadAsync(asset('assets/brush.glb'))]);
-  scene.environment = env; scene.environmentIntensity = 1.05;
-  gltf.scene.traverse(m => {
-    if (!m.isMesh) return;
-    const mt = m.material;
-    if (/Aluminum/i.test(mt.name)) { mt.metalness = 1; mt.roughness = .12; mt.color = new Color('#d9d9d9'); }
-    if (/Glossy_Black/i.test(mt.name)) { mt.roughness = .18; mt.color = new Color('#0d0d0d'); }
-    if (/Matte/i.test(mt.name)) { mt.roughness = .7; }
-  });
-  // longest axis -> 2 units
-  const b = new Box3().setFromObject(gltf.scene), s = b.getSize(new Vector3()), c = b.getCenter(new Vector3());
-  gltf.scene.position.sub(c);
-  const g = new Group(); g.add(gltf.scene); g.scale.setScalar(1.75 / Math.max(s.x, s.y, s.z));
-  const spin = new Group(); spin.add(g); scene.add(spin);
-  const shadow = new Mesh(new PlaneGeometry(2.4, .9), new MeshBasicMaterial({ map: radialTex('rgba(0,0,0,.35)'), transparent: true, depthWrite: false }));
-  shadow.position.set(0, -1.05, -.4); shadow.rotation.x = -Math.PI / 2.4; scene.add(shadow);
+  scene.environment = await envFor(r); scene.environmentIntensity = 1.05;
   const key = new DirectionalLight('#fff4e6', 1.2); key.position.set(2, 3, 3); scene.add(key);
-
+  const shadow = new Mesh(new PlaneGeometry(2.4, .9), new MeshBasicMaterial({ map: radialTex('rgba(0,0,0,.32)'), transparent: true, depthWrite: false }));
+  shadow.position.set(0, -1.05, -.4); shadow.rotation.x = -Math.PI / 2.4; scene.add(shadow);
   new ResizeObserver(() => sizeTo(r, cam, stage)).observe(stage); sizeTo(r, cam, stage);
-  const tgt = { y: .5, z: -.5, x: .35 }, cur = { y: -2, z: -.5, x: .35 };
-  const api = { set(i) { tgt.y = .5 + i * 1.05; tgt.z = (i % 2 ? .35 : -.55); tgt.x = .25 + (i % 3) * .12; } };
+
+  const cache = {};
+  const load = name => cache[name] || (cache[name] = loader.loadAsync(asset(TOOLS[name].file)).then(g => {
+    const T = TOOLS[name], seen = new Set();
+    g.scene.traverse(m => { if (m.isMesh && !seen.has(m.material)) { seen.add(m.material); T.fix(m.material); } });
+    const b = new Box3().setFromObject(g.scene), s = b.getSize(new Vector3()), c = b.getCenter(new Vector3());
+    g.scene.position.sub(c);
+    const inner = new Group(); inner.add(g.scene); inner.scale.setScalar(T.size / Math.max(s.x, s.y, s.z));
+    const outer = new Group(); outer.add(inner); outer.visible = false; scene.add(outer);
+    return { outer, base: T.rot, k: 0 };
+  }));
+  // each tool has its own spin target; the active one grows in, the others shrink out
+  let active = null, want = first, idx = 0;
+  const tgt = { y: 0, z: 0 }, cur = { y: -2, z: 0 };
+  const items = {};
+  async function show(name) {
+    want = name;
+    const it = await load(name); items[name] = it;
+    if (want !== name) return;
+    active = name; it.outer.visible = true;
+  }
+  const api = {
+    set(i, name) { idx = i; tgt.y = ((i % 3) - 1) * .55; tgt.z = i % 2 ? .18 : -.12; if (name && name !== want) show(name); },
+    preload() { Object.keys(TOOLS).forEach(load); },
+  };
+  await show(first);
+  let last = 0;
   visibleLoop(stage, t => {
-    for (const k in cur) cur[k] += (tgt[k] - cur[k]) * (RM ? 1 : .07);
-    spin.rotation.set(cur.x, cur.y, cur.z);
-    spin.position.y = RM ? 0 : Math.sin(t / 900) * .06;
+    const dt = Math.min(.1, last ? (t - last) / 1000 : .016); last = t;
+    const a = RM ? 1 : 1 - Math.exp(-dt * 4.5);
+    for (const k in cur) cur[k] += (tgt[k] - cur[k]) * a;
+    for (const [name, it] of Object.entries(items)) {
+      const on = name === active;
+      it.k += ((on ? 1 : 0) - it.k) * (RM ? 1 : 1 - Math.exp(-dt * (on ? 5 : 11)));
+      if (!on && it.k < .02) it.k = 0;
+      it.outer.visible = it.k > 0;
+      const e = it.k * it.k * (3 - 2 * it.k);
+      it.outer.scale.setScalar(Math.max(.001, e));
+      it.outer.rotation.set(it.base[0], it.base[1] + cur.y + (1 - e) * 2.2, it.base[2] + cur.z);
+      it.outer.position.y = (RM ? 0 : Math.sin(t / 900) * .06) - (1 - e) * .5;
+    }
+    shadow.material.opacity = .4 + .6 * (items[active] ? items[active].k : 0);
     r.render(scene, cam);
   });
   stage.classList.add('ready');
+  setTimeout(() => api.preload(), 1500);
   return api;
 }
 
-window.LJ3D = { heroChair, menuBrush };
+window.LJ3D = { heroChair, menuTools };
 window.dispatchEvent(new Event('lj3d'));

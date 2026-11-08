@@ -493,7 +493,7 @@ textarea.field{min-height:84px;resize:vertical}
       <div class="line"><p id="endline">Your chair is <em>waiting.</em></p><button class="btn ink" type="button" data-book>Book a chair <i>→</i></button></div>
       <div class="wm" aria-hidden="true">LUKE JAMES</div>
     </div>
-    <div class="legal"><span>© Luke James Hairdressing · Woolton, Liverpool</span><span>Hairbrush model: “hair bush” by <a href="https://sketchfab.com/3d-models/hair-bush-921f656b4c12475ab9657b0d5f413d57" target="_blank" rel="noopener">pibini modeling</a>, CC BY 4.0 · Studio light: Poly Haven, CC0</span><span>Demo site. Booking requests here aren't sent anywhere.</span></div>
+    <div class="legal"><span>© Luke James Hairdressing · Woolton, Liverpool</span><span>3D models: <a href="https://sketchfab.com/3d-models/hair-bush-921f656b4c12475ab9657b0d5f413d57" target="_blank" rel="noopener">“hair bush”</a> by pibini modeling (CC BY 4.0) · <a href="https://sketchfab.com/3d-models/barbers-scissors-8b9086eed6a048f8967044fa92a65c4a" target="_blank" rel="noopener">“Barber's scissors”</a> by DUCK_ (CC BY 4.0) · <a href="https://sketchfab.com/3d-models/hair-dryer-9a4bb1dacdd34654abc09367da5e03a4" target="_blank" rel="noopener">“HAIR DRYER”</a> by saud_artist (<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, simplified for the web) · Studio light: Poly Haven, CC0</span><span>Demo site. Booking requests here aren't sent anywhere.</span></div>
   </div>
 </section>
 </main>
@@ -529,9 +529,9 @@ const esc = s => String(s).replace(/[<>&"]/g, c => ({'<':'&lt;','>':'&gt;','&':'
 // p: [short, long] numbers, or a string. m: minutes blocked in the booking calendar. d: true when the duration is published.
 const MENU = [
  {cat:'Cuts & blow dry', items:[
-  {id:'cutblow', name:'Cut & blow dry', sub:'Wash, cut and finish', p:[38,45], m:60, d:true},
-  {id:'washblow', name:'Wash & blow dry', sub:'Wash and finish', p:[26,30], m:45},
-  {id:'drycut', name:'Dry cut', sub:'Cut only', p:[26,30], m:30},
+  {id:'cutblow', name:'Cut & blow dry', sub:'Wash, cut and finish', p:[38,45], m:60, d:true, tool:'scissors'},
+  {id:'washblow', name:'Wash & blow dry', sub:'Wash and finish', p:[26,30], m:45, tool:'dryer'},
+  {id:'drycut', name:'Dry cut', sub:'Cut only', p:[26,30], m:30, tool:'scissors'},
  ]},
  {cat:'Colour', colour:true, items:[
   {id:'roots', name:'Roots', sub:'Matrix root colour', p:[40,43], m:120},
@@ -542,11 +542,11 @@ const MENU = [
   {id:'balayage', name:'Balayage root smudge', sub:'Priced on quotation', p:['P.O.Q.','P.O.Q.'], m:150},
  ]},
  {cat:'Perms', colour:false, items:[
-  {id:'perm', name:'Perm', sub:'Cut and blow dry not included', p:[45,55], m:150},
+  {id:'perm', name:'Perm', sub:'Cut and blow dry not included', p:[45,55], m:150, tool:'dryer'},
  ]},
  {cat:'Gents', items:[
-  {id:'restyle', name:'Gents restyle', sub:'A new shape', p:[38,38], m:45},
-  {id:'gdry', name:'Gents dry cut', sub:'Tidy and shape', p:[22,22], m:30},
+  {id:'restyle', name:'Gents restyle', sub:'A new shape', p:[38,38], m:45, tool:'scissors'},
+  {id:'gdry', name:'Gents dry cut', sub:'Tidy and shape', p:[22,22], m:30, tool:'scissors'},
  ]},
 ];
 const ALL = MENU.flatMap(c => c.items.map(it => ({...it, cat:c.cat, colour:!!c.colour})));
@@ -590,12 +590,13 @@ $('#ticker').innerHTML = tk + tk;
 
 /* ---------- 3D (loaded as a module; the page works without it) */
 let brushApi = null;
+const toolOf = it => it.tool || 'brush';
 function start3D(){
   const L = window.LJ3D;
   L.heroChair($('#stage'), {track: $('#hero')}).catch(e => console.warn('chair', e));
   const bb = $('#brush');
   const io = new IntersectionObserver(([e]) => { if (!e.isIntersecting) return; io.disconnect();
-    L.menuBrush(bb).then(a => { brushApi = a; a.set(curRow); }).catch(e => console.warn('brush', e)); }, {rootMargin:'400px'});
+    L.menuTools(bb, toolOf(MENU[curCat].items[curRow])).then(a => { brushApi = a; a.set(curRow, toolOf(MENU[curCat].items[curRow])); }).catch(e => console.warn('brush', e)); }, {rootMargin:'400px'});
   io.observe(bb);
 }
 if (window.LJ3D) start3D(); else addEventListener('lj3d', start3D, {once:true});
@@ -623,7 +624,7 @@ function setRow(i, force){
   $$('.row').forEach((r, j) => r.classList.toggle('on', j === i));
   const it = MENU[curCat].items[i];
   $('#bnum').textContent = String(i+1).padStart(2,'0'); $('#bname').innerHTML = '<b>' + it.name + '</b>';
-  if (brushApi) brushApi.set(i + curCat * 3);
+  if (brushApi) brushApi.set(i + curCat * 3, toolOf(it));
 }
 renderRows(false);
 
