@@ -153,6 +153,16 @@ Both use generated placeholder images and made-up details.
 
 ## Live demos
 
+- `luke-james`: Luke James Hairdressing, 148 Hunts Cross Ave, Woolton, Liverpool L25 8SQ.
+  Bespoke light-theme page with real-time three.js: a grey salon chair (FurniMesh GLB, materials set in
+  code to match their chairs) lit by a Poly Haven studio HDRI, with a shadow that follows the pointer, drag to
+  turn and 3D-anchored labels, plus a hairbrush (Sketchfab "hair bush" by pibini modeling, CC BY 4.0, credited
+  in the footer) that turns to each row of the price list. Real prices from their price list (short/long toggle),
+  their own salon and colour photos, named reviews, stylist mirrors in their frame style, and a 4-step booking
+  drawer (request only, no payment; skin-test reminder on colour). The 3D source lives outside this repo: rebuild
+  `assets/site.js` with esbuild from three.js r187 (`three` + `GLTFLoader` + `HDRLoader`). `assets/studio.hdr` is the
+  1K EXR downsampled to 512x256. `assets/chair-poster.webp` shows while WebGL loads.
+
 - `house-of-henshaw`: House of Henshaw, 303 Aigburth Road, Liverpool L17. Bespoke page in their
   cream-and-gold brand with H monogram: lived-in colour hero film, Serenity headspa and testing,
   "Wife Day Care" reel, gift vouchers and shop, team, reviews, built-in 4-step booking (closed
