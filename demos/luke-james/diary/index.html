@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Full Diary · Luke James Hairdressing, Woolton</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%23151515%22/%3E%3Ctext x=%2232%22 y=%2242%22 font-family=%22Georgia%22 font-size=%2226%22 fill=%22%23c6a96e%22 text-anchor=%22middle%22%3ELJ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f5f3ef;--paper2:#ece9e3;--paper3:#e3dfd7;--white:#fbfaf8;
+  --ink:#151515;--ink2:#3a3936;--mute:#7f7c76;--line:#dcd7ce;
+  --gold:#a8874a;--gold2:#c6a96e;--goldsoft:#f6efe2;
+  --green:#4f7d5a;--greensoft:#e3eee2;--rose:#b4553b;--rosesoft:#f5e1da;
+  --serif:"Instrument Serif","Lora",Georgia,serif;--sans:"Inter Tight","Inter Display",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 15px/1.5 var(--sans);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;letter-spacing:-.01em}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+.wrap{max-width:1280px;margin:0 auto;padding:0 22px}
+.mono{font:500 10.5px/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase}
+
+/* header */
+header{background:var(--ink);color:#efece5}
+header .wrap{display:flex;align-items:center;gap:16px;padding-top:16px;padding-bottom:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:baseline;gap:14px}
+.brand b{font:400 22px/1 var(--serif);letter-spacing:.22em}
+.brand span{font:500 10px/1 var(--mono);letter-spacing:.24em;text-transform:uppercase;color:var(--gold2)}
+.sync{margin-left:auto;display:flex;align-items:center;gap:8px;font-size:13px;color:#bdb9b1;border:1px solid #333;padding:6px 12px;border-radius:999px}
+.dot{width:8px;height:8px;border-radius:50%;background:#7fbf8a;box-shadow:0 0 0 3px rgba(127,191,138,.25);animation:pulse 2s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 6px rgba(127,191,138,.05)}}
+nav{background:#1e1e1d;border-top:1px solid #2c2c2b;position:sticky;top:0;z-index:30}
+nav .wrap{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+nav button{background:none;border:0;color:#a9a59d;padding:13px 14px;border-bottom:2px solid transparent;white-space:nowrap;font-size:14px}
+nav button.on{color:#fff;border-color:var(--gold2)}
+nav button:hover{color:#fff}
+nav button .nw{font:500 9px/1 var(--mono);letter-spacing:.1em;background:var(--gold);color:#fff;border-radius:99px;padding:2px 5px;margin-left:6px;vertical-align:2px}
+
+/* kpis */
+.kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:22px 0}
+.kpi{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:15px 17px}
+.kpi .l{font:500 10px/1.4 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.kpi .v{font:400 34px/1.1 var(--serif);margin-top:4px}
+.kpi .s{font-size:12.5px;color:var(--mute)}
+.kpi.hi .v{color:var(--gold)}
+.flash{animation:flash 1.2s}
+@keyframes flash{0%{background:var(--goldsoft)}100%{background:var(--white)}}
+
+.tab{display:none;padding-bottom:40px}.tab.on{display:block}
+.grid2{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:20px;align-items:start}
+.card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:22px}
+.card+.card{margin-top:18px}
+.card h2{font-size:30px}
+.card .sub{color:var(--mute);font-size:14px;margin:4px 0 16px;max-width:60em}
+.kick{font:500 10.5px/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.kick::before{content:"";width:22px;height:1px;background:var(--gold)}
+.btn{border:1px solid var(--ink);background:var(--ink);color:#fff;padding:10px 16px;border-radius:999px;font-weight:500;font-size:14px;transition:.15s;white-space:nowrap}
+.btn:hover{background:#000}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--ink)}
+.btn.gold{background:var(--gold);border-color:var(--gold)}
+.btn.gold:hover{background:#94753c}
+.btn.sm{padding:6px 12px;font-size:12.5px}
+.btn:disabled{opacity:.4;cursor:default}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.between{justify-content:space-between}
+.pill{display:inline-block;font-size:11.5px;padding:3px 9px;border-radius:999px;background:var(--paper2);color:var(--ink2);font-weight:500;white-space:nowrap}
+.pill.r{background:var(--rosesoft);color:var(--rose)}
+.pill.g{background:var(--goldsoft);color:#7a5f2c}
+.pill.ok{background:var(--greensoft);color:var(--green)}
+.pill.d{background:var(--ink);color:#fff}
+.muted{color:var(--mute)}
+.note{font-size:13px;color:var(--mute);margin-top:14px}
+
+/* diary */
+.diary{overflow-x:auto;margin-top:6px}
+.dg{display:grid;grid-template-columns:88px repeat(15,minmax(46px,1fr));min-width:790px;row-gap:10px}
+.th{font:500 10px/1 var(--mono);color:var(--mute);padding-bottom:6px;border-bottom:1px solid var(--line)}
+.who{display:flex;flex-direction:column;justify-content:center;font:400 22px/1 var(--serif)}
+.who small{font:400 11.5px var(--sans);color:var(--mute);margin-top:4px}
+.ap{margin:0 2px;border-radius:12px;padding:8px 9px;font-size:12px;line-height:1.3;min-height:64px;background:var(--paper2);border:1px solid var(--line);position:relative;overflow:hidden;transition:.3s}
+.ap b{display:block;font-weight:600;font-size:12.5px}
+.ap .p{color:var(--mute)}
+.ap.open{background:repeating-linear-gradient(135deg,transparent 0 6px,rgba(168,135,74,.08) 6px 12px);border:1px dashed var(--gold2);color:var(--gold);display:grid;place-items:center;font-size:11px}
+.ap.cancel{background:var(--rosesoft);border-color:var(--rose);color:var(--rose)}
+.ap.filled{background:var(--goldsoft);border-color:var(--gold)}
+.ap.filled::after{content:"Refilled";position:absolute;top:6px;right:6px;font-size:9.5px;background:var(--gold);color:#fff;padding:1px 6px;border-radius:999px}
+.ap.web{border-color:var(--ink);background:#fff}
+.ap .flag{position:absolute;right:6px;bottom:6px}
+.legend{display:flex;gap:14px;font-size:12px;color:var(--mute);margin-top:14px;flex-wrap:wrap}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-2px;margin-right:4px}
+
+/* phone */
+.phone{background:var(--ink);border-radius:36px;padding:11px;box-shadow:0 30px 60px -30px rgba(21,21,21,.6);position:sticky;top:64px}
+.screen{background:#ece5dc;border-radius:26px;overflow:hidden;height:560px;display:flex;flex-direction:column}
+.ph{background:#1f2b25;color:#fff;padding:14px 16px;display:flex;gap:10px;align-items:center}
+.ph .av{width:36px;height:36px;border-radius:50%;background:var(--gold2);color:var(--ink);display:grid;place-items:center;font:400 15px var(--serif)}
+.ph b{font-weight:500;display:block;font-size:14px}.ph small{font-size:11px;opacity:.75}
+.msgs{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:8px}
+.m{max-width:86%;padding:8px 11px;border-radius:12px;font-size:13px;line-height:1.42;background:#fff;align-self:flex-start;box-shadow:0 1px 0 rgba(0,0,0,.06);animation:pop .25s}
+.m.me{align-self:flex-end;background:#dcf2d2}
+.m.sys{align-self:center;background:rgba(255,255,255,.55);box-shadow:none;color:var(--mute);font-size:11px;text-align:center;border-radius:8px}
+.m .to{display:block;font-size:10.5px;color:var(--gold);font-weight:600;margin-bottom:2px}
+.m .vch{display:block;margin:6px 0 2px;border-radius:10px;background:var(--ink);color:#fff;padding:12px;font-size:12px}
+.m .vch b{display:block;font:400 26px/1 var(--serif);color:var(--gold2);margin:4px 0}
+@keyframes pop{from{transform:translateY(6px);opacity:0}}
+.phone-cap{color:#a9a59d;font-size:12px;text-align:center;padding:10px 6px 4px}
+
+/* engine */
+.cand{display:grid;grid-template-columns:28px 1fr auto;gap:12px;align-items:center;padding:12px 0;border-top:1px solid var(--line)}
+.cand .n{font:400 22px var(--serif);color:var(--gold)}
+.cand .why{font-size:12.5px;color:var(--mute)}
+.cand.skip{opacity:.45}
+.bar{height:6px;background:var(--paper2);border-radius:6px;overflow:hidden;width:90px}
+.bar i{display:block;height:100%;background:var(--gold)}
+.score{font:400 24px var(--serif);text-align:right}
+.st{font-size:12px;text-align:right}
+.timer{height:3px;background:var(--gold2);transition:width linear;margin-top:6px}
+.log{font-size:13px;color:var(--mute);margin:12px 0 0;padding-left:18px}
+.log li{margin:3px 0}
+
+/* tables */
+.tablewrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;font:500 10px/1.4 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute);padding:8px 10px;border-bottom:1px solid var(--line)}
+td{padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:middle}
+td .nm{font:400 19px var(--serif)}
+td small{color:var(--mute)}
+
+/* misc */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.stat{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding:10px 0}
+.stat b{font:400 26px var(--serif)}
+.field{margin-bottom:14px}
+.field label{display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:6px;color:var(--ink2)}
+.field label b{font:400 19px var(--serif);color:var(--ink)}
+.in{width:100%;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:11px 12px}
+.in:focus{outline:none;border-color:var(--ink);background:#fff}
+input[type=range]{width:100%;accent-color:var(--gold)}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font-size:14px}
+.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.prod{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:#fff;margin-bottom:6px;cursor:pointer;transition:.2s;text-align:left;width:100%}
+.prod.on{border-color:var(--ink);background:var(--goldsoft)}
+.prod small{display:block;color:var(--mute);font-size:12px}
+.meter{display:grid;grid-template-columns:70px 1fr 50px;gap:10px;align-items:center;margin:8px 0;font-size:14px}
+.meter .bar{width:auto;height:10px}
+.vprev{background:var(--ink);color:#fff;border-radius:20px;padding:24px;position:relative;overflow:hidden;min-height:210px}
+.vprev::after{content:"";position:absolute;right:-40px;top:-40px;width:180px;height:180px;border-radius:50%;border:1px solid rgba(198,169,110,.35)}
+.vprev .amt{font:400 64px/1 var(--serif);color:var(--gold2);margin:10px 0}
+.vprev .msg{font:400 italic 20px/1.3 var(--serif);color:#e8e3d9;max-width:22em}
+.plan{border:1px solid var(--line);border-radius:16px;padding:18px;background:#fff}
+.plan .pr{font:400 40px/1 var(--serif);margin:6px 0}
+.plan ul{margin:8px 0 0;padding-left:18px;font-size:13.5px;color:var(--ink2)}
+.big{background:var(--ink);color:#fff;border-radius:18px;padding:24px}
+.big .v{font:400 58px/1 var(--serif);color:var(--gold2);margin:6px 0 12px}
+.big .ln{display:flex;justify-content:space-between;border-top:1px solid #333;padding:9px 0;font-size:14px;color:#bdb9b1}
+.big .ln b{color:#fff;font-weight:500}
+.sched{font:400 13.5px/1.5 var(--sans);border-left:2px solid var(--gold2);padding-left:14px;margin-top:8px}
+.sched div{padding:3px 0}
+.sched b{font-family:var(--mono);font-size:12px;margin-right:8px}
+footer{color:var(--mute);font-size:12.5px;text-align:center;padding:24px 20px 40px;border-top:1px solid var(--line)}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(120px);background:var(--ink);color:#fff;padding:12px 20px;border-radius:999px;font-size:14px;transition:.3s;z-index:50;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.toast.on{transform:translateX(-50%) translateY(0)}
+@media(max-width:1000px){.grid2,.cols{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,1fr)}.phone{position:static}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand"><b>LUKE JAMES</b><span>Full Diary</span></div>
+    <div class="sync"><span class="dot"></span> Woolton · Gill &amp; Kerry · Tue–Sat 9:30–5</div>
+  </div>
+</header>
+<nav><div class="wrap" id="tabs">
+  <button class="on" data-tab="today">Today &amp; refill</button>
+  <button data-tab="addons">Pre-visit add-ons<span class="nw">NEW</span></button>
+  <button data-tab="rebook">Rebook &amp; retail</button>
+  <button data-tab="regulars">Regulars &amp; first-timers</button>
+  <button data-tab="patch">Skin tests</button>
+  <button data-tab="vouchers">Vouchers &amp; memberships<span class="nw">XMAS</span></button>
+  <button data-tab="calls">Missed calls &amp; reviews</button>
+  <button data-tab="groups">Weddings &amp; proms</button>
+  <button data-tab="score">Stylist scorecard</button>
+  <button data-tab="calc">What it's worth</button>
+</div></nav>
+
+<main class="wrap">
+  <section class="kpis">
+    <div class="kpi"><div class="l">Chairs filled today</div><div class="v" id="kUtil">–</div><div class="s">Gill and Kerry</div></div>
+    <div class="kpi hi" id="kRecBox"><div class="l">Recovered this month</div><div class="v" id="kRec">£0</div><div class="s" id="kRecS">refills, add-ons, retail</div></div>
+    <div class="kpi"><div class="l">Rebooked before leaving</div><div class="v" id="kRebook">–</div><div class="s">this month, both stylists</div></div>
+    <div class="kpi"><div class="l">Christmas vouchers sold</div><div class="v" id="kVouch">£0</div><div class="s" id="kVouchS">paid upfront</div></div>
+    <div class="kpi"><div class="l">Skin tests outstanding</div><div class="v" id="kPatch">–</div><div class="s">colour in the next 10 days</div></div>
+  </section>
+
+  <div class="grid2">
+  <div id="tabarea">
+
+  <!-- TODAY -->
+  <section class="tab on" id="today">
+    <div class="card">
+      <div class="row between">
+        <div><div class="kick">Sample Tuesday</div><h2>Today's diary</h2><div class="sub">Two chairs, 9:30 to 5. Website bookings drop straight in.</div></div>
+        <div class="row"><button class="btn" id="btnCancel">▶ Simulate a late cancellation</button></div>
+      </div>
+      <div class="diary"><div class="dg" id="diary"></div></div>
+      <div class="legend">
+        <span><i style="background:var(--paper2);border:1px solid var(--line)"></i>Booked</span>
+        <span><i style="border:1px dashed var(--gold2)"></i>Open</span>
+        <span><i style="background:var(--rosesoft);border:1px solid var(--rose)"></i>Just cancelled</span>
+        <span><i style="background:var(--goldsoft);border:1px solid var(--gold)"></i>Refilled by Full Diary</span>
+        <span><span class="pill r">skin test</span> colour without a valid test</span>
+      </div>
+    </div>
+    <div class="card" id="webCard">
+      <div class="row between"><div><div class="kick">From lukejames website</div><h2>New online bookings</h2><div class="sub">Bookings made on the Luke James demo site in this browser, with their £10 deposits.</div></div><a class="btn ghost sm" href="../" target="_blank" rel="noopener">Open the site ↗</a></div>
+      <div id="webList"></div>
+    </div>
+    <div class="card" id="engine" style="display:none">
+      <div class="kick">The refill engine</div>
+      <h2 id="engTitle">Finding someone for the slot</h2>
+      <div class="sub" id="engSub"></div>
+      <div id="cands"></div>
+      <ol class="log" id="log"></ol>
+    </div>
+  </section>
+
+  <!-- ADD-ONS -->
+  <section class="tab" id="addons">
+    <div class="card">
+      <div class="row between">
+        <div><div class="kick">Increase what each booking is worth</div><h2>Tomorrow's add-on offers</h2>
+        <div class="sub">About 24 hours before each appointment, Full Diary offers one add-on that suits the booking, from the salon's own price list. Clients say yes more easily at home than in the chair.</div></div>
+        <button class="btn gold" id="btnAddons">Send tomorrow's offers</button>
+      </div>
+      <div class="tablewrap"><table><thead><tr><th>Client</th><th>Booking</th><th>Offer</th><th>Status</th></tr></thead><tbody id="addRows"></tbody></table></div>
+      <div class="cols" style="margin-top:18px">
+        <div><div class="stat"><span>Offers sent</span><b id="aSent">0</b></div><div class="stat"><span>Said yes</span><b id="aYes">0</b></div><div class="stat"><span>Added to tomorrow</span><b id="aVal">£0</b></div></div>
+        <div><p class="kick" style="margin-top:10px">Offer rules</p>
+          <label class="row" style="margin:6px 0"><input type="checkbox" class="rule" data-r="nplex" checked> Long hair or colour → NPlex bond treatment (£10–£15)</label>
+          <label class="row" style="margin:6px 0"><input type="checkbox" class="rule" data-r="toner" checked> Roots or highlights → toner refresh (£10–£15)</label>
+          <label class="row" style="margin:6px 0"><input type="checkbox" class="rule" data-r="rollers" checked> Blow dry → rollers or pin curls (+£6)</label>
+          <p class="note">Prices from the Luke James price list. Each client gets one offer at most, and nobody is offered the same thing twice in a row.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REBOOK & RETAIL -->
+  <section class="tab" id="rebook">
+    <div class="card">
+      <div class="kick">At the till</div><h2>Rebook before they leave</h2>
+      <div class="sub">When a client is checked out, Full Diary suggests their next visit from their own rhythm, on a quiet day where possible. One tap books it.</div>
+      <div class="cols">
+        <div>
+          <div class="field"><label>Checking out now</label><select class="in" id="coClient"></select></div>
+          <div id="coInfo"></div>
+          <div class="row" style="margin-top:12px" id="coBtns"></div>
+        </div>
+        <div>
+          <p class="kick">Rebook rate this month</p>
+          <div id="rbMeters"></div>
+          <p class="note">Salons that rebook at the chair keep regulars far longer than ones that wait for them to call. The "Regulars" tab is the backup for anyone who slips through.</p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="kick">After the visit</div><h2>Products your stylist used</h2>
+      <div class="sub">The stylist taps what they used. The client gets a "Gill recommends" message with a link, then a reorder reminder when the bottle is likely running low.</div>
+      <div class="cols">
+        <div id="prodList"></div>
+        <div>
+          <button class="btn gold" id="btnRec" disabled>Send recommendation</button>
+          <p class="kick" style="margin-top:22px">Reorder reminders queued</p>
+          <div class="tablewrap"><table><thead><tr><th>Client</th><th>Product</th><th>Reminder</th></tr></thead><tbody id="reorder"></tbody></table></div>
+        </div>
+      </div>
+      <p class="note">Product names are examples from Matrix (the salon's colour brand) and GHD (the salon is GHD certified). Retail prices are samples, set by the salon.</p>
+    </div>
+  </section>
+
+  <!-- REGULARS -->
+  <section class="tab" id="regulars">
+    <div class="card">
+      <div class="row between"><div><div class="kick">Before they drift</div><h2>Regulars due back</h2>
+      <div class="sub">Each client's own rhythm, learned from their history. Nudges suggest Tuesday and Wednesday first, the quietest days.</div></div>
+      <button class="btn" id="btnNudgeAll">Send all due nudges</button></div>
+      <div class="tablewrap"><table><thead><tr><th>Client</th><th>Usual rhythm</th><th>Last visit</th><th>Status</th><th>Worth a year</th><th></th></tr></thead><tbody id="regRows"></tbody></table></div>
+    </div>
+    <div class="card">
+      <div class="row between"><div><div class="kick">The biggest leak</div><h2>First-timers, second visit</h2>
+      <div class="sub">Most salons lose the majority of first-time clients after one visit. Each new client gets a thank-you and, three weeks later, a second-visit invitation on a quiet day.</div></div>
+      <button class="btn" id="btnFirstAll">Send second-visit invites</button></div>
+      <div class="tablewrap"><table><thead><tr><th>New client</th><th>First visit</th><th>With</th><th>Came back?</th><th></th></tr></thead><tbody id="ftRows"></tbody></table></div>
+      <p class="note">Suggested second-visit offer: a free NPlex add-on on a Tuesday or Wednesday. The salon chooses the offer.</p>
+    </div>
+  </section>
+
+  <!-- PATCH TESTS -->
+  <section class="tab" id="patch">
+    <div class="card">
+      <div class="row between"><div><div class="kick">Protect the biggest bookings</div><h2>Skin tests for colour</h2>
+      <div class="sub">The salon requires a skin test 48 hours before colour. Full Diary checks every colour booking in the next 10 days, reminds anyone without a valid test, and keeps a record.</div></div>
+      <label class="row"><input type="checkbox" id="autoPatch" checked> Send reminders automatically</label></div>
+      <div class="tablewrap"><table><thead><tr><th>Client</th><th>Colour booking</th><th>Last skin test</th><th>Status</th><th></th></tr></thead><tbody id="patchRows"></tbody></table></div>
+    </div>
+    <div class="card">
+      <div class="kick">Compliance record</div><h2>Skin test log</h2>
+      <div class="sub">Every reminder, test and result, timestamped. Exportable if anyone ever asks.</div>
+      <div class="tablewrap"><table><thead><tr><th>When</th><th>Client</th><th>Event</th></tr></thead><tbody id="patchLog"></tbody></table></div>
+      <div class="row" style="margin-top:12px"><button class="btn ghost sm" id="btnCsv">Download log (CSV)</button></div>
+    </div>
+  </section>
+
+  <!-- VOUCHERS & MEMBERSHIPS -->
+  <section class="tab" id="vouchers">
+    <div class="card">
+      <div class="kick">Money upfront, right now</div><h2>Christmas gift vouchers</h2>
+      <div class="sub">A voucher shop on the Luke James site. Pay online, and the voucher is delivered by WhatsApp on the day the giver chooses, Christmas morning included.</div>
+      <div class="cols">
+        <div>
+          <div class="field"><label>Amount</label><div class="chips" id="vAmt"></div></div>
+          <div class="field"><label>For</label><input class="in" id="vTo" value="Mum"></div>
+          <div class="field"><label>Their mobile</label><input class="in" id="vPhone" value="07700 900456"></div>
+          <div class="field"><label>Message</label><input class="in" id="vMsg" value="Treat yourself to a proper colour. Love, Sarah x"></div>
+          <div class="field"><label>Deliver</label><div class="chips" id="vWhen"></div></div>
+          <button class="btn gold" id="btnVoucher">Buy &amp; send voucher</button>
+        </div>
+        <div>
+          <div class="vprev"><span class="mono" style="color:var(--gold2)">Luke James Hairdressing · Gift</span><div class="amt" id="vpAmt">£50</div><div class="msg" id="vpMsg"></div><div class="mono" style="color:#8f8b83;margin-top:18px" id="vpCode">LJ-XMAS-····</div></div>
+          <div class="stat" style="margin-top:14px"><span>Sold this season</span><b id="vSold">£0</b></div>
+          <div class="stat"><span>Vouchers</span><b id="vCount">0</b></div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="kick">Regular, predictable income</div><h2>Memberships</h2>
+      <div class="sub">Monthly plans paid by card. Members book through Full Diary, which steers them onto quiet days first.</div>
+      <div class="cols">
+        <div class="plan"><span class="pill g">Suggested</span><h3 style="font-size:26px;margin-top:8px">Blow-dry Club</h3><div class="pr">£89<small class="muted" style="font:400 14px var(--sans)"> / month</small></div>
+          <ul><li>4 wash &amp; blow dries a month (short hair £26 each, so £104 at full price)</li><li>Tuesday to Thursday, booked through WhatsApp</li><li>10% off add-ons</li></ul>
+          <div class="row" style="margin-top:12px"><button class="btn sm" data-join="club">Add a member</button><span class="muted" id="clubN"></span></div></div>
+        <div class="plan"><span class="pill g">Suggested</span><h3 style="font-size:26px;margin-top:8px">Colour Plan</h3><div class="pr">£35<small class="muted" style="font:400 14px var(--sans)"> / month</small></div>
+          <ul><li>Roots every 6 weeks (from £40), spread into monthly payments</li><li>Skin test tracked automatically</li><li>Free toner every third visit</li></ul>
+          <div class="row" style="margin-top:12px"><button class="btn sm" data-join="colour">Add a member</button><span class="muted" id="colourN"></span></div></div>
+      </div>
+      <div class="stat" style="margin-top:14px"><span>Monthly recurring income</span><b id="mrr">£0</b></div>
+      <p class="note">Plan prices are suggestions built from the salon's own prices, for the owner to set.</p>
+    </div>
+  </section>
+
+  <!-- MISSED CALLS & REVIEWS -->
+  <section class="tab" id="calls">
+    <div class="card">
+      <div class="kick">Bring in new clients</div><h2>Missed-call text-back</h2>
+      <div class="sub">When the phone rings during a colour and nobody can answer, the caller gets a WhatsApp from the salon within seconds, with the next open slots.</div>
+      <div class="row"><button class="btn" id="btnMissed">▶ Simulate a missed call at 11:42</button><button class="btn ghost" id="btnOOH">▶ Simulate a 10pm message</button></div>
+      <div class="stat" style="margin-top:14px"><span>Calls saved this month</span><b id="callsSaved">0</b></div>
+    </div>
+    <div class="card">
+      <div class="kick">After a good visit</div><h2>Reviews &amp; referrals</h2>
+      <div class="sub">Clients who left happy are asked for a Google review the same evening, plus a referral link: £5 off for them and for the friend they send.</div>
+      <div class="tablewrap"><table><thead><tr><th>Client</th><th>Visit today</th><th>Review</th><th>Referral</th></tr></thead><tbody id="revRows"></tbody></table></div>
+      <div class="cols" style="margin-top:12px"><div class="stat"><span>Review requests sent</span><b id="revSent">0</b></div><div class="stat"><span>Referral links shared</span><b id="refSent">0</b></div></div>
+    </div>
+  </section>
+
+  <!-- GROUPS -->
+  <section class="tab" id="groups">
+    <div class="card">
+      <div class="kick">Big bookings, handled properly</div><h2>Wedding &amp; prom quote builder</h2>
+      <div class="sub">Build a quote for the whole party, with timings worked back from the ceremony and a deposit to hold the morning. Sent as one tidy WhatsApp, not twenty Instagram DMs.</div>
+      <div class="cols">
+        <div>
+          <div class="field"><label>Occasion</label><div class="chips" id="gType"></div></div>
+          <div class="field"><label>Ready by</label><input class="in" type="time" id="gReady" value="12:30"></div>
+          <div id="gPeople"></div>
+          <div class="row"><button class="btn ghost sm" id="gAdd">+ Add person</button></div>
+          <div class="field" style="margin-top:14px"><label>Deposit to hold the date <b id="gDepPct">25%</b></label><input type="range" id="gDep" min="10" max="50" step="5" value="25"></div>
+        </div>
+        <div>
+          <div class="big"><div class="mono" style="color:#a9a59d">Quote total</div><div class="v" id="gTotal">£0</div>
+            <div class="ln"><span>Deposit to hold the date</span><b id="gDeposit">£0</b></div>
+            <div class="ln"><span>Chairs needed</span><b>Gill &amp; Kerry</b></div>
+            <div class="ln"><span>Start</span><b id="gStart">–</b></div></div>
+          <div class="sched" id="gSched"></div>
+          <div class="row" style="margin-top:14px"><button class="btn gold" id="gSend">Send quote by WhatsApp</button></div>
+          <p class="note">Occasion styling isn't on the public price list, so it's priced per quote here (sample £45). Everything else uses the list.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCORECARD -->
+  <section class="tab" id="score">
+    <div class="card">
+      <div class="kick">For the owner</div><h2>Stylist scorecard</h2>
+      <div class="sub">This month so far. Updates as you use the other tabs: rebooks, add-ons and retail are credited to the stylist.</div>
+      <div class="tablewrap"><table><thead><tr><th>Stylist</th><th>Average spend</th><th>Rebook rate</th><th>Add-ons</th><th>Retail</th><th>Gaps refilled</th></tr></thead><tbody id="scoreRows"></tbody></table></div>
+      <p class="note">Starting figures are sample data. In use, they come from the diary and the till.</p>
+    </div>
+  </section>
+
+  <!-- CALC -->
+  <section class="tab" id="calc">
+    <div class="card">
+      <div class="kick">The empty chair calculator</div><h2>What Full Diary could add for Luke James</h2>
+      <div class="sub">Move the sliders to match a normal week. The defaults are cautious.</div>
+      <div class="cols">
+        <div>
+          <div class="field"><label>Appointments a week <b id="o1"></b></label><input type="range" id="i1" min="20" max="120" value="55"></div>
+          <div class="field"><label>Average appointment <b id="o2"></b></label><input type="range" id="i2" min="20" max="90" value="42"></div>
+          <div class="field"><label>Late cancellations and no-shows a week <b id="o3"></b></label><input type="range" id="i3" min="0" max="10" value="3"></div>
+          <div class="field"><label>Missed calls a week <b id="o4"></b></label><input type="range" id="i4" min="0" max="30" value="8"></div>
+          <div class="field"><label>Christmas vouchers sold <b id="o5"></b></label><input type="range" id="i5" min="0" max="150" value="40"></div>
+          <div class="field"><label>Members after six months <b id="o6"></b></label><input type="range" id="i6" min="0" max="60" value="12"></div>
+          <p class="note">Assumes 60% of cancelled slots refilled, 12% of clients take a pre-visit add-on at £12, 20% of missed callers book, average voucher £50 and members at £60 a month. Planning estimates, not guarantees.</p>
+        </div>
+        <div class="big">
+          <div class="mono" style="color:#a9a59d">Estimated extra a year</div>
+          <div class="v" id="cTotal">£0</div>
+          <div class="ln"><span>Refilled cancellations</span><b id="c1"></b></div>
+          <div class="ln"><span>Pre-visit add-ons</span><b id="c2"></b></div>
+          <div class="ln"><span>Missed calls turned into bookings</span><b id="c3"></b></div>
+          <div class="ln"><span>Christmas vouchers (upfront)</span><b id="c4"></b></div>
+          <div class="ln"><span>Memberships</span><b id="c5"></b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+
+  <aside>
+    <div class="phone">
+      <div class="screen">
+        <div class="ph"><div class="av">LJ</div><div><b>Luke James Hairdressing</b><small>WhatsApp Business · automated</small></div></div>
+        <div class="msgs" id="msgs"><div class="m sys">Messages Full Diary sends from the salon's number appear here.</div></div>
+      </div>
+      <div class="phone-cap">What clients see. Every message comes from the salon's own WhatsApp.</div>
+    </div>
+  </aside>
+  </div>
+</main>
+
+<footer>Full Diary demo for Luke James Hairdressing, 148 Hunts Cross Ave, Woolton. Prices and hours are the salon's; client names and figures are sample data.</footer>
+<div class="toast" id="toast"></div>
+
+<script>
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const gbp=n=>'£'+Math.round(n).toLocaleString('en-GB');
+const esc=s=>String(s).replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
+const toast=t=>{const e=$('#toast');e.textContent=t;e.classList.add('on');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('on'),2800)};
+const wait=ms=>new Promise(r=>setTimeout(r,ms));
+const slotTime=i=>{const m=9*60+30+i*30,h=Math.floor(m/60);return ((h+11)%12+1)+':'+String(m%60).padStart(2,'0')};
+const DAYN=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+const today=new Date(); today.setHours(12,0,0,0);
+const addDays=n=>{const d=new Date(today);d.setDate(d.getDate()+n);return d};
+const nextOpen=(from,quiet)=>{let d=new Date(from);for(let i=0;i<14;i++){const w=d.getDay();if(w>=2&&w<=6&&(!quiet||w===2||w===3))return d;d.setDate(d.getDate()+1)}return d};
+const dlabel=d=>d.toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short'});
+const dlong=d=>d.toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long'});
+
+/* ---------- state shared across tabs */
+const S={recovered:0,parts:{refill:0,addon:0,retail:0},stylist:{
+  Gill:{spend:46,visits:58,rebooked:36,addons:4,retail:62,refills:1},
+  Kerry:{spend:51,visits:44,rebooked:24,addons:3,retail:38,refills:0}}};
+function credit(kind,amt,who){S.recovered+=amt;S.parts[kind]+=amt;$('#kRec').textContent=gbp(S.recovered);
+  $('#kRecS').textContent=`refills ${gbp(S.parts.refill)} · add-ons ${gbp(S.parts.addon)} · retail ${gbp(S.parts.retail)}`;
+  const b=$('#kRecBox');b.classList.remove('flash');void b.offsetWidth;b.classList.add('flash');
+  if(who&&S.stylist[who]){const st=S.stylist[who];if(kind==='addon')st.addons++;if(kind==='retail')st.retail+=amt;if(kind==='refill')st.refills++;}
+  renderScore();}
+
+/* tabs */
+$$('#tabs button').forEach(b=>b.onclick=()=>{$$('#tabs button').forEach(x=>x.classList.toggle('on',x===b));$$('.tab').forEach(t=>t.classList.toggle('on',t.id===b.dataset.tab));scrollTo({top:0,behavior:'smooth'})});
+
+/* phone */
+function msg(text,{me=false,sys=false,to=''}={}){const m=document.createElement('div');m.className='m'+(me?' me':'')+(sys?' sys':'');
+  m.innerHTML=(to?`<span class="to">${to}</span>`:'')+text;$('#msgs').appendChild(m);$('#msgs').scrollTop=1e6;}
+
+/* ---------- TODAY: diary */
+const SLOTS=15;
+const staff=[
+ {name:'Gill',role:'Cuts & colour',appts:[
+  {s:0,l:2,c:'Margaret E',sv:'Cut & blow dry',p:38},{s:2,l:5,c:'Joanne K',sv:'All-over colour',p:53,colour:true,test:true},
+  {s:8,l:2,c:'Paul R',sv:'Gents restyle',p:38},{s:11,l:2,c:'Sarah W',sv:'Wash & blow dry',p:30}]},
+ {name:'Kerry',role:'Colour & foils',appts:[
+  {s:0,l:5,c:'Helen T',sv:'Foils, half head',p:50,colour:true,test:true},{s:5,l:2,c:'Debbie L',sv:'Cut & blow dry',p:45,id:'cx'},
+  {s:8,l:4,c:'Lisa M',sv:'Roots',p:43,colour:true,test:false}]}
+];
+function renderDiary(){
+  let h='<div class="th"></div>';for(let i=0;i<SLOTS;i++)h+=`<div class="th">${i%2===0?slotTime(i):''}</div>`;
+  staff.forEach((st,r)=>{h+=`<div class="who" style="grid-row:${r+2}">${st.name}<small>${st.role}</small></div>`;
+    const taken=new Array(SLOTS).fill(false);
+    st.appts.forEach(a=>{for(let k=0;k<a.l;k++)taken[a.s+k]=true;const cls=a.state==='cancel'?'cancel':a.state==='filled'?'filled':a.web?'web':'';
+      h+=`<div class="ap ${cls}" style="grid-row:${r+2};grid-column:${a.s+2}/span ${a.l}"><b>${esc(a.c)}</b>${a.sv}<div class="p">${slotTime(a.s)} · £${a.p}${a.web?' · web':''}</div>${a.colour&&!a.test?'<span class="pill r flag">skin test</span>':''}</div>`});
+    let i=0;while(i<SLOTS){if(taken[i]){i++;continue}let j=i;while(j<SLOTS&&!taken[j])j++;h+=`<div class="ap open" style="grid-row:${r+2};grid-column:${i+2}/span ${j-i}">Open · ${(j-i)*30} min</div>`;i=j}});
+  $('#diary').innerHTML=h;
+  let used=0;staff.forEach(s=>s.appts.forEach(a=>{if(a.state!=='cancel')used+=a.l}));
+  $('#kUtil').textContent=Math.round(used/(SLOTS*staff.length)*100)+'%';
+}
+/* website bookings made on ../ in this browser */
+function renderWeb(){
+  let list=[];try{list=JSON.parse(localStorage.getItem('lj-bookings-v1'))||[]}catch(e){}
+  list=list.filter(b=>b.status==='confirmed').sort((a,b)=>(a.date+a.start).localeCompare(b.date+b.start));
+  if(!list.length){$('#webList').innerHTML='<p class="note" style="margin-top:0">None yet. Book a chair on the Luke James site in this browser and it appears here, deposit and all.</p>';return}
+  const f=m=>{const h=Math.floor(m/60);return ((h+11)%12+1)+':'+String(m%60).padStart(2,'0')};
+  $('#webList').innerHTML='<div class="tablewrap"><table><thead><tr><th>Client</th><th>When</th><th>With</th><th>Deposit</th><th>Ref</th></tr></thead><tbody>'+list.map(b=>`<tr><td><span class="nm">${esc(b.name)}</span><br><small>${esc(b.phone)}</small></td><td>${dlabel(new Date(b.date+'T12:00:00'))}, ${f(b.start)}</td><td>${esc(b.staff)}</td><td>${b.paid==='pending'?'<span class="pill g">to check</span>':'<span class="pill ok">£'+b.deposit+' paid</span>'}</td><td class="mono">${esc(b.ref)}</td></tr>`).join('')+'</tbody></table></div>';
+}
+
+/* refill engine */
+let running=false;
+const cands=[
+ {n:'Claire B',why:'Cut & blow dry with Kerry · 2 weeks past her usual 6-week rhythm · lives in Woolton',sc:93},
+ {n:'Natalie O',why:'On the waitlist for "any Tuesday before 2" · replies to 8 in 10 offers',sc:86,reply:'Yes please!! 🙌'},
+ {n:'Grace H',why:'Due a trim next week · works nearby on Tuesdays',sc:70},
+ {n:'Emma J',why:'Skipped: only ever books Saturdays',skip:true},
+ {n:'Rachel T',why:'Skipped: already offered a slot twice this month',skip:true}];
+function countdown(i,ms){return new Promise(r=>{const t=$('#tm'+i);t.style.transition='none';t.style.width='100%';void t.offsetWidth;t.style.transition=`width ${ms}ms linear`;t.style.width='0';setTimeout(r,ms)})}
+const log=t=>{const li=document.createElement('li');li.textContent=t;$('#log').appendChild(li)};
+$('#btnCancel').onclick=async()=>{
+  if(running)return;running=true;$('#btnCancel').disabled=true;
+  const a=staff[1].appts.find(x=>x.id==='cx');a.state='cancel';renderDiary();
+  msg('Debbie L cancelled 12:00 with Kerry (1 hr). 2 hrs 20 min notice.',{sys:true});
+  $('#engine').style.display='block';$('#log').innerHTML='';
+  $('#engTitle').textContent='Refilling Kerry · 12:00 to 1:00';
+  $('#engSub').textContent='Ranking every client who could realistically take this slot, then offering it to one person at a time, so nobody gets a "sorry, it\'s gone" message.';
+  $('#cands').innerHTML=cands.map((c,i)=>`<div class="cand ${c.skip?'skip':''}"><div class="n">${c.skip?'–':i+1}</div><div><b>${c.n}</b><div class="why">${c.why}</div><div class="timer" id="tm${i}" style="width:0"></div></div><div><div class="score">${c.skip?'':c.sc}</div><div class="st" id="st${i}">${c.skip?'':'<div class="bar"><i style="width:'+c.sc+'%"></i></div>'}</div></div></div>`).join('');
+  $('#engine').scrollIntoView({behavior:'smooth',block:'start'});
+  log('Cancellation picked up straight away.');await wait(900);
+  log('Scored 19 waitlist and lapsed clients. Skipped 2 who don\'t fit.');await wait(800);
+  $('#st0').innerHTML='<span class="pill g">Offer sent</span>';
+  msg('Hi Claire, a slot just opened with Kerry <b>today at 12:00</b> for your cut &amp; blow dry. Want it? Reply YES and it\'s yours. Held for 15 minutes.',{me:true,to:'To Claire B'});
+  log('Offered to Claire first. Held for 15 minutes (5 seconds in this demo).');
+  await countdown(0,5000);$('#st0').innerHTML='<span class="pill">No reply</span>';log('No reply from Claire. Released and moved on.');msg('Offer to Claire expired',{sys:true});
+  await wait(500);$('#st1').innerHTML='<span class="pill g">Offer sent</span>';
+  msg('Hi Natalie, you asked for a Tuesday before 2. Kerry has <b>12:00 today</b> free. Reply YES to grab it.',{me:true,to:'To Natalie O'});log('Offered to Natalie.');
+  await countdown(1,2200);msg(cands[1].reply,{to:'Natalie O'});await wait(700);
+  msg('Lovely! You\'re booked with Kerry today at 12:00 ✨ See you on Hunts Cross Avenue. Reply C if anything changes.',{me:true,to:'To Natalie O'});
+  $('#st1').innerHTML='<span class="pill d">Booked</span>';Object.assign(a,{state:'filled',c:'Natalie O',sv:'Cut & blow dry',p:45});renderDiary();
+  log('Booked in for Natalie. Slot refilled in 4 minutes, no phone calls.');
+  $('#engTitle').textContent='Refilled: £45 saved';credit('refill',45,'Kerry');toast('Slot refilled. £45 recovered.');running=false;
+};
+
+/* ---------- ADD-ONS */
+const rules={nplex:true,toner:true,rollers:true};
+const tomorrow=nextOpen(addDays(1));
+const adds=[
+ {n:'Fiona M',b:'Cut & blow dry, long',who:'Gill',t:'9:30',kind:['nplex'],reply:true},
+ {n:'Joanne P',b:'Roots, long',who:'Kerry',t:'10:00',kind:['toner','nplex'],reply:true},
+ {n:'Sophie A',b:'Wash & blow dry',who:'Gill',t:'11:30',kind:['rollers'],reply:false},
+ {n:'Linda C',b:'Foils, half head',who:'Kerry',t:'12:30',kind:['toner'],reply:true},
+ {n:'Mark D',b:'Gents restyle',who:'Gill',t:'2:00',kind:[]},
+ {n:'Amy R',b:'All-over colour, long',who:'Kerry',t:'2:30',kind:['nplex','toner'],reply:false}];
+const OFFERS={nplex:{name:'NPlex bond treatment',price:'from £10',val:12.5,line:'an NPlex bond treatment (from £10) to keep it strong and glossy'},
+ toner:{name:'Toner refresh',price:'from £10',val:12.5,line:'a toner refresh (from £10) to keep the tone fresh'},
+ rollers:{name:'Rollers or pin curls',price:'+£6',val:6,line:'rollers or pin curls for extra bounce (+£6)'}};
+const pick=a=>a.kind.find(k=>rules[k]);
+function renderAdds(){
+  $('#addRows').innerHTML=adds.map(a=>{const k=pick(a),o=k&&OFFERS[k];
+    return `<tr><td><span class="nm">${a.n}</span><br><small>with ${a.who}</small></td><td>${a.b}<br><small>${dlabel(tomorrow)}, ${a.t}</small></td>
+    <td>${o?`${o.name} <small>${o.price}</small>`:'<small>No offer fits (gents restyle)</small>'}</td>
+    <td>${a.st==='yes'?'<span class="pill ok">Added ✓</span>':a.st==='no'?'<span class="pill">No thanks</span>':a.st==='sent'?'<span class="pill g">Sent</span>':o?'<span class="pill">Ready</span>':''}</td></tr>`}).join('');
+}
+$$('.rule').forEach(c=>c.onchange=()=>{rules[c.dataset.r]=c.checked;renderAdds()});
+$('#btnAddons').onclick=async()=>{
+  const todo=adds.filter(a=>!a.st&&pick(a));if(!todo.length)return toast('All of tomorrow\'s offers are sent.');
+  $('#btnAddons').disabled=true;msg(`Sending tomorrow's add-on offers (${todo.length})`,{sys:true});
+  let sent=+$('#aSent').textContent,yes=+$('#aYes').textContent,val=+$('#aVal').textContent.replace(/\D/g,'');
+  for(const a of todo){const o=OFFERS[pick(a)];a.st='sent';renderAdds();sent++;$('#aSent').textContent=sent;
+    msg(`Hi ${a.n.split(' ')[0]}, looking forward to seeing you tomorrow at ${a.t} with ${a.who}. Would you like to add ${o.line}? Reply YES and we'll have it ready.`,{me:true,to:'To '+a.n});await wait(650);}
+  await wait(500);
+  for(const a of todo){if(a.reply){msg('YES 😊',{to:a.n});a.st='yes';yes++;const o=OFFERS[pick(a)];val+=o.val;credit('addon',o.val,a.who);}else a.st='no';renderAdds();await wait(450);}
+  $('#aYes').textContent=yes;$('#aVal').textContent=gbp(val);
+  msg(`${todo.filter(a=>a.reply).length} add-ons booked into tomorrow's diary. Stylists can see them on the day.`,{sys:true});
+  toast(`${gbp(todo.filter(a=>a.reply).reduce((s,a)=>s+OFFERS[pick(a)].val,0))} added to tomorrow before anyone walks in.`);
+};
+
+/* ---------- REBOOK & RETAIL */
+const checkout=[
+ {n:'Margaret E',who:'Gill',sv:'Cut & blow dry',weeks:4},{n:'Joanne K',who:'Gill',sv:'All-over colour',weeks:6},
+ {n:'Helen T',who:'Kerry',sv:'Foils, half head',weeks:8},{n:'Paul R',who:'Gill',sv:'Gents restyle',weeks:5}];
+$('#coClient').innerHTML=checkout.map((c,i)=>`<option value="${i}">${c.n} · ${c.sv} with ${c.who}</option>`).join('');
+let co=checkout[0],selProds=new Set();
+function renderCo(){
+  const due=addDays(co.weeks*7),q=nextOpen(new Date(due.getTime()-2*864e5),true),alt=nextOpen(due);
+  $('#coInfo').innerHTML=`<div class="stat"><span>Usual rhythm</span><b>every ${co.weeks} weeks</b></div><div class="stat"><span>Next due</span><b>${dlabel(due)}</b></div>`;
+  $('#coBtns').innerHTML=co.done?`<span class="pill ok">Rebooked: ${co.done}</span>`:
+   `<button class="btn gold" data-d="${q.toISOString()}">${dlabel(q)}, 10:00 <small style="opacity:.75">· quiet day</small></button><button class="btn ghost" data-d="${alt.toISOString()}">${dlabel(alt)}, 2:30</button>`;
+  $$('#coBtns button').forEach(b=>b.onclick=()=>{const d=new Date(b.dataset.d);co.done=b.textContent.split('·')[0].trim();S.stylist[co.who].rebooked++;S.stylist[co.who].visits++;
+    msg(`Thanks ${co.n.split(' ')[0]}! You're booked back in with ${co.who} on <b>${dlong(d)}</b>. We'll remind you the day before.`,{me:true,to:'To '+co.n});
+    toast(`${co.n} rebooked with ${co.who}.`);renderCo();renderRb();renderScore();});
+  renderProds();
+}
+$('#coClient').onchange=e=>{co=checkout[+e.target.value];selProds.clear();renderCo()};
+function renderRb(){
+  let tr=0,tv=0;$('#rbMeters').innerHTML=Object.entries(S.stylist).map(([n,s])=>{tr+=s.rebooked;tv+=s.visits;const p=Math.round(s.rebooked/s.visits*100);
+    return `<div class="meter"><span>${n}</span><div class="bar"><i style="width:${p}%"></i></div><b>${p}%</b></div>`}).join('');
+  $('#kRebook').textContent=Math.round(tr/tv*100)+'%';
+}
+const PRODS=[
+ {id:'tr-sh',n:'Matrix Total Results shampoo',d:'Matched to colour-treated hair',p:16,weeks:8},
+ {id:'tr-mask',n:'Matrix Total Results mask',d:'Weekly treatment between visits',p:22,weeks:10},
+ {id:'bond',n:'Matrix bond-care leave-in',d:'After colour or lightening',p:19,weeks:8},
+ {id:'ghd',n:'GHD heat protect spray',d:'Before any heat styling',p:18,weeks:12}];
+function renderProds(){
+  $('#prodList').innerHTML=PRODS.map(p=>`<button class="prod ${selProds.has(p.id)?'on':''}" data-p="${p.id}"><span><b style="font-weight:500">${p.n}</b><small>${p.d}</small></span><span class="mono">£${p.p}</span></button>`).join('');
+  $$('.prod').forEach(b=>b.onclick=()=>{selProds.has(b.dataset.p)?selProds.delete(b.dataset.p):selProds.add(b.dataset.p);renderProds()});
+  $('#btnRec').disabled=!selProds.size;
+}
+const reorders=[];
+$('#btnRec').onclick=()=>{
+  const ps=PRODS.filter(p=>selProds.has(p.id));
+  msg(`Hi ${co.n.split(' ')[0]}, ${co.who} here. Today I used ${ps.map(p=>'<b>'+p.n+'</b>').join(' and ')} on your hair. To keep it looking like it did walking out, you can grab ${ps.length>1?'them':'it'} here: lukejames.co/shop/${co.n.split(' ')[0].toLowerCase()} 🛍️`,{me:true,to:'To '+co.n});
+  const bought=ps[0];credit('retail',bought.p,co.who);
+  ps.forEach(p=>reorders.unshift({c:co.n,p:p.n,d:addDays(p.weeks*7)}));
+  $('#reorder').innerHTML=reorders.map(r=>`<tr><td>${r.c}</td><td>${r.p}</td><td>${dlabel(r.d)}</td></tr>`).join('');
+  selProds.clear();renderProds();toast(`Recommendation sent. ${co.n.split(' ')[0]} bought the ${bought.n.replace('Matrix ','')}, £${bought.p}.`);
+};
+
+/* ---------- REGULARS & FIRST-TIMERS */
+const regs=[
+ {n:'Pauline S',st:'Gill',w:6,ago:58,sp:45},{n:'Jackie W',st:'Kerry',w:8,ago:71,sp:53},
+ {n:'Carol N',st:'Gill',w:4,ago:30,sp:38},{n:'Denise F',st:'Kerry',w:6,ago:66,sp:50},
+ {n:'Tony B',st:'Gill',w:5,ago:20,sp:38},{n:'Wendy H',st:'Gill',w:10,ago:96,sp:53}];
+function regStatus(r){const over=r.ago-r.w*7;return over>21?['Drifting','r',over]:over>0?['Due now','g',over]:['On track','',over]}
+function renderRegs(){
+  const rows=regs.map(r=>({r,s:regStatus(r)})).sort((a,b)=>b.s[2]-a.s[2]);
+  $('#regRows').innerHTML=rows.map(({r,s})=>`<tr><td><span class="nm">${r.n}</span><br><small>with ${r.st}</small></td><td>Every ${r.w} weeks</td><td>${r.ago} days ago</td>
+   <td><span class="pill ${s[1]}">${s[0]}${s[2]>0?' · '+s[2]+'d late':''}</span></td><td>${gbp(r.sp*52/r.w)}</td>
+   <td>${s[2]>0?(r.sent?'<span class="pill d">Nudge sent</span>':`<button class="btn sm" data-n="${r.n}">Send nudge</button>`):''}</td></tr>`).join('');
+  $$('#regRows button').forEach(b=>b.onclick=()=>nudge(regs.find(x=>x.n===b.dataset.n)));
+}
+function nudge(r,quiet){r.sent=true;renderRegs();
+  const a=nextOpen(addDays(2),true),b=nextOpen(new Date(a.getTime()+864e5),true);
+  if(!quiet){msg(`Hi ${r.n.split(' ')[0]}, it's been about ${Math.round(r.ago/7)} weeks, so you're due your usual with ${r.st}. She has <b>${dlabel(a)} 10:30</b> or <b>${dlabel(b)} 1:30</b> free. Reply 1 or 2 to book.`,{me:true,to:'To '+r.n});toast(`Nudge sent to ${r.n}.`)}}
+$('#btnNudgeAll').onclick=()=>{const due=regs.filter(r=>regStatus(r)[2]>0&&!r.sent);due.forEach(r=>nudge(r,true));if(due.length){msg(`${due.length} personal nudges sent, each offering Tuesday or Wednesday first.`,{sys:true});toast(`${due.length} nudges sent`)}};
+const firsts=[{n:'Holly G',d:24,who:'Kerry'},{n:'Priya S',d:23,who:'Gill'},{n:'Becky L',d:12,who:'Gill',back:true},{n:'Jade M',d:9,who:'Kerry'}];
+function renderFirsts(){
+  $('#ftRows').innerHTML=firsts.map(f=>`<tr><td><span class="nm">${f.n}</span></td><td>${f.d} days ago</td><td>${f.who}</td>
+   <td>${f.back?'<span class="pill ok">Yes, booked again</span>':f.d>=21?'<span class="pill r">Not yet</span>':'<span class="pill">Thank-you sent</span>'}</td>
+   <td>${!f.back&&f.d>=21?(f.sent?'<span class="pill d">Invite sent</span>':`<button class="btn sm" data-f="${f.n}">Send invite</button>`):''}</td></tr>`).join('');
+  $$('#ftRows button').forEach(b=>b.onclick=()=>invite(firsts.find(x=>x.n===b.dataset.f)));
+}
+function invite(f,quiet){f.sent=true;renderFirsts();const d=nextOpen(addDays(3),true);
+  if(!quiet){msg(`Hi ${f.n.split(' ')[0]}, thanks again for coming to see ${f.who}! When you're ready for your next visit, book a ${DAYN[d.getDay()]} and we'll add a free NPlex treatment. ${f.who} has ${dlabel(d)} at 11:00 if that suits.`,{me:true,to:'To '+f.n});toast(`Second-visit invite sent to ${f.n}.`)}}
+$('#btnFirstAll').onclick=()=>{const due=firsts.filter(f=>!f.back&&f.d>=21&&!f.sent);due.forEach(f=>invite(f,true));if(due.length){msg(`${due.length} second-visit invites sent.`,{sys:true});toast(`${due.length} invites sent`)}};
+
+/* ---------- SKIN TESTS */
+const patches=[
+ {n:'Lisa M',sv:'Roots',in:0,last:null},{n:'Joanne K',sv:'All-over colour',in:0,last:-40},
+ {n:'Linda C',sv:'Foils, half head',in:1,last:-150},{n:'Amy R',sv:'All-over colour',in:1,last:-220},
+ {n:'Sandra P',sv:'Roots',in:4,last:null},{n:'Kim O',sv:'Foils, quarter head',in:6,last:-30},{n:'Rose T',sv:'Cap highlights',in:8,last:-200}];
+const plog=[];
+const validTest=p=>p.done||(p.last!=null&&p.last>=-182);
+function pStatus(p){if(validTest(p))return['Valid','ok'];const hrs=p.in*24;if(p.in<2)return['Too late for 48 hrs: call','r'];if(p.reminded)return['Reminder sent','g'];return['Needs a test','r']}
+function stamp(){return new Date().toLocaleString('en-GB',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})}
+function renderPatch(){
+  $('#patchRows').innerHTML=patches.map((p,i)=>{const s=pStatus(p),d=nextOpen(addDays(p.in));
+    return `<tr><td><span class="nm">${p.n}</span></td><td>${p.sv}<br><small>${dlabel(d)}</small></td><td>${p.done?'Done '+p.done:p.last==null?'Never':Math.abs(p.last)+' days ago'}</td>
+    <td><span class="pill ${s[1]}">${s[0]}</span></td><td>${!validTest(p)?(p.in>=2&&!p.reminded?`<button class="btn sm" data-p="${i}">Send reminder</button>`:p.in<2&&!p.called?`<button class="btn ghost sm" data-c="${i}">Mark called</button>`:p.reminded&&!p.done?`<button class="btn ghost sm" data-t="${i}">Mark test done</button>`:''):''}</td></tr>`}).join('');
+  $$('#patchRows [data-p]').forEach(b=>b.onclick=()=>remind(patches[+b.dataset.p]));
+  $$('#patchRows [data-c]').forEach(b=>b.onclick=()=>{const p=patches[+b.dataset.c];p.called=true;plog.unshift([stamp(),p.n,'Called: colour moved or test arranged by phone']);renderPatch()});
+  $$('#patchRows [data-t]').forEach(b=>b.onclick=()=>{const p=patches[+b.dataset.t];p.done=stamp();plog.unshift([p.done,p.n,'Skin test done in salon, no reaction recorded']);renderPatch()});
+  $('#patchLog').innerHTML=plog.map(l=>`<tr><td class="mono">${l[0]}</td><td>${l[1]}</td><td>${l[2]}</td></tr>`).join('')||'<tr><td colspan="3" class="muted">Nothing logged yet.</td></tr>';
+  $('#kPatch').textContent=patches.filter(p=>!validTest(p)).length;
+}
+function remind(p,quiet){p.reminded=true;const d=nextOpen(addDays(p.in));
+  msg(`Hi ${p.n.split(' ')[0]}, your ${p.sv.toLowerCase()} is on <b>${dlong(d)}</b>. We need a quick skin test at least 48 hours before (just pop in, 5 minutes, any time we're open). Reply with a day that suits.`,{me:true,to:'To '+p.n});
+  plog.unshift([stamp(),p.n,'48-hour skin test reminder sent by WhatsApp']);renderPatch();if(!quiet)toast('Reminder sent and logged.');}
+$('#autoPatch').onchange=e=>{if(e.target.checked){patches.filter(p=>!validTest(p)&&p.in>=2&&!p.reminded).forEach(p=>remind(p,true));toast('Automatic reminders on.')}};
+$('#btnCsv').onclick=()=>{const csv='When,Client,Event\n'+plog.map(l=>l.map(x=>'"'+x.replace(/"/g,'""')+'"').join(',')).join('\n');
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download='luke-james-skin-test-log.csv';a.click()};
+
+/* ---------- VOUCHERS & MEMBERSHIPS */
+let vAmt=50,vWhen='Christmas morning, 8am',vSold=0,vCount=0;
+const AMTS=[25,50,75,100,150],WHENS=['Now','Christmas Eve, 6pm','Christmas morning, 8am'];
+function chipset(el,vals,cur,fmt,set){$(el).innerHTML=vals.map(v=>`<button class="chip ${v===cur?'on':''}" data-v="${v}">${fmt(v)}</button>`).join('');
+  $$(el+' .chip').forEach(b=>b.onclick=()=>{set(isNaN(+b.dataset.v)?b.dataset.v:+b.dataset.v);chipset(el,vals,isNaN(+b.dataset.v)?b.dataset.v:+b.dataset.v,fmt,set);vprev()})}
+function vprev(){$('#vpAmt').textContent='£'+vAmt;$('#vpMsg').textContent='“'+$('#vMsg').value+'”';}
+chipset('#vAmt',AMTS,vAmt,v=>'£'+v,v=>vAmt=v);chipset('#vWhen',WHENS,vWhen,v=>v,v=>vWhen=v);
+['#vMsg','#vTo'].forEach(s=>$(s).oninput=vprev);
+$('#btnVoucher').onclick=async()=>{
+  const code='LJ-XMAS-'+Math.random().toString(36).slice(2,6).toUpperCase();$('#vpCode').textContent=code;
+  vSold+=vAmt;vCount++;$('#vSold').textContent=gbp(vSold);$('#vCount').textContent=vCount;$('#kVouch').textContent=gbp(vSold);$('#kVouchS').textContent=vCount+' sold · paid upfront';
+  msg(`£${vAmt} voucher paid online. Delivery: ${vWhen.toLowerCase()}.`,{sys:true});
+  if(vWhen!=='Now')msg(`Scheduled for ${vWhen}`,{sys:true});
+  await wait(700);
+  msg(`🎁 Hi ${esc($('#vTo').value)}! Someone's treated you to Luke James Hairdressing.<span class="vch"><span class="mono" style="color:#a9a59d">Gift voucher</span><b>£${vAmt}</b>“${esc($('#vMsg').value)}”<br><span class="mono" style="color:#a9a59d">${code} · valid 12 months</span></span>Reply BOOK and we'll find you a time ✨`,{me:true,to:'To '+esc($('#vPhone').value)});
+  toast(`£${vAmt} in the bank today. Voucher sent.`);
+};
+const plans={club:{n:0,p:89,el:'#clubN'},colour:{n:0,p:35,el:'#colourN'}};
+$$('[data-join]').forEach(b=>b.onclick=()=>{const pl=plans[b.dataset.join];pl.n++;$(pl.el).textContent=pl.n+' member'+(pl.n>1?'s':'');
+  $('#mrr').textContent=gbp(plans.club.n*plans.club.p+plans.colour.n*plans.colour.p);
+  const nm=['Kate','Lorraine','Michelle','Tracey','Sue','Hayley'][(plans.club.n+plans.colour.n)%6];
+  msg(`Welcome to the ${b.dataset.join==='club'?'Blow-dry Club':'Colour Plan'}, ${nm}! Your first ${b.dataset.join==='club'?'blow dry':'roots appointment'} is ready to book. Tuesdays and Wednesdays have the most choice. Reply BOOK.`,{me:true,to:'To '+nm});toast('Member added. Monthly income updated.')});
+
+/* ---------- MISSED CALLS & REVIEWS */
+let calls=0;
+$('#btnMissed').onclick=async()=>{
+  msg('📞 Missed call from 07700 900789 at 11:42. Gill and Kerry both mid-colour.',{sys:true});await wait(900);
+  const d=nextOpen(addDays(1));
+  msg(`Hi, sorry we missed your call at Luke James! We're with clients right now. Were you after an appointment? Next free: <b>1) ${dlabel(d)} 10:30</b>, <b>2) ${dlabel(d)} 2:00</b>. Reply 1 or 2, or tell us what you need.`,{me:true,to:'To 07700 900789'});
+  await wait(1600);msg('2 please, cut and blow dry, long hair',{to:'07700 900789'});await wait(900);
+  msg(`Done! Cut &amp; blow dry with Gill, <b>${dlong(d)} at 2:00</b> (from £45). Can I take your name?`,{me:true,to:'To 07700 900789'});
+  await wait(1000);msg('Kelly 😊',{to:'07700 900789'});
+  calls++;$('#callsSaved').textContent=calls;credit('refill',45,'Gill');toast('Missed call turned into a £45 booking.');
+};
+$('#btnOOH').onclick=async()=>{
+  msg('Instagram DM at 10:04pm',{sys:true});msg('hiya do u do highlights? how much for half head',{to:'@jess.x'});await wait(1000);
+  const d=nextOpen(addDays(2),true);
+  msg(`Hi Jess! Yes: half head foils start from £50 for short hair (longer hair is priced at a quick consultation). You'd need a skin test 48 hours before. The first slot that leaves time for it is <b>${dlabel(d)} at 10:00</b> with Kerry. Want me to hold it?`,{me:true,to:'To @jess.x'});
+  await wait(1500);msg('yes pls!!',{to:'@jess.x'});await wait(700);
+  msg('Held ✨ Pop in for your 5-minute skin test any day before then. See you soon!',{me:true,to:'To @jess.x'});
+  calls++;$('#callsSaved').textContent=calls;toast('Answered at 10pm. Nobody had to pick up a phone.');
+};
+const revs=[{n:'Margaret E',sv:'Cut & blow dry',who:'Gill'},{n:'Joanne K',sv:'All-over colour',who:'Gill'},{n:'Helen T',sv:'Foils, half head',who:'Kerry'},{n:'Paul R',sv:'Gents restyle',who:'Gill'}];
+let rS=0,fS=0;
+function renderRevs(){
+  $('#revRows').innerHTML=revs.map((r,i)=>`<tr><td><span class="nm">${r.n}</span></td><td>${r.sv}<br><small>with ${r.who}</small></td>
+   <td>${r.rv?'<span class="pill ok">Asked</span>':`<button class="btn sm" data-r="${i}">Ask for review</button>`}</td>
+   <td>${r.rf?'<span class="pill ok">Link sent</span>':`<button class="btn ghost sm" data-f="${i}">Send referral link</button>`}</td></tr>`).join('');
+  $$('#revRows [data-r]').forEach(b=>b.onclick=()=>{const r=revs[+b.dataset.r];r.rv=1;rS++;$('#revSent').textContent=rS;
+    msg(`Thanks for coming in today, ${r.n.split(' ')[0]}! If you're happy with your ${r.sv.toLowerCase()}, a quick Google review would mean the world to ${r.who}: g.page/r/lukejames/review ⭐`,{me:true,to:'To '+r.n});renderRevs()});
+  $$('#revRows [data-f]').forEach(b=>b.onclick=()=>{const r=revs[+b.dataset.f];r.rf=1;fS++;$('#refSent').textContent=fS;
+    msg(`${r.n.split(' ')[0]}, know someone who'd love ${r.who}? Share your link and you'll both get £5 off: lukejames.co/r/${r.n.split(' ')[0].toLowerCase()}`,{me:true,to:'To '+r.n});renderRevs()});
+}
+
+/* ---------- GROUPS */
+const SVC={'Wash & blow dry':{p:30,m:45},'Occasion styling (up-do)':{p:45,m:60},'Cut & blow dry':{p:45,m:60},'Rollers or pin curls':{p:36,m:60},'Gents restyle':{p:38,m:45}};
+let gType='Wedding';const party={Wedding:[['Bride','Occasion styling (up-do)'],['Bridesmaid','Occasion styling (up-do)'],['Bridesmaid','Wash & blow dry'],['Mother of the bride','Rollers or pin curls']],
+ Prom:[['Prom','Occasion styling (up-do)'],['Prom','Occasion styling (up-do)'],['Prom','Wash & blow dry']]};
+let people=party.Wedding.map(x=>[...x]);
+chipset('#gType',['Wedding','Prom'],gType,v=>v,v=>{gType=v;people=party[v].map(x=>[...x]);renderGroup()});
+function renderGroup(){
+  $('#gPeople').innerHTML=people.map((p,i)=>`<div class="row" style="margin-bottom:8px"><input class="in" style="flex:1" value="${esc(p[0])}" data-i="${i}" data-k="0"><select class="in" style="flex:1.4" data-i="${i}" data-k="1">${Object.keys(SVC).map(s=>`<option ${s===p[1]?'selected':''}>${s}</option>`).join('')}</select><button class="btn ghost sm" data-x="${i}" aria-label="Remove">✕</button></div>`).join('');
+  $$('#gPeople [data-k]').forEach(el=>el.oninput=el.onchange=()=>{people[+el.dataset.i][+el.dataset.k]=el.value;calcGroup()});
+  $$('#gPeople [data-x]').forEach(b=>b.onclick=()=>{people.splice(+b.dataset.x,1);renderGroup()});
+  calcGroup();
+}
+function calcGroup(){
+  const total=people.reduce((s,p)=>s+SVC[p[1]].p,0),pct=+$('#gDep').value,dep=Math.ceil(total*pct/100);
+  $('#gDepPct').textContent=pct+'%';$('#gTotal').textContent=gbp(total);$('#gDeposit').textContent=gbp(dep);
+  // two chairs in parallel, bride finishes last
+  const [hh,mm]=$('#gReady').value.split(':').map(Number),ready=hh*60+mm;
+  const order=people.map((p,i)=>({...{n:p[0],s:p[1],m:SVC[p[1]].m},i})).sort((a,b)=>(a.n==='Bride')-(b.n==='Bride'));
+  const chairs=[ready,ready],sched=[];
+  for(let k=order.length-1;k>=0;k--){const c=chairs[0]>=chairs[1]?0:1,end=chairs[c],st=end-order[k].m;chairs[c]=st;sched.push({st,end,n:order[k].n,s:order[k].s,who:c?'Kerry':'Gill'})}
+  sched.sort((a,b)=>a.st-b.st);const f=m=>{const h=Math.floor(m/60);return ((h+11)%12+1)+':'+String(m%60).padStart(2,'0')+(h<12?'am':'pm')};
+  $('#gStart').textContent=sched.length?f(sched[0].st):'–';
+  $('#gSched').innerHTML=sched.map(x=>`<div><b>${f(x.st)}</b>${esc(x.n)} · ${x.s} · ${x.who}</div>`).join('')+`<div><b>${f(ready)}</b>Everyone ready ✨</div>`;
+  return {total,dep,sched,f};
+}
+$('#gDep').oninput=calcGroup;$('#gReady').oninput=calcGroup;
+$('#gAdd').onclick=()=>{people.push([gType==='Wedding'?'Bridesmaid':'Prom','Wash & blow dry']);renderGroup()};
+$('#gSend').onclick=()=>{const g=calcGroup();
+  msg(`Hi Laura! Here's your ${gType.toLowerCase()} quote from Luke James 💛<br>${people.map(p=>`• ${esc(p[0])}: ${p[1]} (£${SVC[p[1]].p})`).join('<br>')}<br><b>Total £${g.total}</b>, starting ${g.f(g.sched[0].st)} with Gill and Kerry, everyone ready by ${$('#gReady').value}.<br>A £${g.dep} deposit holds the morning: lukejames.co/q/laura`,{me:true,to:'To Laura (bride)'});toast('Quote sent with deposit link.')};
+
+/* ---------- SCORECARD */
+function renderScore(){
+  $('#scoreRows').innerHTML=Object.entries(S.stylist).map(([n,s])=>`<tr><td><span class="nm">${n}</span></td><td>£${s.spend}</td><td>${Math.round(s.rebooked/s.visits*100)}%</td><td>${s.addons}</td><td>${gbp(s.retail)}</td><td>${s.refills}</td></tr>`).join('');
+}
+
+/* ---------- CALC */
+function calc(){
+  const v=['#i1','#i2','#i3','#i4','#i5','#i6'].map(s=>+$(s).value);
+  $('#o1').textContent=v[0];$('#o2').textContent='£'+v[1];$('#o3').textContent=v[2];$('#o4').textContent=v[3];$('#o5').textContent=v[4];$('#o6').textContent=v[5];
+  const c1=v[2]*v[1]*.6*48,c2=v[0]*.12*12*48,c3=v[3]*.2*v[1]*48,c4=v[4]*50,c5=v[5]*60*12*.5;
+  [c1,c2,c3,c4,c5].forEach((c,i)=>$('#c'+(i+1)).textContent=gbp(c));$('#cTotal').textContent=gbp(c1+c2+c3+c4+c5);
+}
+['#i1','#i2','#i3','#i4','#i5','#i6'].forEach(s=>$(s).oninput=calc);
+
+patches.filter(p=>!validTest(p)&&p.in>=2).forEach(p=>{p.reminded=true;plog.push([stamp(),p.n,'48-hour skin test reminder sent automatically by WhatsApp'])});
+renderDiary();renderWeb();renderAdds();renderCo();renderRb();renderRegs();renderFirsts();renderPatch();vprev();renderRevs();renderGroup();renderScore();calc();
+addEventListener('storage',e=>{if(e.key==='lj-bookings-v1')renderWeb()});
+</script>
+</body>
+</html>

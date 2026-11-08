@@ -175,6 +175,13 @@ Both use generated placeholder images and made-up details.
   "Wife Day Care" reel, gift vouchers and shop, team, reviews, built-in 4-step booking (closed
   Sundays, real opening hours), HairSalon + FAQ JSON-LD. Photos and films are the salon's own.
 
+- `luke-james/diary/`: "Full Diary" back-office demo for Luke James (single HTML, no server), in the same style.
+  Tabs: today's diary with a cancellation-refill engine and website bookings (read from the demo site's
+  localStorage in the same browser), pre-visit add-on offers from their price list (NPlex, toner, rollers),
+  rebook at the till with per-stylist rebook rates, product recommendations and reorder reminders, regulars due
+  and first-timer second visits, 48-hour skin-test tracking with a CSV log, Christmas vouchers and memberships,
+  missed-call text-back and 10pm replies, reviews and referrals, a wedding/prom quote builder with timings, a
+  stylist scorecard and a revenue calculator. Prices, hours and stylists are the salon's; clients are sample data.
 - `beyond-salon`: Beyond Beauty Salon by Ahmed Batekha, Egypt (Sheikh Zayed at The Lane
   Mall Palm Hills, Zamalek, Sahel). Bespoke page with a built-in 5-step booking engine
   (branch, services, stylist, date/time, details), booking reference, .ics calendar file,
