@@ -2,8 +2,10 @@
 import {
   WebGLRenderer, Scene, PerspectiveCamera, PMREMGenerator, Group, Box3, Vector3, Vector2,
   MeshPhysicalMaterial, MeshStandardMaterial, DirectionalLight, PlaneGeometry, Mesh, ShadowMaterial,
-  MeshBasicMaterial, CanvasTexture, SRGBColorSpace, ACESFilmicToneMapping, PCFShadowMap, Color, MathUtils
+  MeshBasicMaterial, CanvasTexture, SRGBColorSpace, ACESFilmicToneMapping, PCFShadowMap, Color, MathUtils,
+  CylinderGeometry, Quaternion, Matrix4, EquirectangularReflectionMapping
 } from 'three';
+import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { HDRLoader } from 'three/addons/loaders/HDRLoader.js';
 
@@ -54,6 +56,50 @@ function visibleLoop(el, tick) {
   new IntersectionObserver(([e]) => { on = e.isIntersecting; if (on && !raf) raf = requestAnimationFrame(run); }, { rootMargin: '120px' }).observe(el);
 }
 
+/* ------------------------------------------------------------------ hexagon LED ceiling (from the salon) */
+// flat-top honeycomb of hexagon outlines, each a merged set of 6 thin tubes
+function honeycomb(R, rings) {
+  const out = [], w = Math.sqrt(3) * R;
+  for (let q = -rings; q <= rings; q++) for (let r = Math.max(-rings, -q - rings); r <= Math.min(rings, -q + rings); r++) {
+    const x = 1.5 * R * q, z = w * (r + q / 2), pts = [];
+    for (let i = 0; i < 6; i++) { const a = Math.PI / 3 * i; pts.push(new Vector3(x + R * Math.cos(a), 0, z + R * Math.sin(a))); }
+    out.push({ x, z, pts, d: Math.hypot(x, z) });
+  }
+  return out;
+}
+const Y = new Vector3(0, 1, 0);
+function hexGeometry(pts, rad, inset = 0) {
+  const parts = [];
+  for (let i = 0; i < 6; i++) {
+    const a = pts[i], b = pts[(i + 1) % 6], len = a.distanceTo(b);
+    const g = new CylinderGeometry(rad, rad, len * (1 - inset), 6, 1, true);
+    const q = new Quaternion().setFromUnitVectors(Y, b.clone().sub(a).normalize());
+    g.applyMatrix4(new Matrix4().compose(a.clone().add(b).multiplyScalar(.5), q, new Vector3(1, 1, 1)));
+    parts.push(g);
+  }
+  return mergeGeometries(parts);
+}
+function hexCeiling(R = .5, rings = 2, glow = 1) {
+  const group = new Group(), cells = [];
+  const frame = new MeshStandardMaterial({ color: '#2b2b2b', metalness: .6, roughness: .4 });
+  for (const h of honeycomb(R, rings)) {
+    const cell = new Group();
+    cell.add(new Mesh(hexGeometry(h.pts, .017), frame));
+    const strip = new MeshBasicMaterial({ color: new Color(glow, glow, glow), toneMapped: glow <= 1, transparent: glow <= 1, opacity: 1 });
+    const s = new Mesh(hexGeometry(h.pts, .019, .02), strip); s.position.y = -.026; cell.add(s);
+    cell.userData = { d: h.d, strip }; group.add(cell); cells.push(cell);
+  }
+  return { group, cells };
+}
+// studio HDRI plus the hexagon lights, so chrome and leather reflect the ceiling
+async function hexEnv(r) {
+  const t = await loadHDR(); t.mapping = EquirectangularReflectionMapping;
+  const es = new Scene(); es.background = t;
+  const { group } = hexCeiling(.55, 2, 9); group.position.y = 3.2; es.add(group);
+  const pm = new PMREMGenerator(r); const env = pm.fromScene(es, .012).texture; pm.dispose();
+  return env;
+}
+
 /* ------------------------------------------------------------------ hero chair */
 export async function heroChair(stage, opts = {}) {
   const canvas = stage.querySelector('canvas');
@@ -61,11 +107,13 @@ export async function heroChair(stage, opts = {}) {
   r.shadowMap.enabled = true; r.shadowMap.type = PCFShadowMap;
   const scene = new Scene();
   const cam = new PerspectiveCamera(26, 1, .1, 60);
-  const [env, gltf] = await Promise.all([envFor(r), loader.loadAsync(asset('assets/chair.glb'))]);
-  scene.environment = env; scene.environmentIntensity = 0.95;
+  const [env, gltf] = await Promise.all([hexEnv(r), loader.loadAsync(asset('assets/chair.glb'))]);
+  scene.environment = env; scene.environmentIntensity = 0.8;
+  const ceil = hexCeiling(.36, 2, 1); ceil.group.position.set(0, 2.42, -.35); ceil.group.rotation.y = .18; scene.add(ceil.group);
+  ceil.cells.forEach(c => { c.userData.on = .2 + c.userData.d * .22 + Math.random() * .15; });
 
-  const leather = new MeshPhysicalMaterial({ color: new Color('#6a6d70'), roughness: .5, metalness: 0, clearcoat: .35, clearcoatRoughness: .45, sheen: .35, sheenRoughness: .6, sheenColor: new Color('#cfd1d2') });
-  const panel = leather.clone(); panel.color = new Color('#63666a');
+  const leather = new MeshPhysicalMaterial({ color: new Color('#585b5e'), roughness: .5, metalness: 0, clearcoat: .35, clearcoatRoughness: .45, sheen: .35, sheenRoughness: .6, sheenColor: new Color('#cfd1d2') });
+  const panel = leather.clone(); panel.color = new Color('#525458');
   const chrome = new MeshStandardMaterial({ color: '#f2f2f2', metalness: 1, roughness: .07 });
   const brushed = new MeshStandardMaterial({ color: '#e9e9e9', metalness: 1, roughness: .2 });
   const parts = { 0: panel, 1: panel, 3: chrome, 5: leather, 6: brushed, 7: leather };
@@ -114,21 +162,28 @@ export async function heroChair(stage, opts = {}) {
 
   const tick = t => {
     const age = (t - born) / 1000;
+    // the lights come on one by one from the middle, with a little flicker
+    for (const c of ceil.cells) {
+      const u = RM ? 1 : MathUtils.clamp((age - c.userData.on) / .35, 0, 1);
+      const fl = u > 0 && u < 1 ? (Math.sin(age * 90 + c.userData.d * 7) > .2 ? 1 : .35) : 1;
+      c.userData.strip.opacity = u * fl;
+    }
+    const age2 = age - (RM ? 0 : .95);
     if (!matchMedia('(hover:hover)').matches && !RM) ptrT.set(Math.sin(t / 2600) * .6, Math.cos(t / 3400) * .3 - .1);
     ptr.lerp(ptrT, .06);
     if (!dragging) { dragV *= .94; drag += dragV; }
     // entrance: drop in on the hydraulic, settle with a little bounce
-    const k = RM ? 1 : MathUtils.clamp(age / 1.4, 0, 1);
+    const k = RM ? 1 : MathUtils.clamp(age2 / 1.4, 0, 1);
     const drop = RM ? 0 : (1 - k) * (1 - k) * 1.6 - Math.sin(k * Math.PI * 2.2) * (1 - k) * .08;
-    pivot.position.y = drop;
+    pivot.position.y = age2 < 0 ? 3 : drop;
     pivot.rotation.y = -.55 + ptr.x * .38 + drag + scrollK * 1.4 + (RM ? 0 : (1 - k) * 1.2) + (RM ? 0 : Math.sin(t / 3000) * .03);
     pivot.rotation.x = ptr.y * .04;
     contact.material.opacity = .25 + .75 * k;
     // the key light follows the pointer, so the shadow swings across the floor
     key.position.set(ptr.x * 4.5, 5.2 + ptr.y * 1.5, 3.4 - ptr.y * 1.2);
     // camera eases back as you scroll
-    cam.position.set(0, 1.25 + scrollK * .6, 7.9 + scrollK * 1.2);
-    cam.lookAt(0, .92 - scrollK * .1, 0);
+    cam.position.set(0, 1.2 + scrollK * .6, 8.4 + scrollK * 1.2);
+    cam.lookAt(0, 1.02 - scrollK * .1, 0);
     r.render(scene, cam);
     if (window.__snap) { window.__snapData = canvas.toDataURL('image/png'); window.__snap = 0; }
     for (const tg of tags) {

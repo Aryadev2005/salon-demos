@@ -175,6 +175,9 @@ Both use generated placeholder images and made-up details.
   "Wife Day Care" reel, gift vouchers and shop, team, reviews, built-in 4-step booking (closed
   Sundays, real opening hours), HairSalon + FAQ JSON-LD. Photos and films are the salon's own.
 
+  Premium pass (from their shopfront): monochrome black/white/chrome palette, Bodoni Moda wordmark matching the
+  sign, a hexagon LED ceiling above the 3D chair (also baked into the reflections), graded photos as WebP with
+  srcset, the shopfront in the Visit section, merged salon + recent work, stylists moved into the booking flow.
 - `luke-james/diary/`: "Full Diary" back-office demo for Luke James (single HTML, no server), in the same style.
   Tabs: today's diary with a cancellation-refill engine and website bookings (read from the demo site's
   localStorage in the same browser), pre-visit add-on offers from their price list (NPlex, toner, rollers),
