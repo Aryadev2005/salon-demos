@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Bridal Hairstyles Academy · Student booking kit (demo for Alice)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--white:#fff;--blush:#F8F0EC;--blush2:#F1DED5;--peach:#DCA27D;--peach-d:#B97E58;--peach-t:#E0B39B;--ink:#3C3936;--muted:#7A726C;--line:#EADFD8;--soft:#FAF7F5;--ok:#5E7A5B;--okbg:#E8EFE6;--warn:#A8574A;--serif:"Cormorant Garamond",Georgia,serif;--sans:Jost,system-ui,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--soft);color:var(--ink);font:300 16px/1.55 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;margin:0;line-height:1.1}
+.it{font-style:italic;color:var(--peach-t)}
+.kick{font:500 11px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--peach-d)}
+.muted{color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--peach);background:#fff;padding:12px 18px;font:400 13px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;text-decoration:none}
+.btn.solid{background:var(--peach);color:#fff}
+.btn.solid:hover{background:var(--peach-d)}
+.btn.wa{background:#25D366;border-color:#25D366;color:#fff}
+.btn.block{width:100%}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+:focus-visible{outline:2px solid var(--peach-d);outline-offset:2px}
+
+/* demo switcher */
+.demo{background:var(--ink);color:#EDE6E0;position:sticky;top:0;z-index:50}
+.demo .in{max-width:1180px;margin:0 auto;padding:10px 18px;display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.demo b{font:400 18px/1 var(--serif);color:#fff}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tabs a{font-size:13px;text-decoration:none;padding:7px 12px;border:1px solid #5a534d;color:#EDE6E0}
+.tabs a.on{background:var(--peach);border-color:var(--peach);color:#fff}
+.intro{max-width:1180px;margin:0 auto;padding:22px 18px 6px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:end}
+.intro h1{font-size:clamp(30px,4vw,44px)}
+.intro p{margin:8px 0 0;max-width:640px}
+.view{display:none}
+.view.on{display:block}
+.stage-wrap{max-width:1180px;margin:0 auto;padding:18px 18px 70px;display:grid;grid-template-columns:400px 1fr;gap:34px;align-items:start}
+.explain{position:sticky;top:76px}
+.explain h2{font-size:34px;margin:10px 0 12px}
+.explain ul{list-style:none;padding:0;margin:16px 0 0}
+.explain li{padding:11px 0 11px 28px;border-top:1px solid var(--line);position:relative;font-size:15px}
+.explain li::before{content:"✓";position:absolute;left:2px;top:11px;color:var(--ok)}
+.explain .vs{margin-top:20px;padding:14px 16px;background:var(--blush);border-left:3px solid var(--peach);font-size:14.5px}
+
+/* phone */
+.phone{width:390px;max-width:100%;height:780px;background:#fff;border:10px solid #2b2724;border-radius:44px;overflow:hidden;position:relative;box-shadow:0 40px 80px -40px rgba(0,0,0,.45);margin:0 auto}
+.screen{height:100%;overflow-y:auto;overflow-x:hidden;background:#fff;scrollbar-width:none}
+.screen::-webkit-scrollbar{display:none}
+.notch{position:absolute;top:0;left:50%;transform:translateX(-50%);width:120px;height:24px;background:#2b2724;border-radius:0 0 16px 16px;z-index:5}
+
+/* bride link */
+.bh{background:var(--blush);padding:44px 22px 24px;text-align:center;border-bottom:1px solid var(--blush2)}
+.av{width:74px;height:74px;border-radius:50%;margin:0 auto 12px;background:var(--peach-t);color:#fff;display:grid;place-items:center;font:italic 400 34px/1 var(--serif)}
+.bh h2{font-size:30px}
+.bh .loc{font-size:13.5px;color:var(--muted);margin-top:4px}
+.trained{display:inline-flex;align-items:center;gap:8px;margin-top:14px;background:#fff;border:1px solid var(--peach-t);padding:7px 12px;font-size:12px;letter-spacing:.04em}
+.trained i{font-style:normal;color:var(--peach-d);font-size:14px}
+.bb{padding:22px}
+.sec{margin-bottom:22px}
+.sec>label,.lab{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.in{width:100%;font:inherit;font-size:16px;padding:11px 2px;border:0;border-bottom:1px solid var(--peach-t);background:transparent;color:var(--ink);border-radius:0}
+.in:focus{outline:none;border-color:var(--peach-d)}
+textarea.in{min-height:60px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pr{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+.pr b{font:400 19px/1.1 var(--serif);display:block}
+.pr small{font-size:12px;color:var(--muted)}
+.stp{display:flex;align-items:center;gap:8px}
+.stp button{width:30px;height:30px;border:1px solid var(--peach-t);background:#fff;font-size:15px;line-height:1}
+.stp output{min-width:18px;text-align:center;font:400 19px/1 var(--serif)}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{border:1px solid var(--line);background:#fff;padding:8px 12px;font-size:13.5px}
+.chip[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+.est{background:var(--blush);padding:16px;margin:4px 0 20px}
+.est .row{display:flex;justify-content:space-between;font-size:14px;padding:3px 0}
+.est .tot{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--blush2);margin-top:8px;padding-top:10px}
+.est .tot b{font:400 30px/1 var(--serif)}
+.note{padding:12px 14px;font-size:14px;margin-top:10px}
+.note.ok{background:var(--okbg)}
+.note.no{background:#FBEDE4}
+.done{text-align:center;padding:40px 22px}
+.tick{width:60px;height:60px;border-radius:50%;background:var(--peach);color:#fff;display:grid;place-items:center;margin:0 auto 14px;font-size:26px}
+.foot{text-align:center;font-size:11.5px;color:var(--muted);padding:14px 22px 26px;border-top:1px solid var(--line)}
+
+/* student app */
+.ah{padding:40px 20px 16px;background:#fff;border-bottom:1px solid var(--line)}
+.ah .hi{font:italic 400 30px/1 var(--serif);color:var(--peach-d)}
+.bcast{margin:14px 20px 0;background:var(--blush);border-left:3px solid var(--peach);padding:12px 14px;font-size:13.5px}
+.bcast b{display:block;font:400 17px/1.2 var(--serif)}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:16px 20px 4px}
+.kpi{border:1px solid var(--line);padding:10px;text-align:center}
+.kpi b{font:400 26px/1 var(--serif);display:block}
+.kpi small{font-size:11px;color:var(--muted)}
+.mylink{margin:12px 20px 4px;display:flex;align-items:center;gap:8px;border:1px dashed var(--peach);padding:10px 12px;font-size:13px}
+.mylink span{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mylink button{border:0;background:var(--peach);color:#fff;padding:7px 10px;font-size:12px}
+.list{padding:8px 20px 90px}
+.lh{display:flex;justify-content:space-between;align-items:baseline;margin:14px 0 4px}
+.lh h3{font-size:24px}
+.bride{display:grid;grid-template-columns:52px 1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line);width:100%;text-align:left;background:none;border-left:0;border-right:0;border-top:0}
+.dt{text-align:center;border:1px solid var(--line);padding:5px 0;line-height:1.1}
+.dt b{font:400 22px/1 var(--serif);display:block}
+.dt small{font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.bride h4{font-size:19px}
+.bride .s{font-size:12px;color:var(--muted)}
+.tag{font-size:10.5px;padding:3px 8px;border-radius:999px;white-space:nowrap;background:var(--soft);border:1px solid var(--line);color:var(--muted)}
+.tag.new{background:var(--peach);border-color:var(--peach);color:#fff}
+.tag.go{background:var(--okbg);border-color:#CFDCCB;color:var(--ok)}
+.nav{position:absolute;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr);z-index:4}
+.nav button{border:0;background:none;padding:12px 0 18px;font-size:12px;letter-spacing:.06em;color:var(--muted)}
+.nav button.on{color:var(--peach-d);font-weight:500}
+.nav i{display:block;font-style:normal;font-size:18px;margin-bottom:2px}
+
+/* sheet */
+.sheet{position:absolute;inset:0;background:#fff;z-index:6;overflow-y:auto;transform:translateY(100%);transition:transform .3s ease;scrollbar-width:none}
+.sheet::-webkit-scrollbar{display:none}
+.sheet.open{transform:none}
+.sh{padding:38px 20px 14px;border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff;z-index:2}
+.sh .x{border:0;background:none;font-size:14px;color:var(--muted);padding:0;margin-bottom:10px}
+.sh h3{font-size:28px}
+.sb{padding:16px 20px 40px}
+.prog{display:flex;gap:3px;margin:12px 0 6px}
+.prog span{flex:1;height:4px;background:var(--line)}
+.prog span.on{background:var(--peach)}
+.stg{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--peach-d)}
+.tip{background:var(--blush);padding:14px;margin:14px 0;font-size:14px;position:relative}
+.tip .who{display:flex;align-items:center;gap:8px;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--peach-d);margin-bottom:6px}
+.tip .who i{width:22px;height:22px;border-radius:50%;background:var(--peach-t);color:#fff;display:grid;place-items:center;font:italic 400 13px/1 var(--serif)}
+.msg{border:1px solid var(--line);padding:12px;font-size:13.5px;white-space:pre-line;background:#fff;max-height:210px;overflow:auto}
+.acts{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.acts .btn{flex:1;padding:11px 10px;font-size:12px}
+.blk{border-top:1px solid var(--line);padding-top:16px;margin-top:18px}
+.blk h4{font-size:21px;margin-bottom:8px}
+.pay{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px dashed var(--line);font-size:14.5px}
+.pay label{display:flex;align-items:center;gap:10px;cursor:pointer}
+.pay input{width:18px;height:18px;accent-color:var(--ok)}
+.tl{list-style:none;margin:0;padding:0}
+.tl li{display:grid;grid-template-columns:50px 1fr;gap:10px;padding:6px 0;font-size:14px;border-bottom:1px dashed var(--line)}
+.tl time{font-weight:500;color:var(--peach-d)}
+.kit{columns:2;font-size:13.5px;padding:0;list-style:none;margin:0}
+.kit li{break-inside:avoid;padding:4px 0}
+.kit label{display:flex;gap:8px;align-items:flex-start}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:13.5px}
+.facts span{color:var(--muted)}
+.mon{padding:20px 20px 90px}
+.mrow{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.big{font:400 40px/1 var(--serif)}
+
+/* academy */
+.acad{max-width:1180px;margin:0 auto;padding:10px 18px 80px}
+.ag{display:grid;grid-template-columns:1.25fr 1fr;gap:26px;align-items:start}
+.box{background:#fff;border:1px solid var(--line);padding:22px;margin-bottom:24px}
+.box h3{font-size:27px;margin-bottom:4px}
+.box .hint{font-size:13.5px;color:var(--muted);margin:0 0 12px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;font-weight:400;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:8px 6px;border-bottom:1px solid var(--line)}
+td{padding:11px 6px;border-bottom:1px solid var(--line);vertical-align:middle}
+td b{font:400 18px/1.1 var(--serif)}
+.flag{font-size:11.5px;color:var(--warn)}
+.ak{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0 24px}
+.ak div{background:#fff;border:1px solid var(--line);padding:16px}
+.ak b{font:400 36px/1 var(--serif);display:block}
+.ak small{color:var(--muted);font-size:13px}
+.meth details{border-top:1px solid var(--line);padding:12px 0}
+.meth summary{cursor:pointer;font:400 20px/1.2 var(--serif);list-style:none;display:flex;justify-content:space-between}
+.meth summary::after{content:"Edit";font:400 12px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--peach-d)}
+.meth textarea{width:100%;font:inherit;font-size:14px;border:1px solid var(--line);padding:10px;margin-top:6px;min-height:70px;background:var(--soft)}
+.meth small{font-size:12px;color:var(--muted)}
+.toast{visibility:hidden;position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(90px);background:var(--ink);color:#fff;padding:13px 18px;font-size:14px;z-index:99;transition:transform .3s;max-width:92vw}
+.toast.show{visibility:visible;transform:translateX(-50%)}
+
+@media (max-width:900px){
+  .stage-wrap{grid-template-columns:1fr}
+  .explain{position:static}
+  .ag{grid-template-columns:1fr}
+  .ak{grid-template-columns:1fr 1fr}
+  .intro{grid-template-columns:1fr}
+}
+@media (max-width:480px){
+  .phone{border:0;border-radius:0;height:auto;min-height:100vh;box-shadow:none;width:100%}
+  .notch{display:none}
+  .screen{height:auto;overflow:visible}
+  .nav{position:fixed}
+  .sheet{position:fixed;z-index:60}
+  .sh{padding-top:18px}
+  .nav{z-index:40}
+  .stage-wrap{padding:0 0 60px;gap:0}
+  .explain{padding:18px}
+  .acad table{font-size:12.5px}
+}
+</style>
+</head>
+<body>
+<div class="demo"><div class="in">
+  <span><b>Bridal Hairstyles Academy</b> <span style="opacity:.6;font-size:12.5px;margin-left:6px">Student booking kit · demo for Alice</span></span>
+  <nav class="tabs" aria-label="Demo views">
+    <a href="#link" data-v="link">1 · Bride's link</a>
+    <a href="#app" data-v="app">2 · Student's app</a>
+    <a href="#academy" data-v="academy">3 · Your academy</a>
+  </nav>
+</div></div>
+
+<div class="intro">
+  <div><p class="kick">For Alice Paonessa</p>
+  <h1>Every student leaves your course <span class="it">ready to take her first bride.</span></h1>
+  <p class="muted">One kit with three parts. Try them in order: book as a bride, then see the booking in your student's app, then see your academy. The demo student is “Sophie”, and the brides are sample data.</p></div>
+  <a class="btn" href="../">← Your website demo</a>
+</div>
+
+<!-- 1. BRIDE'S LINK -->
+<section class="view" id="v-link"><div class="stage-wrap">
+  <div class="explain">
+    <p class="kick">1 · What brides see</p>
+    <h2>Her own booking link, <span class="it">no website needed.</span></h2>
+    <p class="muted">Each student puts one link in her Instagram bio, stories and TikTok. Brides send a proper enquiry in two minutes, with everything a stylist needs to know.</p>
+    <ul>
+      <li>Asks the questions <b>you</b> teach students to ask</li>
+      <li>Shows an instant estimate from the student's own prices</li>
+      <li>Dates she's already booked show as taken</li>
+      <li>“Trained by Alice Paonessa” builds trust for a new stylist, and brings your name to every bride she meets</li>
+    </ul>
+    <div class="vs"><b>Try it:</b> fill it in and send. Then tap <a href="#app">2 · Student's app</a> to see it arrive.</div>
+  </div>
+  <div class="phone"><div class="notch"></div><div class="screen" id="linkScreen"></div></div>
+</div></section>
+
+<!-- 2. STUDENT'S APP -->
+<section class="view" id="v-app"><div class="stage-wrap">
+  <div class="explain">
+    <p class="kick">2 · What your student sees</p>
+    <h2>Your method, <span class="it">in her pocket.</span></h2>
+    <p class="muted">Every bride moves through your steps, from enquiry to wedding day. At each step, your student sees your tip and a message written in your words, ready to send on WhatsApp in one tap.</p>
+    <ul>
+      <li>Always shows what to do next, for every bride</li>
+      <li>Payments simply ticked off: deposit, trial, balance</li>
+      <li>Trial notes saved as her “recipe” for the day</li>
+      <li>Wedding-morning schedule worked out from the access and ceremony times</li>
+      <li>Your kit list, ready the night before</li>
+    </ul>
+    <div class="vs"><b>Try it:</b> tap a bride, send the next message, tick a payment, and move her to the next step.</div>
+  </div>
+  <div class="phone"><div class="notch"></div><div class="screen" id="appScreen"></div><div class="sheet" id="sheet"></div></div>
+</div></section>
+
+<!-- 3. ALICE'S ACADEMY -->
+<section class="view" id="v-academy"><div class="acad">
+  <p class="kick" style="margin-top:6px">3 · What only you see</p>
+  <h2 style="font-size:clamp(32px,4vw,48px);margin:8px 0 6px">Your academy, <span class="it">at a glance.</span></h2>
+  <p class="muted" style="max-width:720px;margin:0">No booking app can do this part. You see how every student is getting on, you write your method once, and every student's app updates straight away.</p>
+  <div class="ak" id="akpis"></div>
+  <div class="ag">
+    <div>
+      <div class="box"><h3>Your students</h3><p class="hint">Who's getting brides, who's booked, and who might need a nudge from you.</p><div style="overflow-x:auto"><table id="studs"></table></div></div>
+      <div class="box"><h3>Message all students</h3><p class="hint">It appears at the top of every student's app.</p>
+        <textarea id="bcText" class="in" style="border:1px solid var(--line);padding:10px;min-height:80px" placeholder="e.g. Wedding fair season! Bring your link on a card and collect enquiries on the day."></textarea>
+        <div style="margin-top:10px"><button class="btn solid" id="bcSend">Send to all students</button></div></div>
+    </div>
+    <div class="box meth"><h3>Your method</h3><p class="hint">Your steps, tips and messages. Change one here and every student's app updates. (Sample wording: you'd write your own.)</p><div id="method"></div>
+      <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap"><button class="btn solid" id="saveM">Save for all students</button><button class="btn" id="resetM">Reset to sample</button></div></div>
+  </div>
+</div></section>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+/* ---------- helpers ---------- */
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const st = { get(k,d){ try{ const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; }catch(e){ return d; } }, set(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} } };
+const pad = n => String(n).padStart(2,"0");
+const iso = d => `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+const P = s => { const [y,m,d] = s.split("-").map(Number); return new Date(y,m-1,d); };
+const MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const DW = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+const nice = s => { const d = P(s); return `${DW[d.getDay()]} ${d.getDate()} ${MON[d.getMonth()]} ${d.getFullYear()}`; };
+const hm = m => `${pad(Math.floor(m/60))}:${pad(m%60)}`;
+const tm = s => { const [h,m] = (s||"09:00").split(":").map(Number); return h*60+m; };
+const gbp = n => "£" + Number(n).toLocaleString("en-GB");
+const TODAY = new Date(); TODAY.setHours(0,0,0,0);
+const addD = (d,n) => { const x = new Date(d); x.setDate(x.getDate()+n); return x; };
+const toast = t => { const el = $("#toast"); el.textContent = t; el.classList.add("show"); clearTimeout(toast.t); toast.t = setTimeout(()=>el.classList.remove("show"), 3000); };
+const firstName = n => String(n||"").trim().split(/\s+/)[0] || "there";
+
+/* ---------- Alice's method (sample wording; Alice writes her own) ---------- */
+const DEFAULT_METHOD = [
+  {key:"enquiry", label:"New enquiry", action:"I've sent the quote",
+   tip:"Reply within the hour if you can. Brides often book whoever answers first, and a warm, quick reply is your first impression.",
+   msg:"Hi {bride}! Thank you so much for your enquiry. I'd love to do your hair on {date}, and I'm free that day 😊\n\nFor {party}, your quote is {total}.\n\nTo secure your date I take a {deposit} deposit, and the rest is paid before the wedding. Shall I send you my details?\n\n{student}"},
+  {key:"quoted", label:"Quote sent", action:"Deposit received",
+   tip:"No reply after 3 days? Follow up once, kindly. Brides are busy, not uninterested.",
+   msg:"Hi {bride}, just checking you received my quote for {date}. I'd love to be part of your day. Any questions at all, just ask! 😊\n\n{student}"},
+  {key:"secured", label:"Date secured", action:"Trial booked",
+   tip:"Book the trial 6–10 weeks before the wedding. Early enough to change things, close enough that her hair is similar.",
+   msg:"Your date is secured, {bride}! 🎉 Thank you for your deposit.\n\nNext is your hair trial, ideally 6–10 weeks before {date}. Which days suit you?\n\n{student}"},
+  {key:"trial", label:"Trial booked", action:"Trial done",
+   tip:"Ask her to come with clean, dry hair (washed the day before), her inspiration photos, any accessories and a picture of the dress.",
+   msg:"Looking forward to your trial on {trialdate}, {bride}! Please come with clean, dry hair (washed the day before), and bring your inspiration photos, any accessories and a photo of your dress 💕\n\n{student}"},
+  {key:"trialdone", label:"Trial done", action:"Balance received",
+   tip:"Write your trial notes straight away: sections, pins, products, timing. They're your recipe for the wedding morning.",
+   msg:"It was so lovely to meet you today, {bride}! I'm really happy with your look ✨\n\nThe balance of {balance} is due before the wedding. I'll send your morning schedule nearer the day.\n\n{student}"},
+  {key:"paid", label:"Paid in full", action:"Schedule confirmed",
+   tip:"Confirm the schedule 2–3 weeks before: access time, ceremony time, who goes first. Check parking and where you'll set up.",
+   msg:"Hi {bride}! Here's your wedding morning plan for {date}:\n\n{schedule}\n\nCan you confirm the access time and where I'll be setting up? 💐\n\n{student}"},
+  {key:"ready", label:"Ready for the day", action:"Wedding done",
+   tip:"Pack your kit the night before, check the route and parking, and arrive 15 minutes early. Calm stylist, calm bride.",
+   msg:"Tomorrow's the day, {bride}! 💍 I'll arrive at {access}. Clean, dry hair for everyone please. Get some sleep, it's going to be beautiful.\n\n{student}"},
+  {key:"done", label:"Wedding done", action:"",
+   tip:"Ask for a review and a few photos within a week, while she's still glowing. Reviews are how your next bride finds you.",
+   msg:"Congratulations again, {bride}! 💕 It was such a joy to be part of your day.\n\nIf you have a moment, a short review would mean the world to me, and I'd love to see your photos when they arrive!\n\n{student}"}
+];
+const method = () => st.get("ac.method", DEFAULT_METHOD);
+
+/* ---------- the student ---------- */
+const DEFAULT_STUDENT = { name:"Sophie Clarke", biz:"Sophie Clarke Bridal Hair", area:"Beeston, Nottingham", ig:"@sophieclarkebridal",
+  prices:{ bride:75, guest:60, trial:75, child:35 }, deposit:50 };
+const student = () => st.get("ac.student", DEFAULT_STUDENT);
+const KIT = ["Tongs 25mm & 32mm","Straighteners","Hairdryer + diffuser","Extension lead","Section clips","Pins: bobby & fine","Elastics (clear & brown)","Padding / doughnuts","Backcombing brush","Tail comb","Hairspray (strong & flexible)","Dry shampoo","Shine spray","Heat protector","Mirror & light","Emergency kit: plasters, safety pins","Trial notes","Water & snacks"];
+
+/* ---------- sample brides ---------- */
+function sampleBrides(){
+  const d = n => iso(addD(TODAY, n));
+  return [
+    {id:"b1", name:"Emily Hart", phone:"07700900111", date:d(196), adults:3, kids:1, ready:"Home, West Bridgford", venue:"Colwick Hall", access:"09:00", ceremony:"13:30", length:"Long", style:"Soft boho", heard:"Instagram", notes:"Fine hair, wants volume", stage:0, paid:{}, created:Date.now()-3600e3},
+    {id:"b2", name:"Grace Moore", phone:"07700900222", date:d(245), adults:2, kids:0, ready:"Hotel, city centre", venue:"Nottingham Council House", access:"09:30", ceremony:"14:00", length:"Mid", style:"Classic up-do", heard:"A friend", stage:1, paid:{}, created:Date.now()-4*864e5},
+    {id:"b3", name:"Hannah Ross", phone:"07700900333", date:d(98), adults:4, kids:0, ready:"Home, Ruddington", venue:"Holme Pierrepont Hall", access:"08:30", ceremony:"13:00", length:"Long", style:"Half-up", heard:"Google", stage:3, trial:d(40), trialTime:"11:00", paid:{deposit:true}, created:Date.now()-60*864e5},
+    {id:"b4", name:"Chloe Bennett", phone:"07700900444", date:d(19), adults:3, kids:2, ready:"Home, Beeston", venue:"Kelham House", access:"09:00", ceremony:"14:00", length:"Long", style:"Sleek low bun", heard:"My venue", stage:5, trial:d(-30), trialTime:"10:00", paid:{deposit:true, trial:true, balance:true}, notes:"Trial: 3 sections, padding at crown, 2 cans of strong hold. Bride took 55 min.", created:Date.now()-140*864e5},
+    {id:"b5", name:"Lucy Patel", phone:"07700900555", date:d(-12), adults:2, kids:0, ready:"Home, Clifton", venue:"Thoresby Courtyard", access:"09:30", ceremony:"13:00", length:"Mid", style:"Soft waves", heard:"Instagram", stage:7, trial:d(-60), trialTime:"12:00", paid:{deposit:true, trial:true, balance:true}, created:Date.now()-200*864e5}
+  ];
+}
+const brides = () => st.get("ac.brides", null) || (st.set("ac.brides", sampleBrides()), sampleBrides());
+const saveBrides = b => st.set("ac.brides", b);
+
+/* ---------- money & schedule ---------- */
+const hasTrial = b => b.wantTrial !== false;
+function quoteNoTrial(b){ const p = student().prices; return p.bride + (hasTrial(b) ? p.trial : 0) + b.adults*p.guest + b.kids*p.child; }
+const trialAmt = b => hasTrial(b) ? student().prices.trial : 0;
+function partyText(b){ const bits = ["you"]; if (b.adults) bits.push(`${b.adults} guest${b.adults>1?"s":""}`); if (b.kids) bits.push(`${b.kids} under 10${b.kids>1?"s":""}`); return bits.join(", ").replace(/, ([^,]*)$/, " and $1"); }
+function schedule(b){
+  const rows = [{t:tm(b.access), l:"Arrive and set up"}]; let t = tm(b.access) + 15;
+  if (b.kids) { rows.push({t, l: b.kids>1 ? `Little ones (${b.kids})` : "Little one"}); t += b.kids*20; }
+  if (b.adults) { rows.push({t, l: b.adults>1 ? `Guests (${b.adults})` : "Your guest"}); t += b.adults*45; }
+  rows.push({t, l:"The bride", br:true}); t += 60;
+  rows.push({t, l:"All done: dress & photos"});
+  return { rows, fits: t <= tm(b.ceremony) - 60 };
+}
+function fill(tpl, b){
+  const s = student(), total = quoteNoTrial(b), sch = schedule(b);
+  return tpl.replace(/\{(\w+)\}/g, (_,k) => ({
+    bride: firstName(b.name), date: nice(b.date), party: partyText(b), total: gbp(total), deposit: gbp(s.deposit),
+    balance: gbp(total - s.deposit - trialAmt(b)), student: firstName(s.name), access: b.access,
+    trialdate: b.trial ? `${nice(b.trial)} at ${b.trialTime||"10:00"}` : "your trial date",
+    schedule: sch.rows.map(r=>`${hm(r.t)}  ${r.l}`).join("\n")
+  })[k] ?? `{${k}}`);
+}
+
+/* ---------- 1. bride's link ---------- */
+const F = { date:"", adults:3, kids:0, trial:true, ready:"", venue:"", access:"09:30", ceremony:"14:00", length:"", style:"", insp:"", name:"", phone:"", email:"", heard:"", sent:false };
+function linkView(){
+  const s = student(), p = s.prices, el = $("#linkScreen");
+  if (F.sent) { el.innerHTML = `<div class="bh"><div class="av">${esc(s.name[0])}</div><h2>${esc(s.biz)}</h2></div>
+    <div class="done"><div class="tick">✓</div><h3 style="font-size:28px">Thank you, ${esc(firstName(F.name))}!</h3>
+    <p class="muted" style="font-size:15px">Your enquiry is with ${esc(firstName(s.name))}. She'll be in touch very soon, usually the same day.</p>
+    <p style="margin-top:22px"><a class="btn solid" href="#app">See it arrive in Sophie's app →</a></p>
+    <p><button class="btn" id="again" style="margin-top:6px">Send another enquiry</button></p></div>`; return; }
+  const b = { adults:F.adults, kids:F.kids };
+  const est = p.bride + (F.trial?p.trial:0) + F.adults*p.guest + F.kids*p.child;
+  const taken = F.date && brides().some(x => x.date === F.date && x.stage >= 2);
+  const min = iso(addD(TODAY,1));
+  el.innerHTML = `
+  <div class="bh"><div class="av">${esc(s.name[0])}</div><h2>${esc(s.biz)}</h2><div class="loc">Bridal hair · ${esc(s.area)} · ${esc(s.ig)}</div>
+    <div class="trained"><i>✦</i> Trained by Alice Paonessa · Bridal Hairstyles Academy</div></div>
+  <div class="bb">
+    <div class="sec"><label for="f-date">Your wedding date</label><input class="in" type="date" id="f-date" min="${min}" value="${F.date}">
+      ${F.date ? (taken ? `<div class="note no">${esc(firstName(s.name))} is already booked on ${nice(F.date)}. You can still send your enquiry, and she'll let you know if anything changes.</div>` : `<div class="note ok">Good news: ${esc(firstName(s.name))} is free on ${nice(F.date)}.</div>`) : ""}</div>
+    <div class="sec"><span class="lab">Who's getting ready?</span>
+      <div class="pr"><div><b>You, the bride</b><small>${gbp(p.bride)}</small></div><div class="stp"><output>1</output></div></div>
+      <div class="pr"><div><b>Guests</b><small>Bridesmaids, mums · ${gbp(p.guest)} each</small></div><div class="stp"><button data-d="adults" aria-label="Fewer guests">−</button><output>${F.adults}</output><button data-u="adults" aria-label="More guests">+</button></div></div>
+      <div class="pr"><div><b>Under 10s</b><small>${gbp(p.child)} each</small></div><div class="stp"><button data-d="kids" aria-label="Fewer children">−</button><output>${F.kids}</output><button data-u="kids" aria-label="More children">+</button></div></div>
+      <div class="pr"><label style="display:flex;gap:10px;align-items:center"><input type="checkbox" id="f-trial" ${F.trial?"checked":""} style="width:18px;height:18px;accent-color:var(--peach-d)"><span><b>Bridal hair trial</b><small>Recommended · ${gbp(p.trial)}</small></span></label><span></span></div>
+    </div>
+    <div class="est"><div class="row"><span>Estimate</span><span class="muted">deposit ${gbp(s.deposit)} secures your date</span></div><div class="tot"><span>For ${1+F.adults+F.kids} ${1+F.adults+F.kids>1?"people":"person"}</span><b>${gbp(est)}</b></div></div>
+    <div class="sec two"><div><label for="f-access">Access to the room</label><input class="in" type="time" id="f-access" value="${F.access}" step="900"></div><div><label for="f-cer">Ceremony time</label><input class="in" type="time" id="f-cer" value="${F.ceremony}" step="900"></div></div>
+    <div class="sec"><label for="f-ready">Where are you getting ready?</label><input class="in" id="f-ready" placeholder="At home, NG9 or the venue" value="${esc(F.ready)}"></div>
+    <div class="sec"><label for="f-venue">Venue</label><input class="in" id="f-venue" value="${esc(F.venue)}"></div>
+    <div class="sec"><span class="lab">Your hair length</span><div class="chips">${["Short","Mid","Long","Extensions"].map(x=>`<button class="chip" data-len="${x}" aria-pressed="${F.length===x}">${x}</button>`).join("")}</div></div>
+    <div class="sec"><span class="lab">The look you love</span><div class="chips">${["Classic up-do","Half-up","Soft boho","Hollywood waves","Sleek low bun","Not sure yet"].map(x=>`<button class="chip" data-sty="${x}" aria-pressed="${F.style===x}">${x}</button>`).join("")}</div></div>
+    <div class="sec"><label for="f-insp">Inspiration (Pinterest or Instagram link)</label><input class="in" id="f-insp" value="${esc(F.insp)}"></div>
+    <div class="sec"><label for="f-name">Your name</label><input class="in" id="f-name" autocomplete="name" value="${esc(F.name)}"></div>
+    <div class="sec two"><div><label for="f-phone">Mobile</label><input class="in" id="f-phone" type="tel" value="${esc(F.phone)}"></div><div><label for="f-email">Email</label><input class="in" id="f-email" type="email" value="${esc(F.email)}"></div></div>
+    <div class="sec"><label for="f-heard">How did you find me?</label><select class="in" id="f-heard"><option value="">Choose</option>${["Instagram","TikTok","Facebook","A friend","My venue","Google","Wedding fair"].map(x=>`<option ${F.heard===x?"selected":""}>${x}</option>`).join("")}</select></div>
+    <button class="btn solid block" id="f-send">Send my enquiry</button>
+    <p class="muted" style="font-size:12px;text-align:center;margin-top:10px">No payment now. ${esc(firstName(s.name))} will confirm everything with you personally.</p>
+  </div>
+  <div class="foot">${esc(s.biz)} · bookings by Bridal Hairstyles Academy</div>`;
+}
+$("#linkScreen").addEventListener("click", e => {
+  const t = e.target.closest("button"); if (!t) return; const d = t.dataset;
+  if (d.u || d.d) { const k = d.u || d.d, max = k==="adults" ? 10 : 6; F[k] = Math.max(0, Math.min(max, F[k] + (d.u?1:-1))); linkView(); }
+  else if (d.len) { F.length = d.len; linkView(); }
+  else if (d.sty) { F.style = d.sty; linkView(); }
+  else if (t.id === "again") { Object.assign(F, {sent:false, name:"", phone:"", email:"", date:""}); linkView(); }
+  else if (t.id === "f-send") {
+    if (!F.date) return toast("Please choose your wedding date.");
+    if (!F.name.trim() || !(F.phone.trim() || F.email.trim())) return toast("Please add your name and a mobile or email.");
+    const all = brides(); all.unshift({ id:"b"+Date.now(), name:F.name.trim(), phone:F.phone.trim(), email:F.email.trim(), date:F.date, adults:F.adults, kids:F.kids,
+      wantTrial:F.trial, ready:F.ready, venue:F.venue, access:F.access, ceremony:F.ceremony, length:F.length, style:F.style, insp:F.insp, heard:F.heard,
+      stage:0, paid:{}, created:Date.now(), fresh:true });
+    saveBrides(all); F.sent = true; linkView(); toast(`New enquiry sent to ${firstName(student().name)}'s app.`);
+  }
+});
+$("#linkScreen").addEventListener("input", e => {
+  const id = e.target.id, map = {"f-date":"date","f-access":"access","f-cer":"ceremony","f-ready":"ready","f-venue":"venue","f-insp":"insp","f-name":"name","f-phone":"phone","f-email":"email","f-heard":"heard"};
+  if (map[id]) { F[map[id]] = e.target.value; if (id === "f-date") linkView(); }
+  if (id === "f-trial") { F.trial = e.target.checked; linkView(); }
+});
+$("#linkScreen").addEventListener("change", e => { if (e.target.id === "f-heard") F.heard = e.target.value; });
+
+/* ---------- 2. student's app ---------- */
+let tab = "brides", openId = null;
+function appView(){
+  const s = student(), all = brides(), M = method(), bc = st.get("ac.broadcast", null), el = $("#appScreen");
+  const upcoming = all.filter(b => P(b.date) >= TODAY), news = all.filter(b => b.stage === 0).length;
+  const booked = all.filter(b => b.stage >= 2);
+  const received = booked.reduce((a,b) => a + (b.paid.deposit ? s.deposit : 0) + (b.paid.trial ? trialAmt(b) : 0) + (b.paid.balance ? quoteNoTrial(b) - s.deposit - trialAmt(b) : 0), 0);
+  const value = booked.reduce((a,b) => a + quoteNoTrial(b), 0);
+  let body = "";
+  if (tab === "brides") {
+    const groups = [["Needs you now", all.filter(b => b.stage <= 1)], ["Booked", all.filter(b => b.stage >= 2 && b.stage <= 6 && P(b.date) >= TODAY)], ["Done", all.filter(b => b.stage === 7 || P(b.date) < TODAY)]];
+    body = `<div class="kpis"><div class="kpi"><b>${news}</b><small>new enquiries</small></div><div class="kpi"><b>${booked.filter(b=>P(b.date)>=TODAY).length}</b><small>weddings booked</small></div><div class="kpi"><b>${gbp(value)}</b><small>booked value</small></div></div>
+     <div class="mylink"><span>✦ book.bridalhairstyles.co.uk/${esc(s.name.toLowerCase().replace(/[^a-z]+/g,"-"))}</span><button id="copyLink">Copy</button></div>
+     <div class="list">${groups.map(([h, arr]) => arr.length ? `<div class="lh"><h3>${h}</h3><span class="muted" style="font-size:12px">${arr.length}</span></div>` + arr.sort((a,b)=>a.date<b.date?-1:1).map(b => { const d = P(b.date);
+       return `<button class="bride" data-open="${b.id}"><div class="dt"><b>${d.getDate()}</b><small>${MON[d.getMonth()]} ${String(d.getFullYear()).slice(2)}</small></div>
+       <div><h4>${esc(b.name)}</h4><div class="s">${1+b.adults+b.kids} people · ${esc(b.venue || b.ready || "venue tbc")}</div></div>
+       <span class="tag ${b.stage===0?"new":b.stage>=5?"go":""}">${esc(M[b.stage].label)}</span></button>`; }).join("") : "").join("")}</div>`;
+  } else if (tab === "money") {
+    const due = booked.filter(b => P(b.date) >= TODAY).map(b => ({ b, owed: (b.paid.deposit?0:s.deposit) + (b.paid.trial || !b.trial ? 0 : trialAmt(b)) + (b.paid.balance?0:quoteNoTrial(b)-s.deposit-trialAmt(b)) })).filter(x => x.owed > 0);
+    body = `<div class="mon"><p class="kick">Your money</p><div class="big" style="margin:10px 0 2px">${gbp(received)}</div><p class="muted" style="margin:0 0 18px;font-size:14px">received so far, from ${gbp(value)} booked</p>
+     <h3 style="font-size:22px;margin-bottom:6px">Still to come</h3>${due.map(x=>`<div class="mrow"><span>${esc(x.b.name)} · ${nice(x.b.date)}</span><b>${gbp(x.owed)}</b></div>`).join("") || `<p class="muted">Nothing outstanding.</p>`}
+     <p class="muted" style="font-size:12.5px;margin-top:16px">Payments are simply ticked off in each bride's card, so there's no card machine or set-up needed.</p></div>`;
+  } else {
+    body = `<div class="mon"><p class="kick">Your details</p><p class="muted" style="font-size:13.5px">Set up once, in two minutes, during the course.</p>
+     ${[["name","Your name"],["biz","Business name"],["area","Area"],["ig","Instagram"]].map(([k,l])=>`<div class="sec"><label>${l}</label><input class="in" data-s="${k}" value="${esc(s[k])}"></div>`).join("")}
+     <div class="two">${[["bride","Bride on the day"],["guest","Guest"],["trial","Bride trial"],["child","Under 10"]].map(([k,l])=>`<div class="sec"><label>${l} (£)</label><input class="in" type="number" min="0" data-p="${k}" value="${s.prices[k]}"></div>`).join("")}<div class="sec"><label>Deposit (£)</label><input class="in" type="number" min="0" data-s="deposit" value="${s.deposit}"></div></div>
+     <button class="btn" id="resetDemo">Reset demo data</button></div>`;
+  }
+  el.innerHTML = `<div class="ah"><div class="hi">Hi ${esc(firstName(s.name))}</div><div class="muted" style="font-size:13px;margin-top:4px">${esc(s.biz)}</div></div>
+   ${bc ? `<div class="bcast"><b>From Alice ✦</b>${esc(bc)}</div>` : ""}${body}
+   <nav class="nav"><button data-tab="brides" class="${tab==="brides"?"on":""}"><i>♡</i>Brides</button><button data-tab="money" class="${tab==="money"?"on":""}"><i>£</i>Money</button><button data-tab="me" class="${tab==="me"?"on":""}"><i>✦</i>My details</button></nav>`;
+  if (openId) sheet();
+}
+function sheet(){
+  const b = brides().find(x => x.id === openId); if (!b) { closeSheet(); return; }
+  const M = method(), m = M[b.stage], s = student(), sch = schedule(b), msg = fill(m.msg, b);
+  const total = quoteNoTrial(b), phone = String(b.phone||"").replace(/\D/g,"").replace(/^0/,"44");
+  const wa = phone ? `https://wa.me/${phone}?text=${encodeURIComponent(msg)}` : `https://wa.me/?text=${encodeURIComponent(msg)}`;
+  $("#sheet").innerHTML = `<div class="sh"><button class="x" id="close">← All brides</button><h3>${esc(b.name)}</h3><div class="muted" style="font-size:13px">${nice(b.date)} · ${1+b.adults+b.kids} people · ${gbp(total)}</div>
+    <div class="prog">${M.map((_,i)=>`<span class="${i<=b.stage?"on":""}"></span>`).join("")}</div><div class="stg">Step ${b.stage+1} of ${M.length} · ${esc(m.label)}</div></div>
+   <div class="sb">
+    <div class="tip"><div class="who"><i>A</i>Alice's tip</div>${esc(m.tip)}</div>
+    <span class="lab">Your next message</span><div class="msg">${esc(msg)}</div>
+    <div class="acts"><a class="btn wa" target="_blank" rel="noopener" href="${wa}">WhatsApp</a><button class="btn" id="copyMsg">Copy</button></div>
+    ${b.stage === 2 ? `<div class="blk"><h4>Book her trial</h4><div class="two"><div><label class="lab">Date</label><input class="in" type="date" id="trDate" value="${b.trial||""}"></div><div><label class="lab">Time</label><input class="in" type="time" id="trTime" value="${b.trialTime||"10:00"}"></div></div></div>` : ""}
+    ${m.action ? `<div style="margin-top:16px"><button class="btn solid block" id="advance">✓ ${esc(m.action)}</button></div>` : ""}
+    <div class="blk"><h4>Payments</h4>
+      ${[["deposit","Deposit",s.deposit],...(hasTrial(b)?[["trial","Trial",trialAmt(b)]]:[]),["balance","Balance",total-s.deposit-trialAmt(b)]].map(([k,l,a])=>`<div class="pay"><label><input type="checkbox" data-pay="${k}" ${b.paid[k]?"checked":""}>${l}</label><b>${gbp(a)}</b></div>`).join("")}</div>
+    <div class="blk"><h4>Wedding morning</h4><div class="muted" style="font-size:13px;margin-bottom:6px">Access ${b.access} · ceremony ${b.ceremony}</div>
+      <ul class="tl">${sch.rows.map(r=>`<li><time>${hm(r.t)}</time><span${r.br?' style="font-weight:500"':""}>${r.l}</span></li>`).join("")}</ul>
+      ${sch.fits ? "" : `<div class="note no">Tight for time. Alice's advice: bring in a second stylist, or ask for an earlier access time.</div>`}</div>
+    <div class="blk"><h4>Trial notes: your recipe for the day</h4><textarea class="in" id="notes" placeholder="Sections, pins, padding, products, how long it took…">${esc(b.notes||"")}</textarea></div>
+    <div class="blk"><h4>About her</h4><div class="facts">
+      <div><span>Getting ready</span><br>${esc(b.ready||"–")}</div><div><span>Venue</span><br>${esc(b.venue||"–")}</div>
+      <div><span>Hair</span><br>${esc(b.length||"–")}</div><div><span>Look</span><br>${esc(b.style||"–")}</div>
+      <div><span>Trial</span><br>${b.trial?`${nice(b.trial)}, ${b.trialTime}`:"not booked"}</div><div><span>Found you via</span><br>${esc(b.heard||"–")}</div></div>
+      ${b.insp ? `<p style="font-size:13.5px"><a href="${esc(b.insp)}" target="_blank" rel="noopener">Her inspiration ↗</a></p>` : ""}</div>
+    ${b.stage >= 5 && b.stage < 7 ? `<div class="blk"><h4>Alice's kit list</h4><ul class="kit">${KIT.map((k,i)=>`<li><label><input type="checkbox" style="accent-color:var(--ok)"> ${k}</label></li>`).join("")}</ul></div>` : ""}
+   </div>`;
+  $("#sheet").classList.add("open");
+}
+function closeSheet(){ openId = null; $("#sheet").classList.remove("open"); }
+document.addEventListener("click", e => {
+  const t = e.target.closest("button,a"); if (!t) return;
+  if (t.dataset.open) { openId = t.dataset.open; const all = brides(), b = all.find(x=>x.id===openId); if (b && b.fresh) { b.fresh = false; saveBrides(all); } sheet(); }
+  else if (t.dataset.tab) { tab = t.dataset.tab; appView(); }
+  else if (t.id === "close") closeSheet();
+  else if (t.id === "copyLink") { navigator.clipboard?.writeText("book.bridalhairstyles.co.uk/" + student().name.toLowerCase().replace(/[^a-z]+/g,"-")).catch(()=>{}); toast("Link copied. Paste it in your Instagram bio."); }
+  else if (t.id === "copyMsg") { navigator.clipboard?.writeText($(".msg").textContent).catch(()=>{}); toast("Message copied."); }
+  else if (t.id === "advance") {
+    const all = brides(), b = all.find(x=>x.id===openId), M = method();
+    if (b.stage === 2) { const d = $("#trDate").value; if (!d) return toast("Choose the trial date first."); b.trial = d; b.trialTime = $("#trTime").value || "10:00"; }
+    if (b.stage === 1) b.paid.deposit = true;
+    if (b.stage === 4) b.paid.balance = true;
+    if (b.stage === 3 && hasTrial(b)) b.paid.trial = true;
+    b.stage = Math.min(M.length-1, b.stage+1); saveBrides(all); appView(); toast(`${firstName(b.name)} moved to “${M[b.stage].label}”.`);
+    $("#sheet").scrollTop = 0;
+  }
+  else if (t.id === "resetDemo") { localStorage.removeItem("ac.brides"); localStorage.removeItem("ac.student"); localStorage.removeItem("ac.broadcast"); tab = "brides"; appView(); toast("Demo reset."); }
+});
+document.addEventListener("change", e => {
+  const el = e.target;
+  if (el.dataset.pay) { const all = brides(), b = all.find(x=>x.id===openId); b.paid[el.dataset.pay] = el.checked; saveBrides(all); appView(); }
+  if (el.dataset.s || el.dataset.p) { const s = student(); if (el.dataset.p) s.prices[el.dataset.p] = Math.max(0, Number(el.value)||0); else s[el.dataset.s] = el.dataset.s === "deposit" ? Math.max(0, Number(el.value)||0) : el.value; st.set("ac.student", s); toast("Saved. Your link and quotes are updated."); }
+});
+document.addEventListener("input", e => { if (e.target.id === "notes") { const all = brides(), b = all.find(x=>x.id===openId); b.notes = e.target.value; saveBrides(all); } });
+
+/* ---------- 3. Alice's academy ---------- */
+function academy(){
+  const me = brides(), s = student();
+  const others = [
+    {n:"Megan Walsh", a:"Derby", e:9, bk:5, v:2140, last:"today"},
+    {n:"Priya Shah", a:"Leicester", e:14, bk:8, v:3890, last:"today"},
+    {n:"Ellie Turner", a:"Loughborough", e:3, bk:1, v:410, last:"6 days ago", flag:"No replies to 2 enquiries"},
+    {n:"Jade Okafor", a:"Nottingham", e:6, bk:3, v:1180, last:"yesterday"},
+    {n:"Amy Clarke", a:"Mansfield", e:0, bk:0, v:0, last:"2 weeks ago", flag:"Hasn't shared her link yet"}
+  ];
+  const mine = {n:s.name, a:s.area, e:me.length, bk:me.filter(b=>b.stage>=2).length, v:me.filter(b=>b.stage>=2).reduce((a,b)=>a+quoteNoTrial(b),0), last:"just now", live:true,
+    flag: me.some(b=>b.stage===0 && Date.now()-b.created > 864e5) ? "Enquiry waiting over a day" : ""};
+  const rows = [mine, ...others];
+  const T = rows.reduce((a,r)=>({e:a.e+r.e, bk:a.bk+r.bk, v:a.v+r.v}), {e:0,bk:0,v:0});
+  $("#akpis").innerHTML = `<div><b>${rows.length}</b><small>students using your kit</small></div><div><b>${T.e}</b><small>bride enquiries</small></div><div><b>${T.bk}</b><small>weddings booked</small></div><div><b>${gbp(T.v)}</b><small>booked by your students</small></div>`;
+  $("#studs").innerHTML = `<tr><th>Student</th><th>Enquiries</th><th>Booked</th><th>Value</th><th>Active</th></tr>` + rows.map(r=>`<tr><td><b>${esc(r.n)}</b>${r.live?' <span class="tag new" style="font-size:9.5px">demo</span>':""}<br><span class="muted" style="font-size:12px">${esc(r.a)}</span>${r.flag?`<br><span class="flag">⚑ ${esc(r.flag)}</span>`:""}</td><td>${r.e}</td><td>${r.bk}</td><td>${gbp(r.v)}</td><td class="muted">${r.last}</td></tr>`).join("");
+  const M = method();
+  $("#method").innerHTML = M.map((m,i)=>`<details ${i===0?"open":""}><summary>${i+1}. ${esc(m.label)}</summary>
+    <small>Your tip</small><textarea data-mt="${i}">${esc(m.tip)}</textarea>
+    <small>Message students send · {bride}, {date}, {total}, {deposit} fill in automatically</small><textarea data-mm="${i}" style="min-height:120px">${esc(m.msg)}</textarea></details>`).join("");
+  $("#bcText").value = st.get("ac.broadcast", "") || "";
+}
+$("#saveM").onclick = () => { const M = method(); document.querySelectorAll("[data-mt]").forEach(t => M[t.dataset.mt].tip = t.value); document.querySelectorAll("[data-mm]").forEach(t => M[t.dataset.mm].msg = t.value); st.set("ac.method", M); toast("Saved. Every student's app now uses your new wording."); };
+$("#resetM").onclick = () => { localStorage.removeItem("ac.method"); academy(); toast("Method reset to the sample."); };
+$("#bcSend").onclick = () => { const v = $("#bcText").value.trim(); if (!v) return toast("Write a message first."); st.set("ac.broadcast", v); toast("Sent. It's at the top of every student's app."); };
+
+/* ---------- routing ---------- */
+function route(){
+  const v = (location.hash || "#link").slice(1);
+  const view = ["link","app","academy"].includes(v) ? v : "link";
+  document.querySelectorAll(".view").forEach(x => x.classList.toggle("on", x.id === "v-"+view));
+  document.querySelectorAll(".tabs a").forEach(a => a.classList.toggle("on", a.dataset.v === view));
+  if (view === "link") linkView();
+  if (view === "app") { closeSheet(); appView(); }
+  if (view === "academy") academy();
+  scrollTo(0,0);
+}
+addEventListener("hashchange", route);
+route();
+</script>
+</body>
+</html>

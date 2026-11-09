@@ -212,6 +212,15 @@ Both use generated placeholder images and made-up details.
   an honest no-rankings-promise note; a calculator driven by her prices and her own slider inputs; straight
   answers; next steps. Photos are cropped from her own site screenshots into `img/`. Booked dates and diary
   brides are sample data.
+- `bridal-hairstyles/academy/`: student booking kit for Alice's bridal hair course (her idea: a simple tool she gives
+  students so they can work professionally from day one). Three linked views in one file: `#link`, the bride's
+  enquiry link a student shares on social media ("Trained by Alice Paonessa" badge, instant estimate from the
+  student's prices, booked dates shown); `#app`, the student's phone app, where each bride moves through Alice's
+  8 steps (enquiry, quote, date secured, trial, trial done, paid, ready, done) with Alice's tip and a ready
+  WhatsApp message per step, tick-off payments (no card payments, as Alice asked), trial notes, wedding-morning
+  schedule from access/ceremony times, a kit list, money and settings; `#academy`, Alice's console with all students'
+  enquiries, bookings and flags, an editor for her method (tips and messages update every student's app) and a
+  broadcast to all students. Method wording, students and brides are sample data; data lives in localStorage.
 - `beyond-salon`: Beyond Beauty Salon by Ahmed Batekha, Egypt (Sheikh Zayed at The Lane
   Mall Palm Hills, Zamalek, Sahel). Bespoke page with a built-in 5-step booking engine
   (branch, services, stylist, date/time, details), booking reference, .ics calendar file,
