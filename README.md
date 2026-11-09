@@ -199,6 +199,16 @@ Both use generated placeholder images and made-up details.
   and first-timer second visits, 48-hour skin-test tracking with a CSV log, Christmas vouchers and memberships,
   missed-call text-back and 10pm replies, reviews and referrals, a wedding/prom quote builder with timings, a
   stylist scorecard and a revenue calculator. Prices, hours and stylists are the salon's; clients are sample data.
+- `bridal-hairstyles`: Bridal Hairstyles, 2 Wilberforce Rd, Wilford, Nottingham NG11 7GU (Alice Paonessa,
+  07546 606107). Bespoke, photo-free light page (ivory, olive, blush; Cormorant Garamond + Jost) built around a
+  bridal booking pipeline: wedding-date checker with booked days and a waiting list, party builder (bride,
+  bridesmaids, mums, flower girls) with a live quote and a wedding-morning timeline worked back from the ready-by
+  time, a studio trial picker that highlights six to ten weeks before, details, a £50 deposit (demo checkout
+  unless `CONFIG.stripeLink` is set), reference, reminder plan and .ics. `#studio` is Alice's wedding diary:
+  pipeline stages per wedding, next automatic message, waiting lists, and "Bride cancelled" offering the date to
+  the waiting list. Rating, reviews and hours from her Google listing (5.0 / 41); her story from her own posts.
+  Prices are demo prices (labelled); booked dates and diary brides are sample data. Add her own photos when she
+  shares them.
 - `beyond-salon`: Beyond Beauty Salon by Ahmed Batekha, Egypt (Sheikh Zayed at The Lane
   Mall Palm Hills, Zamalek, Sahel). Bespoke page with a built-in 5-step booking engine
   (branch, services, stylist, date/time, details), booking reference, .ics calendar file,
