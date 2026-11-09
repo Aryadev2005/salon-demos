@@ -158,7 +158,7 @@ Both use generated placeholder images and made-up details.
   mosaic sign in the salon: about 6,000 instanced glass tiles (RoundedBoxGeometry, MeshPhysicalMaterial with
   iridescence, RoomEnvironment reflections) that flip in on load, catch a light that follows the pointer (and wanders
   on its own on phones) and ripple as you scroll. "Bleach" is laid in black tiles from the Lobster font at runtime.
-  No model or HDR files, so it loads light; the sign photo shows if WebGL is unavailable. Fonts are self-hosted in
+  The booking section has a rose velvet styling chair (the same FurniMesh GLB as Luke James, recoloured to Karl's station chairs) that loads only when you get near it: it rises a notch at each booking step, turns to face you while your time is held, spins when the booking is made and turns away on a cancel; drag to turn it. The hero needs no model or HDR files, so it loads light; the sign photo shows if WebGL is unavailable. Fonts are self-hosted in
   `assets/fonts/`. Source in `src/mosaic.js`, bundled to `assets/site.js` with esbuild from three.js r187.
   Real prices, durations and hours from their Treatwell mini-site; reviews and the 4.7 / 95 rating from Treatwell.
   Salon photos are hotlinked from Treatwell's CDN (download them into `img/` if that listing goes away).

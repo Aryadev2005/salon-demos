@@ -211,6 +211,15 @@ fieldset{border:0;padding:0;margin:0 0 14px}
 .ref{font-family:var(--serif);font-size:30px;letter-spacing:.02em}
 .demo-flag{display:inline-block;font-size:12px;font-weight:600;background:#fff4d8;color:#6b4b00;border-radius:999px;padding:3px 10px}
 
+.chair{position:relative;height:clamp(240px,30vw,340px);margin:18px 0 6px;border-radius:var(--r-lg);touch-action:pan-y;cursor:grab;
+  background:radial-gradient(70% 60% at 50% 70%,#ffffff,rgba(255,255,255,0) 70%)}
+.chair.grab{cursor:grabbing}
+.chair-canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.chair-tip{position:absolute;left:50%;bottom:6px;transform:translateX(-50%);font-size:13px;color:var(--muted);opacity:0;transition:opacity .4s;white-space:nowrap}
+.chair.is-live .chair-tip{opacity:1}
+.chair.no-webgl{display:none}
+@media (max-width:900px){.chair{height:240px;margin-top:8px}.how{margin-top:10px}}
+
 /* visit */
 .visit{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(28px,5vw,64px)}
 @media (max-width:860px){.visit{grid-template-columns:1fr}}
@@ -346,6 +355,9 @@ footer p{margin:4px 0}
       <div>
         <h2 id="bookH">Book with Karl</h2>
         <p class="lede">Booking goes straight into Karl's own diary.</p>
+        <div class="chair" data-chair role="img" aria-label="One of Karl's rose velvet styling chairs. It rises a little with each booking step.">
+          <span class="chair-tip" id="chairTip">Drag to turn the chair</span>
+        </div>
         <ol class="how">
           <li><span class="n">1</span><span><b>Choose a service</b>Prices and timings from the menu above.</span></li>
           <li><span class="n">2</span><span><b>Pick a time</b>Only times Karl is actually free are shown.</span></li>
@@ -549,8 +561,12 @@ function renderHours(){
 /* ---------- booking flow ---------- */
 const state = { step:1, svc:null, date:null, time:null, patch:null, patchSlot:null, details:{}, hold:null, timer:0 };
 const pane = $("#pane");
+const CHAIR_TIPS = {1:"Drag to turn the chair", 2:"Pick a time and the chair is yours", 3:"Nearly there", 4:"Held for you while you pay", 5:"See you in the chair"};
 function setStep(n){
   state.step = n;
+  window.__bleachStep = n;
+  dispatchEvent(new CustomEvent("bleach:step", {detail:n}));
+  const tip = document.getElementById("chairTip"); if (tip) tip.textContent = CHAIR_TIPS[n];
   document.querySelectorAll(".steps span").forEach(s => { const k = +s.dataset.s; s.className = k === n ? "on" : k < n ? "done" : ""; });
   ({1:stepService, 2:stepTime, 3:stepDetails, 4:stepDeposit, 5:stepDone})[n]();
 }
@@ -677,6 +693,7 @@ function stepDeposit(){
     if (s.colour && state.patch === "no" && state.patchSlot) list.push({id:"p"+Date.now(), ref:ref+"-PT", date:state.patchSlot.date, start:state.patchSlot.time, mins:15, svc:"patch", name:D.name, phone:D.phone, web:true, patchFor:ref});
     setList("bleach_bookings", list);
     state.last = b;
+    dispatchEvent(new Event("bleach:booked"));
     if (CONFIG.stripeLink) window.open(CONFIG.stripeLink + "?client_reference_id=" + encodeURIComponent(ref), "_blank", "noopener");
     setStep(5);
   };
@@ -697,7 +714,7 @@ function stepDone(){
     $("#cancelArea").innerHTML = `<div class="msg warn">Cancel ${esc(s.name)} on ${niceLong(b.date)}? ${hoursUntil(b) >= 24 ? "Your £10 deposit will be refunded." : "This is less than 24 hours away, so the deposit is kept."}
       <div class="actions" style="margin-top:10px"><button class="linkish" id="keep">Keep my booking</button><button class="btn btn-velvet btn-sm" id="doCancel">Cancel booking</button></div></div>`;
     $("#keep").onclick = () => $("#cancelArea").innerHTML = "";
-    $("#doCancel").onclick = () => { const r = cancelBooking(b.id); pane.innerHTML = `<p class="msg good" style="margin:0"><b>Booking cancelled.</b> ${r.offered ? `Your slot has gone to the waiting list.` : ""}</p><p style="margin-top:16px"><button class="linkish" id="again2">Make another booking</button></p>`; $("#again2").onclick = () => { Object.assign(state, {svc:null, date:null, time:null}); setStep(1); }; };
+    $("#doCancel").onclick = () => { const r = cancelBooking(b.id); dispatchEvent(new Event("bleach:cancelled")); const tip = document.getElementById("chairTip"); if (tip) tip.textContent = "Cancelled. The slot went back on the diary"; pane.innerHTML = `<p class="msg good" style="margin:0"><b>Booking cancelled.</b> ${r.offered ? `Your slot has gone to the waiting list.` : ""}</p><p style="margin-top:16px"><button class="linkish" id="again2">Make another booking</button></p>`; $("#again2").onclick = () => { Object.assign(state, {svc:null, date:null, time:null}); setStep(1); }; };
   };
 }
 function hoursUntil(b){ const n = ukNow(); return ((parseIso(b.date) - parseIso(n.iso)) / 36e5) + (b.start - n.mins) / 60; }
