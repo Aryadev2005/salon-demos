@@ -153,6 +153,20 @@ Both use generated placeholder images and made-up details.
 
 ## Live demos
 
+- `bleach`: Bleach Hair, 385 Smithdown Road, Wavertree, Liverpool L15 3JJ (Karl Mathers). Bespoke light page in the
+  salon's own colours (red and blue velvet, white plaster). The hero is a real-time three.js copy of the gold iridescent
+  mosaic sign in the salon: about 6,000 instanced glass tiles (RoundedBoxGeometry, MeshPhysicalMaterial with
+  iridescence, RoomEnvironment reflections) that flip in on load, catch a light that follows the pointer (and wanders
+  on its own on phones) and ripple as you scroll. "Bleach" is laid in black tiles from the Lobster font at runtime.
+  No model or HDR files, so it loads light; the sign photo shows if WebGL is unavailable. Fonts are self-hosted in
+  `assets/fonts/`. Source in `src/mosaic.js`, bundled to `assets/site.js` with esbuild from three.js r187.
+  Real prices, durations and hours from their Treatwell mini-site; reviews and the 4.7 / 95 rating from Treatwell.
+  Salon photos are hotlinked from Treatwell's CDN (download them into `img/` if that listing goes away).
+  In-page booking (no server): service, day and live free times, details with a free patch test booked 48 hours
+  before colour, a 10-minute hold, a £10 deposit (demo checkout unless `CONFIG.stripeLink` is set), reference, .ics
+  and cancel. Fully booked days take waiting-list sign-ups; cancellations (by a client, or in Karl's diary at
+  `#salon-view`) are offered to the waiting list with the text message shown. Diary clients are sample data.
+
 - `luke-james`: Luke James Hairdressing, 148 Hunts Cross Ave, Woolton, Liverpool L25 8SQ.
   Bespoke light-theme page with real-time three.js: a grey salon chair (FurniMesh GLB, materials set in
   code to match their chairs) lit by a Poly Haven studio HDRI, with a shadow that follows the pointer, drag to
