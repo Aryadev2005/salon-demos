@@ -272,6 +272,17 @@ Both use generated placeholder images and made-up details.
   requests pipeline (request, quote sent, advance paid, confirmed, done) with one-tap next message, season, advances.
   Sample: party price ₹8,500 each, bridal "personal quote", the 30% advance and policy lines, booked dates and studio
   clients. Photos cropped from her grid and profile into `img/`.
+- `mehak-oberoi`: Mehak Oberoi (@mehakoberoiofficial, verified, 10.8K followers, 405 posts), Delhi MUA, "Certified
+  Luxury Makeup Artist from @meerasakhrani @bhumikabahlofficial & @makeupbypratiba". Bookings: Call/WhatsApp
+  +91 87449 19289. Her DM reply: "For which makeup?" then "share your date, location and ready time along with category
+  of makeup". Her "Important note" highlight (used word for word): the time you share is your ready time, not the start
+  time, meaning completely ready with makeup, hair and draping done; bookings are taken as per the ready timings
+  communicated. Blush/mauve page (from her note card) on the Rupangi base: category of makeup + people (or bridal +
+  family makeups), date calendar, Delhi NCR area or outside + venue + ready time with her note, details + "I've read
+  Mehak's note" checkbox, then a WhatsApp to her number answering her four questions in her order. `#studio`: requests
+  pipeline with one-tap next message (the advance message restates her ready-time rule), season, advances. Sample: the
+  category list and prices (engagement ₹18,000, party/festive ₹6,500, bridal personal quote), 30% advance, travel line,
+  booked dates and studio clients. Photos cropped from her grid (family selfies with children left out).
 - `beyond-salon`: Beyond Beauty Salon by Ahmed Batekha, Egypt (Sheikh Zayed at The Lane
   Mall Palm Hills, Zamalek, Sahel). Bespoke page with a built-in 5-step booking engine
   (branch, services, stylist, date/time, details), booking reference, .ics calendar file,
