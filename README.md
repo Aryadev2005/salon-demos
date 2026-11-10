@@ -231,6 +231,11 @@ Both use generated placeholder images and made-up details.
   pre-filled in her team's exact form format. `#studio`: enquiries pipeline (enquiry, quote, advance, trial,
   confirmed, done) with one-tap WhatsApp per stage, season view, team allocation, masterclass seats. Prices in INR
   are samples (labelled); photos cropped from her Instagram grid into `img/`.
+- `sheetal-tripathi`: Sheetal Tripathi, luxury bridal & glam makeup artist, Mumbai, available worldwide
+  (@sheetaltripathi.mua, WhatsApp +91 84259 39665; "Bridal bookings now open 2026–2027"; bridal, engagement,
+  editorial; brand work incl. Nykaa). Adapted from `preshita-bafna` in a deep red/ivory palette: engagement added
+  to the functions, no team/senior-artist choice, Pune in the cities, a brands & editorial enquiry section instead
+  of the masterclass, WhatsApp hand-off to her number. Sample INR prices labelled; photos cropped from her grid.
 - `beyond-salon`: Beyond Beauty Salon by Ahmed Batekha, Egypt (Sheikh Zayed at The Lane
   Mall Palm Hills, Zamalek, Sahel). Bespoke page with a built-in 5-step booking engine
   (branch, services, stylist, date/time, details), booking reference, .ics calendar file,
