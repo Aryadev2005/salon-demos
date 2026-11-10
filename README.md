@@ -262,6 +262,16 @@ Both use generated placeholder images and made-up details.
   bookings (1 person → studio). Black/ivory/champagne page from the Saman flow: evening (per person, min 2 at home,
   home disabled for 1) or bridal (katb el ketab, henna, wedding, trial, destination; quote on request), studio vs her
   place, policy checkbox, WhatsApp hand-off to her bookings number. `#studio`: requests pipeline. Photos from her grid.
+- `rupangi-makeovers`: Rupangi B. Sethi (@rupangiimakeovers, verified, 40.1K followers, 1,412 posts), freelance MUA,
+  Delhi, works globally; bridal and party makeup (highlights Brides'26, Party'26). Bookings "ONLY DM and WhatsApp"
+  +91 81789 04859. Her WhatsApp reply asks: number of party makeups, location, event date(s), ideal time to be ready,
+  and, if the bride, her functions (Engagement, Wedding, Reception, Roka). Wine/gold/ivory page from the Noha flow:
+  event date calendar, party makeup (count + occasion) or bride (her four functions, each with its own date, plus
+  family party makeups), Delhi NCR area chips or outside Delhi NCR + venue and ready time, details + policy checkbox,
+  then a WhatsApp to her number with her own list filled in (her "Idle time" typo written as "Ideal"). `#studio`:
+  requests pipeline (request, quote sent, advance paid, confirmed, done) with one-tap next message, season, advances.
+  Sample: party price ₹8,500 each, bridal "personal quote", the 30% advance and policy lines, booked dates and studio
+  clients. Photos cropped from her grid and profile into `img/`.
 - `beyond-salon`: Beyond Beauty Salon by Ahmed Batekha, Egypt (Sheikh Zayed at The Lane
   Mall Palm Hills, Zamalek, Sahel). Bespoke page with a built-in 5-step booking engine
   (branch, services, stylist, date/time, details), booking reference, .ics calendar file,
