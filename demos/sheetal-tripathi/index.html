@@ -321,7 +321,7 @@ const inr = n => "₹" + Number(n).toLocaleString("en-IN");
 const TODAY = new Date(); TODAY.setHours(0,0,0,0);
 const toast = t => { const el = $("#toast"); el.textContent = t; el.classList.add("show"); clearTimeout(toast.t); toast.t = setTimeout(()=>el.classList.remove("show"), 3200); };
 
-/* sample availability: Preshita + team can take a few bookings a day; peak season Nov–Feb */
+/* sample availability: the artist can take a few bookings a day; peak season Nov–Feb */
 function rng(s){ return () => (s = (s*16807) % 2147483647) / 2147483647; }
 const LOAD = (() => { const r = rng(91823), o = {}; let d = addD(TODAY,1); const end = new Date(2027,11,31);
   for (; d <= end; d = addD(d,1)) { const m = d.getMonth(), peak = m===10||m===11||m===0||m===1||m===3||m===4; const x = r();
@@ -406,7 +406,7 @@ function s3(){
    <div class="two"><label class="f"><span>Phone (WhatsApp)</span><input class="in" id="phone" type="tel" autocomplete="tel" value="${esc(S.phone)}" placeholder="+91"></label>
    <label class="f"><span>Instagram (optional)</span><input class="in" id="insta" value="${esc(S.insta)}" placeholder="@"></label></div>
    <label class="f"><span>Anything else? Outfit colours, references, timings</span><textarea class="in" id="notes">${esc(S.notes)}</textarea></label>
-   <div class="nav"><button class="back" data-go="2">← Back</button><button class="btn gold" id="send">Send to Preshita</button></div>`;
+   <div class="nav"><button class="back" data-go="2">← Back</button><button class="btn gold" id="send">Send to Sheetal</button></div>`;
 }
 function done(){
   const e = enquiries()[0]; const ref = e ? e.ref : "";
@@ -445,7 +445,7 @@ $("#flow").addEventListener("change", e => {
 $("#flow").addEventListener("input", e => { if (["venue","name","phone","insta","notes"].includes(e.target.id)) S[e.target.id] = e.target.value; });
 $("#mcBtn").onclick = () => { const l = st.get("st.mc", []); l.unshift({at:Date.now()}); st.set("st.mc", l); toast("Brand enquiry sent to Sheetal (demo)."); };
 
-/* ---------- Preshita's side ---------- */
+/* ---------- artist's side ---------- */
 const STAGES = ["Enquiry","Quote sent","Advance received","Trial","Confirmed","Done"];
 const MSGS = [
   e => `Hi ${e.name.split(" ")[0]}! Thank you for your enquiry for ${nice(e.date)} 💕 I'm available 😊 For ${e.looks.join(", ")}${e.family?` plus ${e.family} family looks`:""}, your quote is ${inr(e.total)}. Shall I share the advance details to block your date?`,

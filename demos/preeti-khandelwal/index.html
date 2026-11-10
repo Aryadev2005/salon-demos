@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Preeti Khandelwal · Luxury Soft Glam · Book your date</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#2B1B1F;--ink2:#3A262B;--ivory:#FFFAF8;--cream:#F7EDEA;--gold:#D3A890;--gold-d:#A0685A;--maroon:#9C3D54;--muted:#7C7067;--line:#E6DACB;--ok:#4F7A55;--okbg:#E7EFE4;--serif:"Cormorant Garamond",Georgia,serif;--sans:Jost,system-ui,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--ink);font:300 16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;margin:0;line-height:1.08}
+h2{font-size:clamp(34px,4.4vw,52px)}
+.it{font-style:italic;color:var(--gold-d)}
+.kick{font:500 11px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--gold-d);margin:0 0 14px}
+.muted{color:var(--muted)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--gold);background:transparent;padding:14px 24px;font:400 13px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:inherit}
+.btn.gold{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+.btn.gold:hover{background:#d4b37c}
+.btn.wa{background:#25D366;border-color:#25D366;color:#fff}
+.btn:disabled{opacity:.35;cursor:not-allowed}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+section{padding:90px 0}
+
+.pbar{background:#1d1215;color:#d9cdbd;font-size:12.5px}
+.pbar .wrap{display:flex;justify-content:space-between;gap:12px;padding-top:9px;padding-bottom:9px;flex-wrap:wrap}
+.pbar a{color:var(--gold)}
+nav.top{position:sticky;top:0;z-index:40;background:rgba(43,27,31,.96);backdrop-filter:blur(8px);color:var(--ivory);border-bottom:1px solid #2e2520}
+nav.top .wrap{display:flex;justify-content:space-between;align-items:center;height:64px;gap:14px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo img{width:40px;height:40px;border-radius:50%;object-fit:cover;border:1px solid var(--gold)}
+.logo b{font:400 21px/1 var(--serif);letter-spacing:.06em;text-transform:uppercase;display:block}
+.logo small{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+nav.top ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+nav.top ul a{font-size:13px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:#d9cdbd}
+nav.top .btn{padding:10px 16px;font-size:12px}
+
+.hero{background:var(--ink);color:var(--ivory);padding:60px 0 80px;overflow:hidden}
+.hero .g{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.hero h1{font-size:clamp(44px,6vw,80px);line-height:1}
+.hero p.lead{font:300 21px/1.5 var(--serif);color:#d9cdbd;max-width:500px;margin:22px 0 30px}
+.stats{display:flex;gap:30px;margin-top:34px;flex-wrap:wrap}
+.stats div b{display:block;font:400 34px/1 var(--serif);color:var(--gold)}
+.stats div small{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#a99a88}
+.mosaic{display:grid;grid-template-columns:1fr 1fr;gap:12px;height:560px}
+.mosaic img{width:100%;height:100%;object-fit:cover}
+.mosaic .tall{grid-row:span 2}
+
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.col{border:1px solid var(--line);padding:30px;background:#fff}
+.col.after{background:var(--ink);color:var(--ivory);border-color:var(--ink)}
+.col h3{font-size:30px;margin-bottom:16px}
+.col ol{margin:0;padding:0;list-style:none;counter-reset:n}
+.col li{counter-increment:n;padding:11px 0 11px 40px;border-top:1px solid var(--line);position:relative;font-size:15px}
+.col.after li{border-color:#3a302a}
+.col li::before{content:counter(n);position:absolute;left:0;top:11px;width:26px;height:26px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;font:400 14px/1 var(--serif);color:var(--gold-d)}
+.col.after li::before{color:var(--gold)}
+.col li small{display:block;font-size:12.5px;color:var(--muted)}
+.col.after li small{color:#a99a88}
+.red{color:#a5473a !important}
+
+#book{background:var(--cream);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.bk{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:30px;align-items:start}
+.bk>*{min-width:0}
+.panel{background:#fff;border:1px solid var(--line);padding:32px}
+.prog{display:flex;gap:5px;margin-bottom:22px}
+.prog span{flex:1;height:2px;background:var(--line)}
+.prog span.on{background:var(--gold)}
+.sl{font:500 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.panel h3{font-size:32px;margin-bottom:6px}
+.panel .sub{color:var(--muted);font-size:15px;margin:0 0 20px}
+.calh{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.calh b{font:400 26px/1 var(--serif)}
+.ib{width:38px;height:38px;border:1px solid var(--line);background:#fff;font-size:18px}
+.ib:disabled{opacity:.3}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
+.dow{text-align:center;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:4px 0}
+.day{aspect-ratio:1/1;border:1px solid var(--line);background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font:400 19px/1 var(--serif);padding:0}
+.day small{font:400 8.5px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;margin-top:4px;color:var(--ok)}
+.day.few small{color:var(--gold-d)}
+.day.full{background:var(--cream);color:#b8aa9a;border-style:dashed}
+.day.full small{color:#b8aa9a}
+.day.past{opacity:.25;cursor:default;background:transparent}
+.day.sel{background:var(--ink);border-color:var(--ink);color:var(--gold)}
+.day.sel small{color:var(--gold)}
+.legend{display:flex;gap:16px;font-size:12px;color:var(--muted);margin-top:10px;flex-wrap:wrap}
+.note{padding:13px 15px;font-size:14.5px;margin-top:14px;background:var(--cream)}
+.note.ok{background:var(--okbg)}
+.f{display:block;margin-bottom:16px}
+.f>span,.lab{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.in{width:100%;font:inherit;font-size:16px;padding:11px 2px;border:0;border-bottom:1px solid var(--gold);background:transparent;color:var(--ink);border-radius:0}
+.in:focus{outline:none;border-color:var(--maroon)}
+textarea.in{min-height:60px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line);background:#fff;padding:9px 14px;font-size:14px}
+.chip[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:var(--gold)}
+.ev{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.ev b{font:400 20px/1.1 var(--serif);display:block}
+.ev small{font-size:12.5px;color:var(--muted)}
+.tog{display:flex;align-items:center;gap:10px;cursor:pointer}
+.tog input{width:19px;height:19px;accent-color:var(--maroon)}
+.stp{display:flex;align-items:center;gap:8px}
+.stp button{width:30px;height:30px;border:1px solid var(--gold);background:#fff;font-size:15px;line-height:1}
+.stp output{min-width:20px;text-align:center;font:400 20px/1 var(--serif)}
+.art{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.art button{border:1px solid var(--line);background:#fff;padding:16px;text-align:left}
+.art button b{display:block;font:400 22px/1.1 var(--serif)}
+.art button small{color:var(--muted);font-size:13px}
+.art button[aria-pressed=true]{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.nav{display:flex;justify-content:space-between;align-items:center;margin-top:22px;gap:12px}
+.back{background:none;border:0;color:var(--muted);text-decoration:underline;text-underline-offset:3px;font-size:14px}
+.sum{position:sticky;top:84px;background:var(--ink);color:var(--ivory);padding:26px}
+.sum h4{font-size:28px;color:#fff}
+.sum .d{color:#a99a88;font-size:13.5px;margin-top:3px}
+.lines{list-style:none;margin:16px 0 0;padding:0;font-size:14px}
+.lines li{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid #3a302a}
+.lines li span:last-child{white-space:nowrap}
+.tot{display:flex;justify-content:space-between;align-items:baseline;margin-top:14px}
+.tot b{font:400 34px/1 var(--serif);color:var(--gold)}
+.sum .sm{font-size:12.5px;color:#a99a88;margin-top:6px}
+.tag{display:inline-block;margin-top:14px;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid #5b4c40;padding:3px 9px;color:#c9b9a5}
+.done{text-align:center}
+.tick{width:60px;height:60px;border-radius:50%;background:var(--gold);color:var(--ink);display:grid;place-items:center;margin:0 auto 14px;font-size:26px}
+.wamsg{background:#E7F8DC;border-radius:10px 10px 2px 10px;padding:12px 14px;text-align:left;font:400 13.5px/1.5 system-ui,sans-serif;white-space:pre-line;margin:14px auto;max-width:440px;box-shadow:0 1px 2px #0001}
+
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.gal img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.mc{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;background:var(--ink);color:var(--ivory);padding:44px}
+.mc .chip{background:transparent;border-color:var(--gold);color:#ead7d3}
+.mc .chip[aria-pressed=true]{background:var(--gold);color:var(--ink)}
+.mc .seats{display:flex;gap:6px;margin:18px 0}
+.mc .seats i{width:18px;height:18px;border:1px solid var(--gold)}
+.mc .seats i.t{background:var(--gold)}
+footer{background:#1d1215;color:#a99a88;font-size:13px;padding:30px 0 50px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* studio */
+#studio{display:none}
+body.studio .site{display:none}
+body.studio #studio{display:block}
+.sv{background:var(--ink);color:var(--ivory)}
+.sv .wrap{display:flex;justify-content:space-between;align-items:center;height:66px}
+.sv a{color:var(--gold);font-size:14px}
+.kp{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:28px 0 10px}
+.kp div{background:#fff;border:1px solid var(--line);padding:16px 18px}
+.kp b{font:400 36px/1 var(--serif);display:block}
+.kp small{color:var(--muted);font-size:13px}
+.sg{display:grid;grid-template-columns:1.5fr 1fr;gap:22px;align-items:start;padding:16px 0 70px}
+.box{background:#fff;border:1px solid var(--line);padding:22px;margin-bottom:22px}
+.box h3{font-size:27px;margin-bottom:4px}
+.box .hint{font-size:13.5px;color:var(--muted);margin:0 0 10px}
+.enq{border-top:1px solid var(--line);padding:16px 0;display:grid;grid-template-columns:68px 1fr;gap:14px}
+.enq .dt{text-align:center;border:1px solid var(--line);padding:7px 0;height:max-content;line-height:1.1}
+.enq .dt b{font:400 26px/1 var(--serif);display:block}
+.enq .dt small{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.enq h4{font-size:22px}
+.enq .meta{font-size:13.5px;color:var(--muted);margin:2px 0 8px}
+.pipe{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px}
+.pipe span{font-size:11px;padding:3px 9px;border:1px solid var(--line);color:var(--muted)}
+.pipe span.on{background:var(--okbg);border-color:#cddbc9;color:var(--ok)}
+.pipe span.now{background:var(--ink);border-color:var(--ink);color:var(--gold)}
+.mini{font-size:12.5px;border:1px solid var(--line);background:#fff;padding:7px 12px;margin:6px 6px 0 0;text-decoration:none;display:inline-block}
+.mini.g{border-color:var(--gold);background:var(--gold);color:var(--ink)}
+.new{font:500 10px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;background:var(--maroon);color:#fff;padding:4px 8px;margin-left:8px;vertical-align:4px}
+.mon{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.mon>div{border:1px solid var(--line);padding:10px;text-align:center}
+.mon b{font:400 26px/1 var(--serif);display:block}
+.mon small{font-size:11px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.mon .bar{height:4px;background:var(--line);margin-top:8px}
+.mon .bar i{display:block;height:100%;background:var(--gold)}
+.li{border-top:1px solid var(--line);padding:10px 0;font-size:14px;display:flex;justify-content:space-between;gap:10px}
+.toast{visibility:hidden;position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(90px);background:var(--ink);color:var(--gold);padding:13px 18px;font-size:14px;z-index:99;transition:transform .3s;max-width:92vw}
+.toast.show{visibility:visible;transform:translateX(-50%)}
+
+@media (max-width:960px){
+  .hero .g,.ba,.bk,.mc,.sg{grid-template-columns:1fr}
+  .mosaic{height:420px}
+  .sum{position:static}
+  nav.top ul{display:none}
+  .gal{grid-template-columns:1fr 1fr}
+  .kp{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  section{padding:64px 0}
+  .panel{padding:22px 16px}
+  .two,.art{grid-template-columns:1fr}
+  .cal{gap:3px}
+  .day{font-size:16px}
+  .day small{font-size:7px}
+  .mosaic{height:340px}
+  .mc{padding:26px 18px}
+  .mon{grid-template-columns:1fr 1fr}
+  .logo b{font-size:17px}
+}
+</style>
+</head>
+<body>
+<div class="site">
+<div class="pbar"><div class="wrap"><span>A private demo made for <b>Preeti Khandelwal</b> · preetikhandelwalmakeup</span><span>by Aryadev · <a href="https://www.codzo.in" target="_blank" rel="noopener">Codzo</a> · <a href="#studio">See your side →</a></span></div></div>
+<nav class="top"><div class="wrap">
+  <a class="logo" href="#"><img src="img/profile.jpg" alt=""><span><b>Preeti Khandelwal</b><small>Luxury soft glam</small></span></a>
+  <ul><li><a href="#how">How it works</a></li><li><a href="#book">Book</a></li><li><a href="#work">Brides</a></li><li><a href="#masterclass">Classes</a></li></ul>
+  <a class="btn gold" href="#book">Check my date</a>
+</div></nav>
+
+<header class="hero"><div class="wrap g">
+  <div>
+    <p class="kick" style="color:var(--gold)">Bridal makeup · Delhi · Noida · Ghaziabad · destination weddings</p>
+    <h1>Luxury soft glam, <span class="it" style="color:var(--gold)">booked in a minute.</span></h1>
+    <p class="lead">Check if your wedding date is free, choose your looks for every function, and see exactly what's included, with no surprise extra charges. Then send it all to Preeti in one go.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn gold" href="#book">Check my date</a><a class="btn" href="#work" style="color:var(--ivory)">See her brides</a></div>
+    <div class="stats"><div><b>10+</b><small>years experience</small></div><div><b>Soft glam</b><small>her signature</small></div><div><b>Destination</b><small>weddings</small></div></div>
+  </div>
+  <div class="mosaic" aria-hidden="true">
+    <img class="tall" src="img/bride-red.jpg" alt="">
+    <img src="img/bride-window.jpg" alt="">
+    <img src="img/oldworld.jpg" alt="">
+  </div>
+</div></header>
+
+<section id="how"><div class="wrap">
+  <p class="kick">For Preeti · the idea</p>
+  <h2 style="max-width:760px">Every booking happens on WhatsApp today. <span class="it">Let brides arrive with everything you need.</span></h2>
+  <p class="muted" style="max-width:700px;margin:16px 0 40px">Today, every booking is done by hand on WhatsApp: the date, the city, the functions, the family looks, the quote, the advance, the trial. Here's the same process, with the bride doing the first half herself, before she even messages you.</p>
+  <div class="ba">
+    <div class="col"><h3>Today</h3><ol>
+      <li>Bride DMs “price for bridal makeup?”<small>Often while she's messaging five other artists</small></li>
+      <li>You reply asking for her date, city and functions<small class="red">Meanwhile she's waiting, and still messaging other artists</small></li>
+      <li>She replies bit by bit, between other chats</li>
+      <li>You check your diary, work out the quote, explain what's included</li>
+      <li>Advance, trial and events are agreed over many messages</li>
+    </ol></div>
+    <div class="col after"><h3>With your booking link</h3><ol>
+      <li>She taps the link in your bio, at any hour<small>Sees straight away whether her date is free</small></li>
+      <li>She picks her functions and looks<small>Haldi, mehendi, sangeet, wedding, reception</small></li>
+      <li>She sees a starting estimate<small>Or “quote on request”, as you prefer</small></li>
+      <li>Her complete details land on your WhatsApp<small>And she has already seen what's included, so no confusion about extras</small></li>
+      <li>You confirm, send the advance link, done</li>
+    </ol></div>
+  </div>
+</div></section>
+
+<section id="book"><div class="wrap">
+  <p class="kick">Book your bridal makeup</p>
+  <h2 style="margin-bottom:30px">Is Preeti free <span class="it">on your day?</span></h2>
+  <div class="bk"><div class="panel" id="flow" aria-live="polite"></div><aside class="sum" id="sum"></aside></div>
+</div></section>
+
+<section id="work" style="padding-bottom:40px"><div class="wrap">
+  <p class="kick">Her brides</p>
+  <h2 style="margin-bottom:28px">Old-world charm, <span class="it">modern-day muse.</span></h2>
+  <div class="gal">
+    <img src="img/bride-gold.jpg" alt="Bride in a gold saree with mehendi" loading="lazy">
+    <img src="img/closeup.jpg" alt="Soft glam close-up" loading="lazy">
+    <img src="img/saree.jpg" alt="Bride in an orange and pink silk saree" loading="lazy">
+    <img src="img/bride-window.jpg" alt="Bride in red with a diamond and ruby necklace" loading="lazy">
+  </div>
+  <p class="muted" style="font-size:12.5px;margin-top:10px">Photos from @preetikhandelwalmakeup</p>
+</div></section>
+
+<section id="masterclass"><div class="wrap">
+  <div class="mc">
+    <div><p class="kick" style="color:var(--gold)">Classes &amp; masterclass</p><h2>Learn luxury soft glam, <span class="it" style="color:var(--gold)">from Preeti.</span></h2>
+      <p style="color:#ead7d3;margin:16px 0 0">Pro masterclass for artists, and self-makeup classes for brides and their families. Students see the dates and seats left, pick a batch, and their details land on your WhatsApp, with joining info sent automatically.</p></div>
+    <div><div class="chips" id="mcBatch" style="margin-bottom:16px"><button class="chip" data-batch="Pro Soft Glam Masterclass" aria-pressed="true">Pro Soft Glam Masterclass</button><button class="chip" data-batch="Self-Makeup Class">Self-Makeup Class</button></div>
+      <div class="seats" aria-label="Seats"><i class="t"></i><i class="t"></i><i class="t"></i><i class="t"></i><i class="t"></i><i class="t"></i><i class="t"></i><i></i><i></i><i></i></div>
+      <p style="color:#ead7d3;font-size:14px;margin:0 0 18px" id="mcNote">Next batch · 7 of 10 seats taken · demo</p>
+      <button class="btn gold" id="mcBtn">Book my seat</button></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><span>Preeti Khandelwal · bridal makeup artist · Delhi NCR &amp; destination weddings</span><span>Demo by <a href="https://www.codzo.in" style="color:var(--gold)" target="_blank" rel="noopener">Codzo</a> · prices &amp; booked dates are samples</span></div></footer>
+</div>
+
+<!-- PRESHITA'S SIDE -->
+<div id="studio">
+  <div class="sv"><div class="wrap"><span><b style="font:400 24px/1 var(--serif)">Your bookings</b> <span style="color:#a99a88;font-size:13px;margin-left:8px">Preeti's view · demo</span></span><a href="#">← Back to the booking page</a></div></div>
+  <div class="wrap">
+    <div class="kp" id="kp"></div>
+    <p class="muted" style="font-size:13.5px;margin:0">Sample brides for the demo. Anything sent from the booking page in this browser appears here, tagged “New”.</p>
+    <div class="sg">
+      <div class="box"><h3>Enquiries &amp; bookings</h3><p class="hint">Every enquiry arrives complete. One tap sends the next WhatsApp message.</p><div id="enqs"></div></div>
+      <div>
+        <div class="box"><h3>Wedding season</h3><p class="hint">Days booked per month.</p><div class="mon" id="season"></div></div>
+        <div class="box"><h3>Confirmed weddings</h3><p class="hint">Your next bookings.</p><div id="team"></div></div>
+        <div class="box"><h3>Classes</h3><p class="hint">Seats booked per batch.</p><div id="mcList"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+const C = {
+  wa: "",   // Preeti's WhatsApp number goes here
+  events: [
+    {id:"engagement", label:"Engagement / Roka", off:-30}, {id:"haldi", label:"Haldi", off:-2}, {id:"mehendi", label:"Mehendi", off:-2}, {id:"sangeet", label:"Sangeet / Cocktail", off:-1},
+    {id:"wedding", label:"Wedding", off:0, main:true}, {id:"reception", label:"Reception", off:0}
+  ],
+  // Sample prices in ₹. Preeti sets her own, or switches to “quote on request”.
+  price: { preshita:{ main:40000, other:25000 }, senior:{ main:40000, other:25000 }, family:5000, hair:0, drape:2000, trial:7000 },
+  cities: ["Delhi","Noida","Ghaziabad","Gurugram","Other city in India","Destination abroad"]
+};
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const st = { get(k,d){ try{ const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; }catch(e){ return d; } }, set(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} } };
+const pad = n => String(n).padStart(2,"0");
+const iso = d => `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+const P = s => { const [y,m,d] = s.split("-").map(Number); return new Date(y,m-1,d); };
+const MON = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const DW = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+const nice = s => { const d = P(s); return `${DW[d.getDay()]} ${d.getDate()} ${MON[d.getMonth()].slice(0,3)} ${d.getFullYear()}`; };
+const addD = (d,n) => { const x = new Date(d); x.setDate(x.getDate()+n); return x; };
+const inr = n => "₹" + Number(n).toLocaleString("en-IN");
+const TODAY = new Date(); TODAY.setHours(0,0,0,0);
+const toast = t => { const el = $("#toast"); el.textContent = t; el.classList.add("show"); clearTimeout(toast.t); toast.t = setTimeout(()=>el.classList.remove("show"), 3200); };
+
+/* sample availability: the artist can take a few bookings a day; peak season Nov–Feb */
+function rng(s){ return () => (s = (s*16807) % 2147483647) / 2147483647; }
+const LOAD = (() => { const r = rng(91823), o = {}; let d = addD(TODAY,1); const end = new Date(2027,11,31);
+  for (; d <= end; d = addD(d,1)) { const m = d.getMonth(), peak = m===10||m===11||m===0||m===1||m===3||m===4; const x = r();
+    o[iso(d)] = x < (peak ? .28 : .08) ? 2 : x < (peak ? .5 : .2) ? 1 : 0; } return o; })();
+const enquiries = () => st.get("pk.enq", []);
+const status = s => { const n = (LOAD[s]||0) + enquiries().filter(e => e.date === s && e.stage >= 2).length; return n >= 2 ? "full" : n === 1 ? "few" : "free"; };
+
+/* state */
+const S = { step:0, month:new Date(TODAY.getFullYear(), TODAY.getMonth(), 1), date:null, events:{wedding:true}, artist:"preshita", family:2, drape:true, trial:false,
+  city:"Delhi", venue:"", name:"", phone:"", insta:"", notes:"", sent:false };
+const STEPS = ["Your date","Your looks","Where & who","Your details"];
+const looks = () => C.events.filter(e => S.events[e.id]);
+function quote(){
+  const p = C.price[S.artist], L = [];
+  looks().forEach(e => L.push([`Bride · ${e.label}`, e.main ? p.main : p.other]));
+  if (S.family) L.push([`Family looks × ${S.family}`, S.family * C.price.family]);
+  if (S.drape) L.push([`Dupatta / saree draping × ${looks().length}`, looks().length * C.price.drape]);
+  if (S.trial) L.push(["Trial look", C.price.trial]);
+  return { L, total: L.reduce((a,x)=>a+x[1],0) };
+}
+function waText(ref){
+  const ev = looks().map(e => { const d = addD(P(S.date), e.off); return `${e.label} (${d.getDate()} ${MON[d.getMonth()].slice(0,3)})`; }).join(", ");
+  return `Hi Preeti, my wedding date is ${nice(S.date)} 💕
+
+Name of the Bride/Client - ${S.name}
+Phone No - ${S.phone}
+Date - ${nice(S.date)}
+Venue/City - ${S.venue ? S.venue + ", " : ""}${S.city}
+Number of Looks - ${looks().length} bridal${S.family ? ` + ${S.family} family` : ""}
+
+Functions: ${ev}${S.trial ? "\nI'd like a trial look" : ""}${S.insta ? `\nInstagram: ${S.insta}` : ""}${S.notes ? `\nNotes: ${S.notes}` : ""}
+Estimate shown: ${inr(quote().total)}${ref ? `\nRef: ${ref}` : ""}`;
+}
+
+function sum(){
+  const q = quote();
+  $("#sum").innerHTML = `<h4>Your bridal glam</h4><div class="d">${S.date ? nice(S.date) : "Choose your wedding date to begin"} · ${esc(S.city)}</div>
+   ${S.step>0 ? `<ul class="lines">${q.L.map(x=>`<li><span>${x[0]}</span><span>${inr(x[1])}</span></li>`).join("")}</ul>
+   <div class="tot"><span>Starting estimate</span><b>${inr(q.total)}</b></div>
+   <div class="sm"><b style="color:var(--gold)">Included:</b> hairstyling, lashes, draping as chosen, touch-ups before you leave. <b style="color:var(--gold)">No hidden extras.</b> ${S.city==="Destination abroad"||S.city==="Other city in India" ? "For destination weddings, travel &amp; stay are added at cost and shown in your quote." : "Final quote confirmed by Preeti."}</div>` : `<p class="sm" style="margin-top:14px">Your looks and estimate build here as you go.</p>`}
+   <span class="tag">Sample prices · Preeti sets her own</span>`;
+}
+function head(){ return `<div class="prog">${STEPS.map((_,i)=>`<span class="${i<=S.step?"on":""}"></span>`).join("")}</div><div class="sl">Step ${S.step+1} of 4 · ${STEPS[S.step]}</div>`; }
+function render(){ $("#flow").innerHTML = S.sent ? done() : head() + [s0,s1,s2,s3][S.step](); sum(); }
+function go(n){ S.step = n; render(); const y = $("#book").getBoundingClientRect().top + scrollY - 70; if (Math.abs(scrollY-y) > 250) scrollTo({top:y, behavior:"smooth"}); }
+
+function s0(){
+  const m = S.month, first = new Date(m.getFullYear(), m.getMonth(), 1), lead = (first.getDay()+6)%7, n = new Date(m.getFullYear(), m.getMonth()+1, 0).getDate();
+  let c = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"].map(d=>`<div class="dow">${d}</div>`).join("") + "<div></div>".repeat(lead);
+  for (let d=1; d<=n; d++){ const dt = new Date(m.getFullYear(), m.getMonth(), d), s = iso(dt);
+    if (dt <= TODAY) { c += `<button class="day past" disabled aria-hidden="true">${d}<small>&nbsp;</small></button>`; continue; }
+    const k = status(s); c += `<button class="day ${k} ${S.date===s?"sel":""}" data-date="${s}" aria-label="${nice(s)}, ${k}">${d}<small>${k==="full"?"Booked":k==="few"?"1 slot":"Free"}</small></button>`; }
+  const prev = m > new Date(TODAY.getFullYear(), TODAY.getMonth(), 1), next = m < new Date(2027,11,1);
+  const k = S.date && status(S.date);
+  const note = !S.date ? "" : k === "full"
+    ? `<div class="note"><b>${nice(S.date)} is fully booked.</b> Send your details anyway and Preeti will let you know if anything opens up.</div>`
+    : `<div class="note ok"><b>${nice(S.date)} is available${k==="few"?", with one slot left":""}.</b> Choose your looks next.</div>`;
+  return `<h3>When's the wedding?</h3><p class="sub">Peak season fills fast. Dates update live from Preeti's diary.</p>
+   <div class="calh"><button class="ib" id="prev" ${prev?"":"disabled"} aria-label="Previous month">‹</button><b>${MON[m.getMonth()]} ${m.getFullYear()}</b><button class="ib" id="next" ${next?"":"disabled"} aria-label="Next month">›</button></div>
+   <div class="cal">${c}</div><div class="legend"><span>Free</span><span style="color:var(--gold-d)">1 slot left</span><span>Booked</span></div>${note}
+   <div class="nav"><span></span><button class="btn gold" data-go="1" ${S.date?"":"disabled"}>Next: your looks</button></div>`;
+}
+function s1(){
+  const p = C.price[S.artist];
+  return `<h3>Your functions &amp; looks</h3><p class="sub">Pick every function you'd like Preeti for. Each one is a look.</p>
+   ${C.events.map(e => { const d = addD(P(S.date), e.off); return `<div class="ev"><label class="tog"><input type="checkbox" data-ev="${e.id}" ${S.events[e.id]?"checked":""}><span><b>${e.label}</b><small>around ${d.getDate()} ${MON[d.getMonth()].slice(0,3)} · from ${inr(e.main?p.main:p.other)}</small></span></label><span></span></div>`; }).join("")}
+   <div class="ev"><div><b>Family &amp; bridesmaids</b><small>Mother, sisters, friends · ${inr(C.price.family)} each</small></div><div class="stp"><button data-d="family" aria-label="Fewer">−</button><output>${S.family}</output><button data-u="family" aria-label="More">+</button></div></div>
+   <div class="ev"><label class="tog"><input type="checkbox" id="drape" ${S.drape?"checked":""}><span><b>Dupatta / saree draping</b><small>${inr(C.price.drape)} per look</small></span></label><span></span></div>
+   <div class="ev"><label class="tog"><input type="checkbox" id="trial" ${S.trial?"checked":""}><span><b>Trial look</b><small>Before the wedding · ${inr(C.price.trial)}</small></span></label><span></span></div>
+   <div class="nav"><button class="back" data-go="0">← Back</button><button class="btn gold" data-go="2" ${looks().length?"":"disabled"}>Next: where &amp; who</button></div>`;
+}
+function s2(){
+  return `<h3>Where &amp; who</h3><p class="sub">Delhi NCR, or anywhere for destination weddings.</p>
+   <span class="lab">City</span><div class="chips" style="margin-bottom:18px">${C.cities.map(c=>`<button class="chip" data-city="${c}" aria-pressed="${S.city===c}">${c}</button>`).join("")}</div>
+   <label class="f"><span>Venue (or hotel)</span><input class="in" id="venue" placeholder="e.g. Taj Lands End, or Udaipur palace venue" value="${esc(S.venue)}"></label>
+   
+   <div class="nav"><button class="back" data-go="1">← Back</button><button class="btn gold" data-go="3">Next: your details</button></div>`;
+}
+function s3(){
+  return `<h3>Almost there</h3><p class="sub">Everything Preeti needs to quote you, in one go, so nobody has to ask twice.</p>
+   <label class="f"><span>Name of the bride / client</span><input class="in" id="name" autocomplete="name" value="${esc(S.name)}"></label>
+   <div class="two"><label class="f"><span>Phone (WhatsApp)</span><input class="in" id="phone" type="tel" autocomplete="tel" value="${esc(S.phone)}" placeholder="+91"></label>
+   <label class="f"><span>Instagram (optional)</span><input class="in" id="insta" value="${esc(S.insta)}" placeholder="@"></label></div>
+   <label class="f"><span>Anything else? Outfit colours, references, timings</span><textarea class="in" id="notes">${esc(S.notes)}</textarea></label>
+   <div class="nav"><button class="back" data-go="2">← Back</button><button class="btn gold" id="send">Send to Preeti</button></div>`;
+}
+function done(){
+  const e = enquiries()[0]; const ref = e ? e.ref : "";
+  return `<div class="done"><div class="tick">✓</div><h3>Thank you, ${esc(S.name.split(" ")[0])}!</h3>
+   <p class="sub" style="margin:6px 0 0">Your enquiry for ${nice(S.date)} is with Preeti. Ref <b>${ref}</b></p>
+   <p class="sub" style="margin:14px 0 0">Tap below to send it on WhatsApp too. It's already filled in:</p>
+   <div class="wamsg">${esc(waText(ref))}</div>
+   <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap"><a class="btn wa" target="_blank" rel="noopener" href="https://wa.me/${C.wa}?text=${encodeURIComponent(waText(ref))}">Send on WhatsApp</a><a class="btn" href="#studio">Preeti, see your side →</a></div>
+   <p style="margin-top:16px"><button class="back" id="again">Start another enquiry</button></p></div>`;
+}
+
+$("#flow").addEventListener("click", e => {
+  const t = e.target.closest("button"); if (!t || t.disabled) return; const d = t.dataset;
+  if (t.id === "prev") { S.month = new Date(S.month.getFullYear(), S.month.getMonth()-1, 1); render(); }
+  else if (t.id === "next") { S.month = new Date(S.month.getFullYear(), S.month.getMonth()+1, 1); render(); }
+  else if (d.date) { S.date = d.date; render(); }
+  else if (d.u || d.d) { S.family = Math.max(0, Math.min(15, S.family + (d.u?1:-1))); render(); }
+  else if (d.city) { S.city = d.city; render(); }
+  else if (d.art) { S.artist = d.art; render(); }
+  else if (d.go) go(Number(d.go));
+  else if (t.id === "again") { Object.assign(S, {sent:false, step:0, date:null, name:"", phone:""}); render(); }
+  else if (t.id === "send") {
+    if (!S.name.trim() || !S.phone.trim()) return toast("Please add the bride's name and a phone number.");
+    const all = enquiries(), ref = "PK-" + S.date.slice(2).replace(/-/g,"") + "-" + Math.random().toString(36).slice(2,5).toUpperCase();
+    all.unshift({ ref, date:S.date, name:S.name.trim(), phone:S.phone.trim(), city:S.city, venue:S.venue, looks:looks().map(x=>x.label), family:S.family,
+      artist:S.artist, trial:S.trial, total:quote().total, stage:0, at:Date.now(), fresh:true });
+    st.set("pk.enq", all); S.sent = true; render(); toast("Enquiry sent. It's waiting in Preeti's view.");
+  }
+});
+$("#flow").addEventListener("change", e => {
+  const el = e.target;
+  if (el.dataset.ev) { S.events[el.dataset.ev] = el.checked; render(); }
+  if (el.id === "drape") { S.drape = el.checked; sum(); }
+  if (el.id === "trial") { S.trial = el.checked; sum(); }
+});
+$("#flow").addEventListener("input", e => { if (["venue","name","phone","insta","notes"].includes(e.target.id)) S[e.target.id] = e.target.value; });
+let BATCH = "Pro Soft Glam Masterclass";
+document.getElementById("mcBatch").addEventListener("click", e => { const b = e.target.closest("[data-batch]"); if (!b) return; BATCH = b.dataset.batch; document.querySelectorAll("[data-batch]").forEach(x => x.setAttribute("aria-pressed", x === b)); document.getElementById("mcNote").textContent = BATCH === "Self-Makeup Class" ? "Next batch · 4 of 8 seats taken · demo" : "Next batch · 7 of 10 seats taken · demo"; });
+$("#mcBtn").onclick = () => { const l = st.get("pk.mc", []); l.unshift({at:Date.now(), batch:BATCH}); st.set("pk.mc", l); toast(`Seat requested: ${BATCH} (demo). Details sent to Preeti.`); };
+
+/* ---------- artist's side ---------- */
+const STAGES = ["Enquiry","Quote sent","Advance received","Trial","Confirmed","Done"];
+const MSGS = [
+  e => `Hi ${e.name.split(" ")[0]}! Thank you for your enquiry for ${nice(e.date)} 💕 I'm available 😊 For ${e.looks.join(", ")}${e.family?` plus ${e.family} family looks`:""}, your quote is ${inr(e.total)}. Shall I share the advance details to block your date?`,
+  e => `Hi ${e.name.split(" ")[0]}, just checking you saw the quote for ${nice(e.date)}. Dates in season go quickly, so let us know if you'd like us to hold it for you 😊`,
+  e => `Thank you ${e.name.split(" ")[0]}! Your date ${nice(e.date)} is blocked ✨ Shall we plan your trial look? Share 2–3 dates that suit you.`,
+  e => `Hi ${e.name.split(" ")[0]}, looking forward to your trial! Please bring outfit pictures, jewellery references and any looks you love.`,
+  e => `Hi ${e.name.split(" ")[0]}! Final schedule for ${nice(e.date)}: please share the getting-ready location and start time for each function 💄`,
+  e => `Congratulations ${e.name.split(" ")[0]}! 💕 It was a joy to be part of your wedding. We'd love to see your photos, and a review would mean the world.`
+];
+function sample(){
+  const d = n => iso(addD(TODAY,n));
+  return [
+    {ref:"PK-S1", date:d(18), name:"Ishita Arora", phone:"+91 98200 00001", city:"Other city in India", venue:"Jaipur", looks:["Mehendi","Sangeet / Cocktail","Wedding"], family:3, artist:"preshita", total:110000, stage:4, sample:true},
+    {ref:"PK-S2", date:d(33), name:"Kritika Bansal", phone:"+91 98200 00002", city:"Delhi", venue:"The Leela Ambience", looks:["Wedding","Reception"], family:2, artist:"preshita", total:79000, stage:2, sample:true},
+    {ref:"PK-S3", date:d(51), name:"Nidhi Agarwal", phone:"+91 98200 00003", city:"Noida", venue:"Jaypee Greens", looks:["Engagement / Roka"], family:2, artist:"preshita", total:35000, stage:1, sample:true},
+    {ref:"PK-S4", date:d(76), name:"Sakshi Gupta", phone:"+91 98200 00004", city:"Ghaziabad", venue:"Radisson Blu", looks:["Sangeet / Cocktail","Wedding","Reception"], family:2, artist:"preshita", total:104000, stage:0, sample:true}
+  ];
+}
+function studio(){
+  const all = [...enquiries(), ...sample()];
+  const conf = all.filter(e => e.stage >= 2), pending = all.filter(e => e.stage < 2);
+  $("#kp").innerHTML = `<div><b>${pending.length}</b><small>enquiries waiting</small></div><div><b>${conf.length}</b><small>confirmed</small></div><div><b>${inr(conf.reduce((a,e)=>a+e.total,0))}</b><small>confirmed value</small></div><div><b>${all.filter(e=>/abroad|Other/.test(e.city)).length}</b><small>destination weddings</small></div>`;
+  $("#enqs").innerHTML = all.map((e,i) => { const w = P(e.date), msg = MSGS[e.stage](e), ph = String(e.phone).replace(/\D/g,"");
+    return `<div class="enq"><div class="dt"><small>${DW[w.getDay()]}</small><b>${w.getDate()}</b><small>${MON[w.getMonth()].slice(0,3)}</small></div><div>
+    <h4>${esc(e.name)}${e.sample?"":'<span class="new">New</span>'}</h4>
+    <div class="meta">${esc(e.venue?e.venue+", ":"")}${esc(e.city)} · ${e.looks.length} bridal look${e.looks.length>1?"s":""} (${e.looks.map(esc).join(", ")})${e.family?` + ${e.family} family`:""} · ${inr(e.total)}</div>
+    <div class="pipe">${STAGES.map((s,j)=>`<span class="${j<e.stage?"on":j===e.stage?"now":""}">${s}</span>`).join("")}</div>
+    <a class="mini g" target="_blank" rel="noopener" href="https://wa.me/${ph}?text=${encodeURIComponent(msg)}">WhatsApp: ${["send quote","follow up","plan trial","trial prep","confirm schedule","ask for review"][e.stage]}</a>
+    ${e.stage < 5 ? `<button class="mini" data-adv="${e.ref}">Mark “${STAGES[e.stage+1]}”</button>` : ""}</div></div>`; }).join("");
+  const months = []; for (let i=0;i<8;i++){ const m = new Date(TODAY.getFullYear(), TODAY.getMonth()+i, 1); const k = `${m.getFullYear()}-${pad(m.getMonth()+1)}`;
+    const days = Object.keys(LOAD).filter(s => s.startsWith(k) && LOAD[s] > 0).length + all.filter(e=>e.date.startsWith(k) && e.stage>=2).length; months.push([MON[m.getMonth()].slice(0,3), days]); }
+  $("#season").innerHTML = months.map(([m,n]) => `<div><b>${n}</b><small>${m}</small><div class="bar"><i style="width:${Math.min(100,n/16*100)}%"></i></div></div>`).join("");
+  $("#team").innerHTML = all.filter(e=>e.stage>=2).map(e => `<div class="li"><span>${nice(e.date)} · ${esc(e.name.split(" ")[0])}</span><span class="muted">${e.looks.length} look${e.looks.length>1?"s":""}${e.family?` + ${e.family} family`:""}</span></div>`).join("") || `<p class="hint">No confirmed weddings yet.</p>`;
+  const mc = st.get("pk.mc", []);
+  const pro = mc.filter(x=>x.batch!=="Self-Makeup Class").length, self = mc.length - pro;
+  $("#mcList").innerHTML = `<div class="li"><span>Pro Soft Glam Masterclass</span><span>${7 + pro} / 10 seats</span></div><div class="li"><span>Self-Makeup Class</span><span>${4 + self} / 8 seats</span></div><div class="li"><span class="muted">Waiting list</span><span>3</span></div>`;
+}
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-adv]"); if (!b) return;
+  const all = enquiries(), x = all.find(q => q.ref === b.dataset.adv);
+  if (x) { x.stage = Math.min(5, x.stage+1); st.set("pk.enq", all); } else { toast("Sample bride: try it on one you sent from the booking page."); return; }
+  studio(); toast(`Moved to “${STAGES[x.stage]}”.`);
+});
+
+function route(){ const s = location.hash === "#studio"; document.body.classList.toggle("studio", s); if (s) { studio(); scrollTo(0,0); } }
+addEventListener("hashchange", route);
+render(); route();
+</script>
+</body>
+</html>

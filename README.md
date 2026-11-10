@@ -236,6 +236,13 @@ Both use generated placeholder images and made-up details.
   editorial; brand work incl. Nykaa). Adapted from `preshita-bafna` in a deep red/ivory palette: engagement added
   to the functions, no team/senior-artist choice, Pune in the cities, a brands & editorial enquiry section instead
   of the masterclass, WhatsApp hand-off to her number. Sample INR prices labelled; photos cropped from her grid.
+- `preeti-khandelwal`: Preeti Khandelwal, bridal makeup artist, luxury soft glam, Delhi · Noida · Ghaziabad and
+  destination weddings, 10+ years (@preetikhandelwalmakeup; "Classes" highlight; a reel about no confusing extra
+  charges). Bookings are all manual on WhatsApp. Adapted from `preshita-bafna` in a rose/espresso palette:
+  engagement/roka added, Delhi NCR cities, no team choice, an "Included / no hidden extras" note in the quote, and a
+  classes section with two batches (Pro Soft Glam Masterclass, Self-Makeup Class) and seat booking. `C.wa` is empty
+  because no public WhatsApp number was found: put hers in before sending live; until then the WhatsApp button
+  opens WhatsApp with the message ready. Sample INR prices labelled; photos cropped from her grid.
 - `beyond-salon`: Beyond Beauty Salon by Ahmed Batekha, Egypt (Sheikh Zayed at The Lane
   Mall Palm Hills, Zamalek, Sahel). Bespoke page with a built-in 5-step booking engine
   (branch, services, stylist, date/time, details), booking reference, .ics calendar file,
