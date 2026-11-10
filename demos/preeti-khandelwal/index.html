@@ -202,6 +202,29 @@ body.studio #studio{display:block}
   .mon{grid-template-columns:1fr 1fr}
   .logo b{font-size:17px}
 }
+
+/* mobile fixes */
+section,#book,#work,#how{scroll-margin-top:72px}
+@media (max-width:600px){
+  .pbar .wrap{justify-content:center;text-align:center;font-size:12px}
+  .pbar .wrap>span:last-child{display:none}
+  nav.top .wrap{height:58px}
+  .logo img{width:34px;height:34px}
+  .logo b{font-size:16px;letter-spacing:.04em;white-space:nowrap}
+  .logo small{display:none}
+  nav.top .btn{padding:9px 12px;font-size:11px;letter-spacing:.08em;white-space:nowrap}
+  .hero{padding:36px 0 56px}
+  .stats{gap:18px}
+  .stats div b{font-size:26px}
+  .done .btn{width:100%;white-space:normal;text-align:center}
+  .done>div[style*="flex"]{flex-direction:column}
+  .wamsg{font-size:13px}
+  .gal img{aspect-ratio:3/4}
+  .sv .wrap{height:auto;padding-top:12px;padding-bottom:12px;flex-direction:column;align-items:flex-start;gap:6px}
+  .enq{grid-template-columns:56px 1fr;gap:10px}
+  .mini{margin:6px 6px 0 0}
+  .mc .chips{gap:6px}
+}
 </style>
 </head>
 <body>
@@ -260,10 +283,10 @@ body.studio #studio{display:block}
   <p class="kick">Her brides</p>
   <h2 style="margin-bottom:28px">Old-world charm, <span class="it">modern-day muse.</span></h2>
   <div class="gal">
-    <img src="img/bride-gold.jpg" alt="Bride in a gold saree with mehendi" loading="lazy">
-    <img src="img/closeup.jpg" alt="Soft glam close-up" loading="lazy">
-    <img src="img/saree.jpg" alt="Bride in an orange and pink silk saree" loading="lazy">
-    <img src="img/bride-window.jpg" alt="Bride in red with a diamond and ruby necklace" loading="lazy">
+    <img src="img/bride-gold.jpg" alt="Bride in a gold saree with mehendi">
+    <img src="img/closeup.jpg" alt="Soft glam close-up">
+    <img src="img/saree.jpg" alt="Bride in an orange and pink silk saree">
+    <img src="img/bride-window.jpg" alt="Bride in red with a diamond and ruby necklace">
   </div>
   <p class="muted" style="font-size:12.5px;margin-top:10px">Photos from @preetikhandelwalmakeup</p>
 </div></section>

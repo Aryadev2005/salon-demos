@@ -200,6 +200,29 @@ body.studio #studio{display:block}
   .mon{grid-template-columns:1fr 1fr}
   .logo b{font-size:17px}
 }
+
+/* mobile fixes */
+section,#book,#work,#how{scroll-margin-top:72px}
+@media (max-width:600px){
+  .pbar .wrap{justify-content:center;text-align:center;font-size:12px}
+  .pbar .wrap>span:last-child{display:none}
+  nav.top .wrap{height:58px}
+  .logo img{width:34px;height:34px}
+  .logo b{font-size:16px;letter-spacing:.04em;white-space:nowrap}
+  .logo small{display:none}
+  nav.top .btn{padding:9px 12px;font-size:11px;letter-spacing:.08em;white-space:nowrap}
+  .hero{padding:36px 0 56px}
+  .stats{gap:18px}
+  .stats div b{font-size:26px}
+  .done .btn{width:100%;white-space:normal;text-align:center}
+  .done>div[style*="flex"]{flex-direction:column}
+  .wamsg{font-size:13px}
+  .gal img{aspect-ratio:3/4}
+  .sv .wrap{height:auto;padding-top:12px;padding-bottom:12px;flex-direction:column;align-items:flex-start;gap:6px}
+  .enq{grid-template-columns:56px 1fr;gap:10px}
+  .mini{margin:6px 6px 0 0}
+  .mc .chips{gap:6px}
+}
 </style>
 </head>
 <body>
@@ -253,7 +276,7 @@ body.studio #studio{display:block}
 <section id="work" style="padding-bottom:60px"><div class="wrap">
   <p class="kick">Her brides &amp; glams</p>
   <h2 style="margin-bottom:28px">Soft glam, <span class="it">Asian bridal glam.</span></h2>
-  <div class="gal"><img src="img/bride-red2.jpg" alt="Bride in red with dupatta" loading="lazy"><img src="img/bride-pink.jpg" alt="Bride in a blush outfit" loading="lazy"><img src="img/party.jpg" alt="Party glam with waves" loading="lazy"><img src="img/bride-red.jpg" alt="Bride in red with maang tikka" loading="lazy"></div>
+  <div class="gal"><img src="img/bride-red2.jpg" alt="Bride in red with dupatta"><img src="img/bride-pink.jpg" alt="Bride in a blush outfit"><img src="img/party.jpg" alt="Party glam with waves"><img src="img/bride-red.jpg" alt="Bride in red with maang tikka"></div>
   <p class="muted" style="font-size:12.5px;margin-top:10px">Photos from @glamwithsaman</p>
 </div></section>
 
@@ -363,9 +386,10 @@ function s2(){
   return `<h3>Time &amp; place</h3><p class="sub">When you need to be ready, and where. Rochdale, Manchester, or further: travel available.</p>
    <div class="two"><label class="f"><span>Time required (ready by)</span><input class="in" type="time" id="time" value="${S.time}" step="900"></label>
    <label class="f"><span>Postcode</span><input class="in" id="postcode" value="${esc(S.postcode)}" placeholder="e.g. OL11 1AA"></label></div>
-   ${t===null ? "" : `<div class="note ${t===0?"ok":""}">${t===0 ? "Great, no travel charge for your area." : `Outside Rochdale &amp; Manchester: a sample travel charge of ${gbp(t)} is added. Saman confirms the exact amount.`}</div>`}
+   <div id="travelNote">${travelNote()}</div>
    <div class="nav"><button class="back" data-go="1">← Back</button><button class="btn gold" data-go="3" ${S.postcode.trim()?"":"disabled"}>Next: your details</button></div>`;
 }
+function travelNote(){ const t = travel(); return t===null ? "" : `<div class="note ${t===0?"ok":""}">${t===0 ? "Great, no travel charge for your area." : `Outside Rochdale &amp; Manchester: a sample travel charge of ${gbp(t)} is added. Saman confirms the exact amount.`}</div>`; }
 function s3(){
   return `<h3>Almost there</h3><p class="sub">Everything Saman asks for, in one go, so nobody has to ask twice.</p>
    <div class="two"><label class="f"><span>Your name</span><input class="in" id="name" autocomplete="name" value="${esc(S.name)}"></label>
@@ -412,9 +436,8 @@ $("#flow").addEventListener("change", e => {
 $("#flow").addEventListener("input", e => {
   const id = e.target.id;
   if (["name","phone","notes","time"].includes(id)) { S[id] = e.target.value; if (id==="time") sum(); }
-  if (id === "postcode") { S.postcode = e.target.value; const b = document.querySelector('[data-go="3"]'); if (b) b.disabled = !S.postcode.trim(); sum(); }
+  if (id === "postcode") { S.postcode = e.target.value; const b = document.querySelector('[data-go="3"]'); if (b) b.disabled = !S.postcode.trim(); $("#travelNote").innerHTML = travelNote(); sum(); }
 });
-$("#flow").addEventListener("focusout", e => { if (e.target.id === "postcode") render(); });
 
 /* Saman's side */
 const STAGES = ["Enquiry","Quote sent","Deposit paid","Confirmed","Done"];
