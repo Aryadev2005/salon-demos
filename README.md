@@ -256,6 +256,12 @@ Both use generated placeholder images and made-up details.
   (mehndi, nikah/barat, walima, trial) or party glam (people, occasion), time + postcode with sample travel rule
   (OL/M free), details + T&Cs checkbox, and the message in her own format. `#studio`: enquiries pipeline, months,
   deposits. Sample prices labelled; photos cropped from her grid.
+- `noha-ezz-el-din`: Noha Ezz El Din, bridal & celebrity makeup artist, Cairo + destination, 93.8K followers, founder of
+  @the.makeuplab (studio in Sheikh Zayed). Bookings by WhatsApp +20 127 111 1747; her team replies with a pricing card
+  (evening makeup 9,000 EGP, lashes included, 45 min–1 h), a booking form and policy, and a 2-person minimum for home
+  bookings (1 person → studio). Black/ivory/champagne page from the Saman flow: evening (per person, min 2 at home,
+  home disabled for 1) or bridal (katb el ketab, henna, wedding, trial, destination; quote on request), studio vs her
+  place, policy checkbox, WhatsApp hand-off to her bookings number. `#studio`: requests pipeline. Photos from her grid.
 - `beyond-salon`: Beyond Beauty Salon by Ahmed Batekha, Egypt (Sheikh Zayed at The Lane
   Mall Palm Hills, Zamalek, Sahel). Bespoke page with a built-in 5-step booking engine
   (branch, services, stylist, date/time, details), booking reference, .ics calendar file,
