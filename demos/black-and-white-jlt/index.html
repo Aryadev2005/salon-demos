@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Black and White Ladies Salon · JLT Dubai · Book online</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#111;--ink2:#1d1d1d;--paper:#fff;--soft:#F6F5F3;--line:#E6E3DF;--muted:#6b6763;--coral:#F15A57;--coral-d:#D8423F;--ok:#2f7a4b;--okbg:#E7F2EA;--serif:"Playfair Display",Georgia,serif;--sans:Lato,system-ui,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.6 var(--sans)}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;margin:0;line-height:1.1}
+h2{font-size:clamp(32px,4vw,48px)}
+.it{font-style:italic}
+.kick{font:700 11px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--coral);margin:0 0 14px}
+.muted{color:var(--muted)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:2px solid var(--ink);background:transparent;padding:13px 22px;font:700 13px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;text-decoration:none}
+.btn.dark{background:var(--ink);color:#fff}
+.btn.coral{background:var(--coral);border-color:var(--coral);color:#fff}
+.btn.coral:hover{background:var(--coral-d);border-color:var(--coral-d)}
+.btn.wa{background:#25D366;border-color:#25D366;color:#fff}
+.btn:disabled{opacity:.35;cursor:not-allowed}
+:focus-visible{outline:2px solid var(--coral);outline-offset:3px}
+section{padding:80px 0}
+
+.pbar{background:var(--coral);color:#fff;font-size:13px}
+.pbar .wrap{display:flex;justify-content:space-between;gap:12px;padding-top:8px;padding-bottom:8px;flex-wrap:wrap}
+.top{background:var(--ink);color:#ddd;font-size:13px}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;height:40px;flex-wrap:wrap}
+header.main{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid var(--line)}
+header.main .wrap{display:flex;justify-content:space-between;align-items:center;height:72px;gap:16px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.mono{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--ink);display:grid;place-items:center;font:italic 600 20px/1 var(--serif)}
+.logo b{font:italic 600 24px/1 var(--serif);display:block}
+.logo small{font:700 10px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase}
+header.main nav{display:flex;gap:22px;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+header.main nav a{text-decoration:none}
+header.main nav a:hover{color:var(--coral)}
+
+.hero{background:var(--ink);color:#fff;overflow:hidden}
+.hero .g{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch}
+.hero .txt{padding:70px 40px 70px 0}
+.hero h1{font-size:clamp(40px,5.4vw,68px);line-height:1.02}
+.hero p.lead{color:#cfcac5;font-size:18px;max-width:480px;margin:20px 0 28px}
+.hero .ph{background:url(img/team.jpg) center/cover;min-height:440px}
+.facts{display:flex;gap:28px;margin-top:30px;flex-wrap:wrap}
+.facts b{display:block;font:600 26px/1 var(--serif);color:#fff}
+.facts small{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#a9a39d}
+
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.col{border:1px solid var(--line);padding:28px}
+.col.after{background:var(--ink);color:#fff;border-color:var(--ink)}
+.col h3{font-size:26px;margin-bottom:14px}
+.col li{margin:8px 0}
+.broken{display:inline-block;background:var(--soft);border:1px solid var(--line);padding:10px 14px;font-size:14px;color:var(--muted);margin:6px 0 4px}
+
+#book{background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.bk{display:grid;grid-template-columns:minmax(0,1fr) 350px;gap:28px;align-items:start}
+.bk>*{min-width:0}
+.panel{background:#fff;border:1px solid var(--line);padding:30px}
+.prog{display:flex;gap:5px;margin-bottom:20px}
+.prog span{flex:1;height:3px;background:var(--line)}
+.prog span.on{background:var(--coral)}
+.sl{font:700 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.panel h3{font-size:30px;margin-bottom:6px}
+.panel .sub{color:var(--muted);font-size:15px;margin:0 0 20px}
+.tabs{display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap}
+.tabs button{border:1px solid var(--line);background:#fff;padding:9px 16px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-weight:700}
+.tabs button[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.pk{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pkc{border:1px solid var(--line);background:#fff;padding:16px;text-align:left;position:relative}
+.pkc[aria-pressed=true]{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.pkc .nm{font:700 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase}
+.pkc .pr{font:600 26px/1.1 var(--serif);margin:6px 0 2px}
+.pkc .was{font-size:13px;color:var(--muted);text-decoration:line-through;margin-left:6px;font-family:var(--sans)}
+.pkc ul{margin:8px 0 0;padding-left:16px;font-size:13px;color:var(--muted)}
+.pkc .dur{position:absolute;top:14px;right:14px;font-size:11.5px;color:var(--muted)}
+.svc{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line);background:#fff;padding:9px 14px;font-size:14px}
+.chip[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+.days{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:16px}
+.dy{flex:0 0 70px;border:1px solid var(--line);background:#fff;padding:9px 0;text-align:center;line-height:1.2}
+.dy small{display:block;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.dy b{display:block;font:600 22px/1.1 var(--serif)}
+.dy[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.dy[aria-pressed=true] small{color:#bbb}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(82px,1fr));gap:7px}
+.slot{border:1px solid var(--line);background:#fff;padding:10px 0;font-size:14.5px;font-variant-numeric:tabular-nums}
+.slot[aria-pressed=true]{background:var(--coral);border-color:var(--coral);color:#fff}
+.slot:disabled{opacity:.3;text-decoration:line-through;cursor:default}
+.where{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+.where button{border:1px solid var(--line);background:#fff;padding:16px;text-align:left}
+.where button b{display:block;font:600 19px/1.2 var(--serif)}
+.where button small{color:var(--muted);font-size:13px}
+.where button[aria-pressed=true]{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.f{display:block;margin-bottom:14px}
+.f>span,.lab{display:block;font:700 11.5px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.in{width:100%;font:inherit;font-size:16px;padding:11px 12px;border:1px solid var(--line);background:#fff;color:var(--ink)}
+.in:focus{outline:none;border-color:var(--ink)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.nav{display:flex;justify-content:space-between;align-items:center;margin-top:22px;gap:12px}
+.back{background:none;border:0;color:var(--muted);text-decoration:underline;text-underline-offset:3px;font-size:14px}
+.sum{position:sticky;top:90px;background:var(--ink);color:#fff;padding:24px}
+.sum h4{font-size:24px}
+.sum .d{color:#aaa;font-size:13.5px;margin-top:4px}
+.sum ul{list-style:none;margin:14px 0 0;padding:0;font-size:14px}
+.sum li{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid #333}
+.sum .tot{display:flex;justify-content:space-between;align-items:baseline;margin-top:12px}
+.sum .tot b{font:600 32px/1 var(--serif)}
+.sum .sm{font-size:12.5px;color:#aaa;margin-top:8px}
+.done{text-align:center}
+.tick{width:58px;height:58px;border-radius:50%;background:var(--coral);color:#fff;display:grid;place-items:center;margin:0 auto 14px;font-size:26px}
+.wamsg{background:#E7F8DC;border-radius:10px 10px 2px 10px;padding:12px 14px;text-align:left;font:400 13.5px/1.5 system-ui,sans-serif;white-space:pre-line;margin:14px auto;max-width:430px}
+.plan{list-style:none;margin:14px auto;padding:0;max-width:460px;text-align:left;border-top:1px solid var(--line)}
+.plan li{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.plan b{color:var(--coral)}
+
+.party{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.party img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.gal img{width:100%;aspect-ratio:1/1;object-fit:cover}
+footer{background:var(--ink);color:#aaa;font-size:13px;padding:28px 0 40px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.fab{position:fixed;left:16px;bottom:16px;width:54px;height:54px;border-radius:50%;background:#25D366;display:grid;place-items:center;color:#fff;font-size:26px;text-decoration:none;z-index:30;box-shadow:0 8px 20px rgba(0,0,0,.25)}
+
+/* owner */
+#studio{display:none}
+body.studio .site{display:none}
+body.studio #studio{display:block}
+.sv{background:var(--ink);color:#fff}
+.sv .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+.sv a{color:var(--coral);font-size:14px}
+.kp{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:24px 0 8px}
+.kp div{border:1px solid var(--line);padding:14px 16px}
+.kp b{font:600 32px/1 var(--serif);display:block}
+.kp small{color:var(--muted);font-size:13px}
+.sg{display:grid;grid-template-columns:1.5fr 1fr;gap:22px;align-items:start;padding:14px 0 70px}
+.box{border:1px solid var(--line);padding:20px;margin-bottom:22px;background:#fff}
+.box h3{font-size:24px;margin-bottom:4px}
+.box .hint{font-size:13.5px;color:var(--muted);margin:0 0 10px}
+.board{display:grid;grid-template-columns:52px repeat(4,1fr);font-size:12px;border-top:1px solid var(--line)}
+.board .hd{font:700 11px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;padding:8px 6px;border-bottom:1px solid var(--line);background:var(--soft)}
+.board .t{padding:4px 6px;color:var(--muted);border-bottom:1px dashed var(--line);height:34px}
+.board .c{border-left:1px solid var(--line);border-bottom:1px dashed var(--line);height:34px;position:relative}
+.appt{position:absolute;left:3px;right:3px;top:2px;background:var(--ink);color:#fff;padding:3px 6px;font-size:11.5px;line-height:1.25;z-index:1;overflow:hidden}
+.appt.home{background:#5b4bd6}
+.appt.new{background:var(--coral)}
+.appt.gap{background:repeating-linear-gradient(45deg,#fff,#fff 5px,#fbe6e5 5px,#fbe6e5 10px);color:var(--coral-d);border:1px dashed var(--coral)}
+.li{border-top:1px solid var(--line);padding:11px 0;font-size:14px}
+.li small{display:block;color:var(--muted);font-size:12px}
+.mini{display:inline-block;font-size:12.5px;border:1px solid var(--line);background:#fff;padding:6px 11px;margin-top:6px;text-decoration:none}
+.mini.g{background:#25D366;border-color:#25D366;color:#fff}
+.mini.c{background:var(--coral);border-color:var(--coral);color:#fff}
+.toast{visibility:hidden;position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(90px);background:var(--ink);color:#fff;padding:13px 18px;font-size:14px;z-index:99;transition:transform .3s;max-width:92vw}
+.toast.show{visibility:visible;transform:translateX(-50%)}
+
+@media (max-width:960px){
+  .hero .g,.ba,.bk,.party,.sg{grid-template-columns:1fr}
+  .hero .txt{padding:50px 0}
+  .hero .ph{min-height:300px}
+  .sum{position:static}
+  header.main nav{display:none}
+  .kp{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  section{padding:60px 0}
+  .panel{padding:20px 14px}
+  .pk,.where,.two{grid-template-columns:1fr}
+  .gal{grid-template-columns:1fr 1fr}
+  .board{grid-template-columns:42px repeat(4,1fr)}
+}
+</style>
+</head>
+<body>
+<div class="site">
+<div class="pbar"><div class="wrap"><span>A private demo made for <b>Black and White Ladies Salon</b>, JLT</span><span>by Aryadev · <a href="https://www.codzo.in" target="_blank" rel="noopener">Codzo</a> · <a href="#studio">See the salon's side →</a></span></div></div>
+<div class="top"><div class="wrap"><span>Sunday – Saturday · 10 AM – 10 PM</span><span>+971 56 966 6647</span></div></div>
+<header class="main"><div class="wrap">
+  <a class="logo" href="#"><span class="mono">BW</span><span><b>Black And White</b><small>Saloon · Dubai · JLT</small></span></a>
+  <nav><a href="#book">Book online</a><a href="#book">Packages</a><a href="#parties">Parties &amp; home service</a><a href="#gallery">Gallery</a></nav>
+  <a class="btn coral" href="#book" style="padding:11px 16px">Book now</a>
+</div></header>
+
+<header class="hero"><div class="wrap g">
+  <div class="txt">
+    <p class="kick">Best ladies salon in JLT · since 2012</p>
+    <h1>Book your appointment <span class="it">in under a minute.</span></h1>
+    <p class="lead">Choose a package or service, pick a time that's actually free, and get your confirmation on WhatsApp. At the salon in JLT, or at home.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn coral" href="#book">Book now</a><a class="btn" href="#parties" style="border-color:#fff;color:#fff">Parties &amp; home service</a></div>
+    <div class="facts"><div><b>2012</b><small>caring for JLT since</small></div><div><b>7 days</b><small>10 am – 10 pm</small></div><div><b>Goldwell</b><small>&amp; Kevin.Murphy</small></div></div>
+  </div>
+  <div class="ph" role="img" aria-label="The Black and White team in the salon"></div>
+</div></header>
+
+<section><div class="wrap">
+  <p class="kick">For the Black and White team</p>
+  <h2 style="max-width:760px">Your Book Online page <span class="it">needs to take bookings again.</span></h2>
+  <p class="muted" style="max-width:720px;margin:14px 0 30px">Right now, a client who taps “Book Online” on your website sees this:</p>
+  <div class="ba">
+    <div class="col"><h3>Today</h3>
+      <div class="broken">This form is temporarily unavailable.</div>
+      <ul class="muted"><li>The client has to find your number and WhatsApp you instead</li><li>Your team replies by hand, checks the diary, confirms a time</li><li>No reminder goes out, so some clients forget</li><li>Regulars are only rebooked if someone remembers to message them</li></ul></div>
+    <div class="col after"><h3>With this</h3>
+      <ul><li>Clients book a package or service with live free times, 24/7</li><li>Confirmation and a reminder go out on WhatsApp automatically</li><li>Regulars get a friendly nudge when they're due back</li><li>Quiet hours today? Offer them to regulars in one tap</li></ul></div>
+  </div>
+</div></section>
+
+<section id="book"><div class="wrap">
+  <p class="kick">Book online</p>
+  <h2 style="margin-bottom:26px">Your time, <span class="it">your way.</span></h2>
+  <div class="bk"><div class="panel" id="flow" aria-live="polite"></div><aside class="sum" id="sum"></aside></div>
+</div></section>
+
+<section id="parties"><div class="wrap party">
+  <div><p class="kick">Parties &amp; home service</p><h2>Spa parties, bridal showers, <span class="it">or the salon at home.</span></h2>
+    <p class="muted" style="margin:16px 0 22px">Bridal showers, bachelorettes, birthdays and girls' nights at the salon, or our specialists at your home or office. Tell us the occasion and how many guests, and we'll come back with a plan.</p>
+    <div class="two" style="max-width:460px"><label class="f"><span>Occasion</span><select class="in" id="pOcc"><option>Bridal shower</option><option>Bachelorette</option><option>Birthday</option><option>Girls' night out</option><option>Teen party</option></select></label>
+    <label class="f"><span>Guests</span><input class="in" id="pGuests" type="number" min="2" value="6"></label></div>
+    <button class="btn dark" id="pSend">Send party enquiry</button></div>
+  <img src="img/party.jpg" alt="Friends enjoying a spa party with face masks" loading="lazy">
+</div></section>
+
+<section id="gallery" style="padding-top:0"><div class="wrap">
+  <div class="gal"><img src="img/braid.jpg" alt="Braided updo" loading="lazy"><img src="img/nails.jpg" alt="Nail art" loading="lazy"><img src="img/lashes.jpg" alt="Lash extensions" loading="lazy"><img src="img/updo.jpg" alt="Classic bun" loading="lazy"></div>
+</div></section>
+
+<footer><div class="wrap"><span>Black and White Ladies Salon · JLT, Dubai · +971 56 966 6647</span><span>Demo by <a href="https://www.codzo.in" style="color:var(--coral)" target="_blank" rel="noopener">Codzo</a> · package prices from your website; times &amp; clients are samples</span></div></footer>
+<a class="fab" href="https://wa.me/971569666647" target="_blank" rel="noopener" aria-label="WhatsApp the salon">✆</a>
+</div>
+
+<!-- SALON VIEW -->
+<div id="studio">
+  <div class="sv"><div class="wrap"><span><b style="font:600 22px/1 var(--serif)">Today at Black and White</b> <span style="color:#aaa;font-size:13px;margin-left:8px">salon view · demo</span></span><a href="#">← Back to the booking page</a></div></div>
+  <div class="wrap">
+    <div class="kp" id="kp"></div>
+    <p class="muted" style="font-size:13.5px;margin:0">Sample day. Anything booked on the demo in this browser appears here in coral.</p>
+    <div class="sg">
+      <div class="box"><h3>Today's diary</h3><p class="hint">Every chair at a glance. Striped blocks are gaps you could still fill.</p><div class="board" id="board"></div></div>
+      <div>
+        <div class="box"><h3>Fill today's gaps</h3><p class="hint">Offer free slots to regulars on WhatsApp.</p><div id="gaps"></div></div>
+        <div class="box"><h3>Due back</h3><p class="hint">Regulars ready for their next visit.</p><div id="due"></div></div>
+        <div class="box"><h3>Sent automatically</h3><div id="log"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+const C = {
+  wa: "971569666647",
+  packages: [
+    {id:"A", price:149, was:285, mins:90, items:["Wash & blow-dry","Classic manicure","Classic pedicure","Eyebrow & upper-lip threading"]},
+    {id:"B", price:199, was:390, mins:120, items:["Hair treatment (oil or mask)","Half legs or full arms wax","Wash & blow-dry","Classic manicure","Classic pedicure","15 min foot massage"]},
+    {id:"C", price:289, was:495, mins:150, items:["Hair treatment (oil or mask)","Haircut, restyle & blow-dry","Classic mani & pedi","15 min foot massage","Eyebrow & upper-lip thread"]},
+    {id:"D", price:249, was:700, mins:150, items:["Keratin treatment with trim"]},
+    {id:"E", price:349, was:620, mins:180, items:["Hair treatment (oil or mask)","Waxing full arms or half legs","Eyebrow & upper-lip threading","Full hair colour & quick dry","Classic mani & pedi","15 min foot massage"]},
+    {id:"F", price:399, was:665, mins:210, items:["Hair treatment (oil or mask)","Haircut, restyle & blow-dry","Classic mani & pedi","Foot/leg massage 15 min","Eyebrow & upper-lip thread","Full body massage"]}
+  ],
+  services: [["Gel manicure",45],["Gel pedicure",60],["Blow-dry",45],["Haircut",60],["Hair treatment",45],["Hair colour",120],["Crazy colours",180],["Hair extensions",150],["Lashes",90],["Nail art",60],["Facial",60],["Wax & threading",30]],
+  open: 10, close: 22
+};
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const st = { get(k,d){ try{ const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; }catch(e){ return d; } }, set(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} } };
+const pad = n => String(n).padStart(2,"0");
+const iso = d => `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+const P = s => { const [y,m,d] = s.split("-").map(Number); return new Date(y,m-1,d); };
+const DW = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"], MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const hm = m => `${pad(Math.floor(m/60))}:${pad(m%60)}`;
+const tm = s => { const [h,m] = s.split(":").map(Number); return h*60+m; };
+const addD = (d,n) => { const x = new Date(d); x.setDate(x.getDate()+n); return x; };
+const nice = s => { const d = P(s); return `${DW[d.getDay()]} ${d.getDate()} ${MON[d.getMonth()]}`; };
+const aed = n => "AED " + n;
+const TODAY = new Date(); TODAY.setHours(0,0,0,0);
+const toast = t => { const el = $("#toast"); el.textContent = t; el.classList.add("show"); clearTimeout(toast.t); toast.t = setTimeout(()=>el.classList.remove("show"), 3200); };
+function rng(s){ return () => (s = (s*16807) % 2147483647) / 2147483647; }
+const books = () => st.get("bw.books", []);
+
+/* booking state */
+const S = { step:0, tab:"pkg", pkg:"B", svcs:[], day:iso(TODAY), time:null, where:"salon", addr:"", name:"", phone:"", notes:"", done:false };
+const STEPS = ["What","When","Where","You"];
+const chosen = () => S.tab === "pkg" ? { label:`Package ${S.pkg}`, price:C.packages.find(p=>p.id===S.pkg).price, mins:C.packages.find(p=>p.id===S.pkg).mins }
+  : { label: S.svcs.join(", ") || "—", price:null, mins: S.svcs.reduce((a,n)=>a+C.services.find(s=>s[0]===n)[1],0) || 0 };
+function slotsFor(day){
+  const r = rng(Number(day.replace(/-/g,""))), out = [], now = new Date(), isToday = day === iso(TODAY);
+  const last = C.close*60 - Math.max(30, chosen().mins);
+  for (let t = C.open*60; t <= last; t += 30) {
+    const past = isToday && t <= now.getHours()*60 + now.getMinutes() + 30;
+    out.push({ t: hm(t), busy: past || r() < .38 || books().some(b => b.day === day && b.time === hm(t)) });
+  }
+  return out;
+}
+function sum(){
+  const c = chosen(), p = S.tab === "pkg" ? C.packages.find(x=>x.id===S.pkg) : null;
+  $("#sum").innerHTML = `<h4>Your appointment</h4><div class="d">${S.time ? `${nice(S.day)} at ${S.time}` : "Choose a time"} · ${S.where==="home" ? "Home service" : "Salon, JLT"}</div>
+   <ul>${p ? p.items.map(i=>`<li><span>${esc(i)}</span><span>✓</span></li>`).join("") : S.svcs.map(s=>`<li><span>${esc(s)}</span><span>✓</span></li>`).join("") || `<li><span class="muted">Choose your services</span><span></span></li>`}</ul>
+   <div class="tot"><span>${p ? `Package ${p.id}` : "Total"}</span><b>${p ? aed(p.price) : "At the salon"}</b></div>
+   <div class="sm">${p ? `<s>${aed(p.was)}</s> · about ${Math.round(p.mins/60*10)/10} hours` : "Prices as on the salon menu, confirmed on WhatsApp."}${S.where==="home"?" Any home-service charge is confirmed on WhatsApp.":""}</div>`;
+}
+function head(){ return `<div class="prog">${STEPS.map((_,i)=>`<span class="${i<=S.step?"on":""}"></span>`).join("")}</div><div class="sl">Step ${S.step+1} of 4 · ${STEPS[S.step]}</div>`; }
+function render(){ $("#flow").innerHTML = S.done ? done() : head() + [s0,s1,s2,s3][S.step](); sum(); }
+function go(n){ S.step = n; render(); const y = $("#book").getBoundingClientRect().top + scrollY - 80; if (Math.abs(scrollY-y) > 250) scrollTo({top:y, behavior:"smooth"}); }
+function s0(){
+  const body = S.tab === "pkg"
+    ? `<div class="pk">${C.packages.map(p=>`<button class="pkc" data-pkg="${p.id}" aria-pressed="${S.pkg===p.id}"><span class="dur">~${Math.round(p.mins/60*10)/10}h</span><div class="nm">Package ${p.id}</div><div class="pr">${aed(p.price)}<span class="was">${aed(p.was)}</span></div><ul>${p.items.map(i=>`<li>${esc(i)}</li>`).join("")}</ul></button>`).join("")}</div>`
+    : `<div class="svc">${C.services.map(([n])=>`<button class="chip" data-svc="${esc(n)}" aria-pressed="${S.svcs.includes(n)}">${esc(n)}</button>`).join("")}</div>`;
+  return `<h3>What would you like?</h3><p class="sub">Choose one of your favourite packages, or pick individual services.</p>
+   <div class="tabs"><button data-tab="pkg" aria-pressed="${S.tab==="pkg"}">Packages</button><button data-tab="svc" aria-pressed="${S.tab==="svc"}">Services</button></div>${body}
+   <div class="nav"><span></span><button class="btn coral" data-go="1" ${S.tab==="svc" && !S.svcs.length ? "disabled" : ""}>Next: choose a time</button></div>`;
+}
+function s1(){
+  const days = Array.from({length:14}, (_,i) => addD(TODAY,i));
+  const sl = slotsFor(S.day);
+  return `<h3>When suits you?</h3><p class="sub">Only times that are really free are shown. Open 7 days, 10 am – 10 pm.</p>
+   <div class="days">${days.map(d=>`<button class="dy" data-day="${iso(d)}" aria-pressed="${S.day===iso(d)}"><small>${iso(d)===iso(TODAY)?"Today":DW[d.getDay()]}</small><b>${d.getDate()}</b><small>${MON[d.getMonth()]}</small></button>`).join("")}</div>
+   <div class="slots">${sl.map(x=>`<button class="slot" data-time="${x.t}" aria-pressed="${S.time===x.t}" ${x.busy?"disabled":""}>${x.t}</button>`).join("") || `<p class="muted">No times left today. Try tomorrow.</p>`}</div>
+   <div class="nav"><button class="back" data-go="0">← Back</button><button class="btn coral" data-go="2" ${S.time?"":"disabled"}>Next</button></div>`;
+}
+function s2(){
+  return `<h3>Salon or home?</h3><p class="sub">Come to us in JLT, or our specialists come to you.</p>
+   <div class="where"><button data-where="salon" aria-pressed="${S.where==="salon"}"><b>At the salon</b><small>JLT, Dubai</small></button><button data-where="home" aria-pressed="${S.where==="home"}"><b>Home service</b><small>Your home or office</small></button></div>
+   ${S.where==="home" ? `<label class="f"><span>Address (area, building, flat)</span><input class="in" id="addr" value="${esc(S.addr)}" placeholder="e.g. Cluster X, JLT, Tower 2, Flat 1204"></label>` : ""}
+   <div class="nav"><button class="back" data-go="1">← Back</button><button class="btn coral" data-go="3">Next</button></div>`;
+}
+function s3(){
+  return `<h3>Last step</h3><p class="sub">Your confirmation and a reminder come on WhatsApp.</p>
+   <div class="two"><label class="f"><span>Name</span><input class="in" id="name" autocomplete="name" value="${esc(S.name)}"></label>
+   <label class="f"><span>WhatsApp number</span><input class="in" id="phone" type="tel" autocomplete="tel" placeholder="+971" value="${esc(S.phone)}"></label></div>
+   <label class="f"><span>Anything we should know? (optional)</span><input class="in" id="notes" value="${esc(S.notes)}" placeholder="Allergies, preferred stylist, hair length…"></label>
+   <div class="nav"><button class="back" data-go="2">← Back</button><button class="btn coral" id="confirm">Confirm booking</button></div>`;
+}
+function waText(b){ return `Hi Black and White! 💕 I've booked ${b.what} on ${nice(b.day)} at ${b.time} (${b.where==="home"?"home service":"at the salon, JLT"}).\nName: ${b.name}\nRef: ${b.ref}`; }
+function done(){
+  const b = books()[0]; if (!b) return "";
+  const d = P(b.day), rem = addD(d,-1);
+  return `<div class="done"><div class="tick">✓</div><h3>You're booked, ${esc(b.name.split(" ")[0])}!</h3>
+   <p class="sub" style="margin:6px 0 0">${esc(b.what)} · ${nice(b.day)} at ${b.time} · Ref <b>${b.ref}</b></p>
+   <ul class="plan"><li><b>Right now</b><span>WhatsApp confirmation with the address and what to expect.</span></li>
+   <li><b>${iso(rem)===iso(TODAY)?"Later today":`${DW[rem.getDay()]} ${rem.getDate()} ${MON[rem.getMonth()]}`}</b><span>A reminder the day before. Reply 1 to confirm, 2 to reschedule.</span></li>
+   <li><b>In a few weeks</b><span>A friendly nudge when you're due for your next visit.</span></li></ul>
+   <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap"><a class="btn wa" target="_blank" rel="noopener" href="https://wa.me/${C.wa}?text=${encodeURIComponent(waText(b))}">Message the salon</a><a class="btn" href="#studio">See the salon's side →</a></div>
+   <p style="margin-top:14px"><button class="back" id="again">Book another</button></p></div>`;
+}
+$("#flow").addEventListener("click", e => {
+  const t = e.target.closest("button"); if (!t || t.disabled) return; const d = t.dataset;
+  if (d.tab) { S.tab = d.tab; S.time = null; render(); }
+  else if (d.pkg) { S.pkg = d.pkg; S.time = null; render(); }
+  else if (d.svc) { S.svcs = S.svcs.includes(d.svc) ? S.svcs.filter(x=>x!==d.svc) : [...S.svcs, d.svc]; S.time = null; render(); }
+  else if (d.day) { S.day = d.day; S.time = null; render(); }
+  else if (d.time) { S.time = d.time; render(); }
+  else if (d.where) { S.where = d.where; render(); }
+  else if (d.go) go(Number(d.go));
+  else if (t.id === "again") { Object.assign(S, {done:false, step:0, time:null}); render(); }
+  else if (t.id === "confirm") {
+    if (!S.name.trim() || !S.phone.trim()) return toast("Please add your name and WhatsApp number.");
+    if (S.where === "home" && !S.addr.trim()) { go(2); return toast("Please add the address for your home service."); }
+    const c = chosen(), all = books(), ref = "BW-" + Math.random().toString(36).slice(2,6).toUpperCase();
+    all.unshift({ ref, what:c.label, mins:c.mins || 60, price:c.price, day:S.day, time:S.time, where:S.where, addr:S.addr, name:S.name.trim(), phone:S.phone.trim(), at:Date.now() });
+    st.set("bw.books", all); S.done = true; render(); toast("Booked. It's in the salon's diary now.");
+  }
+});
+$("#flow").addEventListener("input", e => { if (["addr","name","phone","notes"].includes(e.target.id)) S[e.target.id] = e.target.value; });
+$("#pSend").onclick = () => { const l = st.get("bw.party", []); l.unshift({occ:$("#pOcc").value, guests:$("#pGuests").value, at:Date.now()}); st.set("bw.party", l);
+  window.open(`https://wa.me/${C.wa}?text=${encodeURIComponent(`Hi Black and White! I'd love to plan a ${$("#pOcc").value.toLowerCase()} for ${$("#pGuests").value} guests. Could you send me the options?`)}`, "_blank", "noopener"); toast("Party enquiry sent (demo)."); };
+
+/* salon view */
+const CHAIRS = ["Hair 1","Hair 2","Nails","Beauty"];
+const SAMPLE = [
+  {c:0, s:"10:00", m:120, n:"Package B · Sara"}, {c:0, s:"13:00", m:150, n:"Package D · Keratin · Hind"}, {c:0, s:"18:30", m:60, n:"Blow-dry · Olga"},
+  {c:1, s:"11:00", m:180, n:"Package E · Priya"}, {c:1, s:"16:00", m:60, n:"Haircut · Lina"},
+  {c:2, s:"10:30", m:45, n:"Gel manicure · Mariam"}, {c:2, s:"12:00", m:60, n:"Gel pedicure · Anna"}, {c:2, s:"15:00", m:60, n:"Nail art · Joy"}, {c:2, s:"19:00", m:45, n:"Gel manicure · Reem"},
+  {c:3, s:"10:00", m:90, n:"Lashes · Fatima"}, {c:3, s:"14:00", m:120, n:"Home service · Package B · Marina", home:true}, {c:3, s:"17:30", m:30, n:"Threading · Noor"}
+];
+function studio(){
+  const todays = books().filter(b => b.day === iso(TODAY));
+  const appts = [...SAMPLE, ...todays.map((b,i) => ({c:(i+1)%4, s:b.time, m:b.mins, n:`${b.what} · ${b.name.split(" ")[0]}`, isNew:true, home:b.where==="home"}))];
+  const rows = []; for (let t = C.open*60; t < C.close*60; t += 30) rows.push(t);
+  const cell = (c, t) => {
+    const a = appts.find(x => x.c === c && tm(x.s) === t);
+    if (a) return `<div class="c"><div class="appt ${a.isNew?"new":a.home?"home":""}" style="height:${a.m/30*34-4}px">${esc(a.s)} ${esc(a.n)}</div></div>`;
+    return `<div class="c"></div>`;
+  };
+  const gaps = [{c:1, s:"19:00", m:120}, {c:0, s:"16:00", m:120}, {c:3, s:"19:00", m:120}];
+  $("#board").innerHTML = `<div class="hd"></div>${CHAIRS.map(c=>`<div class="hd">${c}</div>`).join("")}` + rows.map(t =>
+    `<div class="t">${t%60===0?hm(t):""}</div>` + CHAIRS.map((_,c) => { const g = gaps.find(x=>x.c===c && tm(x.s)===t && !appts.some(a=>a.c===c && tm(a.s)===t));
+      return g ? `<div class="c"><div class="appt gap" style="height:${g.m/30*34-4}px">Free ${g.s}–${hm(tm(g.s)+g.m)}</div></div>` : cell(c,t); }).join("")).join("");
+  const rev = appts.reduce((a,x)=>a+(x.isNew?(books().find(b=>b.time===x.s)?.price||0):0),0);
+  $("#kp").innerHTML = `<div><b>${appts.length}</b><small>appointments today</small></div><div><b>${appts.filter(a=>a.home).length}</b><small>home services</small></div><div><b>${gaps.length}</b><small>gaps you could fill</small></div><div><b>${appts.length}</b><small>WhatsApp reminders sent</small></div>`;
+  $("#gaps").innerHTML = gaps.map(g => `<div class="li">${CHAIRS[g.c]} · free ${g.s}–${hm(tm(g.s)+g.m)}<small>Sample: 12 regulars usually book evenings</small><button class="mini c" data-offer="${CHAIRS[g.c]} at ${g.s}">Offer to regulars</button></div>`).join("");
+  const due = [["Hind","Keratin","12 weeks ago"],["Mariam","Gel manicure","3 weeks ago"],["Lina","Haircut","7 weeks ago"],["Priya","Hair colour","6 weeks ago"]];
+  $("#due").innerHTML = due.map(([n,s,w]) => `<div class="li">${n} · ${s}<small>Last visit ${w}</small><a class="mini g" target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent(`Hi ${n}! It's been a little while since your ${s.toLowerCase()} at Black and White 💕 Shall we book you in? Tap here to choose a time: [your booking link]`)}">WhatsApp nudge</a></div>`).join("");
+  const log = st.get("bw.log", []);
+  $("#log").innerHTML = [...log, {w:"08:00", t:`Reminders sent for today's ${appts.length} appointments. 9 replied “1” to confirm.`}, {w:"Yesterday", t:"Thank-you message and Google review link to 14 clients."}].slice(0,5).map(x=>`<div class="li"><small>${x.w}</small>${esc(x.t)}</div>`).join("");
+}
+document.addEventListener("click", e => { const b = e.target.closest("[data-offer]"); if (!b) return;
+  const log = st.get("bw.log", []); log.unshift({w:"Just now", t:`“A spot just opened today, ${b.dataset.offer}. Reply YES to grab it 💕” sent to regulars.`}); st.set("bw.log", log); studio(); toast("Offer sent to regulars (demo)."); });
+
+function route(){ const s = location.hash === "#studio"; document.body.classList.toggle("studio", s); if (s) { studio(); scrollTo(0,0); } }
+addEventListener("hashchange", route);
+render(); route();
+</script>
+</body>
+</html>

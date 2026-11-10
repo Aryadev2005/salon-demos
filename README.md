@@ -243,6 +243,12 @@ Both use generated placeholder images and made-up details.
   classes section with two batches (Pro Soft Glam Masterclass, Self-Makeup Class) and seat booking. `C.wa` is empty
   because no public WhatsApp number was found: put hers in before sending live; until then the WhatsApp button
   opens WhatsApp with the message ready. Sample INR prices labelled; photos cropped from her grid.
+- `black-and-white-jlt`: Black and White Ladies Salon, JLT Dubai (since 2012, 10am–10pm daily, +971 56 966 6647).
+  Their website's Book Online page shows "This form is temporarily unavailable". Black/white/coral page with the
+  real packages A–F (AED 149–399, with was-prices and contents from their site), individual services (prices at
+  the salon), 14-day picker with 30-min slots, salon or home service, WhatsApp confirmation, reminder and rebooking
+  plan, spa-party enquiry. `#studio`: today's diary by chair with gaps, offer-gaps-to-regulars, due-back nudges,
+  sent log. Team photo and gallery crops from their site; clients and times are samples.
 - `beyond-salon`: Beyond Beauty Salon by Ahmed Batekha, Egypt (Sheikh Zayed at The Lane
   Mall Palm Hills, Zamalek, Sahel). Bespoke page with a built-in 5-step booking engine
   (branch, services, stylist, date/time, details), booking reference, .ics calendar file,
