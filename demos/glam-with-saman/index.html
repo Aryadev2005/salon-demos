@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Glam with Saman · Rochdale Makeup Artist · Book your date</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#2A1216;--ink2:#3A1A1F;--ivory:#FFF8F5;--cream:#F6E9E4;--gold:#D9A57E;--gold-d:#A5503F;--maroon:#8C1C2A;--muted:#7C7067;--line:#E6DACB;--ok:#4F7A55;--okbg:#E7EFE4;--serif:"Cormorant Garamond",Georgia,serif;--sans:Jost,system-ui,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--ink);font:300 16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;margin:0;line-height:1.08}
+h2{font-size:clamp(34px,4.4vw,52px)}
+.it{font-style:italic;color:var(--gold-d)}
+.kick{font:500 11px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--gold-d);margin:0 0 14px}
+.muted{color:var(--muted)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--gold);background:transparent;padding:14px 24px;font:400 13px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:inherit}
+.btn.gold{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+.btn.gold:hover{background:#d4b37c}
+.btn.wa{background:#25D366;border-color:#25D366;color:#fff}
+.btn:disabled{opacity:.35;cursor:not-allowed}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+section{padding:90px 0}
+
+.pbar{background:#1c0b0e;color:#d9cdbd;font-size:12.5px}
+.pbar .wrap{display:flex;justify-content:space-between;gap:12px;padding-top:9px;padding-bottom:9px;flex-wrap:wrap}
+.pbar a{color:var(--gold)}
+nav.top{position:sticky;top:0;z-index:40;background:rgba(42,18,22,.96);backdrop-filter:blur(8px);color:var(--ivory);border-bottom:1px solid #2e2520}
+nav.top .wrap{display:flex;justify-content:space-between;align-items:center;height:64px;gap:14px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo img{width:40px;height:40px;border-radius:50%;object-fit:cover;border:1px solid var(--gold)}
+.logo b{font:400 21px/1 var(--serif);letter-spacing:.06em;text-transform:uppercase;display:block}
+.logo small{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+nav.top ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+nav.top ul a{font-size:13px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:#d9cdbd}
+nav.top .btn{padding:10px 16px;font-size:12px}
+
+.hero{background:var(--ink);color:var(--ivory);padding:60px 0 80px;overflow:hidden}
+.hero .g{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.hero h1{font-size:clamp(44px,6vw,80px);line-height:1}
+.hero p.lead{font:300 21px/1.5 var(--serif);color:#d9cdbd;max-width:500px;margin:22px 0 30px}
+.stats{display:flex;gap:30px;margin-top:34px;flex-wrap:wrap}
+.stats div b{display:block;font:400 34px/1 var(--serif);color:var(--gold)}
+.stats div small{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#a99a88}
+.mosaic{display:grid;grid-template-columns:1fr 1fr;gap:12px;height:560px}
+.mosaic img{width:100%;height:100%;object-fit:cover}
+.mosaic .tall{grid-row:span 2}
+
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.col{border:1px solid var(--line);padding:30px;background:#fff}
+.col.after{background:var(--ink);color:var(--ivory);border-color:var(--ink)}
+.col h3{font-size:30px;margin-bottom:16px}
+.col ol{margin:0;padding:0;list-style:none;counter-reset:n}
+.col li{counter-increment:n;padding:11px 0 11px 40px;border-top:1px solid var(--line);position:relative;font-size:15px}
+.col.after li{border-color:#3a302a}
+.col li::before{content:counter(n);position:absolute;left:0;top:11px;width:26px;height:26px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;font:400 14px/1 var(--serif);color:var(--gold-d)}
+.col.after li::before{color:var(--gold)}
+.col li small{display:block;font-size:12.5px;color:var(--muted)}
+.col.after li small{color:#a99a88}
+.red{color:#a5473a !important}
+
+#book{background:var(--cream);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.bk{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:30px;align-items:start}
+.bk>*{min-width:0}
+.panel{background:#fff;border:1px solid var(--line);padding:32px}
+.prog{display:flex;gap:5px;margin-bottom:22px}
+.prog span{flex:1;height:2px;background:var(--line)}
+.prog span.on{background:var(--gold)}
+.sl{font:500 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.panel h3{font-size:32px;margin-bottom:6px}
+.panel .sub{color:var(--muted);font-size:15px;margin:0 0 20px}
+.calh{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.calh b{font:400 26px/1 var(--serif)}
+.ib{width:38px;height:38px;border:1px solid var(--line);background:#fff;font-size:18px}
+.ib:disabled{opacity:.3}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
+.dow{text-align:center;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:4px 0}
+.day{aspect-ratio:1/1;border:1px solid var(--line);background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font:400 19px/1 var(--serif);padding:0}
+.day small{font:400 8.5px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;margin-top:4px;color:var(--ok)}
+.day.few small{color:var(--gold-d)}
+.day.full{background:var(--cream);color:#b8aa9a;border-style:dashed}
+.day.full small{color:#b8aa9a}
+.day.past{opacity:.25;cursor:default;background:transparent}
+.day.sel{background:var(--ink);border-color:var(--ink);color:var(--gold)}
+.day.sel small{color:var(--gold)}
+.legend{display:flex;gap:16px;font-size:12px;color:var(--muted);margin-top:10px;flex-wrap:wrap}
+.note{padding:13px 15px;font-size:14.5px;margin-top:14px;background:var(--cream)}
+.note.ok{background:var(--okbg)}
+.f{display:block;margin-bottom:16px}
+.f>span,.lab{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.in{width:100%;font:inherit;font-size:16px;padding:11px 2px;border:0;border-bottom:1px solid var(--gold);background:transparent;color:var(--ink);border-radius:0}
+.in:focus{outline:none;border-color:var(--maroon)}
+textarea.in{min-height:60px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line);background:#fff;padding:9px 14px;font-size:14px}
+.chip[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:var(--gold)}
+.ev{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.ev b{font:400 20px/1.1 var(--serif);display:block}
+.ev small{font-size:12.5px;color:var(--muted)}
+.tog{display:flex;align-items:center;gap:10px;cursor:pointer}
+.tog input{width:19px;height:19px;accent-color:var(--maroon)}
+.stp{display:flex;align-items:center;gap:8px}
+.stp button{width:30px;height:30px;border:1px solid var(--gold);background:#fff;font-size:15px;line-height:1}
+.stp output{min-width:20px;text-align:center;font:400 20px/1 var(--serif)}
+.art{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.art button{border:1px solid var(--line);background:#fff;padding:16px;text-align:left}
+.art button b{display:block;font:400 22px/1.1 var(--serif)}
+.art button small{color:var(--muted);font-size:13px}
+.art button[aria-pressed=true]{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.nav{display:flex;justify-content:space-between;align-items:center;margin-top:22px;gap:12px}
+.back{background:none;border:0;color:var(--muted);text-decoration:underline;text-underline-offset:3px;font-size:14px}
+.sum{position:sticky;top:84px;background:var(--ink);color:var(--ivory);padding:26px}
+.sum h4{font-size:28px;color:#fff}
+.sum .d{color:#a99a88;font-size:13.5px;margin-top:3px}
+.lines{list-style:none;margin:16px 0 0;padding:0;font-size:14px}
+.lines li{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid #3a302a}
+.lines li span:last-child{white-space:nowrap}
+.tot{display:flex;justify-content:space-between;align-items:baseline;margin-top:14px}
+.tot b{font:400 34px/1 var(--serif);color:var(--gold)}
+.sum .sm{font-size:12.5px;color:#a99a88;margin-top:6px}
+.tag{display:inline-block;margin-top:14px;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid #5b4c40;padding:3px 9px;color:#c9b9a5}
+.done{text-align:center}
+.tick{width:60px;height:60px;border-radius:50%;background:var(--gold);color:var(--ink);display:grid;place-items:center;margin:0 auto 14px;font-size:26px}
+.wamsg{background:#E7F8DC;border-radius:10px 10px 2px 10px;padding:12px 14px;text-align:left;font:400 13.5px/1.5 system-ui,sans-serif;white-space:pre-line;margin:14px auto;max-width:440px;box-shadow:0 1px 2px #0001}
+
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.gal img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.mc{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;background:var(--ink);color:var(--ivory);padding:44px}
+.mc .seats{display:flex;gap:6px;margin:18px 0}
+.mc .seats i{width:18px;height:18px;border:1px solid var(--gold)}
+.mc .seats i.t{background:var(--gold)}
+footer{background:#1c0b0e;color:#a99a88;font-size:13px;padding:30px 0 50px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* studio */
+#studio{display:none}
+body.studio .site{display:none}
+body.studio #studio{display:block}
+.sv{background:var(--ink);color:var(--ivory)}
+.sv .wrap{display:flex;justify-content:space-between;align-items:center;height:66px}
+.sv a{color:var(--gold);font-size:14px}
+.kp{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:28px 0 10px}
+.kp div{background:#fff;border:1px solid var(--line);padding:16px 18px}
+.kp b{font:400 36px/1 var(--serif);display:block}
+.kp small{color:var(--muted);font-size:13px}
+.sg{display:grid;grid-template-columns:1.5fr 1fr;gap:22px;align-items:start;padding:16px 0 70px}
+.box{background:#fff;border:1px solid var(--line);padding:22px;margin-bottom:22px}
+.box h3{font-size:27px;margin-bottom:4px}
+.box .hint{font-size:13.5px;color:var(--muted);margin:0 0 10px}
+.enq{border-top:1px solid var(--line);padding:16px 0;display:grid;grid-template-columns:68px 1fr;gap:14px}
+.enq .dt{text-align:center;border:1px solid var(--line);padding:7px 0;height:max-content;line-height:1.1}
+.enq .dt b{font:400 26px/1 var(--serif);display:block}
+.enq .dt small{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.enq h4{font-size:22px}
+.enq .meta{font-size:13.5px;color:var(--muted);margin:2px 0 8px}
+.pipe{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px}
+.pipe span{font-size:11px;padding:3px 9px;border:1px solid var(--line);color:var(--muted)}
+.pipe span.on{background:var(--okbg);border-color:#cddbc9;color:var(--ok)}
+.pipe span.now{background:var(--ink);border-color:var(--ink);color:var(--gold)}
+.mini{font-size:12.5px;border:1px solid var(--line);background:#fff;padding:7px 12px;margin:6px 6px 0 0;text-decoration:none;display:inline-block}
+.mini.g{border-color:var(--gold);background:var(--gold);color:var(--ink)}
+.new{font:500 10px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;background:var(--maroon);color:#fff;padding:4px 8px;margin-left:8px;vertical-align:4px}
+.mon{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.mon>div{border:1px solid var(--line);padding:10px;text-align:center}
+.mon b{font:400 26px/1 var(--serif);display:block}
+.mon small{font-size:11px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.mon .bar{height:4px;background:var(--line);margin-top:8px}
+.mon .bar i{display:block;height:100%;background:var(--gold)}
+.li{border-top:1px solid var(--line);padding:10px 0;font-size:14px;display:flex;justify-content:space-between;gap:10px}
+.toast{visibility:hidden;position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(90px);background:var(--ink);color:var(--gold);padding:13px 18px;font-size:14px;z-index:99;transition:transform .3s;max-width:92vw}
+.toast.show{visibility:visible;transform:translateX(-50%)}
+
+@media (max-width:960px){
+  .hero .g,.ba,.bk,.mc,.sg{grid-template-columns:1fr}
+  .mosaic{height:420px}
+  .sum{position:static}
+  nav.top ul{display:none}
+  .gal{grid-template-columns:1fr 1fr}
+  .kp{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  section{padding:64px 0}
+  .panel{padding:22px 16px}
+  .two,.art{grid-template-columns:1fr}
+  .cal{gap:3px}
+  .day{font-size:16px}
+  .day small{font-size:7px}
+  .mosaic{height:340px}
+  .mc{padding:26px 18px}
+  .mon{grid-template-columns:1fr 1fr}
+  .logo b{font-size:17px}
+}
+</style>
+</head>
+<body>
+<div class="site">
+<div class="pbar"><div class="wrap"><span>A private demo made for <b>Saman</b> · @glamwithsaman</span><span>by Aryadev · <a href="https://www.codzo.in" target="_blank" rel="noopener">Codzo</a> · <a href="#studio">See your side →</a></span></div></div>
+<nav class="top"><div class="wrap">
+  <a class="logo" href="#"><img src="img/profile.jpg" alt=""><span><b>Glam with Saman</b><small>Rochdale makeup artist</small></span></a>
+  <ul><li><a href="#how">How it works</a></li><li><a href="#book">Book</a></li><li><a href="#work">Brides</a></li></ul>
+  <a class="btn gold" href="#book">Check my date</a>
+</div></nav>
+
+<header class="hero"><div class="wrap g">
+  <div>
+    <p class="kick" style="color:var(--gold)">Bridal · party glam · Rochdale &amp; Manchester · travel available</p>
+    <h1>Soft glam &amp; Asian bridal, <span class="it" style="color:var(--gold)">booked in a minute.</span></h1>
+    <p class="lead">Bridal or party makeup, your date, time and postcode, all in one go. See straight away if Saman's free, and get your estimate before you even message.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn gold" href="#book">Check my date</a><a class="btn" href="#work" style="color:var(--ivory)">See her brides</a></div>
+    <div class="stats"><div><b>Bridal</b><small>mehndi · nikah · walima</small></div><div><b>Party</b><small>glam, makeup only</small></div><div><b>Travel</b><small>by postcode</small></div></div>
+  </div>
+  <div class="mosaic" aria-hidden="true"><img class="tall" src="img/bride-red.jpg" alt=""><img src="img/bride-maroon.jpg" alt=""><img src="img/glam.jpg" alt=""></div>
+</div></header>
+
+<section id="how"><div class="wrap">
+  <p class="kick">For Saman · the idea</p>
+  <h2 style="max-width:780px">You already know what to ask. <span class="it">Let clients answer before they message.</span></h2>
+  <p class="muted" style="max-width:700px;margin:16px 0 40px">Today a client DMs “how do I book?”, and you reply asking for the service, date, time and postcode. Then you check your diary, work out travel, and send your T&amp;Cs. Here's the same thing, done by the client in one go.</p>
+  <div class="ba">
+    <div class="col"><h3>Today</h3><ol>
+      <li>Client DMs “how do I book?”<small>Often messaging other artists at the same time</small></li>
+      <li>You reply: bridal or party, date, time, postcode<small class="red">She answers bit by bit, between other chats</small></li>
+      <li>You check your diary and the travel</li>
+      <li>You send the price, deposit and T&amp;Cs</li>
+      <li>You chase the deposit to confirm</li>
+    </ol></div>
+    <div class="col after"><h3>With your booking link</h3><ol>
+      <li>She taps the link in your bio, at any hour<small>Sees straight away if your date is free</small></li>
+      <li>Chooses bridal events or party glam<small>And how many people for party makeup</small></li>
+      <li>Adds her time and postcode<small>Travel shown up front</small></li>
+      <li>Reads and accepts your T&amp;Cs</li>
+      <li>Everything lands on your phone in one message</li>
+    </ol></div>
+  </div>
+</div></section>
+
+<section id="book"><div class="wrap">
+  <p class="kick">Book your makeup</p>
+  <h2 style="margin-bottom:30px">Is Saman free <span class="it">on your day?</span></h2>
+  <div class="bk"><div class="panel" id="flow" aria-live="polite"></div><aside class="sum" id="sum"></aside></div>
+</div></section>
+
+<section id="work" style="padding-bottom:60px"><div class="wrap">
+  <p class="kick">Her brides &amp; glams</p>
+  <h2 style="margin-bottom:28px">Soft glam, <span class="it">Asian bridal glam.</span></h2>
+  <div class="gal"><img src="img/bride-red2.jpg" alt="Bride in red with dupatta" loading="lazy"><img src="img/bride-pink.jpg" alt="Bride in a blush outfit" loading="lazy"><img src="img/party.jpg" alt="Party glam with waves" loading="lazy"><img src="img/bride-red.jpg" alt="Bride in red with maang tikka" loading="lazy"></div>
+  <p class="muted" style="font-size:12.5px;margin-top:10px">Photos from @glamwithsaman</p>
+</div></section>
+
+<footer><div class="wrap"><span>Glam with Saman · makeup artist · Rochdale &amp; Manchester, travel available</span><span>Demo by <a href="https://www.codzo.in" style="color:var(--gold)" target="_blank" rel="noopener">Codzo</a> · prices &amp; booked dates are samples</span></div></footer>
+</div>
+
+<div id="studio">
+  <div class="sv"><div class="wrap"><span><b style="font:400 24px/1 var(--serif)">Your bookings</b> <span style="color:#c9a9a2;font-size:13px;margin-left:8px">Saman's view · demo</span></span><a href="#">← Back to the booking page</a></div></div>
+  <div class="wrap">
+    <div class="kp" id="kp"></div>
+    <p class="muted" style="font-size:13.5px;margin:0">Sample clients for the demo. Anything sent from the booking page in this browser appears here, tagged “New”.</p>
+    <div class="sg">
+      <div class="box"><h3>Enquiries &amp; bookings</h3><p class="hint">Every enquiry arrives complete. One tap sends the next message.</p><div id="enqs"></div></div>
+      <div>
+        <div class="box"><h3>This month</h3><p class="hint">Days booked.</p><div class="mon" id="season"></div></div>
+        <div class="box"><h3>Deposits</h3><p class="hint">Received and still to chase.</p><div id="deps"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+const C = {
+  ig: "glamwithsaman",
+  // Sample prices in £. Saman sets her own.
+  bridal: [ {id:"mehndi", label:"Mehndi", off:-2, price:150}, {id:"nikah", label:"Nikah / Barat", off:0, price:250, main:true}, {id:"walima", label:"Walima", off:1, price:180} ],
+  party: 50, trial: 60, deposit: 50,
+  occasions: ["Wedding guest","Engagement","Eid","Birthday","Prom","Photoshoot","Other"],
+  travelFree: ["OL","M"],     // postcodes covered with no travel charge (sample)
+  travelOther: 30
+};
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const st = { get(k,d){ try{ const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; }catch(e){ return d; } }, set(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} } };
+const pad = n => String(n).padStart(2,"0");
+const iso = d => `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+const P = s => { const [y,m,d] = s.split("-").map(Number); return new Date(y,m-1,d); };
+const MON = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const DW = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+const nice = s => { const d = P(s); return `${DW[d.getDay()]} ${d.getDate()} ${MON[d.getMonth()].slice(0,3)} ${d.getFullYear()}`; };
+const addD = (d,n) => { const x = new Date(d); x.setDate(x.getDate()+n); return x; };
+const gbp = n => "£" + Number(n).toLocaleString("en-GB");
+const TODAY = new Date(); TODAY.setHours(0,0,0,0);
+const toast = t => { const el = $("#toast"); el.textContent = t; el.classList.add("show"); clearTimeout(toast.t); toast.t = setTimeout(()=>el.classList.remove("show"), 3200); };
+function rng(s){ return () => (s = (s*16807) % 2147483647) / 2147483647; }
+const LOAD = (() => { const r = rng(55123), o = {}; let d = addD(TODAY,1); const end = new Date(2027,11,31);
+  for (; d <= end; d = addD(d,1)) { const w = d.getDay(), m = d.getMonth(), peak = m>=4 && m<=8; const x = r();
+    o[iso(d)] = (w===6||w===0) ? (x < (peak?.45:.25) ? 2 : x < (peak?.7:.45) ? 1 : 0) : (x < .08 ? 1 : 0); } return o; })();
+const enquiries = () => st.get("gs.enq", []);
+const status = s => { const n = (LOAD[s]||0) + enquiries().filter(e => e.date === s && e.stage >= 2).length; return n >= 2 ? "full" : n === 1 ? "few" : "free"; };
+
+const S = { step:0, month:new Date(TODAY.getFullYear(), TODAY.getMonth(), 1), date:null, type:"bridal", events:{nikah:true}, trial:false, people:1, occasion:"Wedding guest",
+  time:"10:00", postcode:"", name:"", phone:"", notes:"", terms:false, sent:false };
+const STEPS = ["Your date","Your makeup","Time & place","Your details"];
+const bridalLooks = () => C.bridal.filter(e => S.events[e.id]);
+function travel(){ const pc = S.postcode.trim().toUpperCase(); if (!pc) return null; const area = pc.match(/^[A-Z]+/); return area && C.travelFree.includes(area[0]) ? 0 : C.travelOther; }
+function quote(){
+  const L = [];
+  if (S.type === "bridal") { bridalLooks().forEach(e => L.push([`Bridal · ${e.label}`, e.price])); if (S.trial) L.push(["Bridal trial", C.trial]); }
+  else L.push([`Party glam × ${S.people}`, S.people * C.party]);
+  const t = travel(); if (t) L.push(["Travel", t]);
+  return { L, total: L.reduce((a,x)=>a+x[1],0) };
+}
+function lookText(){ return S.type === "bridal" ? bridalLooks().map(e => { const d = addD(P(S.date), e.off); return `${e.label} (${d.getDate()} ${MON[d.getMonth()].slice(0,3)})`; }).join(", ") + (S.trial ? " + trial" : "") : `Party glam for ${S.people} (${S.occasion})`; }
+function msgText(ref){
+  return `Hi Saman! 💕\n\nService - ${S.type === "bridal" ? "Bridal" : "Party makeup"}\nDate - ${nice(S.date)}\nTime required - ${S.time}\nLocation / postcode - ${S.postcode.toUpperCase()}\n${S.type === "bridal" ? `Events - ${lookText()}` : `Occasion - ${S.occasion}\nNumber of people - ${S.people}`}\n\nName - ${S.name}\nPhone - ${S.phone}${S.notes ? `\nNotes - ${S.notes}` : ""}\nEstimate shown: ${gbp(quote().total)}\nT&Cs accepted ✓${ref ? `\nRef: ${ref}` : ""}`;
+}
+function sum(){
+  const q = quote();
+  $("#sum").innerHTML = `<h4>Your glam</h4><div class="d">${S.date ? nice(S.date) : "Choose your date to begin"}${S.step>1 ? ` · ${S.time}` : ""}</div>
+   ${S.step>0 ? `<ul class="lines">${q.L.map(x=>`<li><span>${x[0]}</span><span>${gbp(x[1])}</span></li>`).join("")}</ul>
+   <div class="tot"><span>Estimate</span><b>${gbp(q.total)}</b></div>
+   <div class="sm">Makeup only. ${gbp(C.deposit)} non-refundable deposit secures your date, the rest on the day. ${travel()===null ? "Travel worked out from your postcode." : travel()===0 ? "No travel charge for your area." : "Travel is a sample charge; Saman confirms it."}</div>`
+   : `<p class="sm" style="margin-top:14px">Your estimate builds here as you go.</p>`}
+   <span class="tag">Sample prices · Saman sets her own</span>`;
+}
+function head(){ return `<div class="prog">${STEPS.map((_,i)=>`<span class="${i<=S.step?"on":""}"></span>`).join("")}</div><div class="sl">Step ${S.step+1} of 4 · ${STEPS[S.step]}</div>`; }
+function render(){ $("#flow").innerHTML = S.sent ? done() : head() + [s0,s1,s2,s3][S.step](); sum(); }
+function go(n){ S.step = n; render(); const y = $("#book").getBoundingClientRect().top + scrollY - 70; if (Math.abs(scrollY-y) > 250) scrollTo({top:y, behavior:"smooth"}); }
+function s0(){
+  const m = S.month, first = new Date(m.getFullYear(), m.getMonth(), 1), lead = (first.getDay()+6)%7, n = new Date(m.getFullYear(), m.getMonth()+1, 0).getDate();
+  let c = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"].map(d=>`<div class="dow">${d}</div>`).join("") + "<div></div>".repeat(lead);
+  for (let d=1; d<=n; d++){ const dt = new Date(m.getFullYear(), m.getMonth(), d), s = iso(dt);
+    if (dt <= TODAY) { c += `<button class="day past" disabled aria-hidden="true">${d}<small>&nbsp;</small></button>`; continue; }
+    const k = status(s); c += `<button class="day ${k} ${S.date===s?"sel":""}" data-date="${s}" aria-label="${nice(s)}, ${k}">${d}<small>${k==="full"?"Booked":k==="few"?"1 slot":"Free"}</small></button>`; }
+  const prev = m > new Date(TODAY.getFullYear(), TODAY.getMonth(), 1), next = m < new Date(2027,11,1), k = S.date && status(S.date);
+  const note = !S.date ? "" : k === "full" ? `<div class="note"><b>${nice(S.date)} is fully booked.</b> Send your details anyway and Saman will let you know if anything opens up.</div>`
+    : `<div class="note ok"><b>${nice(S.date)} is available${k==="few"?", with one slot left":""}.</b></div>`;
+  return `<h3>What's the date?</h3><p class="sub">Weekends go first. Dates update live from Saman's diary.</p>
+   <div class="calh"><button class="ib" id="prev" ${prev?"":"disabled"} aria-label="Previous month">‹</button><b>${MON[m.getMonth()]} ${m.getFullYear()}</b><button class="ib" id="next" ${next?"":"disabled"} aria-label="Next month">›</button></div>
+   <div class="cal">${c}</div><div class="legend"><span>Free</span><span style="color:var(--gold-d)">1 slot left</span><span>Booked</span></div>${note}
+   <div class="nav"><span></span><button class="btn gold" data-go="1" ${S.date?"":"disabled"}>Next: your makeup</button></div>`;
+}
+function s1(){
+  const types = `<div class="art" style="margin-bottom:18px"><button data-type="bridal" aria-pressed="${S.type==="bridal"}"><b>Bridal</b><small>Mehndi, nikah / barat, walima</small></button><button data-type="party" aria-pressed="${S.type==="party"}"><b>Party glam</b><small>Makeup only · ${gbp(C.party)} per person</small></button></div>`;
+  const body = S.type === "bridal"
+    ? C.bridal.map(e => { const d = addD(P(S.date), e.off); return `<div class="ev"><label class="tog"><input type="checkbox" data-ev="${e.id}" ${S.events[e.id]?"checked":""}><span><b>${e.label}</b><small>around ${d.getDate()} ${MON[d.getMonth()].slice(0,3)} · ${gbp(e.price)}</small></span></label><span></span></div>`; }).join("")
+      + `<div class="ev"><label class="tog"><input type="checkbox" id="trial" ${S.trial?"checked":""}><span><b>Bridal trial</b><small>Before the wedding · ${gbp(C.trial)}</small></span></label><span></span></div>`
+    : `<div class="ev"><div><b>Number of people</b><small>You and your group</small></div><div class="stp"><button data-d="people" aria-label="Fewer">−</button><output>${S.people}</output><button data-u="people" aria-label="More">+</button></div></div>
+       <span class="lab" style="margin-top:16px">Occasion</span><div class="chips">${C.occasions.map(o=>`<button class="chip" data-occ="${o}" aria-pressed="${S.occasion===o}">${o}</button>`).join("")}</div>`;
+  return `<h3>Bridal or party?</h3><p class="sub">Makeup only, soft glam or full Asian bridal glam.</p>${types}${body}
+   <div class="nav"><button class="back" data-go="0">← Back</button><button class="btn gold" data-go="2" ${S.type==="bridal" && !bridalLooks().length ? "disabled" : ""}>Next: time &amp; place</button></div>`;
+}
+function s2(){
+  const t = travel();
+  return `<h3>Time &amp; place</h3><p class="sub">When you need to be ready, and where. Rochdale, Manchester, or further: travel available.</p>
+   <div class="two"><label class="f"><span>Time required (ready by)</span><input class="in" type="time" id="time" value="${S.time}" step="900"></label>
+   <label class="f"><span>Postcode</span><input class="in" id="postcode" value="${esc(S.postcode)}" placeholder="e.g. OL11 1AA"></label></div>
+   ${t===null ? "" : `<div class="note ${t===0?"ok":""}">${t===0 ? "Great, no travel charge for your area." : `Outside Rochdale &amp; Manchester: a sample travel charge of ${gbp(t)} is added. Saman confirms the exact amount.`}</div>`}
+   <div class="nav"><button class="back" data-go="1">← Back</button><button class="btn gold" data-go="3" ${S.postcode.trim()?"":"disabled"}>Next: your details</button></div>`;
+}
+function s3(){
+  return `<h3>Almost there</h3><p class="sub">Everything Saman asks for, in one go, so nobody has to ask twice.</p>
+   <div class="two"><label class="f"><span>Your name</span><input class="in" id="name" autocomplete="name" value="${esc(S.name)}"></label>
+   <label class="f"><span>Mobile</span><input class="in" id="phone" type="tel" autocomplete="tel" value="${esc(S.phone)}" placeholder="07"></label></div>
+   <label class="f"><span>Anything else? Outfit colours, inspiration, skin type</span><textarea class="in" id="notes">${esc(S.notes)}</textarea></label>
+   <details class="note" style="margin:6px 0 12px"><summary style="cursor:pointer"><b>Saman's T&amp;Cs</b></summary><ul style="margin:8px 0 0;padding-left:18px;font-size:14px">
+     <li>Your deposit secures the date and is non-refundable.</li><li>Date changes depend on availability.</li><li>Please be ready on time. A late fee may apply after 15 minutes.</li><li>Saman's full terms appear here.</li></ul></details>
+   <label class="tog" style="margin-bottom:6px"><input type="checkbox" id="terms" ${S.terms?"checked":""}><span>I've read and agree to Saman's T&amp;Cs</span></label>
+   <div class="nav"><button class="back" data-go="2">← Back</button><button class="btn gold" id="send">Send to Saman</button></div>`;
+}
+function done(){
+  const e = enquiries()[0], ref = e ? e.ref : "";
+  return `<div class="done"><div class="tick">✓</div><h3>Thank you, ${esc(S.name.split(" ")[0])}!</h3>
+   <p class="sub" style="margin:6px 0 0">Your enquiry for ${nice(S.date)} is with Saman. Ref <b>${ref}</b></p>
+   <p class="sub" style="margin:14px 0 0">This is exactly what lands on her phone:</p>
+   <div class="wamsg">${esc(msgText(ref))}</div>
+   <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap"><a class="btn" href="https://ig.me/m/${C.ig}" target="_blank" rel="noopener">Message Saman on Instagram</a><a class="btn gold" href="#studio">Saman, see your side →</a></div>
+   <p style="margin-top:16px"><button class="back" id="again">Start another enquiry</button></p></div>`;
+}
+$("#flow").addEventListener("click", e => {
+  const t = e.target.closest("button"); if (!t || t.disabled) return; const d = t.dataset;
+  if (t.id === "prev") { S.month = new Date(S.month.getFullYear(), S.month.getMonth()-1, 1); render(); }
+  else if (t.id === "next") { S.month = new Date(S.month.getFullYear(), S.month.getMonth()+1, 1); render(); }
+  else if (d.date) { S.date = d.date; render(); }
+  else if (d.type) { S.type = d.type; render(); }
+  else if (d.u || d.d) { S.people = Math.max(1, Math.min(12, S.people + (d.u?1:-1))); render(); }
+  else if (d.occ) { S.occasion = d.occ; render(); }
+  else if (d.go) go(Number(d.go));
+  else if (t.id === "again") { Object.assign(S, {sent:false, step:0, date:null, name:"", phone:"", terms:false}); render(); }
+  else if (t.id === "send") {
+    if (!S.name.trim() || !S.phone.trim()) return toast("Please add your name and mobile.");
+    if (!S.terms) return toast("Please read and agree to Saman's T&Cs.");
+    const all = enquiries(), ref = "GS-" + S.date.slice(2).replace(/-/g,"") + "-" + Math.random().toString(36).slice(2,5).toUpperCase();
+    all.unshift({ ref, date:S.date, time:S.time, name:S.name.trim(), phone:S.phone.trim(), postcode:S.postcode.toUpperCase(), type:S.type, what:lookText(), people:S.type==="party"?S.people:1, total:quote().total, stage:0, at:Date.now() });
+    st.set("gs.enq", all); S.sent = true; render(); toast("Enquiry sent. It's waiting in Saman's view.");
+  }
+});
+$("#flow").addEventListener("change", e => {
+  const el = e.target;
+  if (el.dataset.ev) { S.events[el.dataset.ev] = el.checked; render(); }
+  if (el.id === "trial") { S.trial = el.checked; sum(); }
+  if (el.id === "terms") S.terms = el.checked;
+});
+$("#flow").addEventListener("input", e => {
+  const id = e.target.id;
+  if (["name","phone","notes","time"].includes(id)) { S[id] = e.target.value; if (id==="time") sum(); }
+  if (id === "postcode") { S.postcode = e.target.value; const b = document.querySelector('[data-go="3"]'); if (b) b.disabled = !S.postcode.trim(); sum(); }
+});
+$("#flow").addEventListener("focusout", e => { if (e.target.id === "postcode") render(); });
+
+/* Saman's side */
+const STAGES = ["Enquiry","Quote sent","Deposit paid","Confirmed","Done"];
+const MSGS = [
+  e => `Hi ${e.name.split(" ")[0]}! Thank you for your enquiry 💕 I'm free on ${nice(e.date)} at ${e.time}. For ${e.what}, it's ${gbp(e.total)}. A ${gbp(C.deposit)} deposit secures your date. Shall I send my details?`,
+  e => `Hi ${e.name.split(" ")[0]}, just checking you saw my message for ${nice(e.date)}. Weekends go quickly, so let me know if you'd like me to hold it 😊`,
+  e => `Thank you ${e.name.split(" ")[0]}! Your deposit is received and ${nice(e.date)} is yours ✨ Please come with a clean, moisturised face.`,
+  e => `Hi ${e.name.split(" ")[0]}! See you on ${nice(e.date)} at ${e.time}. Can you confirm the address for ${e.postcode}? 💄`,
+  e => `Thank you so much ${e.name.split(" ")[0]}! 💕 It was lovely doing your makeup. I'd really appreciate a review and a tag in your photos!`
+];
+function sample(){
+  const d = n => iso(addD(TODAY,n));
+  return [
+    {ref:"GS-S1", date:d(4), time:"09:00", name:"Aisha Khan", phone:"07700900101", postcode:"OL12", type:"bridal", what:"Nikah / Barat", people:1, total:250, stage:3, sample:true},
+    {ref:"GS-S2", date:d(11), time:"14:00", name:"Hira Ahmed", phone:"07700900102", postcode:"M8", type:"party", what:"Party glam for 3 (Wedding guest)", people:3, total:150, stage:2, sample:true},
+    {ref:"GS-S3", date:d(26), time:"08:30", name:"Zara Hussain", phone:"07700900103", postcode:"BL1", type:"bridal", what:"Mehndi, Nikah / Barat, Walima + trial", people:1, total:670, stage:1, sample:true},
+    {ref:"GS-S4", date:d(39), time:"17:00", name:"Maryam Ali", phone:"07700900104", postcode:"OL16", type:"party", what:"Party glam for 1 (Eid)", people:1, total:50, stage:0, sample:true}
+  ];
+}
+function studio(){
+  const all = [...enquiries(), ...sample()].sort((a,b)=>a.date<b.date?-1:1);
+  const conf = all.filter(e => e.stage >= 2);
+  $("#kp").innerHTML = `<div><b>${all.filter(e=>e.stage<2).length}</b><small>enquiries waiting</small></div><div><b>${conf.length}</b><small>confirmed</small></div><div><b>${gbp(conf.reduce((a,e)=>a+e.total,0))}</b><small>confirmed value</small></div><div><b>${all.filter(e=>e.type==="bridal").length}</b><small>brides</small></div>`;
+  $("#enqs").innerHTML = all.map(e => { const w = P(e.date), msg = MSGS[e.stage](e), ph = String(e.phone).replace(/\D/g,"").replace(/^0/,"44");
+    return `<div class="enq"><div class="dt"><small>${DW[w.getDay()]}</small><b>${w.getDate()}</b><small>${MON[w.getMonth()].slice(0,3)}</small></div><div>
+    <h4>${esc(e.name)}${e.sample?"":'<span class="new">New</span>'}</h4>
+    <div class="meta">${e.type==="bridal"?"Bridal":"Party"} · ${esc(e.what)} · ready by ${e.time} · ${esc(e.postcode)} · ${gbp(e.total)}</div>
+    <div class="pipe">${STAGES.map((s,j)=>`<span class="${j<e.stage?"on":j===e.stage?"now":""}">${s}</span>`).join("")}</div>
+    <a class="mini g" target="_blank" rel="noopener" href="https://wa.me/${ph}?text=${encodeURIComponent(msg)}">Message: ${["send quote","follow up","thank & prep","confirm address","ask for review"][e.stage]}</a>
+    ${e.stage < 4 && !e.sample ? `<button class="mini" data-adv="${e.ref}">Mark “${STAGES[e.stage+1]}”</button>` : ""}</div></div>`; }).join("");
+  const months = []; for (let i=0;i<8;i++){ const m = new Date(TODAY.getFullYear(), TODAY.getMonth()+i, 1); const k = `${m.getFullYear()}-${pad(m.getMonth()+1)}`;
+    months.push([MON[m.getMonth()].slice(0,3), Object.keys(LOAD).filter(s => s.startsWith(k) && LOAD[s] > 0).length + all.filter(e=>e.date.startsWith(k) && e.stage>=2).length]); }
+  $("#season").innerHTML = months.map(([m,n]) => `<div><b>${n}</b><small>${m}</small><div class="bar"><i style="width:${Math.min(100,n/14*100)}%"></i></div></div>`).join("");
+  $("#deps").innerHTML = all.map(e => `<div class="li"><span>${esc(e.name.split(" ")[0])} · ${nice(e.date)}</span><span class="muted">${e.stage>=2?"✓ "+gbp(C.deposit):"to chase"}</span></div>`).join("");
+}
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-adv]"); if (!b) return;
+  const all = enquiries(), x = all.find(q => q.ref === b.dataset.adv); if (!x) return;
+  x.stage = Math.min(4, x.stage+1); st.set("gs.enq", all); studio(); toast(`Moved to “${STAGES[x.stage]}”.`);
+});
+function route(){ const s = location.hash === "#studio"; document.body.classList.toggle("studio", s); if (s) { studio(); scrollTo(0,0); } }
+addEventListener("hashchange", route);
+render(); route();
+</script>
+
+</body>
+</html>

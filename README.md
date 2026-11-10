@@ -249,6 +249,13 @@ Both use generated placeholder images and made-up details.
   the salon), 14-day picker with 30-min slots, salon or home service, WhatsApp confirmation, reminder and rebooking
   plan, spa-party enquiry. `#studio`: today's diary by chair with gaps, offer-gaps-to-regulars, due-back nudges,
   sent log. Team photo and gallery crops from their site; clients and times are samples.
+- `glam-with-saman`: Saman (@glamwithsaman), makeup artist in Rochdale & Manchester, travel available; bridal and party
+  glam (makeup only), soft glam & Asian bridal. Books by Instagram DM: she replies asking for service, date, time and
+  postcode; her Bookings highlight lists date, time, location, occasion, number of people; T&Cs highlight (non-refundable
+  deposit, late fee). Plum/peach page from the Preshita styles with its own flow in GBP: date calendar, bridal events
+  (mehndi, nikah/barat, walima, trial) or party glam (people, occasion), time + postcode with sample travel rule
+  (OL/M free), details + T&Cs checkbox, and the message in her own format. `#studio`: enquiries pipeline, months,
+  deposits. Sample prices labelled; photos cropped from her grid.
 - `beyond-salon`: Beyond Beauty Salon by Ahmed Batekha, Egypt (Sheikh Zayed at The Lane
   Mall Palm Hills, Zamalek, Sahel). Bespoke page with a built-in 5-step booking engine
   (branch, services, stylist, date/time, details), booking reference, .ics calendar file,
