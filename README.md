@@ -283,6 +283,15 @@ Both use generated placeholder images and made-up details.
   pipeline with one-tap next message (the advance message restates her ready-time rule), season, advances. Sample: the
   category list and prices (engagement ₹18,000, party/festive ₹6,500, bridal personal quote), 30% advance, travel line,
   booked dates and studio clients. Photos cropped from her grid (family selfies with children left out).
+- `monalisa-patel`: Face Stories by Monalisa Tejas Patel (@facestories_by_monalisa, verified, 9,024 followers, 436
+  posts), luxury makeup artist, Sindhu Bhavan, Ahmedabad, works globally; "Bookings are open for 2026-27"; highlights
+  2026 brides, curls, siders, shoot work, hair goals. Her Instagram DM reply: "pls share your details on 7859972820", with
+  no form or list, so the page collects those details for her. Black/champagne/emerald page on the Mehak base: look
+  (bridal, engagement/reception, siders/party, shoot) + people or family makeups + hair styling add-on, date calendar,
+  Ahmedabad area or outside + venue + ready time, details + policy checkbox, then a WhatsApp to +91 78599 72820
+  ("Sharing my details as you asked"). `#studio`: requests pipeline with one-tap next message, season, advances.
+  Sample: all prices (engagement ₹15,000, siders ₹5,500, hair ₹2,000, bridal and shoot on quote), the policy, ready-time
+  wording, booked dates and studio clients. Photos cropped from her grid (the "Brides by Monalisa" watermark cropped out).
 - `beyond-salon`: Beyond Beauty Salon by Ahmed Batekha, Egypt (Sheikh Zayed at The Lane
   Mall Palm Hills, Zamalek, Sahel). Bespoke page with a built-in 5-step booking engine
   (branch, services, stylist, date/time, details), booking reference, .ics calendar file,
