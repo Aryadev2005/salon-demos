@@ -221,6 +221,16 @@ Both use generated placeholder images and made-up details.
   schedule from access/ceremony times, a kit list, money and settings; `#academy`, Alice's console with all students'
   enquiries, bookings and flags, an editor for her method (tips and messages update every student's app) and a
   broadcast to all students. Method wording, students and brides are sample data; data lives in localStorage.
+- `preshita-bafna`: Preshita Bafna, luxe bridal makeup artist, Mumbai & worldwide (Instagram
+  @preshita_bafna_themakeupartist, WhatsApp +91 82374 78901; team @meerasakhrani since 2019, 500+ brides,
+  destination specialist, runs a 2026 masterclass). She books through Instagram DMs and WhatsApp, and her team replies
+  with a manual form (name, phone, date, venue/city, number of looks). Dark espresso/gold page with a proposal strip
+  (today vs with a booking link), and a bride flow: date calendar (free / 1 slot / booked), functions as looks
+  (haldi, mehendi, sangeet, wedding, reception) with dates offset from the wedding, family looks by her team,
+  draping, trial, city chips incl. destination abroad, Preshita or senior artist, details, then a WhatsApp message
+  pre-filled in her team's exact form format. `#studio`: enquiries pipeline (enquiry, quote, advance, trial,
+  confirmed, done) with one-tap WhatsApp per stage, season view, team allocation, masterclass seats. Prices in INR
+  are samples (labelled); photos cropped from her Instagram grid into `img/`.
 - `beyond-salon`: Beyond Beauty Salon by Ahmed Batekha, Egypt (Sheikh Zayed at The Lane
   Mall Palm Hills, Zamalek, Sahel). Bespoke page with a built-in 5-step booking engine
   (branch, services, stylist, date/time, details), booking reference, .ics calendar file,
