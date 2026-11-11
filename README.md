@@ -41,6 +41,44 @@ Rules for every demo: no online payment, no fake urgency ("only 2 slots left"),
 no invented reviews (copy real ones from Google), no third-party marketplace
 logos.
 
+## Find salons and make demos in bulk
+
+`scripts/places_to_leads.py` turns Google searches into finished demos and an outreach sheet.
+
+```bash
+export GOOGLE_MAPS_API_KEY=...                      # Places API (New), on a billed Google Cloud project
+python3 scripts/places_to_leads.py --dry-run        # search + rank only: see who qualifies
+python3 scripts/places_to_leads.py                  # make the demos (default 27, see prospects.json)
+git add leads.json demos && git commit -m "New demos" && git push
+```
+
+- **Searches** come from `scripts/prospects.json` (`queries`, `limit`, `min_rating`, `min_reviews`, `skip`,
+  your name/WhatsApp, `price`, `base_url`). Each query returns up to 60 places (3 pages of 20).
+- **Kept**: operating, phone and opening hours listed, at least 5 photos, rating and review count above the
+  thresholds, no own website (Facebook, Instagram, Linktree, Fresha, Treatwell, Booksy etc. don't count),
+  not a chain, not already in `leads.json` or `skip`. Ranked by rating × log(review count).
+- **Each demo gets**: real hours, address, rating, up to 3 five-star Google reviews (first names, cut at a
+  sentence), 6 Google photos (hero, 4 gallery, Christmas band) credited in the gallery line, an accent colour
+  picked from the photos, starter services for the salon type (no prices), the Christmas band and your pitch
+  banner. Booking: their Fresha/Treatwell/Booksy link if they have one, else the WhatsApp form for UK mobiles
+  (07…), else call-to-book.
+- **`out/outreach.csv`** (git-ignored): salon, phone, channel, a WhatsApp click-to-send link with the message
+  filled in (mobiles), an Instagram link or search (everyone else), demo link, and blank status/notes columns.
+  Re-make it any time with `--rebuild-sheet`.
+- **Cost control**: raw Google responses are cached in `cache/places/` (git-ignored), so re-runs are free;
+  `--max-requests` (default 400) stops the run. A 27-salon run is roughly 15–40 searches + 162 photos.
+- Look at every demo before sending: auto-picked photos can be a dark shopfront or a client's face, and the
+  starter services are generic. Edit the lead in `leads.json`, then `python3 build.py <slug>`.
+- Generated leads carry `"_auto": true` and `place_id`. Google photos are fine for a private preview;
+  swap in the salon's own photos before a site goes live.
+
+## Hosting: one site for every demo
+
+`hosting/` is deployed once to Vercel as **salon-previews.vercel.app**. Any path `/<slug>/` loads
+`demos/<slug>/index.html` straight from this repo's `main` branch on GitHub, so **a `git push` publishes new
+demos with no deploy** (GitHub's raw cache can take a few minutes). Unknown slugs show "This preview isn't
+available". Everything is `noindex`.
+
 ## UK prospecting (Google Maps)
 
 Search `<niche> <town>` in Google Maps, e.g. `hair salon Wigan`, `barbers Doncaster`.

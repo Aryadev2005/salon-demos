@@ -1,0 +1,28 @@
+{
+  "queries": [
+    "hair salon in Wigan",
+    "nail salon in Wigan",
+    "beauty salon in Wigan",
+    "barber in Wigan",
+    "hair salon in Leigh, Wigan",
+    "hair salon in Standish",
+    "hair salon in Hindley",
+    "hair salon in Ashton-in-Makerfield",
+    "hair salon in Skelmersdale",
+    "hair salon in St Helens",
+    "nail salon in St Helens",
+    "hair salon in Bolton",
+    "nail salon in Bolton",
+    "hair salon in Chorley"
+  ],
+  "skip": ["Phoenix Hair & Beauty", "Norman & Philip Hair & Beauty", "Suzanne's", "The Bridal Stylist"],
+  "limit": 27,
+  "min_rating": 4.5,
+  "min_reviews": 40,
+  "photos": 6,
+  "pages": 3,
+  "price": 300,
+  "your_name": "Aryadev",
+  "your_whatsapp": "+91 86378 59578",
+  "base_url": "https://salon-previews.vercel.app"
+}

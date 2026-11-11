@@ -159,8 +159,9 @@ def validate(lead, folder):
         problems.append("highlights must have exactly 3 points")
     # reviews are optional (some salons have none we can quote), but all-or-nothing
     if has_reviews(lead):
-        if len(lead["reviews"]) != 3 or not all(isinstance(r, dict) and r.get("text") and r.get("name") for r in lead["reviews"]):
-            problems.append("reviews must be exactly 3 objects with 'text' and 'name'")
+        revs = lead.get("reviews") or []
+        if len(revs) > 3 or not all(isinstance(r, dict) and r.get("text") and r.get("name") for r in revs):
+            problems.append("reviews must be up to 3 objects with 'text' and 'name'")
         if has_rating(lead):
             if not isinstance(lead.get("rating"), (int, float)) or not 0 <= float(lead["rating"]) <= 5:
                 problems.append("rating must be a number between 0 and 5")
@@ -381,7 +382,7 @@ def sec_reviews(lead):
     star = '<svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.7-5.4 4.8 1.6 7L12 17.5 5.6 21.1l1.6-7L1.8 9.3 9 8.6z"/></svg>'
     q = "".join(
         f'<blockquote><p>“{e(r["text"])}”</p><footer>{e(r["name"])} · {e(lead.get("review_source") or "Google")} review</footer></blockquote>'
-        for r in lead["reviews"]
+        for r in (lead.get("reviews") or [])
     )
     if has_rating(lead):
         top = f'''<div class="rating">
