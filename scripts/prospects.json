@@ -15,7 +15,13 @@
     "nail salon in Bolton",
     "hair salon in Chorley"
   ],
-  "skip": ["Phoenix Hair & Beauty", "Norman & Philip Hair & Beauty", "Suzanne's", "The Bridal Stylist"],
+  "skip": [
+    "Phoenix Hair & Beauty",
+    "Norman & Philip Hair & Beauty",
+    "Suzanne's",
+    "The Bridal Stylist",
+    "Oasis Sun Centre"
+  ],
   "limit": 27,
   "min_rating": 4.5,
   "min_reviews": 40,

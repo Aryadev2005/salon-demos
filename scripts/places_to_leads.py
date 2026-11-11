@@ -60,7 +60,8 @@ BOOKING_HOSTS = {"fresha.com": "Book on Fresha", "treatwell.co.uk": "Book on Tre
                  "setmore.com": "Book online", "phorest.com": "Book online", "gettimely.com": "Book online",
                  "timely.co.nz": "Book online", "vagaro.com": "Book online", "square.site": "Book online"}
 CHAINS = ["toni & guy", "toni&guy", "rush", "regis", "supercuts", "headmasters", "saks", "francesco group",
-          "hair by ", "barberbar", "ruby's", "jaques", "blue sky", "the hair & beauty academy"]
+          "hair by ", "barberbar", "ruby's", "jaques", "blue sky", "the hair & beauty academy",
+          "sun centre", "tanning", "sunbed"]
 
 PERSONA = {  # wording + starter services by Google's primary type
     "hair_salon": dict(type="Hair salon", what="cuts, colour and blow-dries",
