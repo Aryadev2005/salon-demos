@@ -489,6 +489,7 @@ def render(lead):
     folder = DEMOS / slug
     validate(lead, folder)
     p = palette(lead["accent"], lead["mood"])
+    p.update(lead.get("colors") or {})
     parsed = parse_hours(lead["hours"])
     name = lead["name"]
     place = f'{lead["area"]}, {lead["city"]}'

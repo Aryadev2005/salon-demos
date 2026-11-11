@@ -783,9 +783,26 @@
         "name": "Halyna"
       }
     ],
-    "accent": "#8DB82B",
+    "accent": "#A3D139",
     "mood": "dark",
     "photos": 6,
-    "hero_alt": "Long waves in plum and soft blonde"
+    "hero_alt": "Long waves in plum and soft blonde",
+    "colors": {
+      "paper": "#0D0D0D",
+      "paper2": "#161616",
+      "mist": "#1F1F1F",
+      "line": "#2E2E2E",
+      "ink": "#F5F5F2",
+      "muted": "#A9A9A4",
+      "accent": "#A3D139",
+      "on_accent": "#0D0D0D",
+      "board": "#FFFFFF",
+      "board2": "#F1F1EE",
+      "chalk": "#0D0D0D",
+      "chalk_dim": "#4A4A47",
+      "gold": "#4E7A0E",
+      "photo_a": "#2A2A2A",
+      "photo_b": "#111111"
+    }
   }
 ]

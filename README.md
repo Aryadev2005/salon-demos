@@ -89,6 +89,7 @@ Copy rating, review count, hours, prices and three real reviews straight into a 
 | `bridal` | no | `{kicker?, title, text, packages?: [{name, price?}], nav?}`; `nav` renames the menu link (default "Bridal"), e.g. "Christmas" |
 | `gallery_title`, `gallery_text` | no | defaults to "Recent looks" |
 | `monogram` | no | 1–2 letters; defaults to the initials of `name` |
+| `colors` | no | overrides for any generated palette colour (`paper`, `paper2`, `mist`, `line`, `ink`, `muted`, `accent`, `on_accent`, `board`, `board2`, `chalk`, `chalk_dim`, `gold`, `photo_a`, `photo_b`), e.g. to match a salon's exact brand colours |
 | `hero_alt` | no | description of the hero photo or video for screen readers |
 
 ### Images (`demos/<slug>/img/`)
