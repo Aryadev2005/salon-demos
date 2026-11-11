@@ -1158,5 +1158,3539 @@
         "name": "Chloe"
       }
     ]
+  },
+  {
+    "slug": "the-exclusive-mensroom-wigan",
+    "name": "The Exclusive MensRoom",
+    "type": "Barber",
+    "area": "Whelley",
+    "address": "88 Wigan Road, Wigan WN1 3UA",
+    "city": "Wigan",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "07842 799363",
+    "rating": 4.9,
+    "review_count": 463,
+    "maps_link": "https://maps.google.com/?cid=4821139366914345278&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJUfJj-DEPe0gRPsmU8bUg6EI",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "09:00-19:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-19:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-19:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-19:00"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-19:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-19:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "09:00-18:30"
+      }
+    ],
+    "headline": "Skin fades, beard trims and classic cuts in Whelley.",
+    "subline": "The Exclusive MensRoom is a barber in Wigan, rated 4.9 from 463 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 4.9 from 463 Google reviews.",
+      "Specialists in skin fades, beard trims and classic cuts.",
+      "Late appointments until 7pm on Mondays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Cuts",
+        "items": [
+          {
+            "name": "Haircut"
+          },
+          {
+            "name": "Skin fade"
+          },
+          {
+            "name": "Clipper cut"
+          },
+          {
+            "name": "Kids' cut"
+          }
+        ]
+      },
+      {
+        "category": "Beard",
+        "items": [
+          {
+            "name": "Beard trim"
+          },
+          {
+            "name": "Hot towel shave"
+          },
+          {
+            "name": "Cut and beard"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Christmas fade"
+        },
+        {
+          "name": "Cut and beard"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "I dropped in today for my first trip out after being off work for four months recovering from surgery.",
+        "name": "Mark"
+      },
+      {
+        "text": "I have been trying to find someone who can understand a beard lover with no hair. Everywhere I go, no one listens and they always cut my Beard to an inch of its life! I went yesterday and I was greeted with two men with beards.",
+        "name": "Thomas"
+      },
+      {
+        "text": "I had an amazing experience with Nabaz. He was gentle, professional, and truly knew his craft. He took the time to show me photos, discuss exactly what I wanted, and worked with great precision and care.",
+        "name": "Pradeep"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Alexander Great, Grant Platt, Ross Matthews).",
+    "accent": "#25507E",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJUfJj-DEPe0gRPsmU8bUg6EI",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at The Exclusive MensRoom",
+    "_auto": true,
+    "whatsapp": "+447842799363",
+    "instagram": "https://www.instagram.com/themensroom88?igsh=MWtxdnhnZ291bG95"
+  },
+  {
+    "slug": "yu-nail-and-beauty-aesthetics-bolton",
+    "name": "YU Nail & Beauty Aesthetics",
+    "type": "Beauty salon",
+    "area": "Bolton",
+    "address": "20 Bridge Street, Bolton BL1 2EA",
+    "city": "Bolton",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "07494 255811",
+    "rating": 4.8,
+    "review_count": 329,
+    "maps_link": "https://maps.google.com/?cid=3571071321771039519&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJ_Sf1otmne0gRH1u_YXL-jjE",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "09:30-17:30"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:30-17:30"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:30-17:30"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:30-17:30"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Lashes, brows, nails and facials in Bolton.",
+    "subline": "YU Nail & Beauty Aesthetics is a beauty salon in Bolton, rated 4.8 from 329 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 4.8 from 329 Google reviews.",
+      "Specialists in lashes, brows, nails and facials.",
+      "Open Monday to Saturday."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Lashes & brows",
+        "items": [
+          {
+            "name": "Lash extensions"
+          },
+          {
+            "name": "Lash lift"
+          },
+          {
+            "name": "Brow lamination"
+          },
+          {
+            "name": "Brow wax and tint"
+          }
+        ]
+      },
+      {
+        "category": "Beauty",
+        "items": [
+          {
+            "name": "Gel nails"
+          },
+          {
+            "name": "Facials"
+          },
+          {
+            "name": "Waxing"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party lashes"
+        },
+        {
+          "name": "Gel nails"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "I’ve been coming to this salon since 2020, and I genuinely wouldn’t go anywhere else. I came in today without an appointment and, as always, was greeted with such a warm and friendly welcome.",
+        "name": "Megan"
+      },
+      {
+        "text": "The ladies were lovely, very patient and professional ETA 3 months in and I'd never go anywhere else. I always get exactly what I ask for and you are always made to feel so welcome.",
+        "name": "Diane"
+      },
+      {
+        "text": "Very friendly and talkative. Great prices for the service and quality of work they provide. Nails are exactly like the reference photo I showed and they made sure everything was to how I liked it.",
+        "name": "Jordon"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by YU Nail & Beauty Aesthetics).",
+    "accent": "#956248",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJ_Sf1otmne0gRH1u_YXL-jjE",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at YU Nail & Beauty Aesthetics",
+    "_auto": true,
+    "whatsapp": "+447494255811"
+  },
+  {
+    "slug": "happy-nails-bolton",
+    "name": "Happy Nails",
+    "type": "Nail salon",
+    "area": "Bolton",
+    "address": "21 Deansgate, Bolton BL1 1HH",
+    "city": "Bolton",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "01204 450757",
+    "rating": 4.6,
+    "review_count": 383,
+    "maps_link": "https://maps.google.com/?cid=17799293737571557460&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJg-CXUdine0gRVKDJgFnLA_c",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "11:00-17:00"
+      }
+    ],
+    "headline": "BIAB, gel and nail extensions in Bolton.",
+    "subline": "Happy Nails is a nail salon in Bolton, rated 4.6 from 383 Google reviews. Book online or give us a ring.",
+    "highlights": [
+      "Rated 4.6 from 383 Google reviews.",
+      "Specialists in BIAB, gel and nail extensions.",
+      "Open seven days a week."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Nails",
+        "items": [
+          {
+            "name": "BIAB"
+          },
+          {
+            "name": "Gel polish"
+          },
+          {
+            "name": "Nail extensions"
+          },
+          {
+            "name": "Nail art"
+          }
+        ]
+      },
+      {
+        "category": "Feet",
+        "items": [
+          {
+            "name": "Gel toes"
+          },
+          {
+            "name": "Pedicure"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Festive nail art"
+        },
+        {
+          "name": "Gel polish"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "Great customer service and nails were beautifully done. Obsessed with this set and will definitely be back again, thank you! + a video from my second time visiting. Tina did both sets and she’s so talented.",
+        "name": "Sami"
+      },
+      {
+        "text": "Been coming here for years and I look forward to every visit. I don’t go anywhere else. Almost every time, I’ll show the guys wacky inspo pics with some of the most intricate designs, yet they knock it out the park without fail.",
+        "name": "Ellie"
+      },
+      {
+        "text": "Nails done by Ellie, such a lovely lady and has done such an amazing job! I love them and will definitely be back! Thankyou so much 😊🩷",
+        "name": "Tiana"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Happy Nails Bolton, Lauren Ogoh, Lenka Tur).",
+    "accent": "#AC6249",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJg-CXUdine0gRVKDJgFnLA_c",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Happy Nails",
+    "_auto": true,
+    "booking_link": "https://happynailsbolton.setmore.com/",
+    "booking_label": "Book online"
+  },
+  {
+    "slug": "glam-hair-salon-bolton",
+    "name": "Glam Hair Salon",
+    "type": "Hair salon",
+    "area": "Bolton",
+    "address": "1 Exchange Street, Bolton BL1 1RS",
+    "city": "Bolton",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "07404 646575",
+    "rating": 5,
+    "review_count": 205,
+    "maps_link": "https://maps.google.com/?cid=6077470636204749229&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJ7RcUgbyne0gRrfHZA1iDV1Q",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "09:00-17:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-17:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-17:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-17:00"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-17:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-17:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Cuts, colour and blow-dries in Bolton.",
+    "subline": "Glam Hair Salon is a hair salon in Bolton, rated 5 from 205 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 5 from 205 Google reviews.",
+      "Specialists in cuts, colour and blow-dries.",
+      "Open Monday to Saturday."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Hair",
+        "items": [
+          {
+            "name": "Ladies' cut and blow-dry"
+          },
+          {
+            "name": "Wash and blow-dry"
+          },
+          {
+            "name": "Men's cut"
+          },
+          {
+            "name": "Children's cut"
+          }
+        ]
+      },
+      {
+        "category": "Colour",
+        "items": [
+          {
+            "name": "Full head colour"
+          },
+          {
+            "name": "Highlights"
+          },
+          {
+            "name": "Balayage"
+          },
+          {
+            "name": "Toner and gloss"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party blow-dry"
+        },
+        {
+          "name": "Hair up"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "I had a wonderful experience here! Everyone is so friendly, welcoming, and helpful. The service was excellent from start to finish. A special thank you to Lena, who did my hair.",
+        "name": "Vanessza"
+      },
+      {
+        "text": "I’ve found a new hairdresser, Pari💕, and I couldn’t be happier! She coloured my hair exactly the way I wanted, and the cut was absolutely perfect. She really listens to what you want and delivers amazing results.",
+        "name": "Sakina"
+      },
+      {
+        "text": "Best salon, me and my girls are always happy when we going for hair cut..I am definitely recommending to try,you won't regret it,not to mention about the staff, amazing, friendly,kind...Thank you 🙏",
+        "name": "Adriana"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Glam hair salon, Micaela Costa).",
+    "accent": "#6E5035",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJ7RcUgbyne0gRrfHZA1iDV1Q",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Glam Hair Salon",
+    "_auto": true,
+    "whatsapp": "+447404646575"
+  },
+  {
+    "slug": "happy-nails-st-helens",
+    "name": "Happy Nails",
+    "type": "Nail salon",
+    "area": "St Helens",
+    "address": "11 Baldwin Street, St Helens WA10 2RS",
+    "city": "St Helens",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "01744 24221",
+    "rating": 4.7,
+    "review_count": 222,
+    "maps_link": "https://maps.google.com/?cid=3685331359222965742&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJe7j6i4Ibe0gR7qUXcljtJDM",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "09:00-19:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-19:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-19:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-19:00"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-19:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-19:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "BIAB, gel and nail extensions in St Helens.",
+    "subline": "Happy Nails is a nail salon in St Helens, rated 4.7 from 222 Google reviews. Book online or give us a ring.",
+    "highlights": [
+      "Rated 4.7 from 222 Google reviews.",
+      "Specialists in BIAB, gel and nail extensions.",
+      "Late appointments until 7pm on Mondays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Nails",
+        "items": [
+          {
+            "name": "BIAB"
+          },
+          {
+            "name": "Gel polish"
+          },
+          {
+            "name": "Nail extensions"
+          },
+          {
+            "name": "Nail art"
+          }
+        ]
+      },
+      {
+        "category": "Feet",
+        "items": [
+          {
+            "name": "Gel toes"
+          },
+          {
+            "name": "Pedicure"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Festive nail art"
+        },
+        {
+          "name": "Gel polish"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "I come to happy nails regularly and each time they do exactly what I ask for, any design and colour spot on and always do my nails perfectly & professionally. The staff are lovely too 🩷",
+        "name": "Rebecca"
+      },
+      {
+        "text": "1st vist to happy nails, saw some lovely designs that cought my eye on display called cats eyes nails, love them. Frindly staff, attention to detail, didnt feel rushed",
+        "name": "Flower"
+      },
+      {
+        "text": "The best nail place in St Helens. Always great service and friendly staff. Wouldn’t go anywhere else! :)",
+        "name": "Chloe"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Happy Nails, binh mui).",
+    "accent": "#B06845",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJe7j6i4Ibe0gR7qUXcljtJDM",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Happy Nails",
+    "_auto": true,
+    "booking_link": "tel:+44174424221",
+    "booking_label": "Call 01744 24221 to book"
+  },
+  {
+    "slug": "fara-hair-and-beauty-leigh",
+    "name": "FARA Hair & Beauty",
+    "type": "Hair salon",
+    "area": "Leigh",
+    "address": "Railway Road, Leigh WN7 4AA",
+    "city": "Leigh",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "07862 017478",
+    "rating": 5,
+    "review_count": 152,
+    "maps_link": "https://maps.google.com/?cid=13181438382233508244&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJVXuuHosHe0gRlFm60V7g7bY",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "09:00-16:30"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-16:30"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-16:30"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-16:30"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-16:30"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-16:30"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Cuts, colour and blow-dries in Leigh.",
+    "subline": "FARA Hair & Beauty is a hair salon in Leigh, rated 5 from 152 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 5 from 152 Google reviews.",
+      "Specialists in cuts, colour and blow-dries.",
+      "Open Monday to Saturday."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Hair",
+        "items": [
+          {
+            "name": "Ladies' cut and blow-dry"
+          },
+          {
+            "name": "Wash and blow-dry"
+          },
+          {
+            "name": "Men's cut"
+          },
+          {
+            "name": "Children's cut"
+          }
+        ]
+      },
+      {
+        "category": "Colour",
+        "items": [
+          {
+            "name": "Full head colour"
+          },
+          {
+            "name": "Highlights"
+          },
+          {
+            "name": "Balayage"
+          },
+          {
+            "name": "Toner and gloss"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party blow-dry"
+        },
+        {
+          "name": "Hair up"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "Absolutely brilliant experience with Fara! She kindly squeezed us in last minute for my daughter and made her feel instantly comfortable. Fara did an amazing job, my daughter loves her new hair.",
+        "name": "Kora"
+      },
+      {
+        "text": "Had an amazing experience from start to finish. My highlight and lowlights are done to perfection. Topped off with an eyebrow wax & tint #perfect",
+        "name": "Jane"
+      },
+      {
+        "text": "First time visiting today and I will definitely be back! I’ve never been so happy with a haircut before and Fara managed to get my hair exactly how I had wanted it. She was so friendly and definitely recommend. 💕",
+        "name": "Tillie"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Amanda Crompton, FARA hair &Beauty Leigh salon, Gary Davies).",
+    "accent": "#318A78",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJVXuuHosHe0gRlFm60V7g7bY",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at FARA Hair & Beauty",
+    "_auto": true,
+    "whatsapp": "+447862017478"
+  },
+  {
+    "slug": "wigan-barber-wigan",
+    "name": "Wigan Barber",
+    "type": "Barber",
+    "area": "Wigan",
+    "address": "160 Whelley, Wigan WN1 3UE",
+    "city": "Wigan",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "07426 852211",
+    "rating": 4.9,
+    "review_count": 166,
+    "maps_link": "https://maps.google.com/?cid=7355648724175012393&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJA9IHowkPe0gRKcIB8YqDFGY",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "09:00-18:30"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-18:30"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-18:30"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-19:00"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-19:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "10:00-16:30"
+      }
+    ],
+    "headline": "Skin fades, beard trims and classic cuts in Wigan.",
+    "subline": "Wigan Barber is a barber in Wigan, rated 4.9 from 166 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 4.9 from 166 Google reviews.",
+      "Specialists in skin fades, beard trims and classic cuts.",
+      "Late appointments until 7pm on Thursdays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Cuts",
+        "items": [
+          {
+            "name": "Haircut"
+          },
+          {
+            "name": "Skin fade"
+          },
+          {
+            "name": "Clipper cut"
+          },
+          {
+            "name": "Kids' cut"
+          }
+        ]
+      },
+      {
+        "category": "Beard",
+        "items": [
+          {
+            "name": "Beard trim"
+          },
+          {
+            "name": "Hot towel shave"
+          },
+          {
+            "name": "Cut and beard"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Christmas fade"
+        },
+        {
+          "name": "Cut and beard"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "I have been coming to Wigan barbers for many years now and what an excellent service I always receive.",
+        "name": "CA"
+      },
+      {
+        "text": "Always a great experience here. The barbers are great. Medium skin fade comes out spot on every time. Prices are very reasonable and the service is consistently friendly and welcoming. Definitely a place you can rely on.",
+        "name": "Lloyd"
+      },
+      {
+        "text": "Pleasant experience, very nice barbers with friendly staff that take a bit of pride in the cut they do. I would recommend and will re visit.",
+        "name": "Mark"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Rewan Azez, Wigan Barber).",
+    "accent": "#B5A340",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJA9IHowkPe0gRKcIB8YqDFGY",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Wigan Barber",
+    "_auto": true,
+    "whatsapp": "+447426852211"
+  },
+  {
+    "slug": "mr-cut-wigan",
+    "name": "Mr Cut",
+    "type": "Barber",
+    "area": "Wigan",
+    "address": "22 Market Street, Wigan WN2 3AN",
+    "city": "Wigan",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "07367 383386",
+    "rating": 4.9,
+    "review_count": 165,
+    "maps_link": "https://maps.google.com/?cid=14668056809394325830&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJA5xNU_MJe0gRRskyFfRnj8s",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "08:30-18:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "08:30-18:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "08:30-18:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "08:30-18:00"
+      },
+      {
+        "day": "Friday",
+        "time": "08:00-18:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "08:00-18:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "09:00-16:00"
+      }
+    ],
+    "headline": "Skin fades, beard trims and classic cuts in Wigan.",
+    "subline": "Mr Cut is a barber in Wigan, rated 4.9 from 165 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 4.9 from 165 Google reviews.",
+      "Specialists in skin fades, beard trims and classic cuts.",
+      "Open seven days a week."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Cuts",
+        "items": [
+          {
+            "name": "Haircut"
+          },
+          {
+            "name": "Skin fade"
+          },
+          {
+            "name": "Clipper cut"
+          },
+          {
+            "name": "Kids' cut"
+          }
+        ]
+      },
+      {
+        "category": "Beard",
+        "items": [
+          {
+            "name": "Beard trim"
+          },
+          {
+            "name": "Hot towel shave"
+          },
+          {
+            "name": "Cut and beard"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Christmas fade"
+        },
+        {
+          "name": "Cut and beard"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "Never had a bad haircut here! All the lads are really friendly and make you feel welcome, and Zack always delivers a great trim. Easily the best barbers in hindley",
+        "name": "Alex"
+      },
+      {
+        "text": "Zack is a great barber. Haircuts are always on point, and the shop is clean and well set up. Easy to book and a good service all round.",
+        "name": "Juan"
+      },
+      {
+        "text": "What a place! Amazing staff and the cut is ace! Shout-out to Zack, my barber from now on. Highly recommend this barbers",
+        "name": "Brad"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Andrian Buruiana, MR CUT).",
+    "accent": "#A8854D",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJA5xNU_MJe0gRRskyFfRnj8s",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Mr Cut",
+    "_auto": true,
+    "whatsapp": "+447367383386"
+  },
+  {
+    "slug": "dads-and-lads-wigan",
+    "name": "Dads & Lads",
+    "type": "Barber",
+    "area": "Wigan",
+    "address": "15 Meadow Street, Wigan WN6 7LG",
+    "city": "Wigan",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "01942 233301",
+    "rating": 4.9,
+    "review_count": 150,
+    "maps_link": "https://maps.google.com/?cid=16271077316685257028&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJjbFK8ZsPe0gRRNnwlZx6zuE",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "09:00-13:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "Closed"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-17:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-19:00"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "08:00-14:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Skin fades, beard trims and classic cuts in Wigan.",
+    "subline": "Dads & Lads is a barber in Wigan, rated 4.9 from 150 Google reviews. Book online or give us a ring.",
+    "highlights": [
+      "Rated 4.9 from 150 Google reviews.",
+      "Specialists in skin fades, beard trims and classic cuts.",
+      "Late appointments until 7pm on Thursdays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Cuts",
+        "items": [
+          {
+            "name": "Haircut"
+          },
+          {
+            "name": "Skin fade"
+          },
+          {
+            "name": "Clipper cut"
+          },
+          {
+            "name": "Kids' cut"
+          }
+        ]
+      },
+      {
+        "category": "Beard",
+        "items": [
+          {
+            "name": "Beard trim"
+          },
+          {
+            "name": "Hot towel shave"
+          },
+          {
+            "name": "Cut and beard"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Christmas fade"
+        },
+        {
+          "name": "Cut and beard"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "Probably the best haircut I've had in a long time. I didn't catch her name but she took a decent amount of time and shaped it really well.",
+        "name": "Greg"
+      },
+      {
+        "text": "Little lad had a bad experience at another barbers so decided to give the ladies a try, Jess is absolutely amazing, she’s built my boys confidence with haircuts and won’t go anywhere else now",
+        "name": "Alex"
+      },
+      {
+        "text": "Brought my 1 year old in for a trim and the staff couldn't of been any more help washed his dummy 5 times,give him biscuits, and was very very patient will 100% bring him back",
+        "name": "Jack"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Kathryn Sangster, Richard Brennan, Trevor Biermann).",
+    "accent": "#A85E43",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJjbFK8ZsPe0gRRNnwlZx6zuE",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Dads & Lads",
+    "_auto": true,
+    "booking_link": "tel:+441942233301",
+    "booking_label": "Call 01942 233301 to book"
+  },
+  {
+    "slug": "beauty-lounge-bolton",
+    "name": "Beauty Lounge",
+    "type": "Beauty salon",
+    "area": "Bolton",
+    "address": "128 St Helens Road, Bolton BL3 3PJ",
+    "city": "Bolton",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "01204 776846",
+    "rating": 4.7,
+    "review_count": 182,
+    "maps_link": "https://maps.google.com/?cid=1884446405552067684&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJE8ngSbmne0gRZFQxiQXmJho",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "12:00-18:30"
+      },
+      {
+        "day": "Tuesday",
+        "time": "10:00-18:30"
+      },
+      {
+        "day": "Wednesday",
+        "time": "10:00-18:30"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:00-18:30"
+      },
+      {
+        "day": "Friday",
+        "time": "10:00-18:30"
+      },
+      {
+        "day": "Saturday",
+        "time": "10:00-18:30"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Lashes, brows, nails and facials in Bolton.",
+    "subline": "Beauty Lounge is a beauty salon in Bolton, rated 4.7 from 182 Google reviews. Book online or give us a ring.",
+    "highlights": [
+      "Rated 4.7 from 182 Google reviews.",
+      "Specialists in lashes, brows, nails and facials.",
+      "Open Monday to Saturday."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Lashes & brows",
+        "items": [
+          {
+            "name": "Lash extensions"
+          },
+          {
+            "name": "Lash lift"
+          },
+          {
+            "name": "Brow lamination"
+          },
+          {
+            "name": "Brow wax and tint"
+          }
+        ]
+      },
+      {
+        "category": "Beauty",
+        "items": [
+          {
+            "name": "Gel nails"
+          },
+          {
+            "name": "Facials"
+          },
+          {
+            "name": "Waxing"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party lashes"
+        },
+        {
+          "name": "Gel nails"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "Been coming here since they opened almost 15 years ago, the staff are attentive, polite and professional.",
+        "name": "Safina"
+      },
+      {
+        "text": "Since the past 3 years me and my mum come to this salon, Absolutely loved my experience! The staff were so friendly and welcoming, and I’m really happy with the results. The salon was clean, professional, and relaxing.",
+        "name": "Fatima"
+      },
+      {
+        "text": "such a lovely place, nice environment and really kind staff. I travel from manchester regularly as i would not go anywhere else. they do an amazing job and make you feel super comfortable.",
+        "name": "Alishba"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Andreea Dumitrache, Daniela Gažiová, Naintara Nisar).",
+    "accent": "#3D568C",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJE8ngSbmne0gRZFQxiQXmJho",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Beauty Lounge",
+    "_auto": true,
+    "booking_link": "tel:+441204776846",
+    "booking_label": "Call 01204 776846 to book"
+  },
+  {
+    "slug": "the-cutting-crew-chorley",
+    "name": "The Cutting Crew",
+    "type": "Barber",
+    "area": "Chorley",
+    "address": "97 Market Street, Chorley PR7 2SQ",
+    "city": "Chorley",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "01257 671966",
+    "rating": 4.8,
+    "review_count": 154,
+    "maps_link": "https://maps.google.com/?cid=6786016916875521386&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJoa5SH1ENe0gRai0omm7GLF4",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-19:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "08:00-18:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "09:30-16:00"
+      }
+    ],
+    "headline": "Skin fades, beard trims and classic cuts in Chorley.",
+    "subline": "The Cutting Crew is a barber in Chorley, rated 4.8 from 154 Google reviews. Book online or give us a ring.",
+    "highlights": [
+      "Rated 4.8 from 154 Google reviews.",
+      "Specialists in skin fades, beard trims and classic cuts.",
+      "Late appointments until 7pm on Fridays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Cuts",
+        "items": [
+          {
+            "name": "Haircut"
+          },
+          {
+            "name": "Skin fade"
+          },
+          {
+            "name": "Clipper cut"
+          },
+          {
+            "name": "Kids' cut"
+          }
+        ]
+      },
+      {
+        "category": "Beard",
+        "items": [
+          {
+            "name": "Beard trim"
+          },
+          {
+            "name": "Hot towel shave"
+          },
+          {
+            "name": "Cut and beard"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Christmas fade"
+        },
+        {
+          "name": "Cut and beard"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "Awesome group of talented young Barbers. All of them are exceptionally polite I personally always find a good conversation with them to pass my visit and the experience of a great haircut/beard shape up.",
+        "name": "Paul"
+      },
+      {
+        "text": "I’ve been coming to Mo at the cutting crew for 6 years, and I was going to him when he was at Adams barbers. Cutting crew is the best and most popular barbers in chorley, everyone knows this.",
+        "name": "Saul"
+      },
+      {
+        "text": "This is hands down best barbers in the whole of Lancashire. Honestly Mo and Awat cut hair differently to all your normal barbers. If you ever need the perfect trim for any occasion. Definitely hit up Cutting crew",
+        "name": "Ridhik"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Awat Kurd, Fell & Mountain).",
+    "accent": "#354A6E",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJoa5SH1ENe0gRai0omm7GLF4",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at The Cutting Crew",
+    "_auto": true,
+    "booking_link": "tel:+441257671966",
+    "booking_label": "Call 01257 671966 to book"
+  },
+  {
+    "slug": "maison-reign-aesthetics-bolton",
+    "name": "Maison Reign Aesthetics",
+    "type": "Beauty salon",
+    "area": "Bolton",
+    "address": "13 Church Road, Bolton BL1 6HE",
+    "city": "Bolton",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "01204 843509",
+    "rating": 4.9,
+    "review_count": 135,
+    "maps_link": "https://maps.google.com/?cid=990625825641924327&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJVXuuOfOne0gR5wa3mvBovw0",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "Closed"
+      },
+      {
+        "day": "Tuesday",
+        "time": "10:00-17:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "10:00-17:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:00-19:00"
+      },
+      {
+        "day": "Friday",
+        "time": "10:00-19:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "10:00-17:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Lashes, brows, nails and facials in Bolton.",
+    "subline": "Maison Reign Aesthetics is a beauty salon in Bolton, rated 4.9 from 135 Google reviews. Book online or give us a ring.",
+    "highlights": [
+      "Rated 4.9 from 135 Google reviews.",
+      "Specialists in lashes, brows, nails and facials.",
+      "Late appointments until 7pm on Thursdays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Lashes & brows",
+        "items": [
+          {
+            "name": "Lash extensions"
+          },
+          {
+            "name": "Lash lift"
+          },
+          {
+            "name": "Brow lamination"
+          },
+          {
+            "name": "Brow wax and tint"
+          }
+        ]
+      },
+      {
+        "category": "Beauty",
+        "items": [
+          {
+            "name": "Gel nails"
+          },
+          {
+            "name": "Facials"
+          },
+          {
+            "name": "Waxing"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party lashes"
+        },
+        {
+          "name": "Gel nails"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "I booked my daughter in for the prom queen experience and the 4.25hr time slot that was allocated seemed to pass so fast as we didn’t stop chatting and laughing with the team the entire time we were there.",
+        "name": "Charlene"
+      },
+      {
+        "text": "I’ve been going to this beautiful salon for just under a year now. The staff are all incredible and make you feel so welcome & relaxed.",
+        "name": "Emma"
+      },
+      {
+        "text": "All the staff at maison reign are so nice and friendly. Absolutely love visiting shivonne for my BIAB nails. My first set were still going strong 4 weeks later, so popped back for an infill and a colour change.",
+        "name": "Kylie"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Estelle McCann, Kylie Carter, Maison Reign Aesthetics).",
+    "accent": "#87213C",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJVXuuOfOne0gR5wa3mvBovw0",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Maison Reign Aesthetics",
+    "_auto": true,
+    "booking_link": "tel:+441204843509",
+    "booking_label": "Call 01204 843509 to book"
+  },
+  {
+    "slug": "super-fade-cut-platt-bridge",
+    "name": "Super Fade Cut",
+    "type": "Barber",
+    "area": "Platt Bridge",
+    "address": "Warrington Road, Platt Bridge, Wigan WN2 5JA",
+    "city": "Wigan",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "07576 300007",
+    "rating": 4.9,
+    "review_count": 127,
+    "maps_link": "https://maps.google.com/?cid=10380981620794577624&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJWQuMn-gFe0gR2NJRh8inEJA",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "08:30-18:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "08:30-18:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "08:30-18:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "08:30-19:00"
+      },
+      {
+        "day": "Friday",
+        "time": "08:30-19:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "08:00-18:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "09:00-17:00"
+      }
+    ],
+    "headline": "Skin fades, beard trims and classic cuts in Platt Bridge.",
+    "subline": "Super Fade Cut is a barber in Platt Bridge, Wigan, rated 4.9 from 127 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 4.9 from 127 Google reviews.",
+      "Specialists in skin fades, beard trims and classic cuts.",
+      "Late appointments until 7pm on Thursdays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Cuts",
+        "items": [
+          {
+            "name": "Haircut"
+          },
+          {
+            "name": "Skin fade"
+          },
+          {
+            "name": "Clipper cut"
+          },
+          {
+            "name": "Kids' cut"
+          }
+        ]
+      },
+      {
+        "category": "Beard",
+        "items": [
+          {
+            "name": "Beard trim"
+          },
+          {
+            "name": "Hot towel shave"
+          },
+          {
+            "name": "Cut and beard"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Christmas fade"
+        },
+        {
+          "name": "Cut and beard"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "Great service staff so friendly. My son loved his haircut 👍🏾",
+        "name": "Claire"
+      },
+      {
+        "text": "Been taking my son here for about 4 years...he loves the guys that work here, all very friendly and chat away to him to make him feel comfortable. Has never come away with a bad haircut, spot on everytime.",
+        "name": "Kirsty"
+      },
+      {
+        "text": "I don't live here often, but every time I come back I get my hair cut here. They cut it beautifully to my liking and it's cheap. The other places I've tried are ugly and expensive.",
+        "name": "Winstanley"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Kirsty Mcveigh, claire warmington, sarhang abbas).",
+    "accent": "#903C37",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJWQuMn-gFe0gR2NJRh8inEJA",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Super Fade Cut",
+    "_auto": true,
+    "whatsapp": "+447576300007"
+  },
+  {
+    "slug": "mv-nails-horwich-bolton",
+    "name": "MV Nails Horwich",
+    "type": "Nail salon",
+    "area": "Bolton",
+    "address": "22 Winter Hey Lane, Bolton BL6 7AA",
+    "city": "Bolton",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "07447 362771",
+    "rating": 4.9,
+    "review_count": 124,
+    "maps_link": "https://maps.google.com/?cid=4397775541350538016&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJoXfI8vIJe0gRIJsZ8I0JCD0",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "09:30-19:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:30-19:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:30-19:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:30-19:00"
+      },
+      {
+        "day": "Friday",
+        "time": "09:30-19:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "08:30-19:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "BIAB, gel and nail extensions in Bolton.",
+    "subline": "MV Nails Horwich is a nail salon in Bolton, rated 4.9 from 124 Google reviews. Book online or give us a ring.",
+    "highlights": [
+      "Rated 4.9 from 124 Google reviews.",
+      "Specialists in BIAB, gel and nail extensions.",
+      "Late appointments until 7pm on Mondays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Nails",
+        "items": [
+          {
+            "name": "BIAB"
+          },
+          {
+            "name": "Gel polish"
+          },
+          {
+            "name": "Nail extensions"
+          },
+          {
+            "name": "Nail art"
+          }
+        ]
+      },
+      {
+        "category": "Feet",
+        "items": [
+          {
+            "name": "Gel toes"
+          },
+          {
+            "name": "Pedicure"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Festive nail art"
+        },
+        {
+          "name": "Gel polish"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "i had a lovely experience, the staff are lovely and very welcoming. i asked for a very complicated design and they did it perfectly. very affordable aswell, i will definitely be coming back.",
+        "name": "Jasmine"
+      },
+      {
+        "text": "It was my first time with MV nails and they done a great job. Loved my nails.",
+        "name": "Ash"
+      },
+      {
+        "text": "First time here, I had booked an appointment and only waited a few minutes, but i believe you don't need an appointment although you might have a long wait if you don't book 1, they get very busy Nice people. love my nails.",
+        "name": "Hector"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by MV Nails Horwich, kelsey gage).",
+    "accent": "#A95C4C",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJoXfI8vIJe0gRIJsZ8I0JCD0",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at MV Nails Horwich",
+    "_auto": true,
+    "whatsapp": "+447447362771",
+    "booking_link": "https://mvnailshorwich5986.setmore.com/",
+    "booking_label": "Book online"
+  },
+  {
+    "slug": "urban-studios-wigan",
+    "name": "Urban Studios",
+    "type": "Hair salon",
+    "area": "Wigan",
+    "address": "36 Market Street, Wigan WN2 3AN",
+    "city": "Wigan",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "01942 255559",
+    "rating": 4.9,
+    "review_count": 123,
+    "maps_link": "https://maps.google.com/?cid=1476655478629178765&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJIyh_dgIGe0gRjZ1Ti1UifhQ",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "09:00-16:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-16:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-17:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-21:00"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "08:00-16:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Cuts, colour and blow-dries in Wigan.",
+    "subline": "Urban Studios is a hair salon in Wigan, rated 4.9 from 123 Google reviews. Book online or give us a ring.",
+    "highlights": [
+      "Rated 4.9 from 123 Google reviews.",
+      "Specialists in cuts, colour and blow-dries.",
+      "Late appointments until 9pm on Thursdays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Hair",
+        "items": [
+          {
+            "name": "Ladies' cut and blow-dry"
+          },
+          {
+            "name": "Wash and blow-dry"
+          },
+          {
+            "name": "Men's cut"
+          },
+          {
+            "name": "Children's cut"
+          }
+        ]
+      },
+      {
+        "category": "Colour",
+        "items": [
+          {
+            "name": "Full head colour"
+          },
+          {
+            "name": "Highlights"
+          },
+          {
+            "name": "Balayage"
+          },
+          {
+            "name": "Toner and gloss"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party blow-dry"
+        },
+        {
+          "name": "Hair up"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "This salon is by far the best in the game! The girls are amazing and the service is top tier everyone treats you with respect and it’s a lovely environment with a good energy.",
+        "name": "Sarah"
+      },
+      {
+        "text": "Outstanding service from start to finish, I am truly over the moon with my colour from Lucy who knowns exactly what she is doing!",
+        "name": "Charlotte"
+      },
+      {
+        "text": "Urban Studios is truly exceptional. Every single visit, my hair and makeup are absolutely perfect, and I always leave feeling amazing. The atmosphere is so friendly, welcoming, and professional from the moment you walk in.",
+        "name": "Emily"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Suzanne Bleakley, Urban Studios).",
+    "accent": "#6E5835",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJIyh_dgIGe0gRjZ1Ti1UifhQ",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Urban Studios",
+    "_auto": true,
+    "booking_link": "tel:+441942255559",
+    "booking_label": "Call 01942 255559 to book"
+  },
+  {
+    "slug": "life-style-barbers-wigan",
+    "name": "Life Style Barbers",
+    "type": "Barber",
+    "area": "Wigan",
+    "address": "46 Standishgate, Wigan WN1 1UW",
+    "city": "Wigan",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "07908 750804",
+    "rating": 4.8,
+    "review_count": 131,
+    "maps_link": "https://maps.google.com/?cid=17115132809152019402&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJq6USnP0Pe0gRyrsjLZwqhe0",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-19:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "08:30-18:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "10:00-17:00"
+      }
+    ],
+    "headline": "Skin fades, beard trims and classic cuts in Wigan.",
+    "subline": "Life Style Barbers is a barber in Wigan, rated 4.8 from 131 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 4.8 from 131 Google reviews.",
+      "Specialists in skin fades, beard trims and classic cuts.",
+      "Late appointments until 7pm on Fridays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Cuts",
+        "items": [
+          {
+            "name": "Haircut"
+          },
+          {
+            "name": "Skin fade"
+          },
+          {
+            "name": "Clipper cut"
+          },
+          {
+            "name": "Kids' cut"
+          }
+        ]
+      },
+      {
+        "category": "Beard",
+        "items": [
+          {
+            "name": "Beard trim"
+          },
+          {
+            "name": "Hot towel shave"
+          },
+          {
+            "name": "Cut and beard"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Christmas fade"
+        },
+        {
+          "name": "Cut and beard"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "Amazing service I went in for my haircut. Do a great job and so friendly and polite. Also took my son for he's haircut who is confined to a wheelchair.",
+        "name": "Brendan"
+      },
+      {
+        "text": "Been visiting this place since last year after years of just shaving my own hair. Always friendly and helpful, service is great and relaxed. Never had a bad cut or come away thinking I wish they had done something different.",
+        "name": "Kevin"
+      },
+      {
+        "text": "Fab experience today going here for the first time with my son. The guys are friendly, professional & skilled, my son's hair looks fab, & he certainly got star treatment!",
+        "name": "Kerry"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by LIFE STYLE BARBERS).",
+    "accent": "#85291F",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJq6USnP0Pe0gRyrsjLZwqhe0",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Life Style Barbers",
+    "_auto": true,
+    "whatsapp": "+447908750804"
+  },
+  {
+    "slug": "lechic-aesthetics-and-beauty-salon-chorley",
+    "name": "LeChic Aesthetics & Beauty Salon",
+    "type": "Beauty salon",
+    "area": "Chorley",
+    "address": "25 Harpers Lane, Chorley PR6 7AB",
+    "city": "Chorley",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "07444 021814",
+    "rating": 5,
+    "review_count": 100,
+    "maps_link": "https://maps.google.com/?cid=5588156022828334605&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJtbnry0QMe0gRDX4koksejU0",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "Closed"
+      },
+      {
+        "day": "Tuesday",
+        "time": "Closed"
+      },
+      {
+        "day": "Wednesday",
+        "time": "10:00-17:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:00-17:00"
+      },
+      {
+        "day": "Friday",
+        "time": "10:00-18:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "10:00-14:30"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Lashes, brows, nails and facials in Chorley.",
+    "subline": "LeChic Aesthetics & Beauty Salon is a beauty salon in Chorley, rated 5 from 100 Google reviews. Book online or give us a ring.",
+    "highlights": [
+      "Rated 5 from 100 Google reviews.",
+      "Specialists in lashes, brows, nails and facials.",
+      "Open Wednesday to Saturday."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Lashes & brows",
+        "items": [
+          {
+            "name": "Lash extensions"
+          },
+          {
+            "name": "Lash lift"
+          },
+          {
+            "name": "Brow lamination"
+          },
+          {
+            "name": "Brow wax and tint"
+          }
+        ]
+      },
+      {
+        "category": "Beauty",
+        "items": [
+          {
+            "name": "Gel nails"
+          },
+          {
+            "name": "Facials"
+          },
+          {
+            "name": "Waxing"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party lashes"
+        },
+        {
+          "name": "Gel nails"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "Absolutely loved my experience with Lisa! She made me feel relaxed, the vibes were just perfect. Biab nails were done with tips to help my non existent bitten nails and wow! They are incredible.",
+        "name": "Kelly"
+      },
+      {
+        "text": "It was lovely to meet Lisa for the first time, she’s knowledgeable and very easy to chat to nothing is too much trouble! Lovely and honest with advise and recommendations- lots of free parking is a bonus!",
+        "name": "Kate"
+      },
+      {
+        "text": "I have been having treatments here for nearly a year now. The best team I've worked with on both waxing and facials. I can't recommend highly enough",
+        "name": "Pamela"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by LeChic Aesthetics & Beauty Salon, Lisa-marie Doheny).",
+    "accent": "#A6584F",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJtbnry0QMe0gRDX4koksejU0",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at LeChic Aesthetics & Beauty Salon",
+    "_auto": true,
+    "whatsapp": "+447444021814",
+    "booking_link": "https://www.fresha.com/providers/lechic-aesthetics-beauty-ltd-j861v4t8",
+    "booking_label": "Book on Fresha"
+  },
+  {
+    "slug": "ibo-barber-shop-wigan",
+    "name": "IBO Barber Shop",
+    "type": "Barber",
+    "area": "Wigan",
+    "address": "3 Bridge Street, Wigan WN2 3LE",
+    "city": "Wigan",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "07539 108858",
+    "rating": 4.8,
+    "review_count": 120,
+    "maps_link": "https://maps.google.com/?cid=2993261105947967039&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJCdCoFagIe0gRP34F7B0ziik",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-18:30"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-18:30"
+      },
+      {
+        "day": "Friday",
+        "time": "08:00-18:30"
+      },
+      {
+        "day": "Saturday",
+        "time": "08:00-18:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "09:00-16:00"
+      }
+    ],
+    "headline": "Skin fades, beard trims and classic cuts in Wigan.",
+    "subline": "IBO Barber Shop is a barber in Wigan, rated 4.8 from 120 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 4.8 from 120 Google reviews.",
+      "Specialists in skin fades, beard trims and classic cuts.",
+      "Open seven days a week."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Cuts",
+        "items": [
+          {
+            "name": "Haircut"
+          },
+          {
+            "name": "Skin fade"
+          },
+          {
+            "name": "Clipper cut"
+          },
+          {
+            "name": "Kids' cut"
+          }
+        ]
+      },
+      {
+        "category": "Beard",
+        "items": [
+          {
+            "name": "Beard trim"
+          },
+          {
+            "name": "Hot towel shave"
+          },
+          {
+            "name": "Cut and beard"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Christmas fade"
+        },
+        {
+          "name": "Cut and beard"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "Came in and had such a great hair cut that I came back with the kids. Very friendly staff. Highly recommend. Easy parking around the corner. Fast service. They have a lot of attention to detail and made us feel welcome.",
+        "name": "Patrick"
+      },
+      {
+        "text": "Been coming here for the last 6 years since moving to hindley. Safe to say every visit the staff are extremely friendly and attentive to my son who was, at the time, only young and has grown up coming here every time.",
+        "name": "Liam"
+      },
+      {
+        "text": "I finally found someone to stain my hair. The price is very reasonable and will continue to be used. I recommend everyone drop by and ask zana to cut your hair",
+        "name": "Ahmad"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Bayad Zada, Daban Salh, IBO barber shop).",
+    "accent": "#7F2924",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJCdCoFagIe0gRP34F7B0ziik",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at IBO Barber Shop",
+    "_auto": true,
+    "whatsapp": "+447539108858"
+  },
+  {
+    "slug": "magic-scissor-wigan",
+    "name": "Magic Scissor",
+    "type": "Barber",
+    "area": "Wigan",
+    "address": "2E Gathurst Lane, Wigan WN6 8HA",
+    "city": "Wigan",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "07881 706097",
+    "rating": 4.9,
+    "review_count": 108,
+    "maps_link": "https://maps.google.com/?cid=14733025321532208444&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJBQeD9dYPe0gRPDXDlHg4dsw",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "08:30-18:30"
+      },
+      {
+        "day": "Friday",
+        "time": "08:30-18:30"
+      },
+      {
+        "day": "Saturday",
+        "time": "08:30-18:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "10:00-16:00"
+      }
+    ],
+    "headline": "Skin fades, beard trims and classic cuts in Wigan.",
+    "subline": "Magic Scissor is a barber in Wigan, rated 4.9 from 108 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 4.9 from 108 Google reviews.",
+      "Specialists in skin fades, beard trims and classic cuts.",
+      "Open seven days a week."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Cuts",
+        "items": [
+          {
+            "name": "Haircut"
+          },
+          {
+            "name": "Skin fade"
+          },
+          {
+            "name": "Clipper cut"
+          },
+          {
+            "name": "Kids' cut"
+          }
+        ]
+      },
+      {
+        "category": "Beard",
+        "items": [
+          {
+            "name": "Beard trim"
+          },
+          {
+            "name": "Hot towel shave"
+          },
+          {
+            "name": "Cut and beard"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Christmas fade"
+        },
+        {
+          "name": "Cut and beard"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "New to the area and finding a good barber was right at the top of my to do list.",
+        "name": "Leon"
+      },
+      {
+        "text": "Great haircut and friendly service. The barber listened to what I wanted and the result was exactly right. Very happy and would recommend. Best one on Wigan",
+        "name": "Connor"
+      },
+      {
+        "text": "Very welcoming and friendly. Topped off with a great trim at a good price.",
+        "name": "George"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Local Explorer, Magic scissor, Sadr Hamad).",
+    "accent": "#5082A5",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJBQeD9dYPe0gRPDXDlHg4dsw",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Magic Scissor",
+    "_auto": true,
+    "whatsapp": "+447881706097",
+    "instagram": "https://www.instagram.com/magicscissor"
+  },
+  {
+    "slug": "empire-barber-shop-wigan",
+    "name": "Empire Barber Shop",
+    "type": "Barber",
+    "area": "Wigan",
+    "address": "60 Market Street, Wigan WN2 3AN",
+    "city": "Wigan",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "07731 313104",
+    "rating": 4.7,
+    "review_count": 132,
+    "maps_link": "https://maps.google.com/?cid=3420036345613805073&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJa2fbjlUPe0gREWY8q-9odi8",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "08:30-18:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "08:30-18:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "08:30-18:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "08:30-18:00"
+      },
+      {
+        "day": "Friday",
+        "time": "08:00-18:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "08:00-18:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "09:00-16:00"
+      }
+    ],
+    "headline": "Skin fades, beard trims and classic cuts in Wigan.",
+    "subline": "Empire Barber Shop is a barber in Wigan, rated 4.7 from 132 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 4.7 from 132 Google reviews.",
+      "Specialists in skin fades, beard trims and classic cuts.",
+      "Open seven days a week."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Cuts",
+        "items": [
+          {
+            "name": "Haircut"
+          },
+          {
+            "name": "Skin fade"
+          },
+          {
+            "name": "Clipper cut"
+          },
+          {
+            "name": "Kids' cut"
+          }
+        ]
+      },
+      {
+        "category": "Beard",
+        "items": [
+          {
+            "name": "Beard trim"
+          },
+          {
+            "name": "Hot towel shave"
+          },
+          {
+            "name": "Cut and beard"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Christmas fade"
+        },
+        {
+          "name": "Cut and beard"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "Great haircut for my 10 year old he wanted a GARNACHO! Fantastic cut & friendly service. Thanks Martin he loves it .",
+        "name": "Michael"
+      },
+      {
+        "text": "Wonderful place to get a hair cut. Although it is slightly expensive the quality is first class. Received a hair cut, Turkish shave, nostril and ear wax and a eyebrow trim for £35. No complaints at all and really friendly staff.",
+        "name": "Solidworks"
+      },
+      {
+        "text": "The service with my10 year old son is amazing. He has additional needs and the staff are great. He LOVES “the boss” cutting his hair! As do I x",
+        "name": "Samantha"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Empire Barber shop, Stuart Johnston).",
+    "accent": "#6E4D35",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJa2fbjlUPe0gREWY8q-9odi8",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Empire Barber Shop",
+    "_auto": true,
+    "whatsapp": "+447731313104",
+    "instagram": "https://instagram.com/empirebarberhindley?igshid=NzZlODBkYWE4Ng=="
+  },
+  {
+    "slug": "anis-barbers-wigan",
+    "name": "Anis Barbers",
+    "type": "Barber",
+    "area": "Wigan",
+    "address": "96 Darlington Street East, Wigan WN1 3AT",
+    "city": "Wigan",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "07512 830293",
+    "rating": 4.7,
+    "review_count": 127,
+    "maps_link": "https://maps.google.com/?cid=4473925881483884630&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJCYwiymUPe0gRVvhFpeKTFj4",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "09:30-18:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:30-18:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:30-18:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:30-19:00"
+      },
+      {
+        "day": "Friday",
+        "time": "09:30-18:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "08:30-18:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "09:00-16:00"
+      }
+    ],
+    "headline": "Skin fades, beard trims and classic cuts in Wigan.",
+    "subline": "Anis Barbers is a barber in Wigan, rated 4.7 from 127 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 4.7 from 127 Google reviews.",
+      "Specialists in skin fades, beard trims and classic cuts.",
+      "Late appointments until 7pm on Thursdays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Cuts",
+        "items": [
+          {
+            "name": "Haircut"
+          },
+          {
+            "name": "Skin fade"
+          },
+          {
+            "name": "Clipper cut"
+          },
+          {
+            "name": "Kids' cut"
+          }
+        ]
+      },
+      {
+        "category": "Beard",
+        "items": [
+          {
+            "name": "Beard trim"
+          },
+          {
+            "name": "Hot towel shave"
+          },
+          {
+            "name": "Cut and beard"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Christmas fade"
+        },
+        {
+          "name": "Cut and beard"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "My only barber shop in Wigan. Always a relaxed atmosphere, amazing cuts and a full on pampering for men. An excellent service for a reasonable price. Highly recommended Must add, that I have been coming here since 2022.",
+        "name": "Zsolt"
+      },
+      {
+        "text": "Took my son for a haircut and this place was fantastic. The barber was really friendly and easy to talk to. Made my son feel very welcome and comfortable. We will be using this barbers a lot more regularly from now on.",
+        "name": "Kay"
+      },
+      {
+        "text": "Although I had a little bit of a wait as he was very busy, I have to say this is the best hair cut I have ever had. He was friendly, courteous, did an excellent job and was great value.",
+        "name": "Andy"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Anis Ben Zineb).",
+    "accent": "#7F3A24",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJCYwiymUPe0gRVvhFpeKTFj4",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Anis Barbers",
+    "_auto": true,
+    "whatsapp": "+447512830293"
+  },
+  {
+    "slug": "sorellas-hair-room-chorley",
+    "name": "Sorellas Hair Room",
+    "type": "Hair salon",
+    "area": "Chorley",
+    "address": "77b Water Street, Chorley PR7 1EX",
+    "city": "Chorley",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "01257 543101",
+    "rating": 4.9,
+    "review_count": 99,
+    "maps_link": "https://maps.google.com/?cid=12702809158257210884&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJf8gm9lsMe0gRBPZ_h6BxSbA",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "Closed"
+      },
+      {
+        "day": "Tuesday",
+        "time": "10:00-15:30"
+      },
+      {
+        "day": "Wednesday",
+        "time": "10:00-19:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:00-14:30"
+      },
+      {
+        "day": "Friday",
+        "time": "09:30-17:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-14:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Cuts, colour and blow-dries in Chorley.",
+    "subline": "Sorellas Hair Room is a hair salon in Chorley, rated 4.9 from 99 Google reviews. Book online or give us a ring.",
+    "highlights": [
+      "Rated 4.9 from 99 Google reviews.",
+      "Specialists in cuts, colour and blow-dries.",
+      "Late appointments until 7pm on Wednesdays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Hair",
+        "items": [
+          {
+            "name": "Ladies' cut and blow-dry"
+          },
+          {
+            "name": "Wash and blow-dry"
+          },
+          {
+            "name": "Men's cut"
+          },
+          {
+            "name": "Children's cut"
+          }
+        ]
+      },
+      {
+        "category": "Colour",
+        "items": [
+          {
+            "name": "Full head colour"
+          },
+          {
+            "name": "Highlights"
+          },
+          {
+            "name": "Balayage"
+          },
+          {
+            "name": "Toner and gloss"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party blow-dry"
+        },
+        {
+          "name": "Hair up"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "Had an amazing time getting my hair refreshed and more red than ever for my holiday thank you so much to Chantel !! Can’t wait to come back x",
+        "name": "Rebecca"
+      },
+      {
+        "text": "Was really anxious to find a new salon, and as a result I box dyed my hair which turned out completely the wrong colour. I was so upset and found Park Hair Room, after a quick consultation I was booked in for two days later.",
+        "name": "Erin"
+      },
+      {
+        "text": "Since I relocated to Chorley I had been dreading changing my hairdresser of 11 years. I read a lot of reviews and Park Hair Room seemed to shine. I attended today for my first colour, cut and blow dry and I could not be happier!",
+        "name": "Tina"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Daniel Morgan, Sorellas Hair Room).",
+    "accent": "#99272C",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJf8gm9lsMe0gRBPZ_h6BxSbA",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Sorellas Hair Room",
+    "_auto": true,
+    "booking_link": "tel:+441257543101",
+    "booking_label": "Call 01257 543101 to book"
+  },
+  {
+    "slug": "vip-barber-shop-wigan",
+    "name": "VIP Barber Shop",
+    "type": "Barber",
+    "area": "Wigan",
+    "address": "6 Clapgate Lane, Wigan WN3 6RN",
+    "city": "Wigan",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "07999 107676",
+    "rating": 4.7,
+    "review_count": 112,
+    "maps_link": "https://maps.google.com/?cid=17724350820590712248&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJLWH94B4Fe0gRuHW25ymL-fU",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-18:30"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-18:30"
+      },
+      {
+        "day": "Saturday",
+        "time": "08:30-17:30"
+      },
+      {
+        "day": "Sunday",
+        "time": "10:00-16:00"
+      }
+    ],
+    "headline": "Skin fades, beard trims and classic cuts in Wigan.",
+    "subline": "VIP Barber Shop is a barber in Wigan, rated 4.7 from 112 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 4.7 from 112 Google reviews.",
+      "Specialists in skin fades, beard trims and classic cuts.",
+      "Open seven days a week."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Cuts",
+        "items": [
+          {
+            "name": "Haircut"
+          },
+          {
+            "name": "Skin fade"
+          },
+          {
+            "name": "Clipper cut"
+          },
+          {
+            "name": "Kids' cut"
+          }
+        ]
+      },
+      {
+        "category": "Beard",
+        "items": [
+          {
+            "name": "Beard trim"
+          },
+          {
+            "name": "Hot towel shave"
+          },
+          {
+            "name": "Cut and beard"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Christmas fade"
+        },
+        {
+          "name": "Cut and beard"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "One of best barbers been to nice service gentleman’s 👌🏻",
+        "name": "Martin"
+      },
+      {
+        "text": "Great service. Have been bringing my child here for years now, they are patient with kids and do exactly what you ask. The guys are friendly and always good for a laugh.",
+        "name": "Lee"
+      },
+      {
+        "text": "Best barber shop in Wigan. I've been going for five years now.",
+        "name": "Sandy"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by VIP Barber Shop).",
+    "accent": "#A56A50",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJLWH94B4Fe0gRuHW25ymL-fU",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at VIP Barber Shop",
+    "_auto": true,
+    "whatsapp": "+447999107676",
+    "instagram": "https://www.instagram.com/vipbarber1"
+  },
+  {
+    "slug": "shazas-barbers-wigan",
+    "name": "Shaza's Barbers",
+    "type": "Barber",
+    "area": "Wigan",
+    "address": "3 Market Street, Wigan WN6 0HW",
+    "city": "Wigan",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "07758 515275",
+    "rating": 4.8,
+    "review_count": 99,
+    "maps_link": "https://maps.google.com/?cid=15363775407476446799&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJ4-Vb0QMPe0gRTxaEE1UYN9U",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "09:00-19:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-19:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-19:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-19:00"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-19:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "08:00-18:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "09:00-17:00"
+      }
+    ],
+    "headline": "Skin fades, beard trims and classic cuts in Wigan.",
+    "subline": "Shaza's Barbers is a barber in Wigan, rated 4.8 from 99 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 4.8 from 99 Google reviews.",
+      "Specialists in skin fades, beard trims and classic cuts.",
+      "Late appointments until 7pm on Mondays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Cuts",
+        "items": [
+          {
+            "name": "Haircut"
+          },
+          {
+            "name": "Skin fade"
+          },
+          {
+            "name": "Clipper cut"
+          },
+          {
+            "name": "Kids' cut"
+          }
+        ]
+      },
+      {
+        "category": "Beard",
+        "items": [
+          {
+            "name": "Beard trim"
+          },
+          {
+            "name": "Hot towel shave"
+          },
+          {
+            "name": "Cut and beard"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Christmas fade"
+        },
+        {
+          "name": "Cut and beard"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "Very very friendly man, and very meticulous in his work. Did my hair and trimmed and styled my short beard. Hope many more will share this experience! Thank you, young man!",
+        "name": "Bryan"
+      },
+      {
+        "text": "Super welcoming , family friendly, super friendly with my kid too. And the cuts, always perfect and helpful with the style and finish, never had a bad cut from any of the staff members - would 100% recommend!!",
+        "name": "Chris"
+      },
+      {
+        "text": "Needed a quick fade and trim as I'm here for a weekend away. Price was reasonable and service was good, would highly recommend",
+        "name": "Sam"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Dawn, Shaza's Barbers).",
+    "accent": "#A6784F",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJ4-Vb0QMPe0gRTxaEE1UYN9U",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Shaza's Barbers",
+    "_auto": true,
+    "whatsapp": "+447758515275"
+  },
+  {
+    "slug": "lolas-beauty-and-glow-leigh",
+    "name": "Lola's Beauty & Glow",
+    "type": "Afro-Caribbean & European hair salon",
+    "area": "Leigh",
+    "address": "100a Lord Street, Leigh WN7 1BY",
+    "city": "Leigh",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "07384 407469",
+    "rating": 4.9,
+    "review_count": 84,
+    "maps_link": "https://maps.google.com/?cid=14516586411106561550&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJ6102cnAHe0gRDu5EwW1Gdck",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "10:00-19:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "10:00-19:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "10:00-19:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:00-19:00"
+      },
+      {
+        "day": "Friday",
+        "time": "10:00-19:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "10:00-19:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Cuts, colour and blow-dries in Leigh.",
+    "subline": "Lola's Beauty & Glow is an Afro-Caribbean and European hair salon in Leigh, rated 4.9 from 84 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 4.9 from 84 Google reviews.",
+      "Specialists in cuts, colour and blow-dries.",
+      "Late appointments until 7pm on Mondays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Hair",
+        "items": [
+          {
+            "name": "Ladies' cut and blow-dry"
+          },
+          {
+            "name": "Wash and blow-dry"
+          },
+          {
+            "name": "Men's cut"
+          },
+          {
+            "name": "Children's cut"
+          }
+        ]
+      },
+      {
+        "category": "Colour",
+        "items": [
+          {
+            "name": "Full head colour"
+          },
+          {
+            "name": "Highlights"
+          },
+          {
+            "name": "Balayage"
+          },
+          {
+            "name": "Toner and gloss"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party blow-dry"
+        },
+        {
+          "name": "Hair up"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "Absolutely amazing, from the person to the result, she is a lovely character and will talk and laugh with you the whole time, the results were perfect and couldn’t of asked for more, will be returning soon!",
+        "name": "Alexander"
+      },
+      {
+        "text": "Well I need to give Lola 10 stars 🤩 . Absolutely amazing . I called Lola about having some of my dreads put back in as they fell out . There where not done by Lola . She gave me amazing advice . She fitted me in that day .",
+        "name": "Chris"
+      },
+      {
+        "text": "Lola fit me in very last minute last week to relax my hair & I am forever grateful! She did a perfect job, so professional & welcoming. My hair so feels fresh & soft. Very relaxing experience - can’t wait to go back.",
+        "name": "Morgan"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Lola's beauty and glow Afro Caribbean and European hair salon).",
+    "accent": "#AC286C",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJ6102cnAHe0gRDu5EwW1Gdck",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Lola's Beauty & Glow",
+    "_auto": true,
+    "whatsapp": "+447384407469"
+  },
+  {
+    "slug": "blade-z-barber-wigan",
+    "name": "Blade'z Barber",
+    "type": "Barber",
+    "area": "Wigan",
+    "address": "53 Library Street, Wigan WN1 1NN",
+    "city": "Wigan",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "01942 375584",
+    "rating": 4.8,
+    "review_count": 90,
+    "maps_link": "https://maps.google.com/?cid=12873626180995618443&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJD9aTYnoPe0gRi5Zp4c1OqLI",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-19:00"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-19:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "10:00-16:00"
+      }
+    ],
+    "headline": "Skin fades, beard trims and classic cuts in Wigan.",
+    "subline": "Blade'z Barber is a barber in Wigan, rated 4.8 from 90 Google reviews. Book online or give us a ring.",
+    "highlights": [
+      "Rated 4.8 from 90 Google reviews.",
+      "Specialists in skin fades, beard trims and classic cuts.",
+      "Late appointments until 7pm on Thursdays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Cuts",
+        "items": [
+          {
+            "name": "Haircut"
+          },
+          {
+            "name": "Skin fade"
+          },
+          {
+            "name": "Clipper cut"
+          },
+          {
+            "name": "Kids' cut"
+          }
+        ]
+      },
+      {
+        "category": "Beard",
+        "items": [
+          {
+            "name": "Beard trim"
+          },
+          {
+            "name": "Hot towel shave"
+          },
+          {
+            "name": "Cut and beard"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Christmas fade"
+        },
+        {
+          "name": "Cut and beard"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "Been going here for years and now my son too. Friendly staff and always nice and welcoming. Recommend for anyone looking for a fresh trim or a completely different haircut.",
+        "name": "Mark"
+      },
+      {
+        "text": "Best barbers in Wigan. I have been going here for 10 years. Great staff and good prices 👍🏻 Jack",
+        "name": "Jack"
+      },
+      {
+        "text": "Saf and the lads are always friendly and haircuts are quality from all of them. Never waiting ages either as always at least two or three staff in",
+        "name": "Jay"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by David McDermott, Greg “Wigan Wanderers” Knight, Martin Gray).",
+    "accent": "#2574D0",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJD9aTYnoPe0gRi5Zp4c1OqLI",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Blade'z Barber",
+    "_auto": true,
+    "booking_link": "tel:+441942375584",
+    "booking_label": "Call 01942 375584 to book"
+  },
+  {
+    "slug": "style-barbers-wigan",
+    "name": "Style Barbers",
+    "type": "Barber",
+    "area": "Wigan",
+    "address": "272a Miles Lane, Wigan WN6 9JA",
+    "city": "Wigan",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "01257 414898",
+    "rating": 4.8,
+    "review_count": 89,
+    "maps_link": "https://maps.google.com/?cid=8067857761815689624&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJPcrLgs0Re0gRmPlml-PJ9m8",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "Closed"
+      },
+      {
+        "day": "Tuesday",
+        "time": "10:00-18:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "10:00-18:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:00-18:00"
+      },
+      {
+        "day": "Friday",
+        "time": "10:00-18:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-17:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "10:00-14:00"
+      }
+    ],
+    "headline": "Skin fades, beard trims and classic cuts in Wigan.",
+    "subline": "Style Barbers is a barber in Wigan, rated 4.8 from 89 Google reviews. Book online or give us a ring.",
+    "highlights": [
+      "Rated 4.8 from 89 Google reviews.",
+      "Specialists in skin fades, beard trims and classic cuts.",
+      "Open Tuesday to Sunday."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Cuts",
+        "items": [
+          {
+            "name": "Haircut"
+          },
+          {
+            "name": "Skin fade"
+          },
+          {
+            "name": "Clipper cut"
+          },
+          {
+            "name": "Kids' cut"
+          }
+        ]
+      },
+      {
+        "category": "Beard",
+        "items": [
+          {
+            "name": "Beard trim"
+          },
+          {
+            "name": "Hot towel shave"
+          },
+          {
+            "name": "Cut and beard"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Christmas fade"
+        },
+        {
+          "name": "Cut and beard"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "Always a fantastic haircut with eshan. Super consistent cut.",
+        "name": "Edward"
+      },
+      {
+        "text": "I bring my two boys for a haircut there. I encourage them to pick their hairstyle independently and explain it to the barber. They're met with patience and understanding. Seating area is very comfortable.",
+        "name": "Gita"
+      },
+      {
+        "text": "I recently visited Style Barber Shop and had an exceptional experience. From the moment I walked in, the staff greeted me warmly and made me feel right at home.",
+        "name": "Baran"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Artt Sh, Style Barbers).",
+    "accent": "#A56450",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJPcrLgs0Re0gRmPlml-PJ9m8",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Style Barbers",
+    "_auto": true,
+    "booking_link": "tel:+441257414898",
+    "booking_label": "Call 01257 414898 to book"
   }
 ]
