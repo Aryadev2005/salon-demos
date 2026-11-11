@@ -41,6 +41,18 @@ Rules for every demo: no online payment, no fake urgency ("only 2 slots left"),
 no invented reviews (copy real ones from Google), no third-party marketplace
 logos.
 
+## UK prospecting (Google Maps)
+
+Search `<niche> <town>` in Google Maps, e.g. `hair salon Wigan`, `barbers Doncaster`.
+Niches: hair salon, barbers, nail salon, beauty salon, lash and brow, aesthetics clinic,
+dog groomer. Mid-size towns are less pitched-to than London or Manchester: Wigan, Bolton,
+Doncaster, Rotherham, Stoke-on-Trent, Wolverhampton, Walsall, Sunderland, Preston,
+Blackpool, Swindon, Peterborough, Northampton, Luton, Derby, Hull.
+
+Keep a listing if it has **4.5+ stars, 40+ reviews**, a phone number, and **no Website
+button** (or one pointing to Facebook, Instagram, Linktree or a broken page). Skip chains.
+Copy rating, review count, hours, prices and three real reviews straight into a new lead.
+
 ## Lead format (`leads.json`)
 
 `leads.json` is a list with one object per salon.
@@ -148,6 +160,9 @@ The site root has no index on purpose, so nobody can browse the list of demos.
 - `example-hair-studio`: light mood, terracotta accent, before/after, team, prices.
 - `example-bridal-parlour`: dark mood, maroon accent, bridal band, no prices,
   closed on Tuesdays.
+- `example-uk-salon`: UK starter (Sheffield, `en-GB`, £ prices, +44 WhatsApp booking,
+  closed Sundays and Mondays). The bridal band is reused as a **Christmas & New Year
+  party bookings** band; copy this lead for any UK salon in November and December.
 
 Both use generated placeholder images and made-up details.
 

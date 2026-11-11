@@ -319,6 +319,163 @@
     "photos": 5
   },
   {
+    "slug": "example-uk-salon",
+    "name": "Hazel & Thread",
+    "type": "Hair salon",
+    "area": "Ecclesall Road",
+    "address": "412 Ecclesall Road",
+    "city": "Sheffield",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "monogram": "HT",
+    "phone": "+44 7700 900123",
+    "whatsapp": "+44 7700 900123",
+    "rating": 4.9,
+    "review_count": 168,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Ecclesall%20Road%20Sheffield",
+    "google_review_link": "",
+    "booking_link": "",
+    "instagram": "https://www.instagram.com/",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "Closed"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-17:30"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-17:30"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-20:00"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "08:30-16:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Lived-in colour and proper cuts on Ecclesall Road.",
+    "subline": "A small, friendly salon for women and men. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 4.9 from 168 Google reviews.",
+      "Free skin test 48 hours before any colour.",
+      "Late appointments until 8pm on Thursdays."
+    ],
+    "services_note": "Prices in GBP. Colour is priced after a quick consultation.",
+    "services": [
+      {
+        "category": "Cuts",
+        "items": [
+          {
+            "name": "Restyle cut and blow-dry",
+            "price": "£48",
+            "note": "1 hour"
+          },
+          {
+            "name": "Trim and blow-dry",
+            "price": "£38",
+            "note": "45 min"
+          },
+          {
+            "name": "Men's cut",
+            "price": "£22",
+            "note": "30 min"
+          },
+          {
+            "name": "Children's cut (under 12)",
+            "price": "£15"
+          }
+        ]
+      },
+      {
+        "category": "Colour",
+        "items": [
+          {
+            "name": "Full head tint",
+            "price": "from £65"
+          },
+          {
+            "name": "Half head highlights",
+            "price": "from £75"
+          },
+          {
+            "name": "Balayage",
+            "price": "from £110",
+            "note": "Consultation first"
+          },
+          {
+            "name": "Toner and gloss",
+            "price": "£30"
+          }
+        ]
+      },
+      {
+        "category": "Styling",
+        "items": [
+          {
+            "name": "Blow-dry",
+            "price": "£28"
+          },
+          {
+            "name": "Hair up",
+            "price": "from £40"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "kicker": "Christmas & New Year",
+      "title": "Party season appointments are filling up.",
+      "text": "Book your blow-dry or hair up for a work do, Christmas Day or New Year's Eve. Groups of three or more can book together on WhatsApp.",
+      "packages": [
+        {
+          "name": "Party blow-dry",
+          "price": "£28"
+        },
+        {
+          "name": "Party hair up",
+          "price": "from £40"
+        },
+        {
+          "name": "Gift voucher",
+          "price": "any amount"
+        }
+      ]
+    },
+    "gallery_title": "Recent work",
+    "gallery_text": "A few favourites from the chair. Tap any photo to see it larger.",
+    "reviews": [
+      {
+        "text": "Example review. Replace with a real one copied from Google.",
+        "name": "Sarah"
+      },
+      {
+        "text": "Example review. Replace with a real one copied from Google.",
+        "name": "Emma"
+      },
+      {
+        "text": "Example review. Replace with a real one copied from Google.",
+        "name": "James"
+      }
+    ],
+    "accent": "#2F5D50",
+    "mood": "light",
+    "photos": 6,
+    "hero_alt": "Soft copper balayage, finished with a loose blow-dry"
+  },
+  {
     "slug": "the-cut-co",
     "name": "The Cut Co",
     "type": "Hair salon",
