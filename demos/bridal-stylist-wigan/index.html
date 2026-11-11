@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>The Bridal Stylist · Beth Starkie</title>
+<meta name="description" content="Wedding and special occasion hair by Beth Starkie, based at Suzanne's on Wigan Lane. Check your date and send your enquiry in two minutes.">
+<meta name="theme-color" content="#FBF8F3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#FBF8F3;--ivory-2:#F4EEE6;--card:#FFFFFF;--line:#E6DCCF;--ink:#2E2A26;--muted:#6E655C;
+  --gold:#9C7A45;--gold-soft:#C9AE82;--blush:#EFDFD6;--dark:#2B2622;
+  --serif:"Cormorant Garamond",Georgia,serif;--sans:"Jost",system-ui,sans-serif;--ease:cubic-bezier(.2,.7,.2,1)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+section,form{scroll-margin-top:84px}
+body{margin:0;background:var(--ivory);color:var(--ink);font:300 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(1160px,100% - 32px);margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.05;margin:0}
+.kicker{font:500 12px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:50px;padding:0 26px;border-radius:999px;border:1px solid var(--ink);background:var(--ink);color:var(--ivory);font:400 15px/1 var(--sans);letter-spacing:.04em;text-decoration:none;cursor:pointer;transition:all .25s var(--ease)}
+.btn:hover{background:var(--gold);border-color:var(--gold)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--ivory);border-color:var(--ink)}
+.btn[disabled]{opacity:.35;pointer-events:none}
+
+/* pitch strip */
+.pitch{background:var(--dark);color:#F3ECE2;font-size:14px}
+.pitch .wrap{display:flex;gap:10px 16px;justify-content:center;align-items:center;flex-wrap:wrap;padding:10px 0;text-align:center}
+.pitch a{border:1px solid #F3ECE2;border-radius:999px;padding:4px 14px;text-decoration:none;font-weight:500;white-space:nowrap}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--ivory) 90%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand svg{width:30px;height:30px}
+.brand b{font:500 22px/1 var(--serif);letter-spacing:.01em}
+.brand small{display:block;font:400 11px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+nav{display:flex;gap:26px;font-size:14px;letter-spacing:.06em}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+@media (max-width:760px){nav{display:none}}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:72px 0 88px}
+.hero h1{font-size:clamp(46px,6.4vw,84px);letter-spacing:-.01em;margin:18px 0 22px}
+.hero h1 em{color:var(--gold)}
+.hero p{color:var(--muted);max-width:30em;margin:0 0 32px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.trio{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:12px;height:min(620px,78vw)}
+.trio img{width:100%;height:100%;object-fit:cover;border-radius:4px}
+.trio img:first-child{grid-row:span 2;border-radius:999px 999px 4px 4px}
+.facts{display:flex;gap:28px;flex-wrap:wrap;margin-top:36px;padding-top:24px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.facts b{display:block;font:500 24px/1 var(--serif);color:var(--ink);margin-bottom:4px}
+@media (max-width:900px){.hero{grid-template-columns:1fr;padding:44px 0 64px;gap:36px}.trio{height:110vw;max-height:560px}}
+
+/* sections */
+section.block{padding:96px 0}
+.head{max-width:640px;margin-bottom:44px}
+.head h2{font-size:clamp(40px,5vw,62px);margin:14px 0 12px}
+.head p{color:var(--muted);margin:0}
+.alt{background:var(--ivory-2)}
+
+/* how it works */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+.steps li{list-style:none;padding:28px 24px;background:var(--card);border:1px solid var(--line);border-radius:6px;counter-increment:s}
+.steps li::before{content:"0" counter(s);font:500 13px/1 var(--sans);letter-spacing:.2em;color:var(--gold)}
+.steps h3{font-size:28px;margin:14px 0 8px}
+.steps p{margin:0;color:var(--muted);font-size:15px}
+.steps{padding:0;margin:0}
+@media (max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.steps{grid-template-columns:1fr}}
+
+/* planner */
+.planner{display:grid;grid-template-columns:1.25fr .75fr;gap:28px;align-items:start}
+@media (max-width:960px){.planner{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:34px}
+@media (max-width:540px){.card{padding:24px 20px}}
+.prog{display:flex;gap:6px;margin-bottom:26px}
+.prog span{flex:1;height:3px;border-radius:3px;background:var(--line);transition:background .3s}
+.prog span.on{background:var(--gold)}
+.stepname{font:500 12px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.pane h3{font-size:36px;margin-bottom:22px}
+.pane{display:none}
+.pane.on{display:block;animation:fade .45s var(--ease)}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:540px){.grid2{grid-template-columns:1fr}}
+label.f{display:block;font-size:14px;color:var(--muted)}
+label.f span{display:block;margin-bottom:7px}
+input,select,textarea{width:100%;min-width:0;height:50px;padding:0 15px;border:1px solid var(--line);border-radius:6px;background:var(--ivory);color:var(--ink);font:400 16px var(--sans);outline:none;transition:border-color .2s}
+textarea{height:96px;padding:12px 15px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--gold)}
+.counters{display:grid;gap:10px}
+.ctr{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border:1px solid var(--line);border-radius:6px}
+.ctr div b{display:block;font-weight:400;color:var(--ink)}
+.ctr div small{color:var(--muted);font-size:13px}
+.ctr .n{display:flex;align-items:center;gap:14px}
+.ctr button{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--ivory);font:400 20px/1 var(--sans);color:var(--ink);cursor:pointer}
+.ctr button:hover{border-color:var(--gold)}
+.ctr output{min-width:20px;text-align:center;font:500 20px var(--serif)}
+.toggle{display:flex;align-items:center;gap:12px;margin-top:14px;padding:14px 16px;border:1px solid var(--line);border-radius:6px;cursor:pointer;font-size:15px}
+.toggle input{width:20px;height:20px;accent-color:var(--gold)}
+.styles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media (max-width:540px){.styles{grid-template-columns:repeat(2,1fr)}}
+.sty{position:relative;border:0;padding:0;background:none;cursor:pointer;border-radius:6px;overflow:hidden;aspect-ratio:3/4}
+.sty img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+.sty:hover img{transform:scale(1.04)}
+.sty span{position:absolute;left:0;right:0;bottom:0;padding:22px 10px 9px;background:linear-gradient(transparent,rgba(30,25,20,.75));color:#fff;font:400 13px/1.2 var(--sans);text-align:left}
+.sty::after{content:"";position:absolute;inset:0;border:3px solid transparent;border-radius:6px;transition:border-color .2s}
+.sty[aria-pressed="true"]::after{border-color:var(--gold)}
+.sty[aria-pressed="true"] span::before{content:"✓ "}
+.nav-row{display:flex;justify-content:space-between;gap:12px;margin-top:28px}
+.err{color:#A0453A;font-size:14px;margin:12px 0 0;min-height:1em}
+.note{font-size:13px;color:var(--muted);margin-top:10px}
+
+/* morning timeline */
+.side h3{font-size:30px;margin-bottom:6px}
+.side p.sub{color:var(--muted);font-size:14px;margin:0 0 20px}
+.tl{list-style:none;margin:0;padding:0;border-left:1px solid var(--gold-soft)}
+.tl li{position:relative;padding:0 0 16px 20px;font-size:15px}
+.tl li::before{content:"";position:absolute;left:-5px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--ivory);border:1px solid var(--gold)}
+.tl li.ready::before{background:var(--gold)}
+.tl time{display:block;font:500 20px/1.2 var(--serif);color:var(--ink)}
+.tl small{color:var(--muted)}
+.empty{color:var(--muted);font-size:15px;padding:18px;border:1px dashed var(--line);border-radius:6px;text-align:center}
+
+/* summary */
+.summary{white-space:pre-wrap;background:var(--ivory);border:1px solid var(--line);border-radius:6px;padding:18px;font:400 14.5px/1.6 var(--sans);max-height:320px;overflow:auto}
+.done-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,140%);background:var(--dark);color:#fff;padding:12px 20px;border-radius:999px;font-size:14px;transition:transform .35s var(--ease);z-index:50}
+.toast.on{transform:translate(-50%,0)}
+
+/* gallery */
+.gal{columns:4 220px;column-gap:12px}
+.gal img{width:100%;margin-bottom:12px;border-radius:4px;break-inside:avoid}
+@media (max-width:540px){.gal{columns:2;column-gap:8px}.gal img{margin-bottom:8px}.stat{min-width:0;flex:1}}
+
+/* pipeline (Beth's view) */
+.pipe-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:28px}
+.stats{display:flex;gap:12px;flex-wrap:wrap}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:12px 18px;min-width:120px}
+.stat b{display:block;font:500 28px/1 var(--serif)}
+.stat small{color:var(--muted);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.board{display:grid;grid-template-columns:repeat(5,minmax(220px,1fr));gap:12px;overflow-x:auto;padding-bottom:10px;scroll-snap-type:x mandatory}
+.col{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px;min-height:240px;scroll-snap-align:start}
+.col h4{margin:0 0 12px;font:500 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between}
+.col h4 i{font-style:normal;color:var(--gold)}
+.lead{background:var(--ivory);border:1px solid var(--line);border-radius:6px;padding:12px;margin-bottom:10px;font-size:14px}
+.lead b{display:block;font:500 19px/1.2 var(--serif)}
+.lead .meta{color:var(--muted);font-size:13px;margin:4px 0 8px}
+.lead .tag{display:inline-block;font-size:11px;letter-spacing:.06em;padding:2px 8px;border-radius:999px;background:var(--blush);margin:0 4px 4px 0}
+.lead .tag.new{background:var(--gold);color:#fff}
+.lead .acts{display:flex;gap:6px;margin-top:8px}
+.lead .acts button{flex:1;height:32px;border-radius:999px;border:1px solid var(--line);background:#fff;font:400 13px var(--sans);cursor:pointer;color:var(--ink)}
+.lead .acts button:hover{border-color:var(--gold);color:var(--gold)}
+.lead .next{font-size:12.5px;color:var(--gold);margin-top:6px}
+.sample{font-size:13px;color:var(--muted);margin-top:14px}
+
+footer{background:var(--dark);color:#CFC6BA;padding:56px 0 36px;font-size:15px}
+footer .wrap{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}
+footer b{display:block;color:#fff;font:500 24px/1.2 var(--serif);margin-bottom:6px}
+footer h5{margin:0 0 8px;color:#fff;font:500 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase}
+footer a{color:#fff;text-decoration:none}
+footer .fine{grid-column:1/-1;border-top:1px solid #4A423B;padding-top:18px;font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media (max-width:760px){footer .wrap{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="pitch"><div class="wrap"><span>This is a free preview made for The Bridal Stylist. Want it live, linked from your Instagram bio?</span><a href="https://wa.me/918637859578?text=Hi%20Aryadev%2C%20I%20saw%20the%20bridal%20booking%20page%20you%20made%20for%20The%20Bridal%20Stylist." target="_blank" rel="noopener">WhatsApp Aryadev</a></div></div>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="The Bridal Stylist, back to top">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M7 27C12 17 18 9 27 4c-2 7-6 13-12 17-2.5 1.6-5 3-8 6z" fill="none" stroke="#9C7A45" stroke-width="1.2"/><path d="M9 25c4-5 9-10 14-15M12 21l-2-3M15 18l-2.5-3.5M18 15l-2-4M21 12l-1.5-4" stroke="#C9AE82" stroke-width=".9" fill="none"/></svg>
+      <span><b>The Bridal Stylist</b><small>by Beth Starkie</small></span>
+    </a>
+    <nav aria-label="Sections"><a href="#how">How it works</a><a href="#plan">Check your date</a><a href="#work">Portfolio</a><a href="#pipeline">Beth's view</a></nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="wrap hero">
+  <div>
+    <span class="kicker">Wedding &amp; special occasion hair · Wigan</span>
+    <h1>Hair for your <em>wedding morning</em>, done beautifully.</h1>
+    <p>Soft waves, sculpted up-dos, sleek ponytails and half-ups for brides and their bridal party, by Beth Starkie at Suzanne's on Wigan Lane. Tell me about your day in two minutes and I'll come back with availability and a quote.</p>
+    <div class="cta"><a class="btn" href="#plan">Check my date</a><a class="btn ghost" href="#work">See the portfolio</a></div>
+    <div class="facts">
+      <div><b>Brides</b>and bridal parties</div>
+      <div><b>Trials</b>before the big day</div>
+      <div><b>Wigan Lane</b>at Suzanne's</div>
+    </div>
+  </div>
+  <div class="trio" aria-hidden="true">
+    <img src="img/half-up.jpg" alt="">
+    <img src="img/sculpted.jpg" alt="">
+    <img src="img/ponytail.jpg" alt="">
+  </div>
+</section>
+
+<section class="block alt" id="how">
+  <div class="wrap">
+    <div class="head"><span class="kicker">How it works</span><h2>From first message to "I do".</h2><p>No more back-and-forth in the DMs. Everything Beth needs, in one go.</p></div>
+    <ol class="steps">
+      <li><h3>Check your date</h3><p>Pick your wedding date, venue and the time you need to be ready.</p></li>
+      <li><h3>Your party</h3><p>Add bridesmaids, mums and flower girls, and choose a trial.</p></li>
+      <li><h3>Your style</h3><p>Tap the looks you love from Beth's real work.</p></li>
+      <li><h3>Send it</h3><p>Your enquiry goes to Beth, who replies with availability and your quote.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block" id="plan">
+  <div class="wrap">
+    <div class="head"><span class="kicker">Enquire</span><h2>Plan your wedding morning.</h2><p>It takes about two minutes. Your morning timeline builds as you go.</p></div>
+    <div class="planner">
+      <form class="card" id="form" novalidate>
+        <div class="prog" aria-hidden="true"><span class="on"></span><span></span><span></span><span></span></div>
+
+        <div class="pane on" data-step="0">
+          <div class="stepname">Step 1 of 4</div>
+          <h3>The day</h3>
+          <div class="grid2">
+            <label class="f"><span>Wedding date</span><input type="date" id="date" required></label>
+            <label class="f"><span>Ready by (ceremony prep)</span><input type="time" id="ready" value="12:00" required></label>
+            <label class="f"><span>Getting ready at</span><input type="text" id="venue" placeholder="Venue, hotel or home, and town" required></label>
+            <label class="f"><span>Occasion</span><select id="occasion"><option>Wedding</option><option>Civil ceremony</option><option>Engagement party</option><option>Prom or special occasion</option></select></label>
+          </div>
+        </div>
+
+        <div class="pane" data-step="1">
+          <div class="stepname">Step 2 of 4</div>
+          <h3>Who needs their hair doing?</h3>
+          <div class="counters">
+            <div class="ctr"><div><b>Bride</b><small>You!</small></div><div class="n"><button type="button" data-k="bride" data-d="-1" aria-label="One fewer bride">−</button><output id="c-bride">1</output><button type="button" data-k="bride" data-d="1" aria-label="One more bride">+</button></div></div>
+            <div class="ctr"><div><b>Bridesmaids</b><small>Including maid of honour</small></div><div class="n"><button type="button" data-k="maids" data-d="-1" aria-label="One fewer bridesmaid">−</button><output id="c-maids">0</output><button type="button" data-k="maids" data-d="1" aria-label="One more bridesmaid">+</button></div></div>
+            <div class="ctr"><div><b>Mums &amp; guests</b><small>Mother of the bride or groom, family</small></div><div class="n"><button type="button" data-k="guests" data-d="-1" aria-label="One fewer guest">−</button><output id="c-guests">0</output><button type="button" data-k="guests" data-d="1" aria-label="One more guest">+</button></div></div>
+            <div class="ctr"><div><b>Flower girls</b><small>Under 12</small></div><div class="n"><button type="button" data-k="kids" data-d="-1" aria-label="One fewer flower girl">−</button><output id="c-kids">0</output><button type="button" data-k="kids" data-d="1" aria-label="One more flower girl">+</button></div></div>
+          </div>
+          <label class="toggle"><input type="checkbox" id="trial" checked> I'd like a bridal trial before the day</label>
+        </div>
+
+        <div class="pane" data-step="2">
+          <div class="stepname">Step 3 of 4</div>
+          <h3>Looks you love</h3>
+          <div class="styles" id="styles"></div>
+          <label class="f" style="margin-top:16px"><span>Anything else? (hair length, accessories, veil, Pinterest board)</span><textarea id="notes" placeholder="e.g. Long, thick hair. Wearing a cathedral veil."></textarea></label>
+        </div>
+
+        <div class="pane" data-step="3">
+          <div class="stepname">Step 4 of 4</div>
+          <h3>Where can Beth reach you?</h3>
+          <div class="grid2">
+            <label class="f"><span>Your name</span><input type="text" id="name" autocomplete="name" required></label>
+            <label class="f"><span>Mobile</span><input type="tel" id="phone" autocomplete="tel" required></label>
+            <label class="f"><span>Email</span><input type="email" id="email" autocomplete="email"></label>
+            <label class="f"><span>Instagram (optional)</span><input type="text" id="ig" placeholder="@yourname"></label>
+          </div>
+        </div>
+
+        <div class="pane" data-step="4">
+          <div class="stepname">Your enquiry is ready</div>
+          <h3>Thank you, <span id="first"></span>!</h3>
+          <p class="note" style="font-size:15px;margin:0 0 14px">Send it to Beth on Instagram. We've copied it for you, so just paste it into the chat.</p>
+          <div class="summary" id="summary"></div>
+          <div class="done-actions">
+            <a class="btn" id="sendIg" href="https://ig.me/m/_thebridalstylist" target="_blank" rel="noopener">Send to Beth on Instagram</a>
+            <button class="btn ghost" type="button" id="copy">Copy again</button>
+            <a class="btn ghost" href="tel:+441942824634">Call Suzanne's</a>
+          </div>
+        </div>
+
+        <p class="err" id="err" role="alert"></p>
+        <div class="nav-row" id="navrow">
+          <button class="btn ghost" type="button" id="back" disabled>Back</button>
+          <button class="btn" type="button" id="next">Next</button>
+        </div>
+      </form>
+
+      <aside class="card side" aria-live="polite">
+        <h3>Your morning</h3>
+        <p class="sub">Estimated, with one stylist. Beth will confirm exact timings.</p>
+        <div id="timeline"><div class="empty">Add your ready time and party to see your morning.</div></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="work">
+  <div class="wrap">
+    <div class="head"><span class="kicker">Portfolio</span><h2>Recent brides &amp; bridal parties.</h2><p>More every week on <a href="https://www.instagram.com/_thebridalstylist/" target="_blank" rel="noopener">@_thebridalstylist</a>.</p></div>
+    <div class="gal" id="gal"></div>
+  </div>
+</section>
+
+<section class="block" id="pipeline">
+  <div class="wrap">
+    <div class="pipe-head">
+      <div class="head" style="margin:0"><span class="kicker">Beth's view</span><h2>Your bridal pipeline.</h2><p>Every enquiry lands here, so nothing gets lost in the DMs. Move each bride along as you go.</p></div>
+      <div class="stats"><div class="stat"><b id="st-open">0</b><small>Open enquiries</small></div><div class="stat"><b id="st-booked">0</b><small>Brides booked</small></div><div class="stat"><b id="st-heads">0</b><small>Heads of hair</small></div></div>
+    </div>
+    <div class="board" id="board"></div>
+    <p class="sample">Sample brides for the demo. Enquiries you send from this page in this browser appear in "New enquiry". The live version would collect them from every visitor and notify Beth by text or email.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>The Bridal Stylist</b>Wedding &amp; special occasion hair by Beth Starkie.<br>At Suzanne's, 50 Wigan Lane, Wigan WN1 1XS.</div>
+    <div><h5>Enquiries</h5><a href="https://ig.me/m/_thebridalstylist" target="_blank" rel="noopener">Message on Instagram</a><br><a href="tel:+441942824634">01942 824634</a></div>
+    <div><h5>Follow</h5><a href="https://www.instagram.com/_thebridalstylist/" target="_blank" rel="noopener">@_thebridalstylist</a><br><a href="https://www.instagram.com/bethstarkiehair_suzannes/" target="_blank" rel="noopener">@bethstarkiehair_suzannes</a></div>
+    <div class="fine"><span>© <span id="yr"></span> The Bridal Stylist</span><span>Demo site, made to show Beth what her booking page could look like</span></div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function(){
+  "use strict";
+  var STYLES=[
+    ["half-up","Half-up waves"],["sculpted","Sculpted up-do"],["ponytail","Hollywood ponytail"],["waves","Glam waves"],
+    ["low-bun","Sleek low bun"],["textured-updo","Textured up-do"],["half-up-dark","Half-up, dark &amp; glossy"],["bow","Bow &amp; veil"]
+  ];
+  var GALLERY=["half-up","copper-updo","sculpted","ponytail","bow","updo-twist","waves","half-up-dark","textured-updo","low-bun"];
+  // Planning estimates for the timeline only (Beth sets her real timings in the live version)
+  var MIN={bride:60,maids:40,guests:35,kids:20};
+  var STAGES=["New enquiry","Quoted","Trial booked","Deposit paid","Wedding done"];
+  var KEY="tbs-pipeline-v1";
+
+  var $=function(id){return document.getElementById(id)};
+  var step=0, party={bride:1,maids:0,guests:0,kids:0}, picked=[];
+  var panes=document.querySelectorAll(".pane"), bars=document.querySelectorAll(".prog span");
+  $("yr").textContent=new Date().getFullYear();
+
+  // min date = tomorrow
+  var t=new Date(); t.setDate(t.getDate()+1); $("date").min=t.toISOString().slice(0,10);
+
+  // style picker + gallery
+  var sw=$("styles");
+  STYLES.forEach(function(s){
+    var b=document.createElement("button"); b.type="button"; b.className="sty"; b.setAttribute("aria-pressed","false");
+    b.innerHTML='<img src="img/'+s[0]+'.jpg" alt="" loading="lazy"><span>'+s[1]+'</span>';
+    b.addEventListener("click",function(){
+      var on=b.getAttribute("aria-pressed")!=="true"; b.setAttribute("aria-pressed",String(on));
+      var name=b.querySelector("span").textContent.replace(/^✓ /,"");
+      picked=on?picked.concat([name]):picked.filter(function(x){return x!==name});
+    });
+    sw.appendChild(b);
+  });
+  var gal=$("gal");
+  GALLERY.forEach(function(g){var i=document.createElement("img");i.src="img/"+g+".jpg";i.alt="Bridal hair by Beth Starkie";i.loading="lazy";gal.appendChild(i)});
+
+  // counters
+  document.querySelectorAll(".ctr button").forEach(function(b){
+    b.addEventListener("click",function(){
+      var k=b.dataset.k, min=k==="bride"?0:0, max=k==="bride"?2:12;
+      party[k]=Math.max(min,Math.min(max,party[k]+Number(b.dataset.d)));
+      $("c-"+k).textContent=party[k]; timeline();
+    });
+  });
+  ["ready","date"].forEach(function(id){$(id).addEventListener("input",timeline)});
+
+  function heads(){return party.bride+party.maids+party.guests+party.kids}
+  function fmt(mins){mins=(mins+1440)%1440;var h=Math.floor(mins/60),m=mins%60,ap=h>=12?"pm":"am";h=h%12||12;return h+(m?":"+String(m).padStart(2,"0"):"")+ap}
+  function timeline(){
+    var r=$("ready").value, box=$("timeline");
+    if(!r||heads()===0){box.innerHTML='<div class="empty">Add your ready time and party to see your morning.</div>';return}
+    var p=r.split(":"), ready=Number(p[0])*60+Number(p[1]);
+    // bride goes last; everyone else before her, kids first
+    var order=[];
+    for(var i=0;i<party.kids;i++)order.push(["Flower girl "+(i+1),MIN.kids]);
+    for(i=0;i<party.guests;i++)order.push([party.guests>1?"Mum / guest "+(i+1):"Mum / guest",MIN.guests]);
+    for(i=0;i<party.maids;i++)order.push([party.maids>1?"Bridesmaid "+(i+1):"Bridesmaid",MIN.maids]);
+    for(i=0;i<party.bride;i++)order.push([party.bride>1?"Bride "+(i+1):"Bride",MIN.bride]);
+    var buffer=20, total=order.reduce(function(a,o){return a+o[1]},0)+buffer, start=ready-total, cur=start, html='<ol class="tl">';
+    html+='<li><time>'+fmt(start-15)+'</time>Beth arrives and sets up</li>';
+    order.forEach(function(o){html+='<li><time>'+fmt(cur)+'</time>'+o[0]+' <small>· '+o[1]+' min</small></li>';cur+=o[1]});
+    html+='<li><time>'+fmt(cur)+'</time>Veil, accessories &amp; touch-ups</li>';
+    html+='<li class="ready"><time>'+fmt(ready)+'</time>Ready for photos ✨</li></ol>';
+    var hrs=Math.floor(total/60), mm=total%60;
+    html+='<p class="note">'+heads()+' '+(heads()===1?"person":"people")+', about '+(hrs?hrs+" hr ":"")+(mm?mm+" min":"")+' of styling.'+(start<6*60?" That's an early start, so Beth may suggest a second stylist.":"")+'</p>';
+    box.innerHTML=html;
+  }
+
+  function show(n){
+    step=n;
+    panes.forEach(function(p){p.classList.toggle("on",Number(p.dataset.step)===n)});
+    bars.forEach(function(b,i){b.classList.toggle("on",i<=Math.min(n,3))});
+    $("back").disabled=n===0; $("next").textContent=n===3?"Create my enquiry":"Next";
+    $("navrow").style.display=n===4?"none":"flex"; $("err").textContent="";
+    if(n>0)$("form").scrollIntoView({behavior:"smooth",block:"start"});
+  }
+  function check(n){
+    if(n===0){
+      if(!$("date").value)return "Pick your wedding date.";
+      if(!$("ready").value)return "What time do you need to be ready?";
+      if(!$("venue").value.trim())return "Where are you getting ready?";
+    }
+    if(n===1&&heads()===0)return "Add at least one person.";
+    if(n===3){
+      if(!$("name").value.trim())return "Please add your name.";
+      if($("phone").value.replace(/\D/g,"").length<10)return "Please add a mobile number Beth can reach you on.";
+    }
+    return "";
+  }
+  $("next").addEventListener("click",function(){
+    var e=check(step); if(e){$("err").textContent=e;return}
+    if(step===3){finish();return}
+    show(step+1);
+  });
+  $("back").addEventListener("click",function(){if(step>0)show(step-1)});
+
+  function prettyDate(v){var d=new Date(v+"T12:00:00");return d.toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long",year:"numeric"})}
+  function partyText(){
+    var bits=[];
+    if(party.bride)bits.push(party.bride===1?"Bride":party.bride+" brides");
+    if(party.maids)bits.push(party.maids+" bridesmaid"+(party.maids>1?"s":""));
+    if(party.guests)bits.push(party.guests+" mum"+(party.guests>1?"s/guests":"/guest"));
+    if(party.kids)bits.push(party.kids+" flower girl"+(party.kids>1?"s":""));
+    return bits.join(", ");
+  }
+  function summaryText(){
+    var L=[];
+    L.push("Hi Beth! 💐 Bridal hair enquiry:");
+    L.push("");
+    L.push("📅 "+$("occasion").value+": "+prettyDate($("date").value));
+    L.push("📍 Getting ready at: "+$("venue").value.trim());
+    L.push("⏰ Ready by: "+fmt(Number($("ready").value.split(":")[0])*60+Number($("ready").value.split(":")[1])));
+    L.push("👰 Party: "+partyText()+" ("+heads()+" in total)");
+    L.push("✂️ Trial: "+($("trial").checked?"Yes please":"No"));
+    if(picked.length)L.push("💛 Looks I love: "+picked.join(", "));
+    if($("notes").value.trim())L.push("📝 "+$("notes").value.trim());
+    L.push("");
+    L.push($("name").value.trim()+" · "+$("phone").value.trim()+($("email").value.trim()?" · "+$("email").value.trim():"")+($("ig").value.trim()?" · "+$("ig").value.trim():""));
+    return L.join("\n");
+  }
+  function copy(text){
+    function ok(){toast("Copied! Paste it into your chat with Beth.")}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(ok,fallback)}else fallback();
+    function fallback(){var ta=document.createElement("textarea");ta.value=text;document.body.appendChild(ta);ta.select();try{document.execCommand("copy");ok()}catch(e){toast("Select the text above and copy it.")}ta.remove()}
+  }
+  function toast(m){var t=$("toast");t.textContent=m;t.classList.add("on");clearTimeout(toast.h);toast.h=setTimeout(function(){t.classList.remove("on")},2600)}
+
+  function finish(){
+    var text=summaryText();
+    $("summary").textContent=text; $("first").textContent=$("name").value.trim().split(" ")[0];
+    show(4); copy(text);
+    var leads=load();
+    leads.unshift({id:Date.now(),name:$("name").value.trim(),date:$("date").value,venue:$("venue").value.trim(),heads:heads(),party:partyText(),trial:$("trial").checked,looks:picked.slice(0,2),stage:0,fresh:true});
+    save(leads); render();
+  }
+  $("copy").addEventListener("click",function(){copy($("summary").textContent)});
+  $("sendIg").addEventListener("click",function(){copy($("summary").textContent)});
+
+  // pipeline
+  function iso(daysAhead){var d=new Date();d.setDate(d.getDate()+daysAhead);return d.toISOString().slice(0,10)}
+  var SAMPLE=[
+    {id:1,name:"Sophie H.",date:iso(212),venue:"Haigh Hall, Wigan",heads:6,party:"Bride, 4 bridesmaids, 1 mum",trial:true,looks:["Half-up waves"],stage:0},
+    {id:2,name:"Jess M.",date:iso(160),venue:"Kilhey Court, Standish",heads:4,party:"Bride, 3 bridesmaids",trial:true,looks:["Sculpted up-do"],stage:1},
+    {id:3,name:"Amy R.",date:iso(98),venue:"Home, Orrell",heads:3,party:"Bride, 2 bridesmaids",trial:true,looks:["Hollywood ponytail"],stage:2},
+    {id:4,name:"Laura K.",date:iso(54),venue:"Mere Golf Resort",heads:7,party:"Bride, 5 bridesmaids, 1 mum",trial:false,looks:["Glam waves"],stage:3},
+    {id:5,name:"Chloe P.",date:iso(-12),venue:"Shrigley Hall",heads:5,party:"Bride, 4 bridesmaids",trial:true,looks:["Bow & veil"],stage:4}
+  ];
+  function load(){try{var v=JSON.parse(localStorage.getItem(KEY)||"null");return Array.isArray(v)?v:SAMPLE.slice()}catch(e){return SAMPLE.slice()}}
+  function save(v){try{localStorage.setItem(KEY,JSON.stringify(v))}catch(e){}}
+  var NEXT=["Reply with availability & quote","Book the trial","Take the deposit","Confirm timings the week before","Ask for a review & photos"];
+  function daysTo(d){return Math.round((new Date(d+"T12:00:00")-new Date())/864e5)}
+  function render(){
+    var leads=load(), board=$("board"); board.innerHTML="";
+    STAGES.forEach(function(name,si){
+      var col=document.createElement("div"); col.className="col";
+      var items=leads.filter(function(l){return l.stage===si});
+      col.innerHTML='<h4>'+name+'<i>'+items.length+'</i></h4>';
+      items.forEach(function(l){
+        var dd=daysTo(l.date), when=dd>=0?(dd===0?"Today":"in "+dd+" days"):Math.abs(dd)+" days ago";
+        var c=document.createElement("div"); c.className="lead";
+        c.innerHTML='<b></b><div class="meta"></div><div class="tags"></div><div class="next"></div><div class="acts"></div>';
+        c.querySelector("b").textContent=l.name;
+        c.querySelector(".meta").textContent=prettyDate(l.date).replace(/^\w+, /,"")+" · "+when+" · "+l.venue;
+        var tags=c.querySelector(".tags");
+        if(l.fresh){var n=document.createElement("span");n.className="tag new";n.textContent="From your site";tags.appendChild(n)}
+        [l.heads+" heads",l.trial?"Trial":"No trial"].concat(l.looks||[]).forEach(function(x){var s=document.createElement("span");s.className="tag";s.textContent=x;tags.appendChild(s)});
+        c.querySelector(".next").textContent="Next: "+NEXT[si];
+        var acts=c.querySelector(".acts");
+        if(si>0){var b=document.createElement("button");b.type="button";b.textContent="← Back";b.onclick=function(){move(l.id,-1)};acts.appendChild(b)}
+        if(si<STAGES.length-1){var f=document.createElement("button");f.type="button";f.textContent=STAGES[si+1]+" →";f.onclick=function(){move(l.id,1)};acts.appendChild(f)}
+        col.appendChild(c);
+      });
+      board.appendChild(col);
+    });
+    $("st-open").textContent=leads.filter(function(l){return l.stage<3}).length;
+    $("st-booked").textContent=leads.filter(function(l){return l.stage>=3}).length;
+    $("st-heads").textContent=leads.filter(function(l){return l.stage>=3&&l.stage<4}).reduce(function(a,l){return a+l.heads},0);
+  }
+  function move(id,d){var leads=load();leads.forEach(function(l){if(l.id===id){l.stage=Math.max(0,Math.min(STAGES.length-1,l.stage+d));l.fresh=false}});save(leads);render()}
+  render(); timeline();
+})();
+</script>
+</body>
+</html>

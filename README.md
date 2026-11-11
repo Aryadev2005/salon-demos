@@ -170,6 +170,13 @@ Both use generated placeholder images and made-up details.
 
 ## Live demos
 
+- `bridal-stylist-wigan`: The Bridal Stylist by Beth Starkie (@_thebridalstylist), bridal hair at Suzanne's, 50 Wigan Lane.
+  Hand-built page (not from `build.py`) in her ivory and gold. A 4-step enquiry (date, venue and ready time; party
+  counts and trial; tap looks from her real work; contact) builds a live wedding-morning timeline (planning estimates:
+  bride 60 min, bridesmaid 40, guest 35, flower girl 20, plus 20 min buffer), then copies a formatted enquiry and opens
+  her Instagram DMs (ig.me). `#pipeline` is Beth's board: New enquiry, Quoted, Trial booked, Deposit paid, Wedding done,
+  with sample brides plus any enquiry sent in that browser (localStorage). Photos are crops of her Instagram grid.
+
 - `bleach`: Bleach Hair, 385 Smithdown Road, Wavertree, Liverpool L15 3JJ (Karl Mathers). Bespoke light page in the
   salon's own colours (red and blue velvet, white plaster). The hero is a real-time three.js copy of the gold iridescent
   mosaic sign in the salon: about 6,000 instanced glass tiles (RoundedBoxGeometry, MeshPhysicalMaterial with
