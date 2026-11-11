@@ -161,10 +161,11 @@ def validate(lead, folder):
     if has_reviews(lead):
         if len(lead["reviews"]) != 3 or not all(isinstance(r, dict) and r.get("text") and r.get("name") for r in lead["reviews"]):
             problems.append("reviews must be exactly 3 objects with 'text' and 'name'")
-        if not isinstance(lead.get("rating"), (int, float)) or not 0 <= float(lead["rating"]) <= 5:
-            problems.append("rating must be a number between 0 and 5")
-        if not isinstance(lead.get("review_count"), int):
-            problems.append("review_count must be a whole number")
+        if has_rating(lead):
+            if not isinstance(lead.get("rating"), (int, float)) or not 0 <= float(lead["rating"]) <= 5:
+                problems.append("rating must be a number between 0 and 5")
+            if not isinstance(lead.get("review_count"), int):
+                problems.append("review_count must be a whole number")
     days = [h.get("day") for h in lead["hours"] if isinstance(h, dict)]
     if days != DAYS or not all(h.get("time") for h in lead["hours"]):
         problems.append("hours must list Monday..Sunday in order as {day, time} (time may be \"Closed\")")
@@ -363,8 +364,12 @@ def has_reviews(lead):
     return bool(lead.get("reviews") or lead.get("rating") or lead.get("review_count"))
 
 
+def has_rating(lead):
+    return lead.get("rating") not in (None, "") or lead.get("review_count") not in (None, "")
+
+
 def rating_pill(lead):
-    if not has_reviews(lead):
+    if not has_rating(lead):
         return ""
     return (f'<a class="pill-s" href="#reviews"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.6 7.2.7-5.4 4.8 1.6 7L12 17.5 5.6 21.1l1.6-7L1.8 9.3 9 8.6z"/></svg>'
             f'{float(lead["rating"]):.1f} · {lead["review_count"]:,} {e(lead.get("review_source") or "Google")} reviews</a>')
@@ -378,13 +383,16 @@ def sec_reviews(lead):
         f'<blockquote><p>“{e(r["text"])}”</p><footer>{e(r["name"])} · {e(lead.get("review_source") or "Google")} review</footer></blockquote>'
         for r in lead["reviews"]
     )
-    rating = f'{float(lead["rating"]):.1f}'
+    if has_rating(lead):
+        top = f'''<div class="rating">
+    <b>{float(lead["rating"]):.1f}</b>
+    <div><div class="stars" aria-hidden="true">{star * 5}</div><span>from {lead["review_count"]:,} {e(lead.get("review_source") or "Google")} reviews</span></div>
+  </div>'''
+    else:
+        top = '<h2 class="rv-h">What clients say</h2>'
     return f'''
 <section id="reviews" class="wrap block">
-  <div class="rating">
-    <b>{rating}</b>
-    <div><div class="stars" aria-hidden="true">{star * 5}</div><span>from {lead["review_count"]:,} {e(lead.get("review_source") or "Google")} reviews</span></div>
-  </div>
+  {top}
   <div class="quotes">{q}</div>
   <div class="rv-cta"><a class="btn ghost" href="#review">Been in recently? Leave a review</a></div>
 </section>'''

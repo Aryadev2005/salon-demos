@@ -1143,6 +1143,20 @@
     "colors": {
       "gold": "#D8BE92"
     },
-    "hero_alt": "Long, soft-waved hair with a blended ash and honey balayage"
+    "hero_alt": "Long, soft-waved hair with a blended ash and honey balayage",
+    "reviews": [
+      {
+        "text": "Had my cut by Suzanne - first walked in and the atmosphere was relaxed. My 4 year old daughter came with me and Suzanne was very accommodating and friendly to us both.",
+        "name": "Frankie"
+      },
+      {
+        "text": "Being extremely hair sore and having bad experiences in the past, I was very pleased with the service.",
+        "name": "Megan"
+      },
+      {
+        "text": "Had an amazing day at Suzanne's doing Emily Starkie's builder gel course!",
+        "name": "Chloe"
+      }
+    ]
   }
 ]
