@@ -86,7 +86,7 @@ Copy rating, review count, hours, prices and three real reviews straight into a 
 | `services_note` | no | line under the Services heading |
 | `before_after` | no | up to 3 `{title, note?}` |
 | `team` | no | `{name, role, note?}`; names also become stylist chips on `#review` |
-| `bridal` | no | `{kicker?, title, text, packages?: [{name, price?}]}` |
+| `bridal` | no | `{kicker?, title, text, packages?: [{name, price?}], nav?}`; `nav` renames the menu link (default "Bridal"), e.g. "Christmas" |
 | `gallery_title`, `gallery_text` | no | defaults to "Recent looks" |
 | `monogram` | no | 1–2 letters; defaults to the initials of `name` |
 | `hero_alt` | no | description of the hero photo or video for screen readers |

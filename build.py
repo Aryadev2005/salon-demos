@@ -505,7 +505,7 @@ def render(lead):
         nav.append(("#results", "Results"))
     nav.append(("#gallery", "Gallery"))
     if lead.get("bridal"):
-        nav.append(("#bridal", "Bridal"))
+        nav.append(("#bridal", lead["bridal"].get("nav") or "Bridal"))
     nav += [("#reviews", "Reviews"), ("#visit", "Visit")]
 
     data = {

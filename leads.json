@@ -452,7 +452,8 @@
           "name": "Gift voucher",
           "price": "any amount"
         }
-      ]
+      ],
+      "nav": "Christmas"
     },
     "gallery_title": "Recent work",
     "gallery_text": "A few favourites from the chair. Tap any photo to see it larger.",
@@ -618,5 +619,173 @@
     "mood": "dark",
     "photos": 8,
     "hero_alt": "A bright pink textured crop, cut and coloured at The Cut Co"
+  },
+  {
+    "slug": "phoenix-wigan",
+    "name": "Phoenix Hair & Beauty",
+    "type": "Nails, lashes & brows",
+    "area": "Wigan town centre",
+    "address": "11-13 Jaxons Court, Wigan WN1 1LR",
+    "city": "Wigan",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "monogram": "P",
+    "rating": 5.0,
+    "review_count": 1731,
+    "review_source": "Fresha",
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Phoenix%20Hair%20%26%20Beauty%2011-13%20Jaxons%20Court%20Wigan%20WN1%201LR",
+    "booking_link": "https://www.fresha.com/a/phoenix-hair-beauty-wigan-11-13-jaxons-court-sxzn0iud",
+    "booking_label": "Book on Fresha",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "10:00-19:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "10:00-19:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "10:00-19:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:00-19:00"
+      },
+      {
+        "day": "Friday",
+        "time": "10:00-19:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "10:00-19:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "11:00-18:00"
+      }
+    ],
+    "headline": "Nails, lashes and brows, done properly, in the heart of Wigan.",
+    "subline": "Karina's salon on Jaxons Court for BIAB, gel, extensions, lash extensions and brow lamination. Open seven days, book online any time.",
+    "highlights": [
+      "Rated 5.0 from 1,731 client reviews on Fresha.",
+      "BIAB, gel and nail extensions by Liza, plus lashes, brows and pedicures.",
+      "Open seven days a week, until 7pm Monday to Saturday."
+    ],
+    "services_note": "Prices from the salon's online booking. Tap Book to see all 68 treatments.",
+    "services": [
+      {
+        "category": "Nails",
+        "items": [
+          {
+            "name": "BIAB nails",
+            "price": "£42",
+            "note": "1 hour"
+          },
+          {
+            "name": "Gel polish, fingers",
+            "price": "£40",
+            "note": "1 hour"
+          },
+          {
+            "name": "Nail extensions",
+            "price": "from £45",
+            "note": "1 hr 15 min"
+          },
+          {
+            "name": "Gel toes",
+            "price": "£45",
+            "note": "1 hour"
+          }
+        ]
+      },
+      {
+        "category": "Lashes",
+        "items": [
+          {
+            "name": "Light volume lash extensions",
+            "price": "from £50",
+            "note": "1 to 1½ hours"
+          },
+          {
+            "name": "Mega volume lash extensions",
+            "price": "from £55",
+            "note": "1 to 1½ hours"
+          },
+          {
+            "name": "Lash lift"
+          }
+        ]
+      },
+      {
+        "category": "Brows & more",
+        "items": [
+          {
+            "name": "Brow lamination"
+          },
+          {
+            "name": "Manicure and pedicure"
+          },
+          {
+            "name": "Aesthetic treatments"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "kicker": "Christmas & New Year",
+      "title": "Party nails and lashes for the festive season.",
+      "text": "Work dos, Christmas Day, New Year's Eve: book your BIAB, gel or lashes early, because December evenings and weekends go first.",
+      "packages": [
+        {
+          "name": "Gel polish, fingers",
+          "price": "£40"
+        },
+        {
+          "name": "BIAB nails",
+          "price": "£42"
+        },
+        {
+          "name": "Light volume lashes",
+          "price": "from £50"
+        }
+      ],
+      "nav": "Christmas"
+    },
+    "team": [
+      {
+        "name": "Karina",
+        "role": "Founder"
+      },
+      {
+        "name": "Liza",
+        "role": "Top nail stylist"
+      },
+      {
+        "name": "Kseniia",
+        "role": "Brow stylist"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Tap any photo to see it larger.",
+    "reviews": [
+      {
+        "text": "Fantastic service! Karina is so lovely, welcoming, and does a truly wonderful job.",
+        "name": "Natalija"
+      },
+      {
+        "text": "Beautiful eyelashes every time, Karina always does an amazing job.",
+        "name": "Kayleigh"
+      },
+      {
+        "text": "Super every time",
+        "name": "Halyna"
+      }
+    ],
+    "accent": "#8DB82B",
+    "mood": "dark",
+    "photos": 6,
+    "hero_alt": "Long waves in plum and soft blonde"
   }
 ]
