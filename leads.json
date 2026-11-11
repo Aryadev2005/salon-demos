@@ -804,5 +804,206 @@
       "photo_a": "#2A2A2A",
       "photo_b": "#111111"
     }
+  },
+  {
+    "slug": "norman-philip-wigan",
+    "name": "Norman & Philip",
+    "type": "Hair & beauty since 1975",
+    "area": "Wallgate, Wigan",
+    "address": "58-60 Wallgate, Wigan WN1 1BA",
+    "city": "Wigan",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "monogram": "NP",
+    "phone": "+44 1942 242303",
+    "rating": 4.9,
+    "review_count": 1351,
+    "review_source": "Treatwell",
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Norman%20%26%20Philip%20Hair%20%26%20Beauty%20Wallgate%20Wigan",
+    "booking_link": "https://www.treatwell.co.uk/place/norman-philip-hair-beauty/",
+    "booking_label": "Book on Treatwell",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "Closed"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-16:30"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-16:30"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-17:00"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-17:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-15:30"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Wigan's hair and beauty salon on Wallgate, since 1975.",
+    "subline": "Cuts, colour and blow-dries for women, men and children, plus facials and laser treatments. Right opposite Wigan North Western station.",
+    "highlights": [
+      "Rated 4.9 from 1,351 client reviews on Treatwell.",
+      "Senior stylists with over 200 years of experience between them.",
+      "Opposite Wigan North Western station, with parking at the back."
+    ],
+    "services_note": "Prices from the salon's online booking. Free patch test before any colour.",
+    "services": [
+      {
+        "category": "Ladies",
+        "items": [
+          {
+            "name": "Wash, haircut and blow-dry",
+            "price": "£51",
+            "note": "45 min"
+          },
+          {
+            "name": "Wash and blow-dry",
+            "price": "from £19",
+            "note": "30 to 45 min"
+          },
+          {
+            "name": "Blow-dry, short hair",
+            "price": "£19"
+          },
+          {
+            "name": "Blow-dry, medium hair",
+            "price": "£23"
+          },
+          {
+            "name": "Blow-dry, long hair",
+            "price": "£28"
+          },
+          {
+            "name": "Colour and root colour",
+            "note": "Priced after a free patch test"
+          }
+        ]
+      },
+      {
+        "category": "Men",
+        "items": [
+          {
+            "name": "Wash, haircut and styling",
+            "price": "£24",
+            "note": "30 min"
+          },
+          {
+            "name": "Individual foils",
+            "price": "£4.50 each"
+          }
+        ]
+      },
+      {
+        "category": "Children & beauty",
+        "items": [
+          {
+            "name": "Children's haircut",
+            "price": "from £15"
+          },
+          {
+            "name": "Patch test for hair colour",
+            "price": "Free",
+            "note": "5 min"
+          },
+          {
+            "name": "Facials"
+          },
+          {
+            "name": "Laser hair removal"
+          },
+          {
+            "name": "Skin tightening"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Party hair for the festive season.",
+      "text": "Work dos, Christmas Day and New Year's Eve. Book your cut, colour or blow-dry early: December Saturdays go first.",
+      "packages": [
+        {
+          "name": "Wash and blow-dry",
+          "price": "from £19"
+        },
+        {
+          "name": "Wash, haircut and blow-dry",
+          "price": "£51"
+        },
+        {
+          "name": "Men's wash, cut and styling",
+          "price": "£24"
+        }
+      ]
+    },
+    "team": [
+      {
+        "name": "Louise",
+        "role": "Senior stylist"
+      },
+      {
+        "name": "Vanessa",
+        "role": "Senior stylist"
+      },
+      {
+        "name": "Amie",
+        "role": "Senior stylist"
+      },
+      {
+        "name": "Kezzie",
+        "role": "Stylist"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Tap any photo to see it larger.",
+    "reviews": [
+      {
+        "text": "Always a great professional haircut from Louise and a warm welcome, and a friendly and relaxed atmosphere in the salon",
+        "name": "Joy"
+      },
+      {
+        "text": "Louise is excellent, a great hairdresser. Always listens, attentive, professional but friendly attitude.",
+        "name": "Caroline"
+      },
+      {
+        "text": "Lovely experience. My stylist helped me decide what's best for my hair and cut it to perfection.",
+        "name": "Danielle"
+      }
+    ],
+    "accent": "#8CC63F",
+    "mood": "dark",
+    "photos": 5,
+    "colors": {
+      "paper": "#0B0B0B",
+      "paper2": "#151515",
+      "mist": "#1E1E1E",
+      "line": "#2D2D2D",
+      "ink": "#F6F6F3",
+      "muted": "#AAAAA5",
+      "accent": "#8CC63F",
+      "on_accent": "#0B0B0B",
+      "board": "#5B2A86",
+      "board2": "#6A3596",
+      "chalk": "#FFFFFF",
+      "chalk_dim": "#E3D6EE",
+      "gold": "#B5E36B",
+      "photo_a": "#2A2A2A",
+      "photo_b": "#111111"
+    },
+    "hero_alt": "The Norman & Philip shopfront on Wallgate, a black-and-white Tudor building with the lime and white sign"
   }
 ]
