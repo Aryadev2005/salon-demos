@@ -90,6 +90,7 @@ Copy rating, review count, hours, prices and three real reviews straight into a 
 | `gallery_title`, `gallery_text` | no | defaults to "Recent looks" |
 | `monogram` | no | 1–2 letters; defaults to the initials of `name` |
 | `colors` | no | overrides for any generated palette colour (`paper`, `paper2`, `mist`, `line`, `ink`, `muted`, `accent`, `on_accent`, `board`, `board2`, `chalk`, `chalk_dim`, `gold`, `photo_a`, `photo_b`), e.g. to match a salon's exact brand colours |
+| `pitch` | no | `{name, whatsapp, text?}`: a strip at the top of the page saying it's a free preview, with a WhatsApp button to you. Remove it once the salon buys |
 | `hero_alt` | no | description of the hero photo or video for screen readers |
 
 ### Images (`demos/<slug>/img/`)

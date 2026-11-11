@@ -803,6 +803,10 @@
       "gold": "#4E7A0E",
       "photo_a": "#2A2A2A",
       "photo_b": "#111111"
+    },
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
     }
   },
   {
@@ -1004,6 +1008,10 @@
       "photo_a": "#2A2A2A",
       "photo_b": "#111111"
     },
-    "hero_alt": "The Norman & Philip shopfront on Wallgate, a black-and-white Tudor building with the lime and white sign"
+    "hero_alt": "The Norman & Philip shopfront on Wallgate, a black-and-white Tudor building with the lime and white sign",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    }
   }
 ]

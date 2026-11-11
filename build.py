@@ -484,6 +484,19 @@ def contact_blocks(lead):
 
 
 # ---------------------------------------------------------------- render
+def pitch_banner(lead):
+    """Optional strip at the very top telling the salon owner who made the preview and how to reach them."""
+    pb = lead.get("pitch")
+    if not pb:
+        return ""
+    who = pb.get("name") or "us"
+    msg = quote(f"Hi {who}, I saw the website preview you made for {lead['name']}.")
+    href = f"https://wa.me/{re.sub(r'[^0-9]', '', pb['whatsapp'])}?text={msg}"
+    text = pb.get("text") or f"This is a free preview made for {lead['name']}. Want it live on your Google listing?"
+    return (f'<div class="pitch"><div class="wrap"><span>{e(text)}</span>'
+            f'<a href="{e(href)}" target="_blank" rel="noopener">WhatsApp {e(who)}</a></div></div>')
+
+
 def render(lead):
     slug = lead["slug"]
     folder = DEMOS / slug
@@ -551,6 +564,7 @@ def render(lead):
         "kit_chips_block": f'<p>Who is sending it?</p><div class="chips left" id="kitWho">{kit_chips}</div>' if names else "",
         "instagram_link": f' · <a href="{e(lead["instagram"])}" target="_blank" rel="noopener">Instagram</a>' if lead.get("instagram") else "",
         "year": str(datetime.date.today().year),
+        "pitch_banner": pitch_banner(lead),
         "data_json": json.dumps(data, ensure_ascii=False).replace("</", "<\\/"),
     }
     values.update(contact_blocks(lead))
