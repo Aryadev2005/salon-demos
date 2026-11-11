@@ -24,9 +24,8 @@ DEMOS = ROOT / "demos"
 DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 REQUIRED = {
     "slug": str, "name": str, "type": str, "area": str, "city": str, "country": str,
-    "rating": (int, float), "review_count": int,
     "maps_link": str, "hours": list, "headline": str, "subline": str,
-    "highlights": list, "services": list, "reviews": list,
+    "highlights": list, "services": list,
     "accent": str, "mood": str, "photos": int,
 }
 MIN_PHOTOS = 4  # g1 = services photo, g2..gN = gallery (at least 3)
@@ -158,10 +157,14 @@ def validate(lead, folder):
         problems.append("accent must be a hex colour like #8A4A3B")
     if len(lead["highlights"]) != 3:
         problems.append("highlights must have exactly 3 points")
-    if len(lead["reviews"]) != 3 or not all(isinstance(r, dict) and r.get("text") and r.get("name") for r in lead["reviews"]):
-        problems.append("reviews must be exactly 3 objects with 'text' and 'name'")
-    if not 0 <= float(lead["rating"]) <= 5:
-        problems.append("rating must be between 0 and 5")
+    # reviews are optional (some salons have none we can quote), but all-or-nothing
+    if has_reviews(lead):
+        if len(lead["reviews"]) != 3 or not all(isinstance(r, dict) and r.get("text") and r.get("name") for r in lead["reviews"]):
+            problems.append("reviews must be exactly 3 objects with 'text' and 'name'")
+        if not isinstance(lead.get("rating"), (int, float)) or not 0 <= float(lead["rating"]) <= 5:
+            problems.append("rating must be a number between 0 and 5")
+        if not isinstance(lead.get("review_count"), int):
+            problems.append("review_count must be a whole number")
     days = [h.get("day") for h in lead["hours"] if isinstance(h, dict)]
     if days != DAYS or not all(h.get("time") for h in lead["hours"]):
         problems.append("hours must list Monday..Sunday in order as {day, time} (time may be \"Closed\")")
@@ -346,7 +349,30 @@ def sec_gallery(lead):
 </section>'''
 
 
+def days_open_text(lead):
+    open_days = [h["day"] for h in lead["hours"] if h["time"].lower() != "closed"]
+    if len(open_days) == 7:
+        return "seven days a week"
+    idx = [DAYS.index(d) for d in open_days]
+    if idx == list(range(idx[0], idx[-1] + 1)):
+        return f"{open_days[0]} to {open_days[-1]}"
+    return ", ".join(open_days)
+
+
+def has_reviews(lead):
+    return bool(lead.get("reviews") or lead.get("rating") or lead.get("review_count"))
+
+
+def rating_pill(lead):
+    if not has_reviews(lead):
+        return ""
+    return (f'<a class="pill-s" href="#reviews"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.6 7.2.7-5.4 4.8 1.6 7L12 17.5 5.6 21.1l1.6-7L1.8 9.3 9 8.6z"/></svg>'
+            f'{float(lead["rating"]):.1f} · {lead["review_count"]:,} {e(lead.get("review_source") or "Google")} reviews</a>')
+
+
 def sec_reviews(lead):
+    if not has_reviews(lead):
+        return ""
     star = '<svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.7-5.4 4.8 1.6 7L12 17.5 5.6 21.1l1.6-7L1.8 9.3 9 8.6z"/></svg>'
     q = "".join(
         f'<blockquote><p>“{e(r["text"])}”</p><footer>{e(r["name"])} · {e(lead.get("review_source") or "Google")} review</footer></blockquote>'
@@ -432,12 +458,16 @@ def contact_blocks(lead):
                     rows += f'<li><span>{e(it["name"])}</span><b>{e(it["price"])}</b></li>'
         rows = f'<ul class="book-list">{rows}</ul>' if rows else ""
         alt = f' or <a href="{wa_link}" {ext}>message us on WhatsApp</a>' if wa_link else ""
+        by_phone = link.startswith("tel:")
+        intro = ("Give the salon a ring and we'll find a time that suits you." if by_phone
+                 else "Pick your service, stylist and time online. Your booking is confirmed straight away.")
+        small = f"Open {e(days_open_text(lead))}{alt}." if by_phone else f"Free to book, pay in the salon{alt}."
         book = f'''<div class="book" id="book">
       <h3>Book an appointment</h3>
-      <p>Pick your service, stylist and time online. Your booking is confirmed straight away.</p>
+      <p>{intro}</p>
       {rows}
-      <a class="btn solid" href="{e(link)}" {ext}>{e(label)}</a>
-      <small>Free to book, pay in the salon{alt}.</small>
+      <a class="btn solid" href="{e(link)}"{"" if by_phone else " " + ext}>{e(label)}</a>
+      <small>{small}</small>
     </div>'''
     else:
         book = f'''<div class="book" id="book">
@@ -520,7 +550,9 @@ def render(lead):
     nav.append(("#gallery", "Gallery"))
     if lead.get("bridal"):
         nav.append(("#bridal", lead["bridal"].get("nav") or "Bridal"))
-    nav += [("#reviews", "Reviews"), ("#visit", "Visit")]
+    if has_reviews(lead):
+        nav.append(("#reviews", "Reviews"))
+    nav.append(("#visit", "Visit"))
 
     data = {
         "name": name,
@@ -545,8 +577,7 @@ def render(lead):
         "headline": e(lead["headline"]),
         "subline": e(lead["subline"]),
         "initials": e(lead.get("monogram") or initials(name)),
-        "rating": f'{float(lead["rating"]):.1f}',
-        "review_count": f'{lead["review_count"]:,}',
+        "rating_pill": rating_pill(lead),
         "badge_text": e(f'{lead["area"]} · {lead["city"]} · {days_open_phrase(parsed).lower()} ·'),
         "days_open": e(days_open_phrase(parsed)),
         "maps_link": e(lead["maps_link"]),

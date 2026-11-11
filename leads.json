@@ -1013,5 +1013,136 @@
       "name": "Aryadev",
       "whatsapp": "+91 86378 59578"
     }
+  },
+  {
+    "slug": "suzannes-wigan",
+    "name": "Suzanne's",
+    "type": "Hair salon since 1987",
+    "area": "Wigan Lane",
+    "address": "50 Wigan Lane, Wigan WN1 1XS",
+    "city": "Wigan",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "monogram": "S",
+    "phone": "+44 1942 824634",
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Suzanne%27s%2050%20Wigan%20Lane%20Wigan%20WN1%201XS",
+    "booking_link": "tel:+441942824634",
+    "booking_label": "Call 01942 824634 to book",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "Closed"
+      },
+      {
+        "day": "Tuesday",
+        "time": "10:00-18:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "10:00-18:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:00-20:00"
+      },
+      {
+        "day": "Friday",
+        "time": "10:00-18:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-15:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Soft balayage, lived-in blondes and bridal hair on Wigan Lane.",
+    "subline": "Suzanne's has been doing hair in Wigan since 1987. Cuts, colour, extensions and wedding mornings, in a calm salon a few minutes from the town centre.",
+    "highlights": [
+      "Established on Wigan Lane in 1987.",
+      "Balayage, highlights and blended blondes are the salon's speciality.",
+      "Late appointments until 8pm on Thursdays."
+    ],
+    "services_note": "Call the salon for prices. Colour starts with a quick consultation.",
+    "services": [
+      {
+        "category": "Colour",
+        "items": [
+          {
+            "name": "Balayage"
+          },
+          {
+            "name": "Highlights"
+          },
+          {
+            "name": "Full head colour"
+          },
+          {
+            "name": "Toner and gloss"
+          }
+        ]
+      },
+      {
+        "category": "Cuts & styling",
+        "items": [
+          {
+            "name": "Women's haircut"
+          },
+          {
+            "name": "Curly hair"
+          },
+          {
+            "name": "Children's haircut"
+          },
+          {
+            "name": "Hair extensions"
+          }
+        ]
+      },
+      {
+        "category": "Join the team",
+        "items": [
+          {
+            "name": "Hair stylist chair rental",
+            "note": "Rent a chair in the salon"
+          },
+          {
+            "name": "Treatment space",
+            "note": "For beauticians and aestheticians"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "kicker": "Weddings",
+      "title": "Bridal hair, start to finish.",
+      "text": "A trial before the day, then hair for you and your bridal party on the morning. Call the salon to check your date.",
+      "packages": [
+        {
+          "name": "Bridal trial"
+        },
+        {
+          "name": "Wedding morning hair"
+        },
+        {
+          "name": "Bridesmaids and mothers"
+        }
+      ]
+    },
+    "gallery_title": "Recent work",
+    "gallery_text": "Colour and bridal hair from the salon. Tap any photo to see it larger.",
+    "accent": "#353B40",
+    "mood": "light",
+    "photos": 4,
+    "colors": {
+      "gold": "#D8BE92"
+    },
+    "hero_alt": "Long, soft-waved hair with a blended ash and honey balayage"
   }
 ]
