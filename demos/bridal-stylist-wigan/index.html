@@ -49,17 +49,19 @@ nav a:hover{color:var(--ink)}
 @media (max-width:760px){nav{display:none}}
 
 /* hero */
-.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:72px 0 88px}
-.hero h1{font-size:clamp(46px,6.4vw,84px);letter-spacing:-.01em;margin:18px 0 22px}
+.hero{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center;padding:72px 0 88px}
+.hero h1{font-size:clamp(46px,5.6vw,78px);letter-spacing:-.01em;margin:18px 0 22px}
 .hero h1 em{color:var(--gold)}
 .hero p{color:var(--muted);max-width:30em;margin:0 0 32px}
 .cta{display:flex;gap:12px;flex-wrap:wrap}
-.trio{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:12px;height:min(620px,78vw)}
-.trio img{width:100%;height:100%;object-fit:cover;border-radius:4px}
-.trio img:first-child{grid-row:span 2;border-radius:999px 999px 4px 4px}
-.facts{display:flex;gap:28px;flex-wrap:wrap;margin-top:36px;padding-top:24px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+@media (max-width:540px){.cta .btn{flex:1;padding:0 14px}.facts{grid-template-columns:repeat(3,1fr);gap:12px}.facts b{font-size:20px}.facts div{font-size:13px;line-height:1.35}}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:center;max-width:none;justify-self:stretch;width:100%}
+.trio img{width:100%;aspect-ratio:3/4.1;object-fit:cover;border-radius:4px;box-shadow:0 24px 40px -28px rgba(46,42,38,.45)}
+.trio img:nth-child(2){border-radius:999px 999px 4px 4px;transform:translateY(-28px)}
+.trio img:nth-child(1),.trio img:nth-child(3){transform:translateY(18px)}
+.facts{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:32px;margin-top:36px;padding-top:24px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
 .facts b{display:block;font:500 24px/1 var(--serif);color:var(--ink);margin-bottom:4px}
-@media (max-width:900px){.hero{grid-template-columns:1fr;padding:44px 0 64px;gap:36px}.trio{height:110vw;max-height:560px}}
+@media (max-width:900px){.hero{grid-template-columns:1fr;padding:40px 0 72px;gap:40px}.trio{justify-self:stretch;max-width:none;gap:8px}.trio img:nth-child(2){transform:translateY(-16px)}.trio img:nth-child(1),.trio img:nth-child(3){transform:translateY(10px)}}
 
 /* sections */
 section.block{padding:96px 0}
@@ -101,7 +103,7 @@ input:focus,select:focus,textarea:focus{border-color:var(--gold)}
 .counters{display:grid;gap:10px}
 .ctr{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border:1px solid var(--line);border-radius:6px}
 .ctr div b{display:block;font-weight:400;color:var(--ink)}
-.ctr div small{color:var(--muted);font-size:13px}
+.ctr div small{display:block;color:var(--muted);font-size:13px;line-height:1.35;margin-top:2px}
 .ctr .n{display:flex;align-items:center;gap:14px}
 .ctr button{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--ivory);font:400 20px/1 var(--sans);color:var(--ink);cursor:pointer}
 .ctr button:hover{border-color:var(--gold)}
@@ -115,7 +117,7 @@ input:focus,select:focus,textarea:focus{border-color:var(--gold)}
 .sty:hover img{transform:scale(1.04)}
 .sty span{position:absolute;left:0;right:0;bottom:0;padding:22px 10px 9px;background:linear-gradient(transparent,rgba(30,25,20,.75));color:#fff;font:400 13px/1.2 var(--sans);text-align:left}
 .sty::after{content:"";position:absolute;inset:0;border:3px solid transparent;border-radius:6px;transition:border-color .2s}
-.sty[aria-pressed="true"]::after{border-color:var(--gold)}
+.sty[aria-pressed="true"]::after{border-color:var(--gold);box-shadow:inset 0 0 0 1px #fff}
 .sty[aria-pressed="true"] span::before{content:"✓ "}
 .nav-row{display:flex;justify-content:space-between;gap:12px;margin-top:28px}
 .err{color:#A0453A;font-size:14px;margin:12px 0 0;min-height:1em}
@@ -128,6 +130,7 @@ input:focus,select:focus,textarea:focus{border-color:var(--gold)}
 .tl li{position:relative;padding:0 0 16px 20px;font-size:15px}
 .tl li::before{content:"";position:absolute;left:-5px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--ivory);border:1px solid var(--gold)}
 .tl li.ready::before{background:var(--gold)}
+.tl li:last-child{padding-bottom:2px}
 .tl time{display:block;font:500 20px/1.2 var(--serif);color:var(--ink)}
 .tl small{color:var(--muted)}
 .empty{color:var(--muted);font-size:15px;padding:18px;border:1px dashed var(--line);border-radius:6px;text-align:center}
@@ -135,16 +138,17 @@ input:focus,select:focus,textarea:focus{border-color:var(--gold)}
 /* summary */
 .summary{white-space:pre-wrap;background:var(--ivory);border:1px solid var(--line);border-radius:6px;padding:18px;font:400 14.5px/1.6 var(--sans);max-height:320px;overflow:auto}
 .done-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
-.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,140%);background:var(--dark);color:#fff;padding:12px 20px;border-radius:999px;font-size:14px;transition:transform .35s var(--ease);z-index:50}
-.toast.on{transform:translate(-50%,0)}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,calc(100% + 40px));visibility:hidden;background:var(--dark);color:#fff;padding:12px 20px;border-radius:999px;font-size:14px;transition:transform .35s var(--ease);z-index:50}
+.toast.on{transform:translate(-50%,0);visibility:visible}
+.toast{transition:transform .35s var(--ease),visibility 0s linear .35s}.toast.on{transition:transform .35s var(--ease),visibility 0s}
 
 /* gallery */
 .gal{columns:4 220px;column-gap:12px}
 .gal img{width:100%;margin-bottom:12px;border-radius:4px;break-inside:avoid}
-@media (max-width:540px){.gal{columns:2;column-gap:8px}.gal img{margin-bottom:8px}.stat{min-width:0;flex:1}}
+@media (max-width:540px){.gal{columns:2;column-gap:8px}.gal img{margin-bottom:8px}.stats{display:grid;grid-template-columns:repeat(3,1fr);width:100%;gap:8px}.stat{min-width:0;padding:12px}.stat small{font-size:10px;letter-spacing:.06em}}
 
 /* pipeline (Beth's view) */
-.pipe-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:28px}
+.pipe-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:28px}
 .stats{display:flex;gap:12px;flex-wrap:wrap}
 .stat{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:12px 18px;min-width:120px}
 .stat b{display:block;font:500 28px/1 var(--serif)}
@@ -159,10 +163,13 @@ input:focus,select:focus,textarea:focus{border-color:var(--gold)}
 .lead .tag{display:inline-block;font-size:11px;letter-spacing:.06em;padding:2px 8px;border-radius:999px;background:var(--blush);margin:0 4px 4px 0}
 .lead .tag.new{background:var(--gold);color:#fff}
 .lead .acts{display:flex;gap:6px;margin-top:8px}
-.lead .acts button{flex:1;height:32px;border-radius:999px;border:1px solid var(--line);background:#fff;font:400 13px var(--sans);cursor:pointer;color:var(--ink)}
+.lead .acts button{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 10px;height:34px;border-radius:999px;border:1px solid var(--line);background:#fff;font:400 13px var(--sans);cursor:pointer;color:var(--ink)}
+.lead .acts button.bk{flex:0 0 34px;padding:0}
 .lead .acts button:hover{border-color:var(--gold);color:var(--gold)}
 .lead .next{font-size:12.5px;color:var(--gold);margin-top:6px}
 .sample{font-size:13px;color:var(--muted);margin-top:14px}
+.swipe{display:none;font-size:13px;color:var(--gold);margin:6px 0 0}
+@media (max-width:900px){.swipe{display:block}.board{grid-template-columns:repeat(5,78%)}}
 
 footer{background:var(--dark);color:#CFC6BA;padding:56px 0 36px;font-size:15px}
 footer .wrap{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}
@@ -190,26 +197,26 @@ footer .fine{grid-column:1/-1;border-top:1px solid #4A423B;padding-top:18px;font
 <main id="top">
 <section class="wrap hero">
   <div>
-    <span class="kicker">Wedding &amp; special occasion hair · Wigan</span>
+    <span class="kicker">Bridal &amp; occasion hair · Wigan</span>
     <h1>Hair for your <em>wedding morning</em>, done beautifully.</h1>
     <p>Soft waves, sculpted up-dos, sleek ponytails and half-ups for brides and their bridal party, by Beth Starkie at Suzanne's on Wigan Lane. Tell me about your day in two minutes and I'll come back with availability and a quote.</p>
     <div class="cta"><a class="btn" href="#plan">Check my date</a><a class="btn ghost" href="#work">See the portfolio</a></div>
     <div class="facts">
       <div><b>Brides</b>and bridal parties</div>
       <div><b>Trials</b>before the big day</div>
-      <div><b>Wigan Lane</b>at Suzanne's</div>
+      <div><b>Suzanne's</b>on Wigan Lane</div>
     </div>
   </div>
   <div class="trio" aria-hidden="true">
-    <img src="img/half-up.jpg" alt="">
     <img src="img/sculpted.jpg" alt="">
+    <img src="img/half-up.jpg" alt="">
     <img src="img/ponytail.jpg" alt="">
   </div>
 </section>
 
 <section class="block alt" id="how">
   <div class="wrap">
-    <div class="head"><span class="kicker">How it works</span><h2>From first message to "I do".</h2><p>No more back-and-forth in the DMs. Everything Beth needs, in one go.</p></div>
+    <div class="head"><span class="kicker">How it works</span><h2>From first message to “I do”.</h2><p>No more back-and-forth in the DMs. Everything Beth needs, in one go.</p></div>
     <ol class="steps">
       <li><h3>Check your date</h3><p>Pick your wedding date, venue and the time you need to be ready.</p></li>
       <li><h3>Your party</h3><p>Add bridesmaids, mums and flower girls, and choose a trial.</p></li>
@@ -309,6 +316,7 @@ footer .fine{grid-column:1/-1;border-top:1px solid #4A423B;padding-top:18px;font
       <div class="stats"><div class="stat"><b id="st-open">0</b><small>Open enquiries</small></div><div class="stat"><b id="st-booked">0</b><small>Brides booked</small></div><div class="stat"><b id="st-heads">0</b><small>Heads of hair</small></div></div>
     </div>
     <div class="board" id="board"></div>
+    <p class="swipe">Swipe to see every stage →</p>
     <p class="sample">Sample brides for the demo. Enquiries you send from this page in this browser appear in "New enquiry". The live version would collect them from every visitor and notify Beth by text or email.</p>
   </div>
 </section>
@@ -330,12 +338,13 @@ footer .fine{grid-column:1/-1;border-top:1px solid #4A423B;padding-top:18px;font
   "use strict";
   var STYLES=[
     ["half-up","Half-up waves"],["sculpted","Sculpted up-do"],["ponytail","Hollywood ponytail"],["waves","Glam waves"],
-    ["low-bun","Sleek low bun"],["textured-updo","Textured up-do"],["half-up-dark","Half-up, dark &amp; glossy"],["bow","Bow &amp; veil"]
+    ["low-bun","Sleek low bun"],["textured-updo","Textured up-do"],["half-up-dark","Glossy half-up"],["bow","Bow &amp; veil"]
   ];
   var GALLERY=["half-up","copper-updo","sculpted","ponytail","bow","updo-twist","waves","half-up-dark","textured-updo","low-bun"];
   // Planning estimates for the timeline only (Beth sets her real timings in the live version)
   var MIN={bride:60,maids:40,guests:35,kids:20};
   var STAGES=["New enquiry","Quoted","Trial booked","Deposit paid","Wedding done"];
+  var SHORT=["New","Quoted","Trial booked","Deposit paid","Done"];
   var KEY="tbs-pipeline-v1";
 
   var $=function(id){return document.getElementById(id)};
@@ -493,8 +502,8 @@ footer .fine{grid-column:1/-1;border-top:1px solid #4A423B;padding-top:18px;font
         [l.heads+" heads",l.trial?"Trial":"No trial"].concat(l.looks||[]).forEach(function(x){var s=document.createElement("span");s.className="tag";s.textContent=x;tags.appendChild(s)});
         c.querySelector(".next").textContent="Next: "+NEXT[si];
         var acts=c.querySelector(".acts");
-        if(si>0){var b=document.createElement("button");b.type="button";b.textContent="← Back";b.onclick=function(){move(l.id,-1)};acts.appendChild(b)}
-        if(si<STAGES.length-1){var f=document.createElement("button");f.type="button";f.textContent=STAGES[si+1]+" →";f.onclick=function(){move(l.id,1)};acts.appendChild(f)}
+        if(si>0){var b=document.createElement("button");b.type="button";b.textContent="←";b.className="bk";b.setAttribute("aria-label","Move back to "+STAGES[si-1]);b.title="Back to "+STAGES[si-1];b.onclick=function(){move(l.id,-1)};acts.appendChild(b)}
+        if(si<STAGES.length-1){var f=document.createElement("button");f.type="button";f.textContent=SHORT[si+1]+" →";f.title="Move to "+STAGES[si+1];f.onclick=function(){move(l.id,1)};acts.appendChild(f)}
         col.appendChild(c);
       });
       board.appendChild(col);
