@@ -18,6 +18,10 @@ opposite: the buyer already has a site that isn't winning searches, and the pitc
   4. Write one audit page per clinic (demos/audit-<slug>/index.html), a value-first WhatsApp opener
      (no link, no price), the follow-up for after they say yes, and send-day batches of --per-day.
 
+Other countries: scripts/clinic-prospects-us.json is the US version. It keeps its own leads, cache and sheet
+(clinic_leads_us.json, out/clinics_us.csv). US numbers don't show whether they're mobiles, so every clinic gets a
+WhatsApp link to try first and an email (found on its homepage or contact page) as the fallback.
+
 Only facts from Google and the clinic's own homepage go into messages and audits. No medical claims.
 Leads and their status live in clinic_leads.json; declined clinics never get a message again.
 """
@@ -49,6 +53,12 @@ NOT_A_WEBSITE = ["facebook.com", "fb.com", "instagram.com", "linktr.ee", "wa.me"
 CHAINS = ["mydentist", "my dentist", "bupa", "portman", "rodericks", "colosseum", "dentalcare group", "damira",
           "smilepod", "sk:n", "sknclinics", "therapie", "laser clinics", "transform hospital", "harley medical",
           "superdrug", "boots", "spire", "nuffield", "nhs", "together dental", "dental partners", "riverdale"]
+CHAINS += ["ideal image", "laseraway", "skinspirit", "skin spirit", "ever/body", "everbody", "heyday", "aspen dental",
+           "western dental", "pacific dental", "heartland dental", "gentle dental", "clearchoice", "clear choice",
+           "milan laser", "hand & stone", "massage envy", "european wax", "sono bello", "restore hyper", "the joint",
+           "smile brands", "bright now", "coast dental", "dental care alliance", "great expressions", "sola salon"]
+JUNK_EMAIL = ["sentry", "wixpress", "example.", "domain.com", "email.com", "yourdomain", "godaddy", "@sentry", "wix.com",
+              "squarespace", "noreply", "no-reply", "@2x", "user@", "name@", "info@email"]
 CHAIN_HOSTS = ["mydentist.co.uk", "bupa.co.uk", "portmandentalcare.com", "rodericksdentalpartners.co.uk",
                "colosseumdental.co.uk", "sknclinics.co.uk", "therapieclinic.com", "laserclinics.co.uk",
                "togetherdental.co.uk", "dentalpartners.co.uk"]
@@ -93,6 +103,28 @@ def uk_mobile(phone):
     return "44" + d[1:] if re.fullmatch(r"07\d{9}", d) else ""
 
 
+def wa_number(phone, cfg):
+    """International number for a wa.me link. UK: mobiles only. US/CA: every number (mobiles look the same as
+    landlines there, so the link is a try: WhatsApp says so when the number isn't on it)."""
+    if cfg.get("region", "GB") == "GB":
+        return uk_mobile(phone)
+    d = re.sub(r"\D", "", phone or "")
+    if len(d) == 10:
+        d = "1" + d
+    return d if len(d) == 11 and d.startswith("1") else ""
+
+
+def find_emails(page, site_host):
+    found = []
+    for m in re.findall(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}", html.unescape(page)):
+        e = m.strip(".").lower()
+        if re.search(r"\.(png|jpe?g|gif|webp|svg|css|js)$", e) or any(j in e for j in JUNK_EMAIL) or e in found:
+            continue
+        found.append(e)
+    return sorted(found, key=lambda e: (not e.endswith("@" + site_host) and not e.endswith("." + site_host),
+                                        not re.match(r"(info|hello|contact|enquiries|inquiries|reception|office|frontdesk)@", e)))
+
+
 def ordinal(n):
     return f"{n}{'th' if 10 <= n % 100 <= 20 else {1: 'st', 2: 'nd', 3: 'rd'}.get(n % 10, 'th')}"
 
@@ -133,14 +165,14 @@ class Budget:
 
 
 # ---------------------------------------------------------------- 1. search
-def search(q, key, budget, cache):
+def search(q, key, budget, cache, region="GB"):
     cf = cache / "places" / f"{slugify(q)}.json"
     if cf.exists():
         return json.loads(cf.read_text()).get("places", [])
     if not key:
         return []
     budget.spend(f'search "{q}"')
-    body = {"textQuery": q, "pageSize": 20, "regionCode": "GB", "languageCode": "en"}
+    body = {"textQuery": q, "pageSize": 20, "regionCode": region, "languageCode": "en"}
     req = urllib.request.Request(f"{API}/places:searchText", json.dumps(body).encode(), method="POST",
                                  headers={"Content-Type": "application/json", "X-Goog-Api-Key": key,
                                           "X-Goog-FieldMask": FIELDS})
@@ -166,7 +198,7 @@ def search(q, key, budget, cache):
 # ---------------------------------------------------------------- 2. filter
 def in_town(p, town):
     where = " ".join([p.get("formattedAddress") or ""] + [c.get("longText") or "" for c in p.get("addressComponents") or []])
-    return town.lower() in where.lower()
+    return town.split(",")[0].strip().lower() in where.lower()
 
 
 def why_not(p, pos, cfg, town):
@@ -177,7 +209,7 @@ def why_not(p, pos, cfg, town):
     if p.get("businessStatus", "OPERATIONAL") != "OPERATIONAL":
         return "not operating"
     country = next((c.get("shortText") for c in p.get("addressComponents") or [] if "country" in c.get("types", [])), None)
-    if country and country != "GB":
+    if country and country != cfg.get("region", "GB"):
         return "other country"
     if is_chain(p):
         return "chain"
@@ -210,7 +242,7 @@ def collect(cfg, key, budget, cache):
         for town in cfg["towns"]:
             for service in spec["services"]:
                 q = f"{service} in {town}"
-                places = search(q, key, budget, cache)
+                places = search(q, key, budget, cache, cfg.get("region", "GB"))
                 print(f"  {len(places):3d} · {q}")
                 for i, p in enumerate(places):
                     w = why_not(p, i + 1, cfg, town)
@@ -233,10 +265,10 @@ def best_hit(e):
     return max(e["hits"], key=lambda h: (outdone(h, r), -h["position"]))
 
 
-def score(e):
+def score(e, cfg):
     p = e["place"]
     r = p.get("userRatingCount") or 0
-    return ((2 if uk_mobile(p.get("nationalPhoneNumber")) else 0) * 10 + outdone(best_hit(e), r) * 3
+    return ((2 if wa_number(p.get("nationalPhoneNumber"), cfg) else 0) * 10 + outdone(best_hit(e), r) * 3
             + (p.get("rating") or 0) * math.log10(1 + r))
 
 
@@ -244,7 +276,7 @@ def score(e):
 def check_site(url, town, services, cache, enabled):
     cf = cache / "sites" / f"{slugify(host(url))}.json"
     old = json.loads(cf.read_text()) if cf.exists() else None
-    if old and ("mentions" in old or not enabled):
+    if old and (("mentions" in old and "emails" in old) or not enabled):
         return old
     if not enabled:
         return None
@@ -270,6 +302,21 @@ def check_site(url, town, services, cache, enabled):
                    schema=any(f'"{t}"' in ld for t in SCHEMA_TYPES),
                    mentions=[k for k, words in TREATMENT_WORDS.items() if any(w in low for w in words)],
                    booking=any(b in low for b in BOOKING), tap_to_call="href=\"tel:" in low or "href='tel:" in low)
+        site_host = host(final)
+        emails = find_emails(page, site_host)
+        if not emails:  # most clinics only show an email on the contact page
+            for href in re.findall(r"href=[\"']([^\"'#]*contact[^\"'#]*)[\"']", page, re.I)[:2]:
+                link = urllib.parse.urljoin(final, href)
+                if host(link) != site_host:
+                    continue
+                try:
+                    with urllib.request.urlopen(urllib.request.Request(link, headers=req.headers), timeout=15) as r2:
+                        emails = find_emails(r2.read(1_000_000).decode("utf-8", "replace"), site_host)
+                except Exception:
+                    pass
+                if emails:
+                    break
+        out["emails"] = emails[:3]
     except Exception as e:  # a site that won't load is itself a finding; record and move on
         out["error"] = str(e)[:120]
     cf.parent.mkdir(parents=True, exist_ok=True)
@@ -336,7 +383,7 @@ def findings(lead):
 
 # ---------------------------------------------------------------- 4. audit page
 PAGE = """<!doctype html>
-<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow"><title>Google visibility check: {name}</title>
 <meta property="og:title" content="Google visibility check: {name}"><meta property="og:description" content="{og}">
 <style>
@@ -374,7 +421,7 @@ ol{{margin:10px 0 0;padding-left:22px}}ol li{{padding:6px 0;border:0;list-style:
 <section><h2>What I'd fix first</h2><ol>{fixes}</ol></section>
 <section><h2>Want this done for you?</h2>
 <p class="sans">I'm {me}. I do this work for clinics month to month: the site, the Google profile, reviews and how the clinic shows up in AI answers. No contract. Message me and I'll walk you through this page in ten minutes.</p>
-<a class="btn" href="https://wa.me/{wa}?text={wa_text}">Message {me} on WhatsApp</a></section>
+{contact}</section>
 <p class="foot">Positions are from Google Maps searches run on {date} and vary with the searcher's location and the time of day. Ratings and review counts are from Google on the same date.{site_note}</p>
 </main></body></html>
 """
@@ -382,6 +429,17 @@ ol{{margin:10px 0 0;padding-left:22px}}ol li{{padding:6px 0;border:0;list-style:
 
 def esc(s):
     return html.escape(str(s), quote=True)
+
+
+def contact_html(lead, cfg):
+    me, hi = esc(cfg["your_name"]), f"Hi {cfg['your_name']}, I saw the Google check for {lead['name']}."
+    out = (f'<a class="btn" href="https://wa.me/{re.sub(r"[^0-9]", "", cfg["your_whatsapp"])}?text={urllib.parse.quote(hi)}">'
+           f'Message {me} on WhatsApp</a>')
+    if cfg.get("your_email"):
+        out += (f' <a class="btn" style="background:#fff;color:var(--you);border:1px solid var(--you)" '
+                f'href="mailto:{esc(cfg["your_email"])}?subject={urllib.parse.quote("Google check: " + lead["name"])}">'
+                f'Or email {esc(cfg["your_email"])}</a>')
+    return out
 
 
 def audit_html(lead, cfg, today):
@@ -439,8 +497,7 @@ def audit_html(lead, cfg, today):
     return PAGE.format(
         name=esc(lead["name"]), date=today, lede=esc(lede), og=esc(lede), searches=searches, query=esc(hit["query"]),
         compare=compare, verdict=verdict, obs=obs, site=site, ai=ai, fixes="".join(f"<li>{esc(f)}</li>" for f in fixes),
-        me=esc(cfg["your_name"]), wa=re.sub(r"\D", "", cfg["your_whatsapp"]),
-        wa_text=urllib.parse.quote(f"Hi {cfg['your_name']}, I saw the Google check for {lead['name']}."),
+        me=esc(cfg["your_name"]), contact=contact_html(lead, cfg), lang="en-GB" if cfg.get("region", "GB") == "GB" else "en-US",
         site_note=" Website checks are of the homepage only, loaded as a phone would." if rows else "")
 
 
@@ -456,55 +513,90 @@ def messages(lead, cfg):
         gap = f"You have {mine}, more than {beaten['name']}, and it still comes up above you."
     else:
         gap = f"You have {mine} and a {lead['rating']:.1f} rating, so the gap can be closed."
-    opener = (f"Hi, is this {lead['name']}? I'm {me}. I searched Google Maps for \"{hit['query']}\" and you came up "
-              f"{ordinal(hit['position'])}. The three above you: {above}. {gap} I've put together a short page on where "
-              f"you come up and what I'd fix first. Shall I send it over? It's free, and just say no if you'd rather not.")
+    us = cfg.get("region", "GB") != "GB"
+    cur = cfg.get("currency", "£")
+    ask = "Want me to send it over?" if us else "Shall I send it over?"
+    found = (f"I searched Google Maps for \"{hit['query']}\" and you came up {ordinal(hit['position'])}. "
+             f"The three above you: {above}. {gap}")
+    opener = (f"Hi, is this {lead['name']}? I'm {me}. {found} I've put together a short page on where "
+              f"you come up and what I'd fix first. {ask} It's free, and just say no if you'd rather not.")
     after_yes = (f"Here it is: {lead['audit_url']}\n\nIt shows where you come up for {len(lead['hits'])} "
                  f"search{'es' if len(lead['hits']) != 1 else ''}, who is above you, and the things I'd fix first. "
-                 f"If it's useful, I can walk you through it in ten minutes whenever suits.")
-    setup = f", plus £{cfg['setup']} to set up" if cfg.get("setup") else ""
-    price = (f"I do it month to month: £{cfg['monthly']} a month{setup}, no contract, cancel any time. That covers the "
+                 f"If it's useful, I can walk you through it in ten minutes whenever {'works' if us else 'suits'}.")
+    setup = f", plus {cur}{cfg['setup']} to set up" if cfg.get("setup") else ""
+    price = (f"I do it month to month: {cur}{cfg['monthly']} a month{setup}, no contract, cancel any time. That covers the "
              f"site, your Google profile, reviews and how you show up in AI answers, with a report each month of the "
              f"calls and enquiries it brought in.")
-    return opener, after_yes, price
+    subject = f"{lead['name']}: {ordinal(hit['position'])} on Google Maps for \"{hit['query']}\""
+    sign = "\n".join(x for x in [me, cfg.get("company", ""), cfg.get("your_email", "")] if x)
+    email = (f"Hi {lead['name']} team,\n\n{found}\n\nI've put together a short page on where you come up, who is "
+             f"above you and what I'd fix first, including how to get named when people ask ChatGPT or Google's AI "
+             f"for a clinic. {ask} It's free.\n\n{sign}\n\n--\n{cfg.get('postal_address', '')}\n"
+             f"If you'd rather not hear from me, reply \"no thanks\" and I won't email again.")
+    return opener, after_yes, price, subject, email
+
+
+def email_of(l):
+    return ((l.get("site") or {}).get("emails") or [""])[0]
+
+
+def sendable(l, cfg):
+    """In the daily send queue: not yet contacted, treatment checked, and reachable on a channel this market uses."""
+    if l["status"] or l.get("verify"):
+        return False
+    ch = cfg.get("channels", ["whatsapp"])
+    return bool(("whatsapp" in ch and l["whatsapp"]) or ("email" in ch and email_of(l)))
+
+
+def channel(l, cfg):
+    if l.get("verify"):
+        return "Check they offer this treatment first"
+    em = email_of(l) and "email" in cfg.get("channels", ["whatsapp"])
+    if cfg.get("region", "GB") != "GB" and l["whatsapp"]:
+        return "WhatsApp, or email if not on WhatsApp" if em else "WhatsApp, or call if not on WhatsApp"
+    if l["whatsapp"]:
+        return "WhatsApp"
+    return "Email" if em else ("Landline: call" if not email_of(l) else "Landline: call or email")
 
 
 def write_sheet(leads, cfg, out, per_day):
-    rows, day_count = [], {}
-    queue = [l for l in leads if l["whatsapp"] and not l["status"] and not l.get("verify")]
-    for i, l in enumerate(queue):
-        l["_day"] = i // per_day + 1
+    rows, days = [], {}
+    for i, l in enumerate([l for l in leads if sendable(l, cfg)]):
+        days[l["slug"]] = i // per_day + 1
     for l in leads:
         hit = l["hits"][0]
-        if l["status"] == "declined":
-            opener = after_yes = price = ""
-        else:
-            opener, after_yes, price = messages(l, cfg)
-        day = l.pop("_day", "")
-        day_count[day] = day_count.get(day, 0) + 1
+        opener = after_yes = price = subject = email = ""
+        if l["status"] != "declined":
+            opener, after_yes, price, subject, email = messages(l, cfg)
+        live = l["slug"] in days
+        to = email_of(l)
         rows.append({
-            "send_day": day, "status": l["status"], "clinic": l["name"], "niche": l["niche"], "town": l["town"],
-            "phone": l["phone"], "channel": ("Check they offer this treatment first" if l.get("verify") else
-                        "WhatsApp" if l["whatsapp"] else "Landline: call or email"),
-            "whatsapp_link": (f"https://wa.me/{l['whatsapp']}?text={urllib.parse.quote(opener)}"
-                              if l["whatsapp"] and opener and not l["status"] and not l.get("verify") else ""),
+            "send_day": days.get(l["slug"], ""), "status": l["status"], "clinic": l["name"], "niche": l["niche"],
+            "town": l["town"], "phone": l["phone"], "channel": channel(l, cfg),
+            "whatsapp_link": f"https://wa.me/{l['whatsapp']}?text={urllib.parse.quote(opener)}" if live and l["whatsapp"] else "",
+            "email": to,
+            "email_link": (f"mailto:{to}?subject={urllib.parse.quote(subject)}&body={urllib.parse.quote(email)}"
+                           if live and to else ""),
             "website": l["website"], "search": hit["query"], "position": hit["position"],
             "rating": l["rating"], "reviews": l["reviews"],
             "above": "; ".join(f"{a['name']} {a['rating']:.1f}/{a['reviews']}" for a in hit["above"]),
-            "1_opener": opener, "2_after_they_say_yes": after_yes, "3_if_they_ask_price": price,
+            "1_opener": opener, "1_email_subject": subject, "1_email": email,
+            "2_after_they_say_yes": after_yes, "3_if_they_ask_price": price,
             "audit": l["audit_url"], "ai_check_prompt": f"Best clinics for {hit['service']} in {l['town']}? Name three.",
             "slug": l["slug"], "notes": l.get("notes", "")})
     rows.sort(key=lambda r: (r["send_day"] == "", r["send_day"] or 0))
     out.mkdir(exist_ok=True)
-    path = out / "clinics.csv"
+    path = out / cfg.get("sheet", "clinics.csv")
     with path.open("w", newline="", encoding="utf-8-sig") as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0]) if rows else ["clinic"])
         w.writeheader()
         w.writerows(rows)
-    wa = sum(v for k, v in day_count.items() if k != "")
-    print(f"Wrote {path}: {len(rows)} clinics, {wa} to send on WhatsApp over {max([k for k in day_count if k != ''], default=0)} "
-          f"day(s) at {per_day} a day, {sum(1 for l in leads if not l['whatsapp'])} landline-only, "
+    print(f"Wrote {path}: {len(rows)} clinics, {len(days)} to send over {max(days.values(), default=0)} day(s) at "
+          f"{per_day} a day. {sum(1 for l in leads if l['whatsapp'])} with a WhatsApp link, "
+          f"{sum(1 for l in leads if email_of(l))} with an email, "
           f"{sum(1 for l in leads if l.get('verify'))} held back until you check they offer the treatment.")
+    if "email" in cfg.get("channels", []) and not cfg.get("postal_address"):
+        print("  Add your postal address to the config (\"postal_address\"): US law requires one in every marketing email.")
 
 
 def build_audits(leads, cfg, root, today):
@@ -522,7 +614,7 @@ def main():
     ap.add_argument("--config", default=str(ROOT / "scripts" / "clinic-prospects.json"))
     ap.add_argument("--root", default=str(ROOT), help="where cache/, out/, demos/ and clinic_leads.json live")
     ap.add_argument("--limit", type=int, help="most new clinics to add this run")
-    ap.add_argument("--per-day", type=int, help="WhatsApp openers per send day (default from config, 40)")
+    ap.add_argument("--per-day", type=int, help="openers per send day (default from config, 40)")
     ap.add_argument("--max-requests", type=int, default=200, help="cap on paid Google searches this run")
     ap.add_argument("--check-sites", action="store_true", help="load each clinic's homepage for the website checks")
     ap.add_argument("--dry-run", action="store_true", help="search and rank only; nothing written")
@@ -532,8 +624,9 @@ def main():
                     help="mark the next N WhatsApp rows (default: one day's batch) as contacted; the rest move up a day")
     a = ap.parse_args()
     root = Path(a.root)
-    cache, out, store = root / "cache" / "clinics", root / "out", root / "clinic_leads.json"
     cfg = json.loads(Path(a.config).read_text())
+    cache, out = root / "cache" / cfg.get("cache", "clinics"), root / "out"
+    store = root / cfg.get("store", "clinic_leads.json")
     for k, v in dict(min_position=4, max_position=12, min_rating=4.5, min_reviews=15, per_day=40, limit=200,
                      exclude_types=["hospital", "pharmacy", "drugstore"], skip=[]).items():
         cfg.setdefault(k, v)
@@ -548,7 +641,7 @@ def main():
                 sys.exit(f"--mark {m}: unknown slug or status (statuses: {', '.join(s for s in STATUSES if s)})")
             by_slug[slug]["status"] = status
         if a.sent:
-            batch = [l for l in leads if l["whatsapp"] and not l["status"] and not l.get("verify")][:per_day if a.sent < 0 else a.sent]
+            batch = [l for l in leads if sendable(l, cfg)][:per_day if a.sent < 0 else a.sent]
             for l in batch:
                 l["status"] = "contacted"
                 l["contacted_on"] = datetime.date.today().isoformat()
@@ -574,19 +667,19 @@ def main():
     taken = {l["place_id"] for l in leads} | set(by_slug)
     skip = {slugify(s) for s in cfg["skip"]}
     fresh = [e for pid, e in found.items() if pid not in taken and slugify(name_of(e["place"])) not in skip]
-    fresh.sort(key=score, reverse=True)
+    fresh.sort(key=lambda e: score(e, cfg), reverse=True)
     pick = fresh[:a.limit or cfg["limit"]]
     print(f"\n{len(found)} clinics qualify, {len(fresh)} new, adding {len(pick)}. {budget.used} Google searches used.")
     for niche in cfg["niches"]:
         grp = [e for e in fresh if e["niche"] == niche]
-        wa = sum(1 for e in grp if uk_mobile(e["place"].get("nationalPhoneNumber")))
-        print(f"  {niche}: {len(grp)} new, {wa} WhatsApp-able, {len(grp) - wa} landline-only")
+        wa = sum(1 for e in grp if wa_number(e["place"].get("nationalPhoneNumber"), cfg))
+        print(f"  {niche}: {len(grp)} new, {wa} with a WhatsApp link to try, {len(grp) - wa} without")
     print("  skipped: " + ", ".join(f"{v} {k}" for k, v in sorted(rej.items(), key=lambda x: -x[1])))
     for e in pick[:25]:
         p, h = e["place"], best_hit(e)
         print(f"  {ordinal(h['position']):>4} for \"{h['query']}\"  ·  {name_of(p)}  ·  {p.get('rating')}★ "
               f"{p.get('userRatingCount')}  ·  beats {outdone(h, p.get('userRatingCount') or 0)}/3 on reviews"
-              f"{'  · WhatsApp' if uk_mobile(p.get('nationalPhoneNumber')) else ''}")
+              f"{'  · WhatsApp' if wa_number(p.get('nationalPhoneNumber'), cfg) else ''}")
     if a.dry_run:
         return print("\nDry run: nothing written.")
 
@@ -599,7 +692,7 @@ def main():
         while slug in by_slug:
             slug = base + "-2" if slug == base else slug + "-2"
         lead = {"slug": slug, "place_id": p["id"], "name": name_of(p), "niche": e["niche"], "town": town,
-                "phone": p["nationalPhoneNumber"], "whatsapp": uk_mobile(p["nationalPhoneNumber"]),
+                "phone": p["nationalPhoneNumber"], "whatsapp": wa_number(p["nationalPhoneNumber"], cfg),
                 "website": p["websiteUri"], "google_url": p.get("googleMapsUri", ""),
                 "rating": round(p.get("rating") or 0, 1), "reviews": p.get("userRatingCount") or 0, "hits": hits,
                 "audit_url": f"{cfg['base_url'].rstrip('/')}/audit-{slug}/", "status": "", "notes": ""}

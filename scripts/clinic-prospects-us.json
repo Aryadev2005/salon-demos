@@ -1,0 +1,36 @@
+{
+  "region": "US",
+  "currency": "$",
+  "channels": ["whatsapp", "email"],
+  "store": "clinic_leads_us.json",
+  "sheet": "clinics_us.csv",
+  "cache": "clinics_us",
+  "niches": {
+    "aesthetics": {
+      "services": ["med spa", "botox", "lip fillers"]
+    },
+    "dental": {
+      "services": ["cosmetic dentist", "dental implants", "Invisalign"]
+    }
+  },
+  "towns": [
+    "Scottsdale, AZ", "Plano, TX", "Frisco, TX", "Southlake, TX", "The Woodlands, TX",
+    "Naperville, IL", "Alpharetta, GA", "Franklin, TN", "Brentwood, TN", "Bellevue, WA",
+    "Irvine, CA", "Newport Beach, CA", "Carmel, IN", "Westport, CT", "Greenwich, CT"
+  ],
+  "skip": [],
+  "min_position": 4,
+  "max_position": 12,
+  "min_rating": 4.5,
+  "min_reviews": 25,
+  "per_day": 40,
+  "limit": 200,
+  "monthly": 497,
+  "setup": 500,
+  "your_name": "Aryadev",
+  "company": "Codzo",
+  "your_whatsapp": "+91 86378 59578",
+  "your_email": "aryadev.chatterjee@codzo.in",
+  "postal_address": "",
+  "base_url": "https://salon-previews.vercel.app"
+}

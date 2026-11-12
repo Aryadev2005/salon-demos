@@ -395,3 +395,16 @@ python3 scripts/clinic_audits.py --mark <slug>:declined   # or replied / yes / p
   that lead in `clinic_leads.json`, and re-run.
 - To correct or add to one audit, edit that lead in `clinic_leads.json` (`position` on a search, `observations`,
   `fixes_first`, `ai_mentioned`), then `python3 scripts/clinic_audits.py --rebuild` (no Google searches).
+
+### US (and other countries)
+
+```
+python3 scripts/clinic_audits.py --config scripts/clinic-prospects-us.json --dry-run
+python3 scripts/clinic_audits.py --config scripts/clinic-prospects-us.json --check-sites   # out/clinics_us.csv
+python3 scripts/clinic_audits.py --config scripts/clinic-prospects-us.json --sent
+```
+
+- Keeps its own leads (`clinic_leads_us.json`), cache and sheet, so the UK list is untouched.
+- Every clinic gets a `whatsapp_link` to try first. If WhatsApp says the number isn't on it, use the
+  `email_link` in the same row (it opens your mail app with the email written). No email found: call.
+- Fill `postal_address` in the config first: US law (CAN-SPAM) requires one in every marketing email.
