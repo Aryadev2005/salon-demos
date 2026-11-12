@@ -86,7 +86,7 @@ def ordinal(n):
 
 
 def tidy_name(n):
-    n = re.split(r"\s[-|–]\s|\s?\|", re.sub(r"\s+", " ", n).strip())[0]
+    n = re.split(r"\s[-–—]\s?|\s?\|", re.sub(r"\s+", " ", n).strip())[0]
     n = re.sub(r"\s+(Ltd|Limited)\.?$", "", n, flags=re.I).strip()
     if n.isupper() and len(n) > 6:
         n = " ".join(w if len(w) <= 3 else w.capitalize() for w in n.split())
