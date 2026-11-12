@@ -404,31 +404,72 @@ def make_lead(p, slug, cfg, accent, credits):
 
 
 # ---------------------------------------------------------------- 5. outreach
-def outreach_row(lead, base_url, cfg):
-    """Two-step outreach: a short first message with no link or price, then the demo once they say yes.
+# What each kind of business makes the most money from: the pitch leads with this, not with "a website".
+MONEY = {
+    "hair": ("your colour, balayage and bridal work",
+             "colour, balayage, extensions and bridal, not just cuts"),
+    "nail": ("your BIAB, extensions and nail art",
+             "BIAB, extensions and nail art, plus regulars rebooking every few weeks"),
+    "beauty": ("your lashes, brows and facials",
+               "lash sets and infills, brows and facials, the treatments people come back for"),
+    "facial": ("your facials and skin courses",
+               "courses of treatments, so one booking turns into a regular client"),
+    "barber": ("your regulars and walk-ins",
+               "regulars who rebook every few weeks, plus kids' cuts and beard work"),
+}
 
-    A link from an unknown number looks like spam and triggers WhatsApp's block/report prompt; asking first
-    gets more replies and keeps the sending number safer.
+
+def money_for(lead_type):
+    t = lead_type.lower()
+    for key in ("facial", "nail", "barber", "beauty", "hair"):
+        if key in t:
+            return MONEY[key]
+    return MONEY["hair"]
+
+
+def outreach_row(lead, base_url, cfg):
+    """Pitch built around the owner's decision: their most profitable work, no risk, nothing for them to do.
+
+    Step 1 (opener) has no link or price: a link from an unknown number looks like spam.
+    Step 2 goes after they say yes. Businesses already messaged get a short reframed follow-up instead.
     """
     demo = f"{base_url.rstrip('/')}/{lead['slug']}/"
     me = cfg["your_name"]
+    short, long_ = money_for(lead["type"])
+    price, monthly = cfg["price"], cfg.get("monthly", 39)
     rating = f"{float(lead['rating']):.1f}" if lead.get("rating") else ""
-    opener = (f"Hi, is this the owner of {lead['name']}? I'm {me}. I made a free website preview for "
-              f"{lead['name']} using your Google reviews" + (f" ({rating} from {lead['review_count']:,}!)" if rating else "")
-              + ". Can I send you the link to have a look?")
-    followup = (f"Here it is: {demo}\n\nIt's built from your own Google listing: reviews, hours and photos. "
-                f"Your listing has no website right now, so people searching for a {lead['type'].lower()} in {lead['city']} "
-                f"can't see any of this in one place.\n\nIf you like it, it's £{cfg['price']} one-off and I'll put it live "
-                f"on your Google listing this week. If not, no worries at all.")
+    proof = f" ({rating} from {lead['review_count']:,})" if rating else ""
+    terms = (f"you only pay once it's live and you're happy with it: £{price} once, or £{monthly} a month "
+             f"with no contract")
+    opener = (f"Hi, is this {lead['name']}? I'm {me}. I made a free website preview for you, built around "
+              f"{short}, using your own Google reviews{proof}. Nothing to pay or sign up for. "
+              f"Can I send you the link?")
+    after_yes = (f"Here it is: {demo}\n\nIt's built around what makes you the most money: {long_}. "
+                 f"I've used your own Google reviews, photos and hours, so there's nothing for you to do.\n\n"
+                 f"If you want it, I'll put it live on your Google listing, and {terms}. "
+                 f"Happy to change anything first.")
+    follow_up = (f"Hi again, {me} here. One thing I should have made clear about the website I made for "
+                 f"{lead['name']}: there's no risk. I'll put it live on your Google listing and {terms}. "
+                 f"It's built around {short}: {demo}\n\nNo worries at all if it's not for you.")
+    contacted = bool(lead.get("contacted"))
+    if lead.get("declined"):
+        return {"salon": lead["name"], "type": lead["type"], "town": lead["city"], "rating": lead.get("rating", ""),
+                "reviews": lead.get("review_count", ""), "phone": lead["phone"],
+                "stage": "said no: don't message again", "channel": "", "whatsapp_link": "", "instagram": "",
+                "demo": demo, "1_opener": "", "2_after_they_say_yes": "", "follow_up_if_already_messaged": "",
+                "status": "declined", "notes": lead["declined"]}
     wa = lead.get("whatsapp", "")
+    first = follow_up if contacted else opener
     ig = lead.get("instagram") or "https://www.google.com/search?q=" + urllib.parse.quote(f"{lead['name']} {lead['city']} instagram")
     return {
         "salon": lead["name"], "type": lead["type"], "town": lead["city"], "rating": lead.get("rating", ""),
         "reviews": lead.get("review_count", ""), "phone": lead["phone"],
+        "stage": "already messaged: send follow-up" if contacted else "new: send opener",
         "channel": "WhatsApp" if wa else "Instagram DM (or call)",
-        "whatsapp_link": f"https://wa.me/{wa.lstrip('+')}?text={urllib.parse.quote(opener)}" if wa else "",
+        "whatsapp_link": f"https://wa.me/{wa.lstrip('+')}?text={urllib.parse.quote(first)}" if wa else "",
         "instagram": "" if wa else ig,
-        "demo": demo, "1_opener": opener, "2_after_they_say_yes": followup, "status": "", "notes": "",
+        "demo": demo, "1_opener": opener, "2_after_they_say_yes": after_yes,
+        "follow_up_if_already_messaged": follow_up, "status": "", "notes": "",
     }
 
 

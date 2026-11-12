@@ -34,5 +34,6 @@
   "price": 300,
   "your_name": "Aryadev",
   "your_whatsapp": "+91 86378 59578",
-  "base_url": "https://salon-previews.vercel.app"
+  "base_url": "https://salon-previews.vercel.app",
+  "monthly": 39
 }

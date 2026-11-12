@@ -35,5 +35,6 @@
   "base_url": "https://salon-previews.vercel.app",
   "exclude_types": [
     "barber_shop"
-  ]
+  ],
+  "monthly": 39
 }
