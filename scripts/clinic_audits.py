@@ -56,7 +56,8 @@ CHAINS = ["mydentist", "my dentist", "bupa", "portman", "rodericks", "colosseum"
 CHAINS += ["ideal image", "laseraway", "skinspirit", "skin spirit", "ever/body", "everbody", "heyday", "aspen dental",
            "western dental", "pacific dental", "heartland dental", "gentle dental", "clearchoice", "clear choice",
            "milan laser", "hand & stone", "massage envy", "european wax", "sono bello", "restore hyper", "the joint",
-           "smile brands", "bright now", "coast dental", "dental care alliance", "great expressions", "sola salon"]
+           "smile brands", "bright now", "nakedmd", "naked md", "nuvia", "clearchoice", "affordable dentures",
+           "the lip bar", "alchemy 43", "ever/body", "plush aesthetics", "skin laundry", "glo30", "beautyfix", "coast dental", "dental care alliance", "great expressions", "sola salon"]
 JUNK_EMAIL = ["sentry", "wixpress", "example.", "domain.com", "email.com", "yourdomain", "godaddy", "@sentry", "wix.com",
               "squarespace", "noreply", "no-reply", "@2x", "user@", "name@", "info@email"]
 CHAIN_HOSTS = ["mydentist.co.uk", "bupa.co.uk", "portmandentalcare.com", "rodericksdentalpartners.co.uk",
@@ -225,6 +226,8 @@ def why_not(p, pos, cfg, town):
         return "low rating"
     if (p.get("userRatingCount") or 0) < cfg["min_reviews"]:
         return "too few reviews"
+    if cfg.get("max_reviews") and (p.get("userRatingCount") or 0) > cfg["max_reviews"]:
+        return "too big (likely a group with its own marketing team)"
     if not p.get("nationalPhoneNumber"):
         return "no phone"
     return None
