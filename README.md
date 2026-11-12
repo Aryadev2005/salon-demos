@@ -393,3 +393,5 @@ python3 scripts/clinic_audits.py --mark <slug>:declined   # or replied / yes / p
 - Audits are served at `salon-previews.vercel.app/audit-<slug>/` once `demos/audit-*` is on `main`.
 - To add the AI section to an audit, ask ChatGPT the `ai_check_prompt`, set `"ai_mentioned": true` or `false` on
   that lead in `clinic_leads.json`, and re-run.
+- To correct or add to one audit, edit that lead in `clinic_leads.json` (`position` on a search, `observations`,
+  `fixes_first`, `ai_mentioned`), then `python3 scripts/clinic_audits.py --rebuild` (no Google searches).

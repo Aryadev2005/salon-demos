@@ -3294,7 +3294,7 @@
         "query": "lip fillers in Solihull",
         "service": "lip fillers",
         "town": "Solihull",
-        "position": 7,
+        "position": 14,
         "above": [
           {
             "name": "AL Aesthetics Clinic Solihull",
@@ -3385,7 +3385,16 @@
       "schema": true,
       "booking": true,
       "tap_to_call": true
-    }
+    },
+    "observations": [
+      "On Google Maps itself you came up 14th for lip fillers in Solihull when I searched on a weekday lunchtime.",
+      "Neo Aesthetics (20 reviews) and Fresh Aesthetics (21 reviews) came up above you with a quarter of your reviews, so review count alone isn't deciding this search.",
+      "Listings above you showed a client review about lips or lip fillers under their name. Yours showed none for this search.",
+      "Your listing showed as closed until 5pm. Google tends to favour clinics that are open at the time someone searches."
+    ],
+    "fixes_first": [
+      "Get lip fillers named on your Google profile: listed as a treatment, in photos, and in new reviews. Ask for the review straight after a lip filler appointment, when the treatment is what a client naturally writes about."
+    ]
   },
   {
     "slug": "kent-beauty-and-aesthetics-tunbridge-wel",

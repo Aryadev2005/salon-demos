@@ -278,7 +278,10 @@ def findings(lead):
                 fixes.append(fix)
         row(s["town_in_title"] and s["service_in_title"], "Page title and heading",
             "Names both the treatment and the town.",
-            f"The homepage title is \"{s['title'] or 'empty'}\". It doesn't clearly say what you do and where.",
+            f"The homepage title is \"{s['title'] or 'empty'}\". "
+            + (f"It names {lead['town']} but not {hit['service']}." if s["town_in_title"] else
+               f"It names the treatment but not {lead['town']}." if s["service_in_title"] else
+               "It doesn't clearly say what you do and where."),
             f"Put the treatment and the town (\"{hit['service'].title()} in {lead['town']}\") in the page title and "
             f"main heading, and give each main treatment its own page.")
         row(s["schema"], "Clinic details Google and AI assistants can read",
@@ -299,7 +302,8 @@ def findings(lead):
     if not (s and s.get("ok")):
         fixes.append(f"Give each main treatment its own page that names {lead['town']}, so Google has a clear page to rank.")
     fixes.append("Keep the Google profile active: treatments listed, new photos and a reply to every review.")
-    return rows, fixes[:4]
+    fixes = list(lead.get("fixes_first") or []) + fixes
+    return rows, fixes[:5]
 
 
 # ---------------------------------------------------------------- 4. audit page
@@ -322,6 +326,7 @@ td{{padding:9px 8px;border-bottom:1px solid var(--line);vertical-align:top}}td.n
 tr.you td{{background:var(--you-bg);font-weight:600}}tr.you td:first-child{{color:var(--you)}}
 .q{{font-style:italic}}ul{{list-style:none;margin:10px 0 0;padding:0}}li{{padding:9px 0 9px 30px;border-bottom:1px solid var(--line);position:relative;font-size:15px}}
 li:last-child{{border-bottom:0}}li b{{display:block}}li::before{{position:absolute;left:0;top:9px;width:20px;height:20px;border-radius:50%;text-align:center;font:700 13px/20px sans-serif;color:#fff}}
+li.dot::before{{content:"";width:8px;height:8px;top:16px;left:6px;background:var(--you)}}
 li.ok::before{{content:"\\2713";background:var(--ok)}}li.no::before{{content:"!";background:var(--bad)}}
 ol{{margin:10px 0 0;padding-left:22px}}ol li{{padding:6px 0;border:0;list-style:decimal}}
 .btn{{display:inline-block;margin-top:6px;background:var(--you);color:#fff;text-decoration:none;font-weight:600;padding:12px 18px;border-radius:8px}}
@@ -337,12 +342,12 @@ ol{{margin:10px 0 0;padding-left:22px}}ol li{{padding:6px 0;border:0;list-style:
 <p class="sans">For <span class="q">{query}</span>.</p>
 <table><tr><th>Place</th><th>Clinic</th><th class="n">Rating</th><th class="n">Reviews</th></tr>{compare}</table>
 {verdict}</section>
-{site}{ai}
+{obs}{site}{ai}
 <section><h2>What I'd fix first</h2><ol>{fixes}</ol></section>
 <section><h2>Want this done for you?</h2>
 <p class="sans">I'm {me}. I do this work for clinics month to month: the site, the Google profile, reviews and how the clinic shows up in AI answers. No contract. Message me and I'll walk you through this page in ten minutes.</p>
 <a class="btn" href="https://wa.me/{wa}?text={wa_text}">Message {me} on WhatsApp</a></section>
-<p class="foot">Positions are from Google Maps searches run on {date} and can vary with the searcher's location. Ratings and review counts are from Google on the same date.{site_note}</p>
+<p class="foot">Positions are from Google Maps searches run on {date} and vary with the searcher's location and the time of day. Ratings and review counts are from Google on the same date.{site_note}</p>
 </main></body></html>
 """
 
@@ -363,23 +368,49 @@ def audit_html(lead, cfg, today):
     n = outdone(hit, lead["reviews"])
     verdict = (f"<p class=\"sans\" style=\"margin-top:12px\">You have more reviews than {'all three of the' if n == 3 else 'two of the three' if n == 2 else 'one of the three'} clinics above you. "
                f"Your reputation isn't what's holding you back.</p>" if n else
-               "<p class=\"sans\" style=\"margin-top:12px\">The clinics above you have more reviews. That gap is the first thing to close.</p>")
+               "<p class=\"sans\" style=\"margin-top:12px\">The three at the top have more reviews than you, and that gap is worth closing.</p>")
     rows, fixes = findings(lead)
     site = ""
     if rows:
         site = ("<section><h2>Your website</h2><p class=\"sans\">What a phone sees on your homepage.</p><ul>"
                 + "".join(f"<li class=\"{'ok' if ok else 'no'}\"><b>{esc(label)}</b>{esc(detail)}</li>" for ok, label, detail in rows)
                 + "</ul></section>")
-    ai = ""
+    obs = ""
+    if lead.get("observations"):
+        obs = ("<section><h2>What I noticed on Google Maps</h2><ul>"
+               + "".join(f"<li class=\"dot\">{esc(o)}</li>" for o in lead["observations"]) + "</ul></section>")
+    asked = ""
     if lead.get("ai_mentioned") in (True, False):
-        said = "named you" if lead["ai_mentioned"] else "did not name you"
-        ai = (f"<section><h2>AI answers</h2><p class=\"sans\">I asked ChatGPT for the best clinics for "
-              f"{esc(hit['service'])} in {esc(lead['town'])}. It {said}.</p></section>")
+        asked = (f" I asked ChatGPT for the best clinics for {esc(hit['service'])} in {esc(lead['town'])}. "
+                 f"It {'named you' if lead['ai_mentioned'] else 'did not name you'}.")
+    ai_points = [
+        ("A page for each treatment that answers what people ask",
+         f"Who does it, what it costs from, how long it lasts and where you are, written as plain questions and "
+         f"answers. That is the text an assistant lifts when someone asks about {hit['service']} in {lead['town']}."),
+        ("Details a machine can read",
+         "Structured data on the site for the clinic, the practitioner, each treatment, hours and reviews, so an "
+         "assistant doesn't have to guess."),
+        ("The same facts everywhere",
+         "Name, address, phone and treatments matching on Google, Bing, Apple Maps and the directories for your "
+         "field. ChatGPT's search draws on Bing among others, so a Bing Places listing matters as well as Google's."),
+        ("Reviews that name the treatment",
+         "AI answers lean on what clients say in their own words. A review that mentions the treatment and the town "
+         "is what gets picked up."),
+        ("Mentions on sites an assistant trusts", "Professional registers, local press and established directories."),
+    ]
+    ai = ("<section><h2>Showing up in ChatGPT and Google's AI answers</h2>"
+          f"<p class=\"sans\">More people now ask an AI assistant for a clinic instead of scrolling a map.{asked} "
+          "These assistants have no list of their own. They read what is already public about you and name the "
+          "clinics they can describe with confidence. What gets a clinic named:</p><ul>"
+          + "".join(f"<li class=\"dot\"><b>{esc(a)}</b>{esc(b)}</li>" for a, b in ai_points)
+          + "</ul><p class=\"sans\" style=\"margin-top:12px\">Each month I ask ChatGPT, Gemini and Google the questions your "
+          "clients would ask and report whether you were named. Nobody can guarantee a place in an AI answer; this is "
+          "the work that makes you the easy clinic to recommend.</p></section>")
     lede = (f"You came up {ordinal(hit['position'])} for “{hit['query']}”. "
             f"Most people searching pick from the first three.")
     return PAGE.format(
         name=esc(lead["name"]), date=today, lede=esc(lede), og=esc(lede), searches=searches, query=esc(hit["query"]),
-        compare=compare, verdict=verdict, site=site, ai=ai, fixes="".join(f"<li>{esc(f)}</li>" for f in fixes),
+        compare=compare, verdict=verdict, obs=obs, site=site, ai=ai, fixes="".join(f"<li>{esc(f)}</li>" for f in fixes),
         me=esc(cfg["your_name"]), wa=re.sub(r"\D", "", cfg["your_whatsapp"]),
         wa_text=urllib.parse.quote(f"Hi {cfg['your_name']}, I saw the Google check for {lead['name']}."),
         site_note=" Website checks are of the homepage only, loaded as a phone would." if rows else "")
@@ -446,6 +477,15 @@ def write_sheet(leads, cfg, out, per_day):
           f"day(s) at {per_day} a day, {sum(1 for l in leads if not l['whatsapp'])} landline-only.")
 
 
+def build_audits(leads, cfg, root, today):
+    """Rewrite every audit page, so edits to clinic_leads.json (position, observations, ai_mentioned) show up."""
+    for l in leads:
+        if l["status"] != "declined":
+            d = root / "demos" / f"audit-{l['slug']}"
+            d.mkdir(parents=True, exist_ok=True)
+            (d / "index.html").write_text(audit_html(l, cfg, today), encoding="utf-8")
+
+
 # ---------------------------------------------------------------- main
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -456,6 +496,7 @@ def main():
     ap.add_argument("--max-requests", type=int, default=200, help="cap on paid Google searches this run")
     ap.add_argument("--check-sites", action="store_true", help="load each clinic's homepage for the website checks")
     ap.add_argument("--dry-run", action="store_true", help="search and rank only; nothing written")
+    ap.add_argument("--rebuild", action="store_true", help="rewrite audits and the sheet from clinic_leads.json; no searching")
     ap.add_argument("--mark", action="append", default=[], metavar="SLUG:STATUS", help="|".join(s for s in STATUSES if s))
     ap.add_argument("--sent", type=int, nargs="?", const=-1, metavar="N",
                     help="mark the next N WhatsApp rows (default: one day's batch) as contacted; the rest move up a day")
@@ -483,6 +524,11 @@ def main():
                 l["contacted_on"] = datetime.date.today().isoformat()
             print(f"Marked {len(batch)} clinics as contacted.")
         store.write_text(json.dumps(leads, indent=2, ensure_ascii=False) + "\n")
+        return write_sheet(leads, cfg, out, per_day)
+
+    if a.rebuild:
+        build_audits(leads, cfg, root, datetime.date.today().strftime("%-d %B %Y"))
+        print(f"Rebuilt {sum(1 for l in leads if l['status'] != 'declined')} audit pages.")
         return write_sheet(leads, cfg, out, per_day)
 
     key = os.environ.get("GOOGLE_MAPS_API_KEY", "").strip()
@@ -525,11 +571,7 @@ def main():
         lead["site"] = check_site(p["websiteUri"], town, cfg["niches"][e["niche"]]["services"], cache, a.check_sites)
         by_slug[slug] = lead
         leads.append(lead)
-    for l in leads:  # rebuild every audit so edits to clinic_leads.json (e.g. ai_mentioned) show up
-        if l["status"] != "declined":
-            d = root / "demos" / f"audit-{l['slug']}"
-            d.mkdir(parents=True, exist_ok=True)
-            (d / "index.html").write_text(audit_html(l, cfg, today), encoding="utf-8")
+    build_audits(leads, cfg, root, today)
     store.write_text(json.dumps(leads, indent=2, ensure_ascii=False) + "\n")
     write_sheet(leads, cfg, out, per_day)
 
