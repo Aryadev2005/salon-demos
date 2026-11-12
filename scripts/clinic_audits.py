@@ -87,7 +87,10 @@ def ordinal(n):
 
 def tidy_name(n):
     n = re.split(r"\s[-|–]\s|\s?\|", re.sub(r"\s+", " ", n).strip())[0]
-    return re.sub(r"\s+(Ltd|Limited)\.?$", "", n, flags=re.I).strip()
+    n = re.sub(r"\s+(Ltd|Limited)\.?$", "", n, flags=re.I).strip()
+    if n.isupper() and len(n) > 6:
+        n = " ".join(w if len(w) <= 3 else w.capitalize() for w in n.split())
+    return n
 
 
 def name_of(p):
@@ -149,7 +152,12 @@ def search(q, key, budget, cache):
 
 
 # ---------------------------------------------------------------- 2. filter
-def why_not(p, pos, cfg):
+def in_town(p, town):
+    where = " ".join([p.get("formattedAddress") or ""] + [c.get("longText") or "" for c in p.get("addressComponents") or []])
+    return town.lower() in where.lower()
+
+
+def why_not(p, pos, cfg, town):
     if pos < cfg["min_position"]:
         return "already top 3"
     if pos > cfg["max_position"]:
@@ -161,6 +169,10 @@ def why_not(p, pos, cfg):
         return "other country"
     if is_chain(p):
         return "chain"
+    if not in_town(p, town):
+        return "based in another town"
+    if re.search(r"hospital|@", (p.get("displayName") or {}).get("text", ""), re.I):
+        return "inside a hospital"
     if (p.get("primaryType") or "") in cfg["exclude_types"]:
         return "excluded type"
     if not p.get("websiteUri") or host_in(p["websiteUri"], NOT_A_WEBSITE):
@@ -189,7 +201,7 @@ def collect(cfg, key, budget, cache):
                 places = search(q, key, budget, cache)
                 print(f"  {len(places):3d} · {q}")
                 for i, p in enumerate(places):
-                    w = why_not(p, i + 1, cfg)
+                    w = why_not(p, i + 1, cfg, town)
                     if w:
                         rej[w] = rej.get(w, 0) + 1
                         continue
@@ -488,6 +500,10 @@ def main():
     fresh.sort(key=score, reverse=True)
     pick = fresh[:a.limit or cfg["limit"]]
     print(f"\n{len(found)} clinics qualify, {len(fresh)} new, adding {len(pick)}. {budget.used} Google searches used.")
+    for niche in cfg["niches"]:
+        grp = [e for e in fresh if e["niche"] == niche]
+        wa = sum(1 for e in grp if uk_mobile(e["place"].get("nationalPhoneNumber")))
+        print(f"  {niche}: {len(grp)} new, {wa} WhatsApp-able, {len(grp) - wa} landline-only")
     print("  skipped: " + ", ".join(f"{v} {k}" for k, v in sorted(rej.items(), key=lambda x: -x[1])))
     for e in pick[:25]:
         p, h = e["place"], best_hit(e)
