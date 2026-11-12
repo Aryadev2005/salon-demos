@@ -1,0 +1,27 @@
+{
+  "niches": {
+    "aesthetics": {
+      "services": ["aesthetics clinic", "botox", "lip fillers", "skin clinic"]
+    },
+    "dental": {
+      "services": ["dental implants", "Invisalign", "cosmetic dentist", "private dentist"]
+    }
+  },
+  "towns": [
+    "Harrogate", "Ilkley", "Wetherby", "Knaresborough", "Cheltenham", "Cirencester",
+    "Wilmslow", "Altrincham", "Knutsford", "Hale", "Solihull", "Sutton Coldfield",
+    "Guildford", "St Albans", "Tunbridge Wells"
+  ],
+  "skip": [],
+  "min_position": 4,
+  "max_position": 12,
+  "min_rating": 4.5,
+  "min_reviews": 15,
+  "per_day": 40,
+  "limit": 200,
+  "monthly": 399,
+  "setup": 300,
+  "your_name": "Aryadev",
+  "your_whatsapp": "+91 86378 59578",
+  "base_url": "https://salon-previews.vercel.app"
+}

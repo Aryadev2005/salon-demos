@@ -372,3 +372,24 @@ Both use generated placeholder images and made-up details.
 - `the-cut-co`: The Cut Co, 125 Karangahape Road, Auckland (Remi Chak, @remichak).
   Details, prices, hours and reviews come from their Fresha listing; photos and
   the hero video are their own Instagram work (two gallery tiles are still screenshot crops). Books through Fresha (no WhatsApp/phone found).
+
+## Clinics: retainer pipeline (private dental + aesthetics)
+
+`scripts/clinic_audits.py` is the opposite of the salon script: it looks for clinics that **have** a website but
+come up 4th to 12th on Google Maps, and pitches a monthly retainer, not a one-off site.
+
+```
+export GOOGLE_MAPS_API_KEY=...
+python3 scripts/clinic_audits.py --dry-run        # search + rank only (1 Google search per service per town)
+python3 scripts/clinic_audits.py --check-sites    # clinic_leads.json, demos/audit-<slug>/, out/clinics.csv
+python3 scripts/clinic_audits.py --sent           # after sending today's WhatsApp batch (40): mark it contacted
+python3 scripts/clinic_audits.py --mark <slug>:declined   # or replied / yes / paid
+```
+
+- Towns, services, price and batch size are in `scripts/clinic-prospects.json`.
+- `out/clinics.csv`: `send_day` 1 is today's WhatsApp batch. Message 1 has no link and no price; message 2 (the
+  audit link) goes only after a yes; message 3 only if they ask the price.
+- Landline-only clinics (most dentists) are listed with no send day: reach those by email or a call.
+- Audits are served at `salon-previews.vercel.app/audit-<slug>/` once `demos/audit-*` is on `main`.
+- To add the AI section to an audit, ask ChatGPT the `ai_check_prompt`, set `"ai_mentioned": true` or `false` on
+  that lead in `clinic_leads.json`, and re-run.
