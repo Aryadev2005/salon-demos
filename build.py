@@ -11,6 +11,7 @@ import colorsys
 import datetime
 import html
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -523,6 +524,23 @@ def contact_blocks(lead):
 
 
 # ---------------------------------------------------------------- render
+PREVIEW_BASE = os.environ.get("PREVIEW_BASE", "https://salon-previews.vercel.app")
+
+
+def og_tags(lead, name, place):
+    """Link-preview card (WhatsApp, iMessage, Facebook): salon name, rating line and hero photo."""
+    url = f"{PREVIEW_BASE.rstrip('/')}/{lead['slug']}/"
+    desc = (f"{float(lead['rating']):.1f}★ from {lead['review_count']:,} reviews · " if lead.get("rating") else "") + lead["headline"]
+    tags = {
+        "og:type": "website", "og:url": url, "og:site_name": name,
+        "og:title": f"{name} · {lead['type']} in {place}", "og:description": desc,
+        "og:image": url + "img/hero.jpg", "og:image:alt": lead.get("hero_alt") or name,
+    }
+    out = [f'<meta property="{k}" content="{e(v)}">' for k, v in tags.items()]
+    out.append('<meta name="twitter:card" content="summary_large_image">')
+    return "\n".join(out)
+
+
 def pitch_banner(lead):
     """Optional strip at the very top telling the salon owner who made the preview and how to reach them."""
     pb = lead.get("pitch")
@@ -545,6 +563,8 @@ def render(lead):
     parsed = parse_hours(lead["hours"])
     name = lead["name"]
     place = f'{lead["area"]}, {lead["city"]}'
+    if lead["area"] == lead["city"]:
+        place = lead["city"]
     wa = wa_number(lead.get("whatsapp", ""))
     names = chips(lead)
 
@@ -576,6 +596,7 @@ def render(lead):
         "lang": lead.get("lang", "en"),
         "title": e(f'{name} · {lead["type"]} in {place}'),
         "description": e(f'{lead["headline"]} {lead["subline"]}'[:300]),
+        "og": og_tags(lead, name, place),
         "name": e(name),
         "type": e(lead["type"]),
         "area": e(lead["area"]),
