@@ -6,6 +6,7 @@
     python3 scripts/clinic_audits.py --check-sites       # leads + audits + out/clinics.csv
     python3 scripts/clinic_audits.py --sent              # after sending day 1's batch: mark it contacted
     python3 scripts/clinic_audits.py --mark some-slug:declined --mark other-slug:yes
+    python3 scripts/clinic_audits.py --rebuild --check-sites   # re-read homepages, rewrite audits + sheet, no searches
 
 The salon and trades scripts look for businesses with NO website and pitch a one-off site. This one is the
 opposite: the buyer already has a site that isn't winning searches, and the pitch is a monthly retainer.
@@ -56,6 +57,17 @@ BOOKING = ["book online", "book now", "book an appointment", "book a consultatio
            "softwareofexcellence", "pabau", "fresha.com", "phorest", "calendly", "cliniko", "timely", "ovatu"]
 SCHEMA_TYPES = ["Dentist", "MedicalBusiness", "MedicalClinic", "LocalBusiness", "BeautySalon", "HealthAndBeautyBusiness",
                 "Physician", "DaySpa"]
+
+
+# Treatment searches: Google also returns clinics that don't offer the treatment, so a clinic is only pitched on
+# one of these if its own homepage mentions it. UK clinics rarely write "botox" (it can't be advertised), hence the
+# alternatives. Any service not listed here (e.g. "skin clinic") is a general search and needs no check.
+TREATMENT_WORDS = {
+    "botox": ["botox", "anti-wrinkle", "anti wrinkle", "wrinkle relaxing", "botulinum", "injectable"],
+    "lip fillers": ["lip filler", "dermal filler", "lip enhancement", "lip augmentation", "fillers", "injectable"],
+    "dental implants": ["implant"],
+    "invisalign": ["invisalign", "clear aligner", "invisible brace"],
+}
 
 
 # ---------------------------------------------------------------- helpers
@@ -231,8 +243,9 @@ def score(e):
 # ---------------------------------------------------------------- 3. homepage checks
 def check_site(url, town, services, cache, enabled):
     cf = cache / "sites" / f"{slugify(host(url))}.json"
-    if cf.exists():
-        return json.loads(cf.read_text())
+    old = json.loads(cf.read_text()) if cf.exists() else None
+    if old and ("mentions" in old or not enabled):
+        return old
     if not enabled:
         return None
     out = {"url": url, "ok": False}
@@ -255,12 +268,27 @@ def check_site(url, town, services, cache, enabled):
                    town_in_title=town.lower() in head,
                    service_in_title=any(s.lower() in head for s in services),
                    schema=any(f'"{t}"' in ld for t in SCHEMA_TYPES),
+                   mentions=[k for k, words in TREATMENT_WORDS.items() if any(w in low for w in words)],
                    booking=any(b in low for b in BOOKING), tap_to_call="href=\"tel:" in low or "href='tel:" in low)
     except Exception as e:  # a site that won't load is itself a finding; record and move on
         out["error"] = str(e)[:120]
     cf.parent.mkdir(parents=True, exist_ok=True)
     cf.write_text(json.dumps(out, indent=1))
     return out
+
+
+def offers(lead, service):
+    """True when it's safe to pitch this search: a general search, or a treatment their homepage mentions."""
+    if service.lower() not in TREATMENT_WORDS:
+        return True
+    return service.lower() in ((lead.get("site") or {}).get("mentions") or [])
+
+
+def order_hits(lead):
+    """Lead with a search the clinic certainly belongs in. Sets lead['verify'] when none is certain."""
+    if not lead.get("pinned"):  # pinned: the first search was checked by hand, leave it alone
+        lead["hits"].sort(key=lambda h: (not offers(lead, h["service"]), -outdone(h, lead["reviews"]), h["position"]))
+    lead["verify"] = not (lead.get("pinned") or offers(lead, lead["hits"][0]["service"]))
 
 
 def findings(lead):
@@ -443,7 +471,7 @@ def messages(lead, cfg):
 
 def write_sheet(leads, cfg, out, per_day):
     rows, day_count = [], {}
-    queue = [l for l in leads if l["whatsapp"] and not l["status"]]
+    queue = [l for l in leads if l["whatsapp"] and not l["status"] and not l.get("verify")]
     for i, l in enumerate(queue):
         l["_day"] = i // per_day + 1
     for l in leads:
@@ -456,9 +484,10 @@ def write_sheet(leads, cfg, out, per_day):
         day_count[day] = day_count.get(day, 0) + 1
         rows.append({
             "send_day": day, "status": l["status"], "clinic": l["name"], "niche": l["niche"], "town": l["town"],
-            "phone": l["phone"], "channel": "WhatsApp" if l["whatsapp"] else "Landline: call or email",
+            "phone": l["phone"], "channel": ("Check they offer this treatment first" if l.get("verify") else
+                        "WhatsApp" if l["whatsapp"] else "Landline: call or email"),
             "whatsapp_link": (f"https://wa.me/{l['whatsapp']}?text={urllib.parse.quote(opener)}"
-                              if l["whatsapp"] and opener and not l["status"] else ""),
+                              if l["whatsapp"] and opener and not l["status"] and not l.get("verify") else ""),
             "website": l["website"], "search": hit["query"], "position": hit["position"],
             "rating": l["rating"], "reviews": l["reviews"],
             "above": "; ".join(f"{a['name']} {a['rating']:.1f}/{a['reviews']}" for a in hit["above"]),
@@ -474,7 +503,8 @@ def write_sheet(leads, cfg, out, per_day):
         w.writerows(rows)
     wa = sum(v for k, v in day_count.items() if k != "")
     print(f"Wrote {path}: {len(rows)} clinics, {wa} to send on WhatsApp over {max([k for k in day_count if k != ''], default=0)} "
-          f"day(s) at {per_day} a day, {sum(1 for l in leads if not l['whatsapp'])} landline-only.")
+          f"day(s) at {per_day} a day, {sum(1 for l in leads if not l['whatsapp'])} landline-only, "
+          f"{sum(1 for l in leads if l.get('verify'))} held back until you check they offer the treatment.")
 
 
 def build_audits(leads, cfg, root, today):
@@ -518,7 +548,7 @@ def main():
                 sys.exit(f"--mark {m}: unknown slug or status (statuses: {', '.join(s for s in STATUSES if s)})")
             by_slug[slug]["status"] = status
         if a.sent:
-            batch = [l for l in leads if l["whatsapp"] and not l["status"]][:per_day if a.sent < 0 else a.sent]
+            batch = [l for l in leads if l["whatsapp"] and not l["status"] and not l.get("verify")][:per_day if a.sent < 0 else a.sent]
             for l in batch:
                 l["status"] = "contacted"
                 l["contacted_on"] = datetime.date.today().isoformat()
@@ -527,6 +557,11 @@ def main():
         return write_sheet(leads, cfg, out, per_day)
 
     if a.rebuild:
+        for l in leads:
+            if a.check_sites and l.get("website"):
+                l["site"] = check_site(l["website"], l["town"], cfg["niches"][l["niche"]]["services"], cache, True)
+            order_hits(l)
+        store.write_text(json.dumps(leads, indent=2, ensure_ascii=False) + "\n")
         build_audits(leads, cfg, root, datetime.date.today().strftime("%-d %B %Y"))
         print(f"Rebuilt {sum(1 for l in leads if l['status'] != 'declined')} audit pages.")
         return write_sheet(leads, cfg, out, per_day)
@@ -569,6 +604,7 @@ def main():
                 "rating": round(p.get("rating") or 0, 1), "reviews": p.get("userRatingCount") or 0, "hits": hits,
                 "audit_url": f"{cfg['base_url'].rstrip('/')}/audit-{slug}/", "status": "", "notes": ""}
         lead["site"] = check_site(p["websiteUri"], town, cfg["niches"][e["niche"]]["services"], cache, a.check_sites)
+        order_hits(lead)
         by_slug[slug] = lead
         leads.append(lead)
     build_audits(leads, cfg, root, today)

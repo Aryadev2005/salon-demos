@@ -2099,8 +2099,8 @@
       }
     ],
     "audit_url": "https://salon-previews.vercel.app/audit-skinroom-wetherby/",
-    "status": "",
-    "notes": "",
+    "status": "replied",
+    "notes": "Doesn't do injectables: was wrongly pitched on lip fillers. Skin treatments only.",
     "site": {
       "url": "https://www.skinroomthorparch.co.uk/",
       "ok": true,
@@ -3394,7 +3394,8 @@
     ],
     "fixes_first": [
       "Get lip fillers named on your Google profile: listed as a treatment, in photos, and in new reviews. Ask for the review straight after a lip filler appointment, when the treatment is what a client naturally writes about."
-    ]
+    ],
+    "pinned": true
   },
   {
     "slug": "kent-beauty-and-aesthetics-tunbridge-wel",
