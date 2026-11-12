@@ -407,7 +407,7 @@ def outreach_row(lead, base_url, cfg):
            f"but there's no website on your listing, so people searching for a {lead['type'].lower()} in {lead['city']} "
            f"can't see your work, prices or hours in one place.\n\nSo I made you one to look at, free: {demo}\n\n"
            f"If you like it, it's £{cfg['price']} one-off and I'll put it live on your Google listing this week. "
-           f"If not, no worries at all 😊")
+           f"If not, no worries at all.")
     wa = lead.get("whatsapp", "")
     ig = lead.get("instagram") or "https://www.google.com/search?q=" + urllib.parse.quote(f"{lead['name']} {lead['city']} instagram")
     return {
@@ -507,7 +507,7 @@ def write_sheet(auto, cfg):
     OUT.mkdir(exist_ok=True)
     rows = [outreach_row(l, cfg["base_url"], cfg) for l in auto]
     path = OUT / "outreach.csv"
-    with path.open("w", newline="", encoding="utf-8") as f:
+    with path.open("w", newline="", encoding="utf-8-sig") as f:  # BOM so Excel/Numbers read UTF-8 (£, names)
         w = csv.DictWriter(f, fieldnames=list(rows[0].keys()) if rows else ["salon"])
         w.writeheader()
         w.writerows(rows)
