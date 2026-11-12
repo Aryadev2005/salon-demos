@@ -16,13 +16,15 @@
     "hair salon in Chorley"
   ],
   "skip": [
-    "Phoenix Hair & Beauty",
-    "Norman & Philip Hair & Beauty",
-    "Suzanne's",
-    "The Bridal Stylist",
-    "Oasis Sun Centre",
+    "Ada Rose Beauty & Academy",
+    "Corrine Howe",
+    "Doggy Styles Dog Grooming",
     "Morenna",
-    "Ada Rose Beauty & Academy"
+    "Norman & Philip Hair & Beauty",
+    "Oasis Sun Centre",
+    "Phoenix Hair & Beauty",
+    "Suzanne's",
+    "The Bridal Stylist"
   ],
   "limit": 27,
   "min_rating": 4.5,

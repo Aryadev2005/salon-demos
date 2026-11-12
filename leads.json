@@ -4692,5 +4692,1974 @@
     "_auto": true,
     "booking_link": "tel:+441257414898",
     "booking_label": "Call 01257 414898 to book"
+  },
+  {
+    "slug": "the-blossom-nail-spa-ripon",
+    "name": "The Blossom Nail Spa",
+    "type": "Nail salon",
+    "area": "Ripon",
+    "address": "Westgate, Ripon HG4 2AT",
+    "city": "Ripon",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "07362 416262",
+    "rating": 4.8,
+    "review_count": 133,
+    "maps_link": "https://maps.google.com/?cid=10996753426424531290&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJc4FxkG2tfkgRWgmYYPpQnJg",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "09:00-18:30"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-18:30"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-18:30"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-18:30"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-18:30"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-18:30"
+      },
+      {
+        "day": "Sunday",
+        "time": "10:30-17:00"
+      }
+    ],
+    "headline": "BIAB, gel and nail extensions in Ripon.",
+    "subline": "The Blossom Nail Spa is a nail salon in Ripon, rated 4.8 from 133 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 4.8 from 133 Google reviews.",
+      "Specialists in BIAB, gel and nail extensions.",
+      "Open seven days a week."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Nails",
+        "items": [
+          {
+            "name": "BIAB"
+          },
+          {
+            "name": "Gel polish"
+          },
+          {
+            "name": "Nail extensions"
+          },
+          {
+            "name": "Nail art"
+          }
+        ]
+      },
+      {
+        "category": "Feet",
+        "items": [
+          {
+            "name": "Gel toes"
+          },
+          {
+            "name": "Pedicure"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Festive nail art"
+        },
+        {
+          "name": "Gel polish"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "Honestly amazing! Me and my mum have been twice now and both times our nails have looked absolutely beautiful. We’re not the easiest people to please when it comes to our nails, but they have exceeded our expectations both times!",
+        "name": "Molly"
+      },
+      {
+        "text": "Absolutely obsessed with my new cat-eye nails! ✨ The shimmer is stunning and catches the light beautifully from every angle. The shape is perfect, the finish is flawless, and the attention to detail is amazing.",
+        "name": "Rachel"
+      },
+      {
+        "text": "Tried this salon for the first time, as it was closer to my brothers school and saw it had been taken over. From start to finish I felt completely looked after, lovely chats and very pleased with my nails.",
+        "name": "Jodie"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by THE BLOSSOM NAIL SPA).",
+    "accent": "#6E4135",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJc4FxkG2tfkgRWgmYYPpQnJg",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at The Blossom Nail Spa",
+    "_auto": true,
+    "whatsapp": "+447362416262"
+  },
+  {
+    "slug": "charlotte-woolley-hairdressing-harrogate",
+    "name": "Charlotte Woolley Hairdressing",
+    "type": "Hair salon",
+    "area": "Harrogate",
+    "address": "unit 4 Albert Street, Harrogate HG1 1JX",
+    "city": "Harrogate",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "01423 800651",
+    "rating": 4.9,
+    "review_count": 93,
+    "maps_link": "https://maps.google.com/?cid=6307179003529970752&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJR5ClBiVTeUgRQMQ0COOZh1c",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "Closed"
+      },
+      {
+        "day": "Tuesday",
+        "time": "08:00-17:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "08:00-17:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "08:00-19:00"
+      },
+      {
+        "day": "Friday",
+        "time": "08:00-17:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "08:00-16:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Cuts, colour and blow-dries in Harrogate.",
+    "subline": "Charlotte Woolley Hairdressing is a hair salon in Harrogate, rated 4.9 from 93 Google reviews. Book online or give us a ring.",
+    "highlights": [
+      "Rated 4.9 from 93 Google reviews.",
+      "Specialists in cuts, colour and blow-dries.",
+      "Late appointments until 7pm on Thursdays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Hair",
+        "items": [
+          {
+            "name": "Ladies' cut and blow-dry"
+          },
+          {
+            "name": "Wash and blow-dry"
+          },
+          {
+            "name": "Men's cut"
+          },
+          {
+            "name": "Children's cut"
+          }
+        ]
+      },
+      {
+        "category": "Colour",
+        "items": [
+          {
+            "name": "Full head colour"
+          },
+          {
+            "name": "Highlights"
+          },
+          {
+            "name": "Balayage"
+          },
+          {
+            "name": "Toner and gloss"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party blow-dry"
+        },
+        {
+          "name": "Hair up"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "The hair salon was immaculate and stunning. Jodie was amazing and checked on me throughout our session to see if I wanted anything different done.",
+        "name": "Honey"
+      },
+      {
+        "text": "My daughter went for a cut & blow-dry with Libby. It was our first time at the salon- it's s a beautiful space! Libby was very friendly and greeted us as we arrived.",
+        "name": "Suzanne"
+      },
+      {
+        "text": "Exceptional experience. Libby talked me through different colour and hair style options. She always made sure I was happy and comfortable. Salon is immaculate and stylish. I was extremely happy with my new hair.",
+        "name": "Gemma"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Charlotte Woolley Hairdressing, Mrs G-J).",
+    "accent": "#6E4735",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJR5ClBiVTeUgRQMQ0COOZh1c",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Charlotte Woolley Hairdressing",
+    "_auto": true,
+    "booking_link": "tel:+441423800651",
+    "booking_label": "Call 01423 800651 to book"
+  },
+  {
+    "slug": "kingsgrove-hair-and-beauty-harrogate",
+    "name": "Kingsgrove Hair and Beauty",
+    "type": "Hair salon",
+    "area": "Harrogate",
+    "address": "118 King's Road, Harrogate HG1 5HY",
+    "city": "Harrogate",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "01423 566062",
+    "rating": 5,
+    "review_count": 83,
+    "maps_link": "https://maps.google.com/?cid=5545696569379733924&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJ1X7jNOhTeUgRpEH7waVF9kw",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "Closed"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-17:30"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-17:30"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-20:00"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-17:30"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-16:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Cuts, colour and blow-dries in Harrogate.",
+    "subline": "Kingsgrove Hair and Beauty is a hair salon in Harrogate, rated 5 from 83 Google reviews. Book online or give us a ring.",
+    "highlights": [
+      "Rated 5 from 83 Google reviews.",
+      "Specialists in cuts, colour and blow-dries.",
+      "Late appointments until 8pm on Thursdays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Hair",
+        "items": [
+          {
+            "name": "Ladies' cut and blow-dry"
+          },
+          {
+            "name": "Wash and blow-dry"
+          },
+          {
+            "name": "Men's cut"
+          },
+          {
+            "name": "Children's cut"
+          }
+        ]
+      },
+      {
+        "category": "Colour",
+        "items": [
+          {
+            "name": "Full head colour"
+          },
+          {
+            "name": "Highlights"
+          },
+          {
+            "name": "Balayage"
+          },
+          {
+            "name": "Toner and gloss"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party blow-dry"
+        },
+        {
+          "name": "Hair up"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "Wow. From my first ‘last minute booking’ with Izzy for a curly blow, I was hugely impressed. It’s hard to tame my hair, but when done properly it will hold a style for days and Izzy achieved this, where most hairdressers don’t.",
+        "name": "Lisa"
+      },
+      {
+        "text": "From the get go, I was so happy to be offered an appointment within a day of calling for one!",
+        "name": "Sarah"
+      },
+      {
+        "text": "I couldn’t be happier with the result , my hair was saved from disaster!! Was all dry and too long. Jennifer paid attention to every details and the results are just perfect. I love my new hair cut.",
+        "name": "CS"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Kingsgrove Hair and Beauty).",
+    "accent": "#C08A35",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJ1X7jNOhTeUgRpEH7waVF9kw",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Kingsgrove Hair and Beauty",
+    "_auto": true,
+    "booking_link": "tel:+441423566062",
+    "booking_label": "Call 01423 566062 to book"
+  },
+  {
+    "slug": "crown-house-hair-harrogate",
+    "name": "Crown House Hair",
+    "type": "Hair salon",
+    "area": "Harrogate",
+    "address": "22 Cheltenham Parade, Harrogate HG1 1DB",
+    "city": "Harrogate",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "01423 561101",
+    "rating": 5,
+    "review_count": 68,
+    "maps_link": "https://maps.google.com/?cid=16173643020674163177&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJa9jFiI5TeUgR6WFCu6JSdOA",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "Closed"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:30-17:30"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:30-17:30"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:30-19:30"
+      },
+      {
+        "day": "Friday",
+        "time": "09:30-17:30"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:30-16:30"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Cuts, colour and blow-dries in Harrogate.",
+    "subline": "Crown House Hair is a hair salon in Harrogate, rated 5 from 68 Google reviews. Book online or give us a ring.",
+    "highlights": [
+      "Rated 5 from 68 Google reviews.",
+      "Specialists in cuts, colour and blow-dries.",
+      "Late appointments until 7:30pm on Thursdays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Hair",
+        "items": [
+          {
+            "name": "Ladies' cut and blow-dry"
+          },
+          {
+            "name": "Wash and blow-dry"
+          },
+          {
+            "name": "Men's cut"
+          },
+          {
+            "name": "Children's cut"
+          }
+        ]
+      },
+      {
+        "category": "Colour",
+        "items": [
+          {
+            "name": "Full head colour"
+          },
+          {
+            "name": "Highlights"
+          },
+          {
+            "name": "Balayage"
+          },
+          {
+            "name": "Toner and gloss"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party blow-dry"
+        },
+        {
+          "name": "Hair up"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "If you're thinking about hair extensions I would definitely recommend Aimee at Crown House. Had the best experience from start to finish and would not go elsewhere.",
+        "name": "Melina"
+      },
+      {
+        "text": "Always a great cut with Aimee - I would definitely recommend her! I feel like I’m in safe hands and she’s lovely to chat to. The additional bonus of some cuddles with her sweet dog makes the whole experience perfect",
+        "name": "Holly"
+      },
+      {
+        "text": "Aimee and her team are so professional, I’m always thrilled with my hair extensions! The atmosphere in the salon is relaxed and friendly too, which adds to the overall experience. 100% recommend",
+        "name": "Rebecca"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Crown House Hair).",
+    "accent": "#A57E50",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJa9jFiI5TeUgR6WFCu6JSdOA",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Crown House Hair",
+    "_auto": true,
+    "booking_link": "tel:+441423561101",
+    "booking_label": "Call 01423 561101 to book"
+  },
+  {
+    "slug": "tint-and-tone-harrogate",
+    "name": "Tint & Tone",
+    "type": "Hair salon",
+    "area": "Harrogate",
+    "address": "139 Wetherby Road, Harrogate HG2 7AA",
+    "city": "Harrogate",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "01423 806516",
+    "rating": 5,
+    "review_count": 49,
+    "maps_link": "https://maps.google.com/?cid=8914353585564589772&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJFc14omFReUgRzJ7OFVsltns",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "Closed"
+      },
+      {
+        "day": "Tuesday",
+        "time": "10:00-17:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "10:00-20:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:00-20:00"
+      },
+      {
+        "day": "Friday",
+        "time": "10:00-17:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "08:00-17:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Cuts, colour and blow-dries in Harrogate.",
+    "subline": "Tint & Tone is a hair salon in Harrogate, rated 5 from 49 Google reviews. Book online or give us a ring.",
+    "highlights": [
+      "Rated 5 from 49 Google reviews.",
+      "Specialists in cuts, colour and blow-dries.",
+      "Late appointments until 8pm on Wednesdays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Hair",
+        "items": [
+          {
+            "name": "Ladies' cut and blow-dry"
+          },
+          {
+            "name": "Wash and blow-dry"
+          },
+          {
+            "name": "Men's cut"
+          },
+          {
+            "name": "Children's cut"
+          }
+        ]
+      },
+      {
+        "category": "Colour",
+        "items": [
+          {
+            "name": "Full head colour"
+          },
+          {
+            "name": "Highlights"
+          },
+          {
+            "name": "Balayage"
+          },
+          {
+            "name": "Toner and gloss"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party blow-dry"
+        },
+        {
+          "name": "Hair up"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "What a lovely salon. I felt so relaxed and left with feeling like a new woman. Evening after a night's sleep, my hair looks fabulous - now that's a great cut. And the colour is perfect!",
+        "name": "Natalie"
+      },
+      {
+        "text": "Such a gorgeous salon, all the team are really friendly and make it such a relaxed place to have your hair done. Liv is fantastic, I wouldn’t ever go anywhere else now, her knowledge and attention to detail is great!",
+        "name": "Amy"
+      },
+      {
+        "text": "Jasmine has been cutting my hair for about 14 years and she is perfect. All the girls are so friendly and kind. Would never go anywhere else!",
+        "name": "Laura"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Aidan Carswell, Shoko Land).",
+    "accent": "#A58650",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJFc14omFReUgRzJ7OFVsltns",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Tint & Tone",
+    "_auto": true,
+    "booking_link": "tel:+441423806516",
+    "booking_label": "Call 01423 806516 to book"
+  },
+  {
+    "slug": "design-nails-harrogate",
+    "name": "Design Nails",
+    "type": "Nail salon",
+    "area": "Harrogate",
+    "address": "2 Oxford Street, Harrogate HG1 1QJ",
+    "city": "Harrogate",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "01423 522971",
+    "rating": 4.6,
+    "review_count": 50,
+    "maps_link": "https://maps.google.com/?cid=8254369116250122638&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJY0D3F-dTeUgRjikLS_pojXI",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "BIAB, gel and nail extensions in Harrogate.",
+    "subline": "Design Nails is a nail salon in Harrogate, rated 4.6 from 50 Google reviews. Book online or give us a ring.",
+    "highlights": [
+      "Rated 4.6 from 50 Google reviews.",
+      "Specialists in BIAB, gel and nail extensions.",
+      "Open Monday to Saturday."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Nails",
+        "items": [
+          {
+            "name": "BIAB"
+          },
+          {
+            "name": "Gel polish"
+          },
+          {
+            "name": "Nail extensions"
+          },
+          {
+            "name": "Nail art"
+          }
+        ]
+      },
+      {
+        "category": "Feet",
+        "items": [
+          {
+            "name": "Gel toes"
+          },
+          {
+            "name": "Pedicure"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Festive nail art"
+        },
+        {
+          "name": "Gel polish"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "I walked in today just behind a large group, they let me know there would be a wait and I was happy to just sit and wait my turn.",
+        "name": "Storm"
+      },
+      {
+        "text": "I went here yesterday and although there was a few people waiting before me but it wasn’t a long wait only about 10 minutes which isn’t bad at all.",
+        "name": "Georgie"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Design Nails, Greece).",
+    "accent": "#AE6647",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJY0D3F-dTeUgRjikLS_pojXI",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Design Nails",
+    "_auto": true,
+    "booking_link": "tel:+441423522971",
+    "booking_label": "Call 01423 522971 to book"
+  },
+  {
+    "slug": "the-harrogate-hair-and-beauty-clinic-harrogate",
+    "name": "The Harrogate Hair & Beauty Clinic",
+    "type": "Beauty salon",
+    "area": "Harrogate",
+    "address": "15 Westmoreland Street, Harrogate HG1 5AY",
+    "city": "Harrogate",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "01423 705750",
+    "rating": 4.6,
+    "review_count": 45,
+    "maps_link": "https://maps.google.com/?cid=15244545335509910350&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJRfVVntxTeUgRTgNorTaBj9M",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "Closed"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-20:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-20:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-20:00"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-17:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-17:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Lashes, brows, nails and facials in Harrogate.",
+    "subline": "The Harrogate Hair & Beauty Clinic is a beauty salon in Harrogate, rated 4.6 from 45 Google reviews. Book online or give us a ring.",
+    "highlights": [
+      "Rated 4.6 from 45 Google reviews.",
+      "Specialists in lashes, brows, nails and facials.",
+      "Late appointments until 8pm on Tuesdays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Lashes & brows",
+        "items": [
+          {
+            "name": "Lash extensions"
+          },
+          {
+            "name": "Lash lift"
+          },
+          {
+            "name": "Brow lamination"
+          },
+          {
+            "name": "Brow wax and tint"
+          }
+        ]
+      },
+      {
+        "category": "Beauty",
+        "items": [
+          {
+            "name": "Gel nails"
+          },
+          {
+            "name": "Facials"
+          },
+          {
+            "name": "Waxing"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party lashes"
+        },
+        {
+          "name": "Gel nails"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "I had my hair done by the very talented Holly today. I'm extremely impressed & honestly haven't stopped looking in the mirror! Her dedication, professionalism and pure talent has made me into a brand new women!",
+        "name": "Trinity"
+      },
+      {
+        "text": "I went here at the end of May and Jodie was my hairdresser. I explained what I wanted and she went through everything she was going to do thoroughly, explaining each step and offering suggestions.",
+        "name": "Kealey"
+      },
+      {
+        "text": "Had my hair done today by the lovely Georgia and I'm very impressed with the end result already booked my next appointment",
+        "name": "Bobbie"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Kealey Pitts, The Harrogate Hair & Beauty Clinic).",
+    "accent": "#993A1F",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJRfVVntxTeUgRTgNorTaBj9M",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at The Harrogate Hair & Beauty Clinic",
+    "_auto": true,
+    "booking_link": "tel:+441423705750",
+    "booking_label": "Call 01423 705750 to book"
+  },
+  {
+    "slug": "hidden-beauty-chipping-norton",
+    "name": "Hidden Beauty",
+    "type": "Beauty salon",
+    "area": "Chipping Norton",
+    "address": "8 Middle Row, Chipping Norton OX7 5HN",
+    "city": "Chipping Norton",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "01608 643862",
+    "rating": 4.8,
+    "review_count": 34,
+    "maps_link": "https://maps.google.com/?cid=13108988650620770243&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJy_lvf7TUdkgRw9fgLLl77LU",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "Closed"
+      },
+      {
+        "day": "Tuesday",
+        "time": "08:30-17:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "08:30-17:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "08:30-18:00"
+      },
+      {
+        "day": "Friday",
+        "time": "08:30-18:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "08:30-14:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Lashes, brows, nails and facials in Chipping Norton.",
+    "subline": "Hidden Beauty is a beauty salon in Chipping Norton, rated 4.8 from 34 Google reviews. Book online or give us a ring.",
+    "highlights": [
+      "Rated 4.8 from 34 Google reviews.",
+      "Specialists in lashes, brows, nails and facials.",
+      "Open Tuesday to Saturday."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Lashes & brows",
+        "items": [
+          {
+            "name": "Lash extensions"
+          },
+          {
+            "name": "Lash lift"
+          },
+          {
+            "name": "Brow lamination"
+          },
+          {
+            "name": "Brow wax and tint"
+          }
+        ]
+      },
+      {
+        "category": "Beauty",
+        "items": [
+          {
+            "name": "Gel nails"
+          },
+          {
+            "name": "Facials"
+          },
+          {
+            "name": "Waxing"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party lashes"
+        },
+        {
+          "name": "Gel nails"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "My daughter and myself love coming to see Emily for our eyebrow waxing. She always has a smile on her face and is always professional. Sometimes she is done before we even sit down! We used the salon too a few weeks ago!",
+        "name": "Karen"
+      },
+      {
+        "text": "By far the best salon experience ever! Sinead, Emily and the team are warm, friendly and professional, so you almost feel like you're meeting friends rather than the more formal atmosphere you can sometime experience.",
+        "name": "Natalie"
+      },
+      {
+        "text": "There is nothing like getting a treatment at Hidden Beauty. Emily is just the best. She is nice, professional, creative and so skilled.",
+        "name": "Barbara"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Jennifer Allsop, Jordan Russ, Karen Murgatroyd).",
+    "accent": "#7A462A",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJy_lvf7TUdkgRw9fgLLl77LU",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Hidden Beauty",
+    "_auto": true,
+    "booking_link": "tel:+441608643862",
+    "booking_label": "Call 01608 643862 to book"
+  },
+  {
+    "slug": "licatas-cirencester",
+    "name": "Licata's",
+    "type": "Hair salon",
+    "area": "Cirencester",
+    "address": "81 Cricklade Street, Cirencester GL7 1JF",
+    "city": "Cirencester",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "01285 654760",
+    "rating": 4.9,
+    "review_count": 30,
+    "maps_link": "https://maps.google.com/?cid=13952527771632005696&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJtcd6L68VcUgRQPLlqhVWocE",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "Closed"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-17:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-19:00"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "08:30-16:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Cuts, colour and blow-dries in Cirencester.",
+    "subline": "Licata's is a hair salon in Cirencester, rated 4.9 from 30 Google reviews. Book online or give us a ring.",
+    "highlights": [
+      "Rated 4.9 from 30 Google reviews.",
+      "Specialists in cuts, colour and blow-dries.",
+      "Late appointments until 7pm on Thursdays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Hair",
+        "items": [
+          {
+            "name": "Ladies' cut and blow-dry"
+          },
+          {
+            "name": "Wash and blow-dry"
+          },
+          {
+            "name": "Men's cut"
+          },
+          {
+            "name": "Children's cut"
+          }
+        ]
+      },
+      {
+        "category": "Colour",
+        "items": [
+          {
+            "name": "Full head colour"
+          },
+          {
+            "name": "Highlights"
+          },
+          {
+            "name": "Balayage"
+          },
+          {
+            "name": "Toner and gloss"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party blow-dry"
+        },
+        {
+          "name": "Hair up"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "First time at this salon for a hair colour correction. Shona is a colour wizard. She took extensive time to understand my hair goal and her attention to detail during colouring was incredible.",
+        "name": "Sheelagh"
+      },
+      {
+        "text": "My daughter had just received a wonderful cut and blow dry with Shona today! She was absolutely thrilled with the results! We will be back! Thank you so much! 🙏",
+        "name": "The"
+      },
+      {
+        "text": "Had high lights and a blow dry Done today with Sarah.and iv never felt so happy she Done such a great job thank you so much sarah.",
+        "name": "Wendy"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Charlotte Sadler, Leah Bennett).",
+    "accent": "#774E39",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJtcd6L68VcUgRQPLlqhVWocE",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Licata's",
+    "_auto": true,
+    "booking_link": "tel:+441285654760",
+    "booking_label": "Call 01285 654760 to book"
+  },
+  {
+    "slug": "hollywood-nails-knaresborough",
+    "name": "Hollywood Nails",
+    "type": "Nail salon",
+    "area": "Knaresborough",
+    "address": "22 High Street, Knaresborough HG5 0EQ",
+    "city": "Knaresborough",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "01423 864100",
+    "rating": 4.6,
+    "review_count": 34,
+    "maps_link": "https://maps.google.com/?cid=6784501568419403083&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJcRxijlFTeUgRSxW4CztkJ14",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "BIAB, gel and nail extensions in Knaresborough.",
+    "subline": "Hollywood Nails is a nail salon in Knaresborough, rated 4.6 from 34 Google reviews. Book online or give us a ring.",
+    "highlights": [
+      "Rated 4.6 from 34 Google reviews.",
+      "Specialists in BIAB, gel and nail extensions.",
+      "Open Monday to Saturday."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Nails",
+        "items": [
+          {
+            "name": "BIAB"
+          },
+          {
+            "name": "Gel polish"
+          },
+          {
+            "name": "Nail extensions"
+          },
+          {
+            "name": "Nail art"
+          }
+        ]
+      },
+      {
+        "category": "Feet",
+        "items": [
+          {
+            "name": "Gel toes"
+          },
+          {
+            "name": "Pedicure"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Festive nail art"
+        },
+        {
+          "name": "Gel polish"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "I have been going here for a while and they’re amazing. Always do a great job and are always friendly. You do have to book an appointment as they’re always so busy but it’s worth it!",
+        "name": "Charlotte"
+      },
+      {
+        "text": "Best Pedicure I’ve ever had. My nails were prepped and painted to perfection and my feet now feel so soft. The pedicure chair looked amazing and gives you a mechanical back massage whilst your feet relax in a blue watery shell.",
+        "name": "Alison"
+      },
+      {
+        "text": "Best nails I have ever had done!! Will definitely be coming again :)",
+        "name": "Poppy"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Hollywood Nails, Poppy Joy).",
+    "accent": "#C3224A",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJcRxijlFTeUgRSxW4CztkJ14",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Hollywood Nails",
+    "_auto": true,
+    "booking_link": "tel:+441423864100",
+    "booking_label": "Call 01423 864100 to book"
+  },
+  {
+    "slug": "eden-hair-harrogate",
+    "name": "Eden Hair",
+    "type": "Hair salon",
+    "area": "Harrogate",
+    "address": "45 Cold Bath Road, Harrogate HG2 0NL",
+    "city": "Harrogate",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "07931 494523",
+    "rating": 5,
+    "review_count": 29,
+    "maps_link": "https://maps.google.com/?cid=2486705458514771155&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJy5W74XhTeUgR0zzMe3CNgiI",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "Closed"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-19:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-19:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-19:00"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-19:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-19:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Cuts, colour and blow-dries in Harrogate.",
+    "subline": "Eden Hair is a hair salon in Harrogate, rated 5 from 29 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 5 from 29 Google reviews.",
+      "Specialists in cuts, colour and blow-dries.",
+      "Late appointments until 7pm on Tuesdays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Hair",
+        "items": [
+          {
+            "name": "Ladies' cut and blow-dry"
+          },
+          {
+            "name": "Wash and blow-dry"
+          },
+          {
+            "name": "Men's cut"
+          },
+          {
+            "name": "Children's cut"
+          }
+        ]
+      },
+      {
+        "category": "Colour",
+        "items": [
+          {
+            "name": "Full head colour"
+          },
+          {
+            "name": "Highlights"
+          },
+          {
+            "name": "Balayage"
+          },
+          {
+            "name": "Toner and gloss"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party blow-dry"
+        },
+        {
+          "name": "Hair up"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "I have visited many hair salons in my time, and Sally is one of the best. I met her when she worked in Leeds, and because she cuts hair so well, I now travel from Halifax to Harrogate to get my hair done by Sally.",
+        "name": "Frances"
+      },
+      {
+        "text": "I have been to Claire for several years now. Really recommend her for excellent cutting and colour. Lovely lady too.",
+        "name": "Lorraine"
+      },
+      {
+        "text": "My first appointment with Sally and she did not disappoint! Sally is professional but is also very warm and friendly. Sally took the time to discuss what i was looking for with my colour change and haircut.",
+        "name": "Helen"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by EDEN HAIR HARROGATE, Maureen Moffat).",
+    "accent": "#8A5A44",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJy5W74XhTeUgR0zzMe3CNgiI",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Eden Hair",
+    "_auto": true,
+    "whatsapp": "+447931494523"
+  },
+  {
+    "slug": "hands-by-han-harrogate",
+    "name": "Hands By Han",
+    "type": "Nail salon",
+    "area": "Harrogate",
+    "address": "168-170 Skipton Road, Harrogate HG1 4PS",
+    "city": "Harrogate",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "07454 209778",
+    "rating": 5,
+    "review_count": 24,
+    "maps_link": "https://maps.google.com/?cid=17756056657413835368&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJJ73-AFz9e0gRaIrcTHQvavY",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "Closed"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-19:30"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-19:30"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-23:59"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-18:30"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-17:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "BIAB, gel and nail extensions in Harrogate.",
+    "subline": "Hands By Han is a nail salon in Harrogate, rated 5 from 24 Google reviews. Book online or give us a ring.",
+    "highlights": [
+      "Rated 5 from 24 Google reviews.",
+      "Specialists in BIAB, gel and nail extensions.",
+      "Late appointments until 7:30pm on Tuesdays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Nails",
+        "items": [
+          {
+            "name": "BIAB"
+          },
+          {
+            "name": "Gel polish"
+          },
+          {
+            "name": "Nail extensions"
+          },
+          {
+            "name": "Nail art"
+          }
+        ]
+      },
+      {
+        "category": "Feet",
+        "items": [
+          {
+            "name": "Gel toes"
+          },
+          {
+            "name": "Pedicure"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Festive nail art"
+        },
+        {
+          "name": "Gel polish"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "I’ve been going to Hannah for over a year now, and she never disappoints! No matter what design I bring in, she always brings it to life perfectly.",
+        "name": "Imogen"
+      },
+      {
+        "text": "I’ve been coming to Hannah for just over a year and never looked back! She is an amazing nail tech and has gorgeous nail art ideas. I always leave so happy with my nails. I’d definitely recommend for all occasions!",
+        "name": "Anna"
+      },
+      {
+        "text": "I always look forward to my appointments with Hannah. She is absolutely amazing at doing my nails, making them look fantastic and fun! I can never get over her precision in her artwork just amazing!",
+        "name": "Becky"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Hands By Han, Imogen Brodaty).",
+    "accent": "#AA614B",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJJ73-AFz9e0gRaIrcTHQvavY",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Hands By Han",
+    "_auto": true,
+    "whatsapp": "+447454209778",
+    "booking_link": "https://booksy.com/en-gb/182993_hands-by-han-shade-harrogate_nail-salon_1384610_harrogate",
+    "booking_label": "Book on Booksy"
+  },
+  {
+    "slug": "mel-bowman-hairdressing-harrogate",
+    "name": "Mel Bowman Hairdressing",
+    "type": "Hair salon",
+    "area": "Harrogate",
+    "address": "Harrogate HG2 7RE",
+    "city": "Harrogate",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "07525 757809",
+    "rating": 5,
+    "review_count": 24,
+    "maps_link": "https://maps.google.com/?cid=5390856301021040284&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJA5GFAqhTeUgRnA6JaT4r0Eo",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "Closed"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:30-20:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:30-20:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:30-20:00"
+      },
+      {
+        "day": "Friday",
+        "time": "09:30-15:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Cuts, colour and blow-dries in Harrogate.",
+    "subline": "Mel Bowman Hairdressing is a hair salon in Harrogate, rated 5 from 24 Google reviews. Book online or give us a ring.",
+    "highlights": [
+      "Rated 5 from 24 Google reviews.",
+      "Specialists in cuts, colour and blow-dries.",
+      "Late appointments until 8pm on Tuesdays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Hair",
+        "items": [
+          {
+            "name": "Ladies' cut and blow-dry"
+          },
+          {
+            "name": "Wash and blow-dry"
+          },
+          {
+            "name": "Men's cut"
+          },
+          {
+            "name": "Children's cut"
+          }
+        ]
+      },
+      {
+        "category": "Colour",
+        "items": [
+          {
+            "name": "Full head colour"
+          },
+          {
+            "name": "Highlights"
+          },
+          {
+            "name": "Balayage"
+          },
+          {
+            "name": "Toner and gloss"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party blow-dry"
+        },
+        {
+          "name": "Hair up"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "I am very happy with my hair. Had a lovely high quality salon experience from start to finish, Mel was professional and so easy to talk to. Felt so comfortable all the way through. Couldn’t recommend more. ❤️",
+        "name": "Abby"
+      },
+      {
+        "text": "First time customer but will definitely be back, in fact I’ve already booked my next appointment . Love my new cut. Mel was very professional and very easy to chat with. Thank you ☺️",
+        "name": "Carole"
+      },
+      {
+        "text": "Mel is such a fab hairdresser and a brilliant person too. I highly recommend!",
+        "name": "Mike"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Mel Bowman Hairdressing, mel bell).",
+    "accent": "#AF2B4D",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJA5GFAqhTeUgRnA6JaT4r0Eo",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Mel Bowman Hairdressing",
+    "_auto": true,
+    "whatsapp": "+447525757809",
+    "booking_link": "http://melbowmanhairdressing.gettimely.com/",
+    "booking_label": "Book online"
+  },
+  {
+    "slug": "the-harrogate-facialist-harrogate",
+    "name": "The Harrogate Facialist",
+    "type": "Facial & skin clinic",
+    "area": "Harrogate",
+    "address": "3 Westminster Rise, Harrogate HG3 1LZ",
+    "city": "Harrogate",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "07342 646139",
+    "rating": 5,
+    "review_count": 21,
+    "maps_link": "https://maps.google.com/?cid=14043684175571689585&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJs-cohiJReUgRcaC53lkw5cI",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "10:00-20:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "10:00-20:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "10:00-20:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:00-20:00"
+      },
+      {
+        "day": "Friday",
+        "time": "10:00-16:30"
+      },
+      {
+        "day": "Saturday",
+        "time": "10:00-16:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Facials and skin treatments in Harrogate.",
+    "subline": "The Harrogate Facialist is a facial and skin clinic in Harrogate, rated 5 from 21 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 5 from 21 Google reviews.",
+      "Specialists in facials and skin treatments.",
+      "Late appointments until 8pm on Mondays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Facials",
+        "items": [
+          {
+            "name": "Signature facial"
+          },
+          {
+            "name": "Deep cleansing facial"
+          },
+          {
+            "name": "Express facial"
+          }
+        ]
+      },
+      {
+        "category": "Skin",
+        "items": [
+          {
+            "name": "Skin consultation"
+          },
+          {
+            "name": "Chemical peels"
+          },
+          {
+            "name": "Microneedling"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party-ready facial"
+        },
+        {
+          "name": "Glow facial"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "Such a wonderful experience every time I visit Sarah for one of her relaxing, rejuvenating facial peels.",
+        "name": "Francine"
+      },
+      {
+        "text": "I had an amazing facial with Sarah today, she made me feel so at ease and took the time to figure out what would be best for my skin. The products she used are lovely and she explained everything as she was doing it.",
+        "name": "Claire"
+      },
+      {
+        "text": "Sarah is a wonderful therapist! Her treatments are like nothing else I’ve ever experienced, and believe me when I say I’ve tried quite a few salons, spas and therapists.",
+        "name": "Kate"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by The Harrogate Facialist).",
+    "accent": "#6E5835",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJs-cohiJReUgRcaC53lkw5cI",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at The Harrogate Facialist",
+    "_auto": true,
+    "whatsapp": "+447342646139"
+  },
+  {
+    "slug": "ash-hair-harrogate",
+    "name": "Ash Hair",
+    "type": "Hair salon",
+    "area": "Harrogate",
+    "address": "11 Devonshire Place, Harrogate HG1 4AA",
+    "city": "Harrogate",
+    "country": "United Kingdom",
+    "lang": "en-GB",
+    "phone": "01423 564792",
+    "rating": 5,
+    "review_count": 28,
+    "maps_link": "https://maps.google.com/?cid=10500080495989672530&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJixmYQ9tTeUgRUsp4TJTHt5E",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "Closed"
+      },
+      {
+        "day": "Tuesday",
+        "time": "07:00-19:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "07:00-19:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "07:00-19:00"
+      },
+      {
+        "day": "Friday",
+        "time": "07:00-19:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "07:00-17:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Cuts, colour and blow-dries in Harrogate.",
+    "subline": "Ash Hair is a hair salon in Harrogate, rated 5 from 28 Google reviews. Book online or give us a ring.",
+    "highlights": [
+      "Rated 5 from 28 Google reviews.",
+      "Specialists in cuts, colour and blow-dries.",
+      "Late appointments until 7pm on Tuesdays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Hair",
+        "items": [
+          {
+            "name": "Ladies' cut and blow-dry"
+          },
+          {
+            "name": "Wash and blow-dry"
+          },
+          {
+            "name": "Men's cut"
+          },
+          {
+            "name": "Children's cut"
+          }
+        ]
+      },
+      {
+        "category": "Colour",
+        "items": [
+          {
+            "name": "Full head colour"
+          },
+          {
+            "name": "Highlights"
+          },
+          {
+            "name": "Balayage"
+          },
+          {
+            "name": "Toner and gloss"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party blow-dry"
+        },
+        {
+          "name": "Hair up"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "Lovely experience with Alison! Great service and very happy with my cut ☺️",
+        "name": "Jess"
+      },
+      {
+        "text": "Alison is lovely and always chatty and always provides a great cut on my hair",
+        "name": "Robert"
+      },
+      {
+        "text": "Great service from the first phone call. Adam is fun, friendly but still professional and very skilled hairstylist. After consultation, where he gave me few options I had amazing head massage and ended up with great haircut.",
+        "name": "Zuzana"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Ash Hair).",
+    "accent": "#A58550",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJixmYQ9tTeUgRUsp4TJTHt5E",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Ash Hair",
+    "_auto": true,
+    "booking_link": "tel:+441423564792",
+    "booking_label": "Call 01423 564792 to book"
   }
 ]

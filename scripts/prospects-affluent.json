@@ -1,0 +1,39 @@
+{
+  "queries": [
+    "hair salon in Harrogate",
+    "beauty salon in Harrogate",
+    "nail salon in Harrogate",
+    "barber in Harrogate",
+    "hair salon in Knaresborough",
+    "hair salon in Ripon",
+    "hair salon in Cirencester",
+    "beauty salon in Cirencester",
+    "hair salon in Stow-on-the-Wold",
+    "hair salon in Burford",
+    "hair salon in Chipping Norton",
+    "hair salon in Tetbury"
+  ],
+  "skip": [
+    "Ada Rose Beauty & Academy",
+    "Corrine Howe",
+    "Doggy Styles Dog Grooming",
+    "Morenna",
+    "Norman & Philip Hair & Beauty",
+    "Oasis Sun Centre",
+    "Phoenix Hair & Beauty",
+    "Suzanne's",
+    "The Bridal Stylist"
+  ],
+  "limit": 10,
+  "min_rating": 4.6,
+  "min_reviews": 30,
+  "photos": 5,
+  "pages": 3,
+  "price": 300,
+  "your_name": "Aryadev",
+  "your_whatsapp": "+91 86378 59578",
+  "base_url": "https://salon-previews.vercel.app",
+  "exclude_types": [
+    "barber_shop"
+  ]
+}

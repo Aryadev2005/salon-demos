@@ -178,12 +178,17 @@ def search(query, key, budget, region, pages):
 def qualifies(p, cfg, taken_ids, taken_names):
     name = (p.get("displayName") or {}).get("text", "")
     why = None
+    country = next((c.get("shortText") for c in p.get("addressComponents") or [] if "country" in c.get("types", [])), None)
     if p.get("businessStatus", "OPERATIONAL") != "OPERATIONAL":
         why = "not operating"
+    elif country and country != cfg["region"]:
+        why = "other country"
     elif p.get("id") in taken_ids or slugify(name) in taken_names:
         why = "already a lead"
     elif any(c in name.lower() for c in CHAINS):
         why = "chain"
+    elif (p.get("primaryType") or "") in cfg.get("exclude_types", []):
+        why = "excluded type"
     elif (p.get("rating") or 0) < cfg["min_rating"]:
         why = "low rating"
     elif (p.get("userRatingCount") or 0) < cfg["min_reviews"]:
@@ -400,23 +405,30 @@ def make_lead(p, slug, cfg, accent, credits):
 
 # ---------------------------------------------------------------- 5. outreach
 def outreach_row(lead, base_url, cfg):
+    """Two-step outreach: a short first message with no link or price, then the demo once they say yes.
+
+    A link from an unknown number looks like spam and triggers WhatsApp's block/report prompt; asking first
+    gets more replies and keeps the sending number safer.
+    """
     demo = f"{base_url.rstrip('/')}/{lead['slug']}/"
-    first = cfg["your_name"]
-    hook = f"{lead['rating']} from {lead['review_count']:,} Google reviews"
-    msg = (f"Hi! I'm {first}. I came across {lead['name']} on Google: {hook} is brilliant, "
-           f"but there's no website on your listing, so people searching for a {lead['type'].lower()} in {lead['city']} "
-           f"can't see your work, prices or hours in one place.\n\nSo I made you one to look at, free: {demo}\n\n"
-           f"If you like it, it's £{cfg['price']} one-off and I'll put it live on your Google listing this week. "
-           f"If not, no worries at all.")
+    me = cfg["your_name"]
+    rating = f"{float(lead['rating']):.1f}" if lead.get("rating") else ""
+    opener = (f"Hi, is this the owner of {lead['name']}? I'm {me}. I made a free website preview for "
+              f"{lead['name']} using your Google reviews" + (f" ({rating} from {lead['review_count']:,}!)" if rating else "")
+              + ". Can I send you the link to have a look?")
+    followup = (f"Here it is: {demo}\n\nIt's built from your own Google listing: reviews, hours and photos. "
+                f"Your listing has no website right now, so people searching for a {lead['type'].lower()} in {lead['city']} "
+                f"can't see any of this in one place.\n\nIf you like it, it's £{cfg['price']} one-off and I'll put it live "
+                f"on your Google listing this week. If not, no worries at all.")
     wa = lead.get("whatsapp", "")
     ig = lead.get("instagram") or "https://www.google.com/search?q=" + urllib.parse.quote(f"{lead['name']} {lead['city']} instagram")
     return {
-        "salon": lead["name"], "type": lead["type"], "town": lead["city"], "rating": lead["rating"],
-        "reviews": lead["review_count"], "phone": lead["phone"],
+        "salon": lead["name"], "type": lead["type"], "town": lead["city"], "rating": lead.get("rating", ""),
+        "reviews": lead.get("review_count", ""), "phone": lead["phone"],
         "channel": "WhatsApp" if wa else "Instagram DM (or call)",
-        "whatsapp_link": f"https://wa.me/{wa.lstrip('+')}?text={urllib.parse.quote(msg)}" if wa else "",
+        "whatsapp_link": f"https://wa.me/{wa.lstrip('+')}?text={urllib.parse.quote(opener)}" if wa else "",
         "instagram": "" if wa else ig,
-        "demo": demo, "message": msg, "status": "", "notes": "",
+        "demo": demo, "1_opener": opener, "2_after_they_say_yes": followup, "status": "", "notes": "",
     }
 
 
