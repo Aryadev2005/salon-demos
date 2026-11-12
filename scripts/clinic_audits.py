@@ -296,10 +296,7 @@ def findings(lead):
             f"The homepage took {s['seconds']}s to load in our test.",
             f"Speed up the homepage ({s['seconds']}s in our test); slow pages lose visitors before they see anything.")
         row(s["https"], "Secure connection", "Uses https.", "Not on https; browsers show a warning.", "Move the site to https.")
-    elif s and s.get("error"):
-        rows.append((False, "Homepage", "The homepage didn't load when we tested it."))
-        fixes.append("Fix the homepage: it didn't load when we tested it.")
-    if not s:
+    if not (s and s.get("ok")):
         fixes.append(f"Give each main treatment its own page that names {lead['town']}, so Google has a clear page to rank.")
     fixes.append("Keep the Google profile active: treatments listed, new photos and a reply to every review.")
     return rows, fixes[:4]
@@ -391,16 +388,15 @@ def audit_html(lead, cfg, today):
 # ---------------------------------------------------------------- 5. messages + sheet
 def messages(lead, cfg):
     hit, me = lead["hits"][0], cfg["your_name"]
-    above = ", ".join(f"{a['name']} ({a['rating']:.1f} from {a['reviews']:,} reviews)" for a in hit["above"])
-    n = outdone(hit, lead["reviews"])
-    mine = f"{lead['rating']:.1f} from {lead['reviews']:,}"
+    above = ", ".join(f"{a['name']} ({a['reviews']:,}{' reviews' if k == 0 else ''})" for k, a in enumerate(hit["above"]))
+    n, mine = outdone(hit, lead["reviews"]), f"{lead['reviews']:,}"
     if n >= 2:
-        gap = f"You have more reviews than {'all three' if n == 3 else 'two of them'} ({mine}), so it isn't your reputation."
+        gap = f"You have {mine}, more than {'all three' if n == 3 else 'two of them'}, so it isn't your reputation."
     elif n == 1:
         beaten = next(a for a in hit["above"] if a["reviews"] < lead["reviews"])
-        gap = f"You have more reviews than {beaten['name']} ({mine}) and it still comes up above you."
+        gap = f"You have {mine}, more than {beaten['name']}, and it still comes up above you."
     else:
-        gap = f"You're rated {mine}, so the gap can be closed."
+        gap = f"You have {mine} and a {lead['rating']:.1f} rating, so the gap can be closed."
     opener = (f"Hi, is this {lead['name']}? I'm {me}. I searched Google Maps for \"{hit['query']}\" and you came up "
               f"{ordinal(hit['position'])}. The three above you: {above}. {gap} I've put together a short page on where "
               f"you come up and what I'd fix first. Shall I send it over? It's free, and just say no if you'd rather not.")
