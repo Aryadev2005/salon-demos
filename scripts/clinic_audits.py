@@ -56,7 +56,7 @@ CHAINS = ["mydentist", "my dentist", "bupa", "portman", "rodericks", "colosseum"
 CHAINS += ["ideal image", "laseraway", "skinspirit", "skin spirit", "ever/body", "everbody", "heyday", "aspen dental",
            "western dental", "pacific dental", "heartland dental", "gentle dental", "clearchoice", "clear choice",
            "milan laser", "hand & stone", "massage envy", "european wax", "sono bello", "restore hyper", "the joint",
-           "smile brands", "bright now", "nakedmd", "naked md", "nuvia", "clearchoice", "affordable dentures",
+           "smile brands", "bright now", "nakedmd", "naked md", "ideal dental", "lifesculpt", "same day smiles", "nuvia", "clearchoice", "affordable dentures",
            "the lip bar", "alchemy 43", "ever/body", "plush aesthetics", "skin laundry", "glo30", "beautyfix", "coast dental", "dental care alliance", "great expressions", "sola salon"]
 JUNK_EMAIL = ["sentry", "wixpress", "example.", "domain.com", "email.com", "yourdomain", "godaddy", "@sentry", "wix.com",
               "squarespace", "noreply", "no-reply", "@2x", "user@", "name@", "info@email"]
