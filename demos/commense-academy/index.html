@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Commense Academy · Graduate Booking Studio (sample)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#1748D0; --blue-d:#0F3299; --blue-soft:#E3E9FA;
+  --ink:#121A33; --muted:#6C6B73; --line:#DCD7CF;
+  --paper:#ECE9E4; --card:#FAF8F5; --white:#fff;
+  --nude:#EBCFC6; --pink:#F3BCCB; --berry:#5B1020; --mauve:#7A5A62;
+  --ok:#2F7A4F; --ok-soft:#E3F1E8; --warn:#A5621A; --warn-soft:#FBEEDD;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Archivo',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  --r:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+input,select,textarea{font:inherit;color:inherit}
+.serif{font-family:var(--serif)}
+em.it{font-family:var(--serif);font-style:italic;font-weight:500}
+
+/* Demo bar */
+.demobar{position:sticky;top:0;z-index:50;background:var(--ink);color:#fff}
+.demobar .in{max-width:1180px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.demobar .tag{font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.7}
+.tabs{display:flex;gap:6px;margin-left:auto;flex-wrap:wrap}
+.tabs button{padding:8px 14px;border-radius:999px;font-size:13.5px;font-weight:500;color:#cfd3e2;border:1px solid #2c3554}
+.tabs button.on{background:#fff;color:var(--ink);border-color:#fff}
+.tabs button .n{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;background:#2c3554;font-size:11px;margin-right:6px}
+.tabs button.on .n{background:var(--blue);color:#fff}
+
+.wrap{max-width:1180px;margin:0 auto;padding:28px 20px 80px}
+.view{display:none}.view.on{display:block;animation:fade .3s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+.explain{display:flex;gap:14px;align-items:flex-start;background:var(--blue-soft);border:1px solid #c9d5f6;border-radius:var(--r);padding:14px 18px;margin-bottom:24px;font-size:14px;color:#22336b}
+.explain b{color:var(--blue-d)}
+.explain .ic{flex:none;width:28px;height:28px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:700;font-size:13px}
+
+/* Logo */
+.logo{display:flex;align-items:center;gap:10px}
+.logo .mark{width:34px;height:34px;border-radius:50%;background:var(--paper);border:1px solid var(--line);display:grid;place-items:center;color:var(--blue);font-weight:800;font-size:20px;font-family:var(--sans)}
+.logo .wm{font-weight:700;letter-spacing:.04em;color:var(--blue);font-size:14px}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 20px;border-radius:999px;font-weight:600;font-size:14.5px;transition:.15s}
+.btn.pri{background:var(--blue);color:#fff}.btn.pri:hover{background:var(--blue-d)}
+.btn.pri:disabled{background:#a9b6dc;cursor:not-allowed}
+.btn.ghost{border:1px solid var(--line);background:var(--white)}.btn.ghost:hover{border-color:var(--ink)}
+.btn.sm{padding:7px 13px;font-size:13px}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:600}
+.pill.ok{background:var(--ok-soft);color:var(--ok)}
+.pill.warn{background:var(--warn-soft);color:var(--warn)}
+.pill.blue{background:var(--blue-soft);color:var(--blue-d)}
+.pill.grey{background:#ebe8e3;color:var(--muted)}
+.muted{color:var(--muted)}
+h2.sec{font-family:var(--serif);font-style:italic;font-weight:500;font-size:30px;line-height:1.1;margin-bottom:6px}
+.eyebrow{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:600}
+
+/* ============ VIEW 1: Graduate public page ============ */
+.pub{display:grid;grid-template-columns:1fr 440px;gap:28px;align-items:start}
+.hero{position:relative;border-radius:22px;overflow:hidden;background:var(--white);border:1px solid var(--line)}
+.hero .top{padding:34px 34px 26px;background:linear-gradient(160deg,#f6efe9 0%,#efe2dc 60%,#e9d3cc 100%)}
+.hero h1{font-family:var(--serif);font-style:italic;font-weight:500;font-size:54px;line-height:.98;color:var(--berry)}
+.hero .loc{margin-top:10px;color:var(--mauve);font-size:14px}
+.cert{display:inline-flex;align-items:center;gap:10px;margin-top:18px;background:#fff;border:1px solid #d9cfc6;border-radius:999px;padding:6px 14px 6px 6px;font-size:12.5px}
+.cert .mark{width:24px;height:24px;font-size:13px}
+.cert b{color:var(--blue)}
+.swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.sw{aspect-ratio:1/1.1;position:relative;display:grid;place-items:end center;padding-bottom:12px}
+.nail{width:44%;height:62%;border-radius:46% 46% 18% 18%/52% 52% 14% 14%;box-shadow:inset -6px -8px 14px rgba(0,0,0,.12),inset 6px 6px 12px rgba(255,255,255,.35)}
+.nail::after{content:"";position:absolute;width:6%;height:18%;border-radius:50%;background:rgba(255,255,255,.55);transform:translate(70%,40%)}
+.sw small{position:absolute;top:10px;left:12px;font-size:11px;color:rgba(0,0,0,.55);font-weight:500}
+.hero .about{padding:24px 34px 30px;display:grid;grid-template-columns:1fr 1fr;gap:20px;font-size:14px}
+.hero .about h4{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;font-weight:600}
+.academy-strip{margin:0 34px 30px;border:1px dashed #b9c6ee;border-radius:14px;padding:14px 16px;display:flex;align-items:center;gap:14px;background:#f7f9ff;font-size:13.5px}
+.academy-strip .btn{margin-left:auto;flex:none}
+
+.book{position:sticky;top:76px;background:var(--white);border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.book .hd{padding:18px 22px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
+.book .hd h3{font-family:var(--serif);font-style:italic;font-weight:600;font-size:24px}
+.steps{display:flex;gap:6px}
+.steps i{width:22px;height:4px;border-radius:4px;background:var(--line)}
+.steps i.on{background:var(--blue)}
+.book .bd{padding:18px 22px;min-height:420px}
+.book .ft{padding:14px 22px;border-top:1px solid var(--line);display:flex;align-items:center;gap:10px;background:var(--card)}
+.book .ft .sum{font-size:13px;color:var(--muted);line-height:1.3}
+.book .ft .sum b{display:block;color:var(--ink);font-size:16px}
+.book .ft .btn{margin-left:auto}
+
+.svc{display:flex;gap:12px;align-items:flex-start;padding:13px 14px;border:1px solid var(--line);border-radius:12px;margin-bottom:8px;width:100%;text-align:left;transition:.15s;background:#fff}
+.svc:hover{border-color:#b9b2a8}
+.svc.on{border-color:var(--blue);background:#f6f8ff;box-shadow:0 0 0 1px var(--blue) inset}
+.svc .dot{flex:none;width:30px;height:30px;border-radius:50%}
+.svc .t{font-weight:600;font-size:14.5px}
+.svc .d{font-size:12.5px;color:var(--muted)}
+.svc .p{margin-left:auto;text-align:right;font-weight:600;white-space:nowrap}
+.svc .p small{display:block;font-weight:400;color:var(--muted);font-size:12px}
+.addons{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.chip{padding:7px 12px;border:1px solid var(--line);border-radius:999px;font-size:13px;background:#fff}
+.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.lbl{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:16px 0 8px}
+
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.day{padding:8px 0;border:1px solid var(--line);border-radius:10px;text-align:center;font-size:12px;background:#fff}
+.day b{display:block;font-size:17px;font-weight:600}
+.day.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.day:disabled{opacity:.35;cursor:not-allowed;background:transparent}
+.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.slot{padding:10px 0;border:1px solid var(--line);border-radius:10px;font-size:14px;font-weight:500;background:#fff}
+.slot.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.slot:disabled{text-decoration:line-through;opacity:.4;cursor:not-allowed;background:transparent}
+
+.field{margin-bottom:12px}
+.field label{display:block;font-size:13px;font-weight:600;margin-bottom:5px}
+.field input,.field select,.field textarea{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:10px;background:#fff;outline:none}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--blue)}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;margin-bottom:8px;background:#fff;cursor:pointer}
+.check input{margin-top:3px;accent-color:var(--blue)}
+.note{font-size:12.5px;color:var(--muted);background:var(--card);border-radius:10px;padding:10px 12px;margin-top:6px}
+
+.done{text-align:center;padding:30px 6px}
+.done .big{width:64px;height:64px;border-radius:50%;background:var(--ok-soft);color:var(--ok);display:grid;place-items:center;font-size:30px;margin:0 auto 14px}
+.done h4{font-family:var(--serif);font-style:italic;font-weight:600;font-size:28px}
+.receipt{text-align:left;margin:18px 0;border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px}
+.receipt div{display:flex;justify-content:space-between;padding:4px 0}
+.receipt div span:first-child{color:var(--muted)}
+
+/* ============ VIEW 2: Graduate diary ============ */
+.appshell{display:grid;grid-template-columns:230px 1fr;gap:22px}
+.side{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:18px;height:max-content;position:sticky;top:76px}
+.who{display:flex;gap:10px;align-items:center;padding-bottom:16px;border-bottom:1px solid var(--line);margin-bottom:12px}
+.av{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-weight:700;color:#fff;flex:none}
+.who b{display:block;font-size:14.5px}.who small{color:var(--muted);font-size:12px}
+.nav button{display:flex;width:100%;align-items:center;gap:10px;padding:9px 10px;border-radius:9px;font-size:14px;color:var(--muted);font-weight:500}
+.nav button.on{background:var(--blue-soft);color:var(--blue-d)}
+.nav .count{margin-left:auto;background:var(--blue);color:#fff;font-size:11px;padding:1px 7px;border-radius:999px}
+.side .link{margin-top:16px;padding:12px;border-radius:10px;background:var(--card);font-size:12.5px}
+.side .link code{display:block;font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:var(--blue-d);margin:4px 0 8px;word-break:break-all}
+
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
+.kpi{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:16px}
+.kpi small{font-size:12px;color:var(--muted);font-weight:500}
+.kpi b{display:block;font-size:26px;font-weight:600;letter-spacing:-.01em;margin-top:2px}
+.kpi span{font-size:12px;color:var(--muted)}
+.kpi.accent{background:var(--blue);border-color:var(--blue);color:#fff}
+.kpi.accent small,.kpi.accent span{color:#c9d6ff}
+
+.panel{background:var(--white);border:1px solid var(--line);border-radius:var(--r);margin-bottom:18px}
+.panel .ph{display:flex;align-items:center;gap:10px;padding:16px 18px;border-bottom:1px solid var(--line)}
+.panel .ph h3{font-size:16px;font-weight:600}
+.panel .ph .r{margin-left:auto;display:flex;gap:6px}
+.appt{display:grid;grid-template-columns:72px 1fr auto;gap:14px;padding:16px 18px;border-bottom:1px solid var(--line);align-items:start}
+.appt:last-child{border-bottom:none}
+.appt.new{animation:flash 2.2s ease}
+@keyframes flash{0%,40%{background:#eef3ff}100%{background:transparent}}
+.appt .when b{display:block;font-size:17px}
+.appt .when small{color:var(--muted);font-size:12px}
+.appt .nm{font-weight:600}
+.appt .sv{font-size:13.5px;color:var(--muted)}
+.flags{display:flex;gap:6px;flex-wrap:wrap;margin-top:7px}
+.journey{display:flex;gap:4px;margin-top:10px;flex-wrap:wrap}
+.journey button{font-size:12px;padding:5px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:#fff}
+.journey button.done{background:var(--ok-soft);border-color:#bfe0cc;color:var(--ok)}
+.journey button.next{border-color:var(--blue);color:var(--blue);font-weight:600}
+.appt .amt{text-align:right;font-weight:600}
+.appt .amt small{display:block;font-weight:400;font-size:12px;color:var(--muted)}
+
+.two{display:grid;grid-template-columns:1.25fr 1fr;gap:18px}
+.list-row{display:flex;align-items:center;gap:12px;padding:12px 18px;border-bottom:1px solid var(--line);font-size:14px}
+.list-row:last-child{border-bottom:none}
+.list-row .grow{flex:1;min-width:0}
+.list-row .grow small{display:block;color:var(--muted);font-size:12.5px}
+.method li{list-style:none;display:flex;gap:10px;padding:9px 18px;font-size:14px;border-bottom:1px solid #eee9e2;align-items:center}
+.method li:last-child{border-bottom:none}
+.method li span{flex:none;width:22px;height:22px;border-radius:50%;background:var(--blue-soft);color:var(--blue-d);font-size:11.5px;font-weight:700;display:grid;place-items:center}
+.msg{margin:14px 18px 18px;padding:14px;border-radius:12px;background:#f2f6ef;border:1px solid #d6e4d0;font-size:13.5px;white-space:pre-line}
+.sub-view{display:none}.sub-view.on{display:block}
+
+/* ============ VIEW 3: Academy dashboard ============ */
+.acad-hd{display:flex;align-items:flex-end;gap:20px;margin-bottom:22px;flex-wrap:wrap}
+.acad-hd h1{font-family:var(--serif);font-style:italic;font-weight:500;font-size:46px;line-height:1}
+.acad-hd .btn{margin-left:auto}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;padding:10px 18px;border-bottom:1px solid var(--line)}
+td{padding:12px 18px;border-bottom:1px solid #eee9e2;vertical-align:middle}
+tr:last-child td{border-bottom:none}
+td .g{display:flex;align-items:center;gap:10px}
+td .g .av{width:32px;height:32px;font-size:12px}
+td small{display:block;color:var(--muted);font-size:12px}
+td.plan{white-space:nowrap;font-size:13px}
+
+.calc{padding:18px}
+.range{margin-bottom:16px}
+.range .top{display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:6px}
+.range .top b{color:var(--blue-d)}
+input[type=range]{width:100%;accent-color:var(--blue)}
+.result{background:var(--ink);color:#fff;border-radius:14px;padding:18px;margin-top:6px}
+.result .row{display:flex;justify-content:space-between;font-size:13.5px;padding:4px 0;color:#c7cbe0}
+.result .row b{color:#fff}
+.result .big{font-family:var(--serif);font-style:italic;font-size:44px;line-height:1;margin:10px 0 4px}
+.result small{color:#9aa1c0;font-size:12px}
+
+.compare{padding:6px 18px 18px}
+.bar{margin-top:12px}
+.bar .lab{display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px}
+.bar .track{height:12px;border-radius:12px;background:#efebe5;overflow:hidden}
+.bar .fill{height:100%;border-radius:12px;background:#b9b2a8}
+.bar.us .fill{background:var(--blue)}
+
+.feed li{list-style:none;padding:11px 18px;border-bottom:1px solid #eee9e2;font-size:13.5px;display:flex;gap:10px}
+.feed li:last-child{border-bottom:none}
+.feed li i{flex:none;width:8px;height:8px;border-radius:50%;background:var(--blue);margin-top:7px}
+.feed li small{display:block;color:var(--muted);font-size:12px}
+
+/* ============ VIEW 4: Shenique's own page ============ */
+.own{display:grid;grid-template-columns:1fr 400px;gap:24px;align-items:start}
+.ownhero{border-radius:22px;background:var(--blue);color:#fff;padding:34px;position:relative;overflow:hidden;margin-bottom:18px}
+.ownhero::after{content:"C";position:absolute;right:-30px;top:-70px;font-size:300px;font-weight:800;color:rgba(255,255,255,.08);line-height:1}
+.ownhero h1{font-family:var(--serif);font-style:italic;font-weight:500;font-size:48px;line-height:1}
+.ownhero p{color:#d6e0ff;margin-top:10px;max-width:520px}
+.ownhero .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.ownhero .row span{border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:5px 12px;font-size:12.5px}
+.course{display:grid;grid-template-columns:86px 1fr auto;gap:16px;align-items:center;padding:18px;border-bottom:1px solid var(--line)}
+.course:last-child{border-bottom:none}
+.cdate{text-align:center;border:1px solid var(--line);border-radius:12px;padding:8px 0;background:var(--card)}
+.cdate b{display:block;font-family:var(--serif);font-size:30px;line-height:1;font-weight:600;color:var(--blue)}
+.cdate small{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.course h4{font-size:15.5px}
+.course p{font-size:13px;color:var(--muted)}
+.seats{display:flex;gap:4px;margin-top:8px}
+.seats i{width:16px;height:16px;border-radius:50%;background:var(--blue)}
+.seats i.free{background:#fff;border:1.5px dashed #9fb1e6}
+.course .act{text-align:right}
+.course .act small{display:block;font-size:12px;color:var(--muted);margin-top:4px}
+.model{display:flex;align-items:center;gap:12px;padding:12px 18px;border-bottom:1px solid #eee9e2;font-size:14px}
+.model:last-child{border-bottom:none}
+.model .grow{flex:1}.model .grow small{display:block;color:var(--muted);font-size:12.5px}
+.mini{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:16px 18px}
+.mini div{background:var(--card);border-radius:12px;padding:12px}
+.mini b{display:block;font-size:22px}
+.mini small{font-size:12px;color:var(--muted)}
+@media (max-width:980px){.own{grid-template-columns:1fr}.course{grid-template-columns:70px 1fr}.course .act{grid-column:1/-1;text-align:left}}
+
+/* modal + toast */
+.modal{position:fixed;inset:0;background:rgba(18,26,51,.45);display:none;place-items:center;z-index:90;padding:20px}
+.modal.on{display:grid}
+.modal .box{background:#fff;border-radius:20px;max-width:460px;width:100%;padding:24px}
+.modal h3{font-family:var(--serif);font-style:italic;font-weight:600;font-size:28px;margin-bottom:4px}
+.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,40px);opacity:0;background:var(--ink);color:#fff;padding:12px 18px;border-radius:12px;font-size:14px;z-index:99;transition:.3s;max-width:90vw}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+footer{text-align:center;font-size:12.5px;color:var(--muted);padding:10px 20px 40px}
+
+@media (max-width:980px){
+  .pub,.appshell,.two{grid-template-columns:1fr}
+  .book,.side{position:static}
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  .hero h1{font-size:42px}
+  .hero .about{grid-template-columns:1fr}
+  .tabs{margin-left:0}
+  .hide-m{display:none}
+  .demobar{position:static}
+}
+</style>
+</head>
+<body>
+
+<div class="demobar">
+  <div class="in">
+    <div class="logo"><div class="mark">C</div><div><div class="wm" style="color:#fff">COMMENSE ACADEMY</div><div class="tag">Graduate Booking Studio · sample</div></div></div>
+    <div class="tabs" role="tablist">
+      <button class="on" data-view="client"><span class="n">1</span>A client books a graduate</button>
+      <button data-view="grad"><span class="n">2</span>The graduate's diary</button>
+      <button data-view="academy"><span class="n">3</span>Shenique's academy view</button>
+      <button data-view="own"><span class="n">4</span>Shenique's own bookings</button>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+<!-- ================= VIEW 1 ================= -->
+<section class="view on" id="v-client">
+  <div class="explain"><div class="ic">1</div><div>This is the page a <b>Commense graduate</b> shares in her Instagram bio. Her clients book here. Every page shows that she trained with Commense, which sends future students back to the academy. <b>Try a booking.</b> It will show up in her diary on tab 2.</div></div>
+
+  <div class="pub">
+    <div class="hero">
+      <div class="top">
+        <div class="eyebrow" style="color:var(--mauve)">Gel · BIAB · E-file</div>
+        <h1>Nails by<br>Amara</h1>
+        <div class="loc">Home studio · Erdington, Birmingham · @nailsbyamara.bham</div>
+        <div class="cert"><div class="logo"><div class="mark">C</div></div><span>Trained &amp; certified by <b>Commense Academy</b> · ABT accredited</span></div>
+      </div>
+      <div class="swatches">
+        <div class="sw" style="background:#f4ece6"><small>Milky nude BIAB</small><div class="nail" style="background:linear-gradient(160deg,#f7e3dc,#e9c9bf)"></div></div>
+        <div class="sw" style="background:#efe3e3"><small>Baby pink gel</small><div class="nail" style="background:linear-gradient(160deg,#f9c9d6,#ee9fb5)"></div></div>
+        <div class="sw" style="background:#e9e2e4"><small>Cherry chrome</small><div class="nail" style="background:linear-gradient(160deg,#8c1f30,#4a0a16)"></div></div>
+        <div class="sw" style="background:#ece5e0"><small>Mocha shimmer</small><div class="nail" style="background:linear-gradient(160deg,#9e7a76,#5e4243)"></div></div>
+      </div>
+      <div class="about">
+        <div><h4>About</h4>Clean, long-lasting gel and BIAB with careful e-file prep. Small home studio, one client at a time.</div>
+        <div><h4>Good to know</h4>£10 deposit secures your slot. New to gel? I'll check about a patch test first. Infills every 3–4 weeks.</div>
+      </div>
+      <div class="academy-strip">
+        <div class="logo"><div class="mark">C</div></div>
+        <div><b>Want to do nails like this?</b><br><span class="muted">Amara trained at Commense Academy. Courses run online and in person.</span></div>
+        <button class="btn ghost sm" onclick="toast('Opens commenseacademy.com. Shenique sees this as a course lead on tab 3.'); academyLead()">See courses</button>
+      </div>
+    </div>
+
+    <div class="book" id="book">
+      <div class="hd"><h3 id="bk-title">Choose a treatment</h3><div class="steps" id="bk-steps"><i class="on"></i><i></i><i></i></div></div>
+      <div class="bd" id="bk-body"></div>
+      <div class="ft" id="bk-foot">
+        <div class="sum" id="bk-sum"><span>Nothing selected</span></div>
+        <button class="btn ghost sm" id="bk-back" style="display:none">Back</button>
+        <button class="btn pri" id="bk-next" disabled>Continue</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VIEW 2 ================= -->
+<section class="view" id="v-grad">
+  <div class="explain"><div class="ic">2</div><div>This is Amara's side. Every booking follows the <b>journey Shenique teaches</b>: deposit, appointment, payment, aftercare, then an infill reminder. Payments are only noted, never taken, so there are no card fees. <b>Tap the steps</b> to move a client along.</div></div>
+
+  <div class="appshell">
+    <aside class="side">
+      <div class="who"><div class="av" style="background:#8c1f30">AJ</div><div><b>Amara J.</b><small>Graduated Nov 2026</small></div></div>
+      <div class="nav">
+        <button class="on" data-sub="diary">Diary <span class="count" id="cnt-diary">0</span></button>
+        <button data-sub="clients">Clients &amp; infills</button>
+        <button data-sub="method">My Commense routine</button>
+      </div>
+      <div class="link">Your booking link
+        <code>book.commenseacademy.com/amara</code>
+        <button class="btn ghost sm" style="width:100%" onclick="toast('Link copied. It goes in her Instagram bio.')">Copy for Instagram bio</button>
+      </div>
+    </aside>
+
+    <div>
+      <div class="kpis">
+        <div class="kpi accent"><small>This week</small><b id="k-week">£0</b><span>booked value</span></div>
+        <div class="kpi"><small>Appointments</small><b id="k-appts">0</b><span>next 7 days</span></div>
+        <div class="kpi"><small>Deposits to chase</small><b id="k-dep">0</b><span>not yet noted</span></div>
+        <div class="kpi"><small>Infills due</small><b id="k-inf">0</b><span>reminders queued</span></div>
+      </div>
+
+      <div class="sub-view on" id="s-diary">
+        <div class="panel">
+          <div class="ph"><h3>Upcoming</h3><span class="pill blue" id="newpill" style="display:none">New booking</span><div class="r"><button class="btn ghost sm" onclick="switchView('client')">+ Test a booking</button></div></div>
+          <div id="appts"></div>
+        </div>
+        <div class="panel" id="aftercare-panel" style="display:none">
+          <div class="ph"><h3>Aftercare message sent</h3><span class="pill ok">WhatsApp / SMS</span></div>
+          <div class="msg" id="aftercare-msg"></div>
+        </div>
+      </div>
+
+      <div class="sub-view" id="s-clients">
+        <div class="panel">
+          <div class="ph"><h3>Clients</h3><span class="muted" style="font-size:13px">Infill reminders go out automatically at 3 weeks</span></div>
+          <div id="clients"></div>
+        </div>
+      </div>
+
+      <div class="sub-view" id="s-method">
+        <div class="two">
+          <div class="panel">
+            <div class="ph"><h3>Prep &amp; application checklist</h3><span class="pill blue">Set by Commense</span></div>
+            <ul class="method" id="method"></ul>
+          </div>
+          <div class="panel">
+            <div class="ph"><h3>From your academy</h3></div>
+            <div class="list-row"><div class="grow"><b>Pricing guide for new techs</b><small>Shenique's suggested starting prices</small></div><span class="pill grey">PDF</span></div>
+            <div class="list-row"><div class="grow"><b>Content creation basics</b><small>Shooting your sets for Instagram</small></div><span class="pill grey">Video</span></div>
+            <div class="list-row"><div class="grow"><b>Ready for the next level?</b><small>Beginners E-File Course · alumni price</small></div><button class="btn pri sm" onclick="toast('Upsell sent to Shenique as a course enquiry.'); academyLead()">Enquire</button></div>
+            <div class="list-row"><div class="grow"><b>Ask Shenique</b><small>Mentor messages for graduates</small></div><span class="pill ok">Open</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VIEW 3 ================= -->
+<section class="view" id="v-academy">
+  <div class="explain"><div class="ic">3</div><div>This is <b>Shenique's view</b>. When students qualify, she switches on their booking page. Each graduate pays her <b>£50 a year</b>, and she keeps <b>£30</b> of it. Use the sliders to change the class sizes.</div></div>
+
+  <div class="acad-hd">
+    <div><div class="eyebrow">Academy dashboard</div><h1>Your graduates</h1></div>
+    <button class="btn pri" onclick="openModal()">+ Add a graduate</button>
+  </div>
+
+  <div class="kpis">
+    <div class="kpi accent"><small>Your share this year</small><b id="a-earn">£0</b><span>£30 × active graduates</span></div>
+    <div class="kpi"><small>Graduates live</small><b id="a-live">0</b><span>taking bookings</span></div>
+    <div class="kpi"><small>Bookings via graduates</small><b id="a-book">0</b><span>this month</span></div>
+    <div class="kpi"><small>Course leads from graduate pages</small><b id="a-leads">0</b><span>this month</span></div>
+  </div>
+
+  <div class="two">
+    <div>
+      <div class="panel">
+        <div class="ph"><h3>Graduates</h3><div class="r"><span class="pill grey">Small-group courses</span></div></div>
+        <div style="overflow-x:auto"><table><thead><tr><th>Graduate</th><th>Course</th><th>Status</th><th class="hide-m">Bookings</th><th>Plan</th></tr></thead><tbody id="grads"></tbody></table></div>
+      </div>
+      <div class="panel">
+        <div class="ph"><h3>What a graduate pays for software</h3><span class="muted" style="font-size:13px">per year</span></div>
+        <div class="compare">
+          <div class="bar us"><div class="lab"><b>Commense booking page</b><b>£50</b></div><div class="track"><div class="fill" style="width:10.4%"></div></div></div>
+          <div class="bar"><div class="lab"><span>Typical booking app, entry plan (~£15/mo)</span><span>£180</span></div><div class="track"><div class="fill" style="width:37.5%"></div></div></div>
+          <div class="bar"><div class="lab"><span>Typical booking app, solo pro plan (~£40/mo)</span><span>£480</span></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+          <p class="note" style="margin-top:14px">Your graduate pays less, you earn every year they stay on, and you keep a link with them after the course ends.</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="panel">
+        <div class="ph"><h3>What this could earn you</h3></div>
+        <div class="calc">
+          <div class="range"><div class="top"><span>Students per course</span><b id="r1v">6</b></div><input type="range" id="r1" min="2" max="12" value="6"></div>
+          <div class="range"><div class="top"><span>Courses per month</span><b id="r2v">2</b></div><input type="range" id="r2" min="1" max="8" value="2"></div>
+          <div class="range"><div class="top"><span>Graduates who switch it on</span><b id="r3v">70%</b></div><input type="range" id="r3" min="20" max="100" step="5" value="70"></div>
+          <div class="result">
+            <div class="row"><span>Graduates on the plan in year 1</span><b id="o1">0</b></div>
+            <div class="row"><span>You keep per graduate</span><b>£30 / year</b></div>
+            <div class="big" id="o2">£0</div>
+            <small>in year 1, with no extra work after setup</small>
+            <div class="row" style="margin-top:12px;border-top:1px solid #2c3554;padding-top:10px"><span>Year 2, if 60% renew and new classes join</span><b id="o3">£0</b></div>
+          </div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="ph"><h3>Activity</h3></div>
+        <ul class="feed" id="feed"></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VIEW 4 ================= -->
+<section class="view" id="v-own">
+  <div class="explain"><div class="ic">4</div><div>The same system works for <b>Shenique's own bookings</b>. Students reserve course seats, with payment in full or spread over 3 months. Full courses collect a <b>waiting list</b>, and <b>hand models</b> book themselves in for practical days. She stops managing all of this in her DMs.</div></div>
+  <div class="own">
+    <div>
+      <div class="ownhero">
+        <div class="eyebrow" style="color:#c9d6ff">Accredited nail courses</div>
+        <h1>Learn with Commense</h1>
+        <p>Small-group, in-person courses and self-paced online courses with 1-1 mentoring from Shenique.</p>
+        <div class="row"><span>ABT accredited</span><span>Starter kit included</span><span>Spread the cost over 3 months</span></div>
+      </div>
+      <div class="panel">
+        <div class="ph"><h3>Upcoming in-person courses</h3><span class="pill grey">Small groups</span></div>
+        <div id="courses"></div>
+      </div>
+      <div class="panel">
+        <div class="ph"><h3>Online courses</h3><span class="pill ok">Start any time</span></div>
+        <div class="model"><div class="grow"><b>Gel Polish &amp; Builder Gel for Beginners</b><small>4K videos, manual, quizzes and a 1-1 mentor session</small></div><button class="btn ghost sm" onclick="enrol('Gel Polish & Builder Gel (online)')">Enrol</button></div>
+        <div class="model"><div class="grow"><b>Beginners E-File Course</b><small>Safe e-file prep, removal and rebalancing</small></div><button class="btn ghost sm" onclick="enrol('Beginners E-File (online)')">Enrol</button></div>
+        <div class="model"><div class="grow"><b>The Nail Routine</b><small>For qualified techs refining their routine</small></div><button class="btn ghost sm" onclick="enrol('The Nail Routine (online)')">Enrol</button></div>
+      </div>
+    </div>
+    <div>
+      <div class="panel">
+        <div class="ph"><h3>Shenique's week</h3><span class="pill blue">Admin view</span></div>
+        <div class="mini"><div><b id="o-seats">0</b><small>seats booked</small></div><div><b id="o-wait">0</b><small>on waiting lists</small></div><div><b id="o-models">0</b><small>models booked</small></div></div>
+        <ul class="feed" id="ownfeed"></ul>
+      </div>
+      <div class="panel">
+        <div class="ph"><h3>Hand models needed</h3><span class="pill warn">£10 set</span></div>
+        <p class="muted" style="font-size:13px;padding:12px 18px 0">Students practise on real clients on practical days. Models book a slot here.</p>
+        <div id="models"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<footer>Sample prepared for Commense Academy · demo data only, nothing here is live · all services, prices and graduates are placeholders</footer>
+
+<div class="modal" id="modal"><div class="box">
+  <h3>Add a graduate</h3>
+  <p class="muted" style="font-size:14px;margin-bottom:16px">She gets her own booking page in minutes, already set up with your services and routine.</p>
+  <div class="field"><label>Name</label><input id="m-name" placeholder="e.g. Jodie Clarke"></div>
+  <div class="field"><label>Course completed</label><select id="m-course"><option>Beginners Gel Polish &amp; Builder Gel</option><option>Beginners E-File Course</option><option>The Nail Routine</option></select></div>
+  <div class="field"><label>Instagram handle</label><input id="m-ig" placeholder="@jodienails"></div>
+  <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:6px"><button class="btn ghost" onclick="closeModal()">Cancel</button><button class="btn pri" onclick="addGrad()">Create her page</button></div>
+</div></div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ---------- helpers ---------- */
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const DAYN=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'], MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const addDays=(d,n)=>{const x=new Date(d);x.setDate(x.getDate()+n);return x};
+const fmtD=d=>`${DAYN[d.getDay()]} ${d.getDate()} ${MON[d.getMonth()]}`;
+const today=new Date();today.setHours(0,0,0,0);
+let tt;function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('on'),2600)}
+
+/* ---------- data ---------- */
+const SERVICES=[
+ {id:'gel',name:'Gel polish manicure',dur:45,price:25,desc:'Prep, cuticle work, long-wear gel colour',c:'linear-gradient(160deg,#f9c9d6,#ee9fb5)'},
+ {id:'biab',name:'BIAB overlay',dur:60,price:32,desc:'Builder in a bottle on natural nails',c:'linear-gradient(160deg,#f7e3dc,#e9c9bf)'},
+ {id:'infill',name:'BIAB infill',dur:60,price:28,desc:'Rebalance and fresh colour at 3–4 weeks',c:'linear-gradient(160deg,#efd5cd,#d9aea2)'},
+ {id:'ext',name:'Builder gel extensions',dur:90,price:42,desc:'Sculpted length with builder gel',c:'linear-gradient(160deg,#8c1f30,#4a0a16)'},
+ {id:'rem',name:'E-file removal & tidy',dur:30,price:12,desc:'Safe removal, no soaking',c:'linear-gradient(160deg,#cfc8c2,#a49b94)'}
+];
+const ADDONS=[{id:'fr',name:'French tips',price:5},{id:'ch',name:'Chrome',price:5},{id:'art',name:'Art on 2 nails',price:6}];
+const SLOTS=['09:30','11:00','12:30','14:00','15:30','17:00','18:30'];
+const JOURNEY=['Deposit noted','Appointment done','Paid','Aftercare sent'];
+
+const svc=id=>SERVICES.find(s=>s.id===id);
+const openDay=n=>{let d=addDays(today,n);while(d.getDay()===0)d=addDays(d,1);return d};
+let appts=[
+ {id:1,name:'Leah M.',svc:'infill',add:[],date:openDay(0),time:'11:00',stage:2,newc:false,pay:'Card'},
+ {id:2,name:'Danielle O.',svc:'biab',add:['ch'],date:openDay(0),time:'15:30',stage:1,newc:false},
+ {id:3,name:'Sian R.',svc:'gel',add:[],date:openDay(1),time:'12:30',stage:0,newc:true},
+ {id:4,name:'Tara K.',svc:'ext',add:['fr'],date:openDay(2),time:'14:00',stage:1,newc:false},
+ {id:5,name:'Mia P.',svc:'rem',add:[],date:openDay(4),time:'17:00',stage:0,newc:false}
+];
+const taken=new Set(appts.map(a=>a.date.toDateString()+a.time));
+['09:30','14:00'].forEach(t=>taken.add(addDays(today,3).toDateString()+t));
+taken.add(addDays(today,5).toDateString()+'11:00');
+
+let clients=[
+ {name:'Leah M.',last:addDays(today,-24),svc:'BIAB infill',visits:6},
+ {name:'Chloe B.',last:addDays(today,-22),svc:'BIAB overlay',visits:3},
+ {name:'Jas K.',last:addDays(today,-19),svc:'Gel polish manicure',visits:2},
+ {name:'Danielle O.',last:addDays(today,-12),svc:'BIAB overlay',visits:4},
+ {name:'Tara K.',last:addDays(today,-30),svc:'Builder gel extensions',visits:5}
+];
+
+let grads=[
+ {n:'Amara J.',ig:'@nailsbyamara.bham',course:'Beginners Gel Polish & Builder Gel',status:'live',book:23,col:'#8c1f30'},
+ {n:'Keisha W.',ig:'@keishadoesnails',course:'Beginners Gel Polish & Builder Gel',status:'live',book:17,col:'#1748D0'},
+ {n:'Priya S.',ig:'@nailsbypriya_',course:'Beginners E-File Course',status:'live',book:31,col:'#7A5A62'},
+ {n:'Ellie-May T.',ig:'@ellienails.studio',course:'The Nail Routine',status:'live',book:12,col:'#2F7A4F'},
+ {n:'Sofia R.',ig:'@sofia.gelbar',course:'Beginners Gel Polish & Builder Gel',status:'setup',book:0,col:'#A5621A'},
+ {n:'Jade L.',ig:'@jadelnails',course:'Beginners E-File Course',status:'live',book:9,col:'#5e4243'},
+ {n:'Grace A.',ig:'—',course:'Beginners Gel Polish & Builder Gel',status:'invited',book:0,col:'#6C6B73'}
+];
+let leads=4;
+let feed=[
+ {t:'Priya S. took her 30th booking',s:'2 hours ago'},
+ {t:'A client clicked "See courses" on Keisha\'s page',s:'Yesterday'},
+ {t:'Sofia R. is setting up her page',s:'Yesterday'},
+ {t:'Ellie-May T. renewed for another year',s:'3 days ago'}
+];
+
+/* ---------- top tabs ---------- */
+function switchView(v){
+  $$('.tabs button').forEach(b=>b.classList.toggle('on',b.dataset.view===v));
+  $$('.view').forEach(s=>s.classList.toggle('on',s.id==='v-'+v));
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+$$('.tabs button').forEach(b=>b.onclick=()=>switchView(b.dataset.view));
+
+/* ---------- VIEW 1: booking flow ---------- */
+let bk={step:0,svc:null,add:[],day:null,time:null};
+function total(){if(!bk.svc)return 0;return svc(bk.svc).price+bk.add.reduce((s,a)=>s+ADDONS.find(x=>x.id===a).price,0)}
+function renderBook(){
+  const body=$('#bk-body'),next=$('#bk-next'),back=$('#bk-back');
+  $$('#bk-steps i').forEach((i,n)=>i.classList.toggle('on',n<=bk.step));
+  back.style.display=bk.step>0&&bk.step<3?'':'none';
+  $('#bk-foot').style.display=bk.step===3?'none':'flex';
+  const s=bk.svc?svc(bk.svc):null;
+  $('#bk-sum').innerHTML=s?`<span>${esc(s.name)}${bk.time?` · ${fmtD(bk.day)}, ${bk.time}`:''}</span><b>£${total()}</b>`:'<span>Nothing selected</span>';
+
+  if(bk.step===0){
+    $('#bk-title').textContent='Choose a treatment';
+    body.innerHTML=SERVICES.map(x=>`<button class="svc ${bk.svc===x.id?'on':''}" data-s="${x.id}"><span class="dot" style="background:${x.c}"></span><span><span class="t">${x.name}</span><br><span class="d">${x.desc}</span></span><span class="p">£${x.price}<small>${x.dur} min</small></span></button>`).join('')
+      +`<div class="lbl">Add-ons</div><div class="addons">${ADDONS.map(a=>`<button class="chip ${bk.add.includes(a.id)?'on':''}" data-a="${a.id}">${a.name} +£${a.price}</button>`).join('')}</div>`;
+    body.querySelectorAll('[data-s]').forEach(b=>b.onclick=()=>{bk.svc=b.dataset.s;renderBook()});
+    body.querySelectorAll('[data-a]').forEach(b=>b.onclick=()=>{const id=b.dataset.a;bk.add=bk.add.includes(id)?bk.add.filter(x=>x!==id):[...bk.add,id];renderBook()});
+    next.disabled=!bk.svc;next.textContent='Choose a time';
+  }
+  if(bk.step===1){
+    $('#bk-title').textContent='Pick a day & time';
+    const days=[...Array(14)].map((_,i)=>addDays(today,i+1));
+    body.innerHTML=`<div class="lbl" style="margin-top:0">${MON[days[0].getMonth()]} ${days[0].getFullYear()}</div><div class="days">${days.map((d,i)=>`<button class="day ${bk.day&&bk.day.getTime()===d.getTime()?'on':''}" data-d="${i}" ${d.getDay()===0?'disabled':''}>${DAYN[d.getDay()]}<b>${d.getDate()}</b></button>`).join('')}</div>`
+      +(bk.day?`<div class="lbl">Available on ${fmtD(bk.day)}</div><div class="slots">${SLOTS.map(t=>`<button class="slot ${bk.time===t?'on':''}" data-t="${t}" ${taken.has(bk.day.toDateString()+t)?'disabled':''}>${t}</button>`).join('')}</div>`:'<p class="note" style="margin-top:16px">Closed on Sundays. Pick a day to see free times.</p>');
+    body.querySelectorAll('[data-d]').forEach(b=>b.onclick=()=>{bk.day=days[+b.dataset.d];bk.time=null;renderBook()});
+    body.querySelectorAll('[data-t]').forEach(b=>b.onclick=()=>{bk.time=b.dataset.t;renderBook()});
+    next.disabled=!bk.time;next.textContent='Your details';
+  }
+  if(bk.step===2){
+    $('#bk-title').textContent='Your details';
+    body.innerHTML=`<div class="field"><label>Name</label><input id="f-name" placeholder="Your name" value="${esc(bk.name||'')}"></div>
+      <div class="field"><label>Mobile (for your reminder)</label><input id="f-phone" placeholder="07…" value="${esc(bk.phone||'')}"></div>
+      <div class="lbl">Nail health check</div>
+      <label class="check"><input type="checkbox" id="f-before" ${bk.before?'checked':''}> I've had gel or BIAB before with no reaction</label>
+      <label class="check"><input type="checkbox" id="f-cond" ${bk.cond?'checked':''}> I have a nail or skin condition Amara should know about</label>
+      <div class="field" style="margin-top:10px"><label>Inspo or notes (optional)</label><textarea id="f-note" rows="2" placeholder="e.g. short square, milky pink">${esc(bk.note||'')}</textarea></div>
+      <div class="note">To secure your slot, send a <b>£10 deposit</b> by bank transfer after booking. Amara will message you the details. Please give 48 hours' notice if you can't make it.</div>`;
+    const sync=()=>{bk.name=$('#f-name').value.trim();bk.phone=$('#f-phone').value.trim();bk.before=$('#f-before').checked;bk.cond=$('#f-cond').checked;bk.note=$('#f-note').value;next.disabled=!(bk.name&&bk.phone)};
+    body.querySelectorAll('input,textarea').forEach(i=>i.oninput=i.onchange=sync);sync();
+    next.textContent='Request booking';
+  }
+  if(bk.step===3){
+    $('#bk-title').textContent='You\'re booked in';
+    body.innerHTML=`<div class="done"><div class="big">✓</div><h4>See you soon, ${esc(bk.name.split(' ')[0])}</h4><p class="muted" style="font-size:14px">Amara has your request and will send deposit details by text.</p>
+      <div class="receipt"><div><span>Treatment</span><span>${esc(s.name)}</span></div>${bk.add.length?`<div><span>Add-ons</span><span>${bk.add.map(a=>ADDONS.find(x=>x.id===a).name).join(', ')}</span></div>`:''}<div><span>When</span><span>${fmtD(bk.day)}, ${bk.time}</span></div><div><span>Total</span><span><b>£${total()}</b> (pay on the day)</span></div><div><span>Deposit</span><span>£10 by transfer</span></div></div>
+      <button class="btn pri" style="width:100%" onclick="switchView('grad')">See it in Amara's diary →</button>
+      <button class="btn ghost sm" style="margin-top:10px" onclick="resetBook()">Make another booking</button></div>`;
+  }
+}
+$('#bk-next').onclick=()=>{
+  if(bk.step===2){
+    const a={id:Date.now(),name:bk.name,svc:bk.svc,add:[...bk.add],date:bk.day,time:bk.time,stage:0,newc:!bk.before,cond:bk.cond,note:bk.note,fresh:true};
+    appts.push(a);taken.add(bk.day.toDateString()+bk.time);
+    grads[0].book++;
+    feed.unshift({t:`New booking on Amara's page: ${bk.name}, ${svc(bk.svc).name}`,s:'Just now'});
+    $('#newpill').style.display='';
+    renderGrad();renderAcademy();
+  }
+  bk.step++;renderBook();
+};
+$('#bk-back').onclick=()=>{bk.step--;renderBook()};
+function resetBook(){bk={step:0,svc:null,add:[],day:null,time:null};renderBook()}
+function academyLead(){leads++;feed.unshift({t:'Course enquiry from a graduate page',s:'Just now'});renderAcademy()}
+
+/* ---------- VIEW 2: graduate diary ---------- */
+$$('.nav button').forEach(b=>b.onclick=()=>{$$('.nav button').forEach(x=>x.classList.toggle('on',x===b));$$('.sub-view').forEach(v=>v.classList.toggle('on',v.id==='s-'+b.dataset.sub))});
+function apptTotal(a){return svc(a.svc).price+a.add.reduce((s,id)=>s+ADDONS.find(x=>x.id===id).price,0)}
+function advance(id,i){
+  const a=appts.find(x=>x.id===id); if(i!==a.stage)return;
+  a.stage++;
+  if(a.stage===4){
+    const first=a.name.split(' ')[0];
+    $('#aftercare-msg').textContent=`Hi ${first}! Thanks for coming in today 💅\n\nAftercare for your ${svc(a.svc).name.toLowerCase()}:\n• Cuticle oil every evening\n• Gloves for cleaning and washing up\n• Don't pick or peel. Come back for removal\n\nYour infill is due around ${fmtD(addDays(a.date,21))}. I'll send you a reminder. Amara x`;
+    $('#aftercare-panel').style.display='';
+    clients.unshift({name:a.name,last:a.date,svc:svc(a.svc).name,visits:1});
+    toast('Aftercare sent and infill reminder set for 3 weeks');
+  } else toast(JOURNEY[i]+' ✓');
+  renderGrad();
+}
+function renderGrad(){
+  const sorted=[...appts].filter(a=>a.stage<4||a.date>=today).sort((a,b)=>a.date-b.date||a.time.localeCompare(b.time));
+  $('#appts').innerHTML=sorted.map(a=>{
+    const s=svc(a.svc);const isToday=a.date.getTime()===today.getTime();
+    return `<div class="appt ${a.fresh?'new':''}">
+      <div class="when"><b>${a.time}</b><small>${isToday?'Today':fmtD(a.date)}</small></div>
+      <div><div class="nm">${esc(a.name)}</div><div class="sv">${s.name}${a.add.length?' + '+a.add.map(id=>ADDONS.find(x=>x.id===id).name).join(', '):''} · ${s.dur} min</div>
+        <div class="flags">${a.newc?'<span class="pill warn">New to gel · patch test</span>':''}${a.cond?'<span class="pill warn">Nail/skin condition noted</span>':''}${a.note?`<span class="pill grey">“${esc(a.note.slice(0,40))}”</span>`:''}${a.stage===0?'<span class="pill grey">Deposit not yet noted</span>':''}</div>
+        <div class="journey">${JOURNEY.map((j,i)=>`<button class="${i<a.stage?'done':i===a.stage?'next':''}" onclick="advance(${a.id},${i})">${i<a.stage?'✓ ':''}${j}</button>`).join('')}</div>
+      </div>
+      <div class="amt">£${apptTotal(a)}<small>${a.stage>=3?'paid':'due on the day'}</small></div></div>`}).join('');
+  appts.forEach(a=>a.fresh=false);
+  const wk=appts.filter(a=>a.date<addDays(today,7));
+  $('#k-week').textContent='£'+wk.reduce((s,a)=>s+apptTotal(a),0);
+  $('#k-appts').textContent=wk.filter(a=>a.stage<4).length;
+  $('#k-dep').textContent=appts.filter(a=>a.stage===0).length;
+  $('#cnt-diary').textContent=appts.filter(a=>a.stage<4).length;
+  const due=clients.filter(c=>(today-c.last)/864e5>=18);
+  $('#k-inf').textContent=due.length;
+  $('#clients').innerHTML=clients.map(c=>{const d=Math.round((today-c.last)/864e5);const due=d>=18;
+    return `<div class="list-row"><div class="av" style="background:#c9b5ad;width:34px;height:34px;font-size:12px">${esc(c.name.split(' ').map(x=>x[0]).join(''))}</div><div class="grow"><b>${esc(c.name)}</b><small>${esc(c.svc)} · ${d===0?'today':d+' days ago'} · ${c.visits} visit${c.visits>1?'s':''}</small></div>${due?'<span class="pill warn">Infill due</span> <button class="btn ghost sm" onclick="toast(\'Reminder sent with her booking link\')">Remind</button>':'<span class="pill ok">Reminder queued</span>'}</div>`}).join('');
+}
+const METHOD=['Sanitise hands and tools, set up the station','Cuticle prep with the e-file (safe bit, low speed)','Shape and buff, remove the shine','Dehydrate and prime','Apply in thin layers, cure each one fully','Build the apex and check the side profile','Finish with cuticle oil and an aftercare card','Photograph the set for content'];
+$('#method').innerHTML=METHOD.map((m,i)=>`<li><span>${i+1}</span>${m}</li>`).join('');
+
+/* ---------- VIEW 3: academy ---------- */
+function renderAcademy(){
+  const live=grads.filter(g=>g.status==='live').length;
+  $('#a-live').textContent=live;
+  $('#a-earn').textContent='£'+(live*30);
+  $('#a-book').textContent=grads.reduce((s,g)=>s+g.book,0);
+  $('#a-leads').textContent=leads;
+  const st={live:'<span class="pill ok">Live</span>',setup:'<span class="pill blue">Setting up</span>',invited:'<span class="pill grey">Invited</span>'};
+  $('#grads').innerHTML=grads.map(g=>`<tr><td><div class="g"><div class="av" style="background:${g.col}">${esc(g.n.split(' ').map(x=>x[0]).join('').slice(0,2))}</div><div><b>${esc(g.n)}</b><small>${esc(g.ig)}</small></div></div></td><td style="font-size:13px">${esc(g.course.replace('Beginners Gel Polish & Builder Gel','Gel Polish & Builder Gel').replace('Beginners E-File Course','E-File Course'))}</td><td>${st[g.status]}</td><td class="hide-m">${g.book}</td><td class="plan">£50/yr<small>you keep £30</small></td></tr>`).join('');
+  $('#feed').innerHTML=feed.slice(0,6).map(f=>`<li><i></i><div>${esc(f.t)}<small>${f.s}</small></div></li>`).join('');
+}
+function calc(){
+  const a=+$('#r1').value,b=+$('#r2').value,c=+$('#r3').value/100;
+  $('#r1v').textContent=a;$('#r2v').textContent=b;$('#r3v').textContent=Math.round(c*100)+'%';
+  const y1=Math.round(a*b*12*c);
+  $('#o1').textContent=y1;
+  $('#o2').textContent='£'+(y1*30).toLocaleString('en-GB');
+  $('#o3').textContent='£'+(Math.round(y1*0.6+y1)*30).toLocaleString('en-GB');
+}
+['#r1','#r2','#r3'].forEach(s=>$(s).oninput=calc);
+function openModal(){$('#modal').classList.add('on');$('#m-name').focus()}
+function closeModal(){$('#modal').classList.remove('on')}
+$('#modal').onclick=e=>{if(e.target.id==='modal')closeModal()};
+function addGrad(){
+  const n=$('#m-name').value.trim();if(!n){$('#m-name').focus();return}
+  const ig=$('#m-ig').value.trim()||'—';
+  const slug=n.toLowerCase().split(' ')[0].replace(/[^a-z]/g,'');
+  grads.unshift({n,ig,course:$('#m-course').value,status:'live',book:0,col:'#1748D0'});
+  feed.unshift({t:`${n}'s page is live: book.commenseacademy.com/${slug}`,s:'Just now'});
+  closeModal();$('#m-name').value='';$('#m-ig').value='';renderAcademy();
+  toast(`${n}'s booking page is live, with your services and routine already set up`);
+}
+
+/* ---------- VIEW 4: own bookings ---------- */
+const COURSES=[
+ {id:'c1',name:'Beginners Gel Polish & Builder Gel',when:new Date(2026,10,17),fmt:'In person · 1 day + online theory',seats:6,taken:5},
+ {id:'c2',name:'Beginners E-File Course',when:new Date(2026,11,5),fmt:'In person · 1 day',seats:4,taken:2},
+ {id:'c3',name:'The Nail Routine',when:new Date(2027,0,11),fmt:'In person · for qualified techs',seats:6,taken:6,wait:3}
+];
+let MODELS=[
+ {t:'Tue 17 Nov · 13:00',what:'Gel polish, hands',left:2},
+ {t:'Tue 17 Nov · 14:30',what:'Builder gel overlay',left:1},
+ {t:'Sat 5 Dec · 13:00',what:'E-file removal & rebalance',left:3}
+];
+let ownFeed=[{t:'Seat reserved: Gel & Builder Gel (17 Nov), paying over 3 months',s:'Today'},{t:'2 people joined The Nail Routine waiting list',s:'Yesterday'}];
+function renderOwn(){
+  $('#courses').innerHTML=COURSES.map(c=>{const full=c.taken>=c.seats;const left=c.seats-c.taken;
+    return `<div class="course"><div class="cdate"><small>${MON[c.when.getMonth()]}</small><b>${c.when.getDate()}</b><small>${DAYN[c.when.getDay()]}</small></div>
+    <div><h4>${c.name}</h4><p>${c.fmt}</p><div class="seats">${[...Array(c.seats)].map((_,i)=>`<i class="${i<c.taken?'':'free'}"></i>`).join('')}</div></div>
+    <div class="act">${full?`<button class="btn ghost sm" onclick="waitlist('${c.id}')">Join waiting list</button><small>Full · ${c.wait||0} waiting</small>`:`<button class="btn pri sm" onclick="reserve('${c.id}')">Reserve a seat</button><small>${left} of ${c.seats} left</small>`}</div></div>`}).join('');
+  $('#models').innerHTML=MODELS.map((m,i)=>`<div class="model"><div class="grow"><b>${m.t}</b><small>${m.what} · ${m.left?m.left+' slot'+(m.left>1?'s':'')+' left':'fully booked'}</small></div>${m.left?`<button class="btn ghost sm" onclick="bookModel(${i})">Book</button>`:'<span class="pill grey">Full</span>'}</div>`).join('');
+  $('#o-seats').textContent=COURSES.reduce((s,c)=>s+c.taken,0);
+  $('#o-wait').textContent=COURSES.reduce((s,c)=>s+(c.wait||0),0);
+  $('#o-models').textContent=9-MODELS.reduce((s,m)=>s+m.left,0)+3;
+  $('#ownfeed').innerHTML=ownFeed.slice(0,4).map(f=>`<li><i></i><div>${esc(f.t)}<small>${f.s}</small></div></li>`).join('');
+}
+function reserve(id){const c=COURSES.find(x=>x.id===id);c.taken++;if(c.taken>=c.seats)c.wait=c.wait||0;ownFeed.unshift({t:`Seat reserved: ${c.name} (${c.when.getDate()} ${MON[c.when.getMonth()]}), plan chosen at checkout`,s:'Just now'});renderOwn();toast(c.taken>=c.seats?'Seat reserved, and the course is now full. New sign-ups go to the waiting list.':'Seat reserved. Welcome pack and kit details sent.')}
+function waitlist(id){const c=COURSES.find(x=>x.id===id);c.wait=(c.wait||0)+1;ownFeed.unshift({t:`Joined waiting list: ${c.name}`,s:'Just now'});renderOwn();toast("Added to the waiting list. She'll hear first when a new date opens.")}
+function bookModel(i){MODELS[i].left--;ownFeed.unshift({t:`Hand model booked: ${MODELS[i].t}`,s:'Just now'});renderOwn();toast('Model booked. Reminder sent the day before.')}
+function enrol(n){ownFeed.unshift({t:`Online enrolment: ${n}`,s:'Just now'});renderOwn();toast('Enrolment started. Spread over 3 months available.')}
+
+renderBook();renderGrad();renderAcademy();calc();renderOwn();
+</script>
+</body>
+</html>
