@@ -52,16 +52,16 @@ FIELDS = ",".join("places." + f for f in [
 # A "website" on these hosts doesn't count as the salon having its own site.
 NOT_A_WEBSITE = {
     "facebook.com": "Facebook", "fb.com": "Facebook", "instagram.com": "Instagram", "linktr.ee": "Linktree",
-    "fresha.com": "Fresha", "treatwell.co.uk": "Treatwell", "booksy.com": "Booksy", "setmore.com": "Setmore",
+    "fresha.com": "Fresha", "treatwell.co.uk": "Treatwell", "treatwell.ie": "Treatwell", "booksy.ie": "Booksy", "salonized.com": "Salonized", "slickpic.us": "Salon page", "bookwhen.com": "Bookwhen", "phorest.me": "Phorest", "booksy.com": "Booksy", "setmore.com": "Setmore",
     "phorest.com": "Phorest", "timely.co.nz": "Timely", "gettimely.com": "Timely", "vagaro.com": "Vagaro",
     "square.site": "Square", "squareup.com": "Square", "wa.me": "WhatsApp", "tiktok.com": "TikTok",
 }
-BOOKING_HOSTS = {"fresha.com": "Book on Fresha", "treatwell.co.uk": "Book on Treatwell", "booksy.com": "Book on Booksy",
+BOOKING_HOSTS = {"fresha.com": "Book on Fresha", "treatwell.co.uk": "Book on Treatwell", "treatwell.ie": "Book on Treatwell", "phorest.me": "Book online", "salonized.com": "Book online", "booksy.com": "Book on Booksy",
                  "setmore.com": "Book online", "phorest.com": "Book online", "gettimely.com": "Book online",
                  "timely.co.nz": "Book online", "vagaro.com": "Book online", "square.site": "Book online"}
 CHAINS = ["toni & guy", "toni&guy", "rush", "regis", "supercuts", "headmasters", "saks", "francesco group",
           "hair by ", "barberbar", "ruby's", "jaques", "blue sky", "the hair & beauty academy",
-          "sun centre", "tanning", "sunbed"]
+          "sun centre", "tanning", "sunbed", "peter mark", "brown sugar", "dylan bradshaw", "zinc hair", "cut & dry", "hair republic", "academy"]
 
 PERSONA = {  # wording + starter services by Google's primary type
     "hair_salon": dict(type="Hair salon", what="cuts, colour and blow-dries",
@@ -109,12 +109,22 @@ def match_host(url, table):
     return None
 
 
+REGION = "GB"
+MOBILE = {  # region: (country code, national mobile pattern incl. leading 0)
+    "GB": ("44", r"07\d{9}"),
+    "IE": ("353", r"08[35679]\d{7}"),
+    "AU": ("61", r"04\d{8}"),
+}
+COUNTRY = {"GB": ("United Kingdom", "en-GB"), "IE": ("Ireland", "en-IE"), "AU": ("Australia", "en-AU")}
+
+
 def uk_mobile(phone):
-    """Return +447... if the number is a UK mobile (likely on WhatsApp), else ''."""
+    """Return +<cc>... if the number is a mobile in the current REGION (likely on WhatsApp), else ''."""
+    cc, pat = MOBILE.get(REGION, MOBILE["GB"])
     d = re.sub(r"\D", "", phone or "")
-    if d.startswith("44"):
-        d = "0" + d[2:]
-    return "+44" + d[1:] if re.fullmatch(r"07\d{9}", d) else ""
+    if d.startswith(cc):
+        d = "0" + d[len(cc):]
+    return "+" + cc + d[1:] if re.fullmatch(pat, d) else ""
 
 
 class Budget:
@@ -197,6 +207,8 @@ def qualifies(p, cfg, taken_ids, taken_names):
         why = "has a website"
     elif not p.get("nationalPhoneNumber"):
         why = "no phone"
+    elif cfg.get("require_mobile") and not uk_mobile(p.get("nationalPhoneNumber")):
+        why = "no mobile (WhatsApp)"
     elif not (p.get("regularOpeningHours") or {}).get("periods"):
         why = "no opening hours"
     elif len(p.get("photos") or []) < 5:
@@ -364,7 +376,7 @@ def make_lead(p, slug, cfg, accent, credits):
              else f"Open {'seven days a week' if len(open_days) == 7 else open_days[0] + ' to ' + open_days[-1]}.")
     lead = {
         "slug": slug, "name": name, "type": per["type"],
-        "area": area, "address": address, "city": city, "country": "United Kingdom", "lang": "en-GB",
+        "area": area, "address": address, "city": city, "country": COUNTRY.get(REGION, COUNTRY["GB"])[0], "lang": COUNTRY.get(REGION, COUNTRY["GB"])[1],
         "phone": phone,
         "rating": rating, "review_count": count,
         "maps_link": p.get("googleMapsUri") or "https://www.google.com/maps/search/?api=1&query=" + urllib.parse.quote(f"{name} {address}"),
@@ -439,7 +451,7 @@ def outreach_row(lead, base_url, cfg):
     price, monthly = cfg["price"], cfg.get("monthly", 39)
     rating = f"{float(lead['rating']):.1f}" if lead.get("rating") else ""
     proof = f" ({rating} from {lead['review_count']:,})" if rating else ""
-    terms = (f"you only pay once it's live and you're happy with it: £{price} once, or £{monthly} a month "
+    terms = (f"you only pay once it's live and you're happy with it: {cfg['currency']}{price} once, or {cfg['currency']}{monthly} a month "
              f"with no contract")
     opener = (f"Hi, is this {lead['name']}? I'm {me}. I made a free website preview for you, built around "
               f"{short}, using your own Google reviews{proof}. Nothing to pay or sign up for. "
@@ -490,6 +502,9 @@ def main():
     cfg.setdefault("region", "GB")
     cfg.setdefault("pages", 3)
     cfg.setdefault("price", 300)
+    cfg.setdefault("currency", "£")
+    global REGION
+    REGION = cfg["region"]
     limit = args.limit or cfg.get("limit", 27)
     key = os.environ.get("GOOGLE_MAPS_API_KEY", "").strip()
     leads = json.loads(LEADS.read_text())

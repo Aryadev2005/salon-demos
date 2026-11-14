@@ -6690,5 +6690,2623 @@
     "_auto": true,
     "booking_link": "tel:+441423564792",
     "booking_label": "Call 01423 564792 to book"
+  },
+  {
+    "slug": "blush-beauty-carlow",
+    "name": "Blush Beauty Carlow",
+    "type": "Beauty salon",
+    "area": "Carlow",
+    "address": "15 Castle Street, Carlow R93 F744",
+    "city": "Carlow",
+    "country": "Ireland",
+    "lang": "en-IE",
+    "phone": "085 152 3144",
+    "rating": 4.9,
+    "review_count": 199,
+    "maps_link": "https://maps.google.com/?cid=9292217627127825349&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJ_7edH9dDXUgRxcOTGLOW9IA",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "10:00-18:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "10:00-20:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "10:00-20:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:00-20:00"
+      },
+      {
+        "day": "Friday",
+        "time": "10:00-20:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-16:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Lashes, brows, nails and facials in Carlow.",
+    "subline": "Blush Beauty Carlow is a beauty salon in Carlow, rated 4.9 from 199 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 4.9 from 199 Google reviews.",
+      "Specialists in lashes, brows, nails and facials.",
+      "Late appointments until 8pm on Tuesdays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Lashes & brows",
+        "items": [
+          {
+            "name": "Lash extensions"
+          },
+          {
+            "name": "Lash lift"
+          },
+          {
+            "name": "Brow lamination"
+          },
+          {
+            "name": "Brow wax and tint"
+          }
+        ]
+      },
+      {
+        "category": "Beauty",
+        "items": [
+          {
+            "name": "Gel nails"
+          },
+          {
+            "name": "Facials"
+          },
+          {
+            "name": "Waxing"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party lashes"
+        },
+        {
+          "name": "Gel nails"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "I had a micro-needling facial done with Ciara today. She talked me through the process and made me feel at ease. I learned loads about my skin and skincare in general. Ciara is a fountain of knowledge!",
+        "name": "Éadaoin"
+      },
+      {
+        "text": "I get my nails done every month and have done so since September 2022 at Blush Beauty. It’s always a pleasure to visit and every staff member is always so lovely and friendly.",
+        "name": "Sarah"
+      },
+      {
+        "text": "Full works, eyebrow wax/tint, eyelash tint, chin/lip wax, under arm, full leg, brazillian bikini wax Excellent service. Would highly recommend Sarah",
+        "name": "Amanda"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Amy Russell, Blush Beauty Carlow, R “Rick Coslo” C).",
+    "accent": "#2A567C",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJ_7edH9dDXUgRxcOTGLOW9IA",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Blush Beauty Carlow",
+    "_auto": true,
+    "whatsapp": "+353851523144"
+  },
+  {
+    "slug": "empire-hairdressing-sligo",
+    "name": "Empire Hairdressing",
+    "type": "Hair salon",
+    "area": "Sligo",
+    "address": "Unit 2 Water Lane, Sligo",
+    "city": "Sligo",
+    "country": "Ireland",
+    "lang": "en-IE",
+    "phone": "087 130 1004",
+    "rating": 4.9,
+    "review_count": 168,
+    "maps_link": "https://maps.google.com/?cid=7930429423080589658&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJzbznXjToXkgRWkkGB4uLDm4",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "Closed"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-20:00"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-16:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Cuts, colour and blow-dries in Sligo.",
+    "subline": "Empire Hairdressing is a hair salon in Sligo, rated 4.9 from 168 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 4.9 from 168 Google reviews.",
+      "Specialists in cuts, colour and blow-dries.",
+      "Late appointments until 8pm on Thursdays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Hair",
+        "items": [
+          {
+            "name": "Ladies' cut and blow-dry"
+          },
+          {
+            "name": "Wash and blow-dry"
+          },
+          {
+            "name": "Men's cut"
+          },
+          {
+            "name": "Children's cut"
+          }
+        ]
+      },
+      {
+        "category": "Colour",
+        "items": [
+          {
+            "name": "Full head colour"
+          },
+          {
+            "name": "Highlights"
+          },
+          {
+            "name": "Balayage"
+          },
+          {
+            "name": "Toner and gloss"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party blow-dry"
+        },
+        {
+          "name": "Hair up"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "I’m so happy with my hair! I got half head of highlights, and I absolutely love the result. My hair looks fresh, bright and exactly how I wanted it.",
+        "name": "Aoife"
+      },
+      {
+        "text": "⭐⭐⭐⭐⭐ I’ve been a customer of Empire Hair for years, even travelling from Donegal to Sligo because the talent, atmosphere and genuine care in this salon are second to none. Today Kayleigh absolutely outdid herself!",
+        "name": "All"
+      },
+      {
+        "text": "I recently had an appointment in Empire to lighten my very dark hair and to make my grey roots more manageable. Kayleigh was so helpful in explaining what would need to be done and setting expectations.",
+        "name": "Jennifer"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Empire Hairdressing, Louise Mc, sorcha clarke).",
+    "accent": "#3B3876",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJzbznXjToXkgRWkkGB4uLDm4",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Empire Hairdressing",
+    "_auto": true,
+    "whatsapp": "+353871301004"
+  },
+  {
+    "slug": "beauty-by-vaiva-kilkenny",
+    "name": "Beauty by Vaiva",
+    "type": "Beauty salon",
+    "area": "Kilkenny",
+    "address": "1 The Parade, Kilkenny R95 XKR7",
+    "city": "Kilkenny",
+    "country": "Ireland",
+    "lang": "en-IE",
+    "phone": "089 238 0533",
+    "rating": 5,
+    "review_count": 134,
+    "maps_link": "https://maps.google.com/?cid=6712450537397068420&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJVxl64XgxXUgRhKLuHTNqJ10",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "Closed"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-16:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "08:00-17:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "08:00-17:00"
+      },
+      {
+        "day": "Friday",
+        "time": "07:00-17:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "07:00-17:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Lashes, brows, nails and facials in Kilkenny.",
+    "subline": "Beauty by Vaiva is a beauty salon in Kilkenny, rated 5 from 134 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 5 from 134 Google reviews.",
+      "Specialists in lashes, brows, nails and facials.",
+      "Open Tuesday to Saturday."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Lashes & brows",
+        "items": [
+          {
+            "name": "Lash extensions"
+          },
+          {
+            "name": "Lash lift"
+          },
+          {
+            "name": "Brow lamination"
+          },
+          {
+            "name": "Brow wax and tint"
+          }
+        ]
+      },
+      {
+        "category": "Beauty",
+        "items": [
+          {
+            "name": "Gel nails"
+          },
+          {
+            "name": "Facials"
+          },
+          {
+            "name": "Waxing"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party lashes"
+        },
+        {
+          "name": "Gel nails"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "Vaiva did my bridal party and my mam and grooms mam the morning of our wedding 14th August in the Newpark Kilkenny. I knew she was super talented by looking at her page but my god I still cant get over how amazing she is!",
+        "name": "Cathriona"
+      },
+      {
+        "text": "I booked vaiva for my wedding makeup and spray tan and I couldnt recommend her enough. From the trail makeup to the day of the wedding, she was amazing! Her kind and warm personality added to the morning of the wedding.",
+        "name": "ELaine"
+      },
+      {
+        "text": "I could not be happier that I chose Beauty by Vaiva for my wedding day makeup!! Vaiva is so incredibly sweet and funny, and she was truly such a pleasure to work with.",
+        "name": "Stephanie"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Beauty by Vaiva, Vaiva Sim).",
+    "accent": "#A6704F",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJVxl64XgxXUgRhKLuHTNqJ10",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Beauty by Vaiva",
+    "_auto": true,
+    "whatsapp": "+353892380533",
+    "instagram": "https://www.instagram.com/vaivabeauty?igsh=MXE2emxoM3FleDMyZQ=="
+  },
+  {
+    "slug": "jbeauty-aesthetics-and-permanent-makeup-clonmel",
+    "name": "JBeauty Aesthetics & Permanent Makeup",
+    "type": "Beauty & permanent makeup studio",
+    "area": "Clonmel",
+    "address": "2 Abbey Street, Clonmel E91 X0D9",
+    "city": "Clonmel",
+    "country": "Ireland",
+    "lang": "en-IE",
+    "phone": "087 478 7523",
+    "rating": 5,
+    "review_count": 107,
+    "maps_link": "https://maps.google.com/?cid=9607476822546378549&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJxYSAoLDFXEgRNe-se0SdVIU",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:30-18:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:30-18:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:30-18:00"
+      },
+      {
+        "day": "Friday",
+        "time": "09:30-18:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "08:30-18:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Permanent makeup, brows and lips in Clonmel.",
+    "subline": "JBeauty Aesthetics & Permanent Makeup is a permanent makeup and aesthetics studio in Clonmel, rated 5 from 107 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 5 from 107 Google reviews.",
+      "Specialists in permanent makeup: brows, lip blush and eyeliner.",
+      "Open Monday to Saturday."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Permanent makeup",
+        "items": [
+          {
+            "name": "Microblading / powder brows"
+          },
+          {
+            "name": "Lip blush"
+          },
+          {
+            "name": "Eyeliner"
+          },
+          {
+            "name": "Touch-up sessions"
+          }
+        ]
+      },
+      {
+        "category": "Brows & skin",
+        "items": [
+          {
+            "name": "Brow lamination"
+          },
+          {
+            "name": "Brow wax and tint"
+          },
+          {
+            "name": "Skin treatments"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party brows"
+        },
+        {
+          "name": "Lip blush top-up"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "I had my lip blush done with JBeauty and honestly couldn’t be happier with my experience or the results. From the moment I arrived, I felt so comfortable and welcomed.",
+        "name": "Freya"
+      },
+      {
+        "text": "I had Joy do my lips, tattoo removal , micro needling and laser carbon peel and I couldn’t be happier. She’s a lovely girl, so welcoming and puts you at ease straight away.",
+        "name": "Amy"
+      },
+      {
+        "text": "Fabulous experience and a lovely calming atmosphere. Joy is very gentle and looks for any signs of discomfort before proceeding. Her approach and manner is always professional and client safety and experience focused.",
+        "name": "Monica"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by JBeauty Aesthetics & Permanent Makeup).",
+    "accent": "#7E2D25",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJxYSAoLDFXEgRNe-se0SdVIU",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at JBeauty Aesthetics & Permanent Makeup",
+    "_auto": true,
+    "whatsapp": "+353874787523",
+    "instagram": "https://www.instagram.com/jbeauty_pmu_?igsh=dzdpeDZoZDkzemgx&utm_source=qr"
+  },
+  {
+    "slug": "hair-we-go-killarney",
+    "name": "Hair We Go",
+    "type": "Hair salon",
+    "area": "Killarney",
+    "address": "3 Fleming's Lane, Killarney V93 YC80",
+    "city": "Killarney",
+    "country": "Ireland",
+    "lang": "en-IE",
+    "phone": "087 966 6471",
+    "rating": 4.7,
+    "review_count": 140,
+    "maps_link": "https://maps.google.com/?cid=6605559414903341755&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJA6QOwAg8RUgRuwINREqpq1s",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "Closed"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-18:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-17:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Cuts, colour and blow-dries in Killarney.",
+    "subline": "Hair We Go is a hair salon in Killarney, rated 4.7 from 140 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 4.7 from 140 Google reviews.",
+      "Specialists in cuts, colour and blow-dries.",
+      "Open Monday to Saturday."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Hair",
+        "items": [
+          {
+            "name": "Ladies' cut and blow-dry"
+          },
+          {
+            "name": "Wash and blow-dry"
+          },
+          {
+            "name": "Men's cut"
+          },
+          {
+            "name": "Children's cut"
+          }
+        ]
+      },
+      {
+        "category": "Colour",
+        "items": [
+          {
+            "name": "Full head colour"
+          },
+          {
+            "name": "Highlights"
+          },
+          {
+            "name": "Balayage"
+          },
+          {
+            "name": "Toner and gloss"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party blow-dry"
+        },
+        {
+          "name": "Hair up"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "This salon is wonderful all because of Magda and Anna. Read the reviews and thought we'd give them a try as we needed a cut while traveling. Magda listens and suggests excellent ideas that fit what I desired.",
+        "name": "Lois"
+      },
+      {
+        "text": "I have been going to Magda in Hair we Go for a few years now and am never disappointed. Magda is an amazing hairdresser and gives great advice on what styles would suit.",
+        "name": "Diane"
+      },
+      {
+        "text": "I had such fantastic experience at Hair We Go today. Roksana was amazing from start to finish while doing my hair. I got the new Onyx treatment done.",
+        "name": "Zoe"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Hair We go).",
+    "accent": "#A57950",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJA6QOwAg8RUgRuwINREqpq1s",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Hair We Go",
+    "_auto": true,
+    "whatsapp": "+353879666471"
+  },
+  {
+    "slug": "atelier-11-salon-clonmel",
+    "name": "Atelier 11 Salon",
+    "type": "Hair salon",
+    "area": "Clonmel",
+    "address": "9 Sarsfield Street, Clonmel E91 K2P1",
+    "city": "Clonmel",
+    "country": "Ireland",
+    "lang": "en-IE",
+    "phone": "083 106 7045",
+    "rating": 5,
+    "review_count": 95,
+    "maps_link": "https://maps.google.com/?cid=1087142699346141666&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJQSF6u-YxQ0gR4qGvboZOFg8",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "Closed"
+      },
+      {
+        "day": "Tuesday",
+        "time": "10:00-18:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "10:00-18:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:00-18:00"
+      },
+      {
+        "day": "Friday",
+        "time": "10:00-20:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "10:00-15:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Cuts, colour and blow-dries in Clonmel.",
+    "subline": "Atelier 11 Salon is a hair salon in Clonmel, rated 5 from 95 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 5 from 95 Google reviews.",
+      "Specialists in cuts, colour and blow-dries.",
+      "Late appointments until 8pm on Fridays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Hair",
+        "items": [
+          {
+            "name": "Ladies' cut and blow-dry"
+          },
+          {
+            "name": "Wash and blow-dry"
+          },
+          {
+            "name": "Men's cut"
+          },
+          {
+            "name": "Children's cut"
+          }
+        ]
+      },
+      {
+        "category": "Colour",
+        "items": [
+          {
+            "name": "Full head colour"
+          },
+          {
+            "name": "Highlights"
+          },
+          {
+            "name": "Balayage"
+          },
+          {
+            "name": "Toner and gloss"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party blow-dry"
+        },
+        {
+          "name": "Hair up"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "I had a great experience at Atelier 11 Salon. Caden was so friendly, professional, and really took the time to understand what I wanted. I am happy with my balayage , the colour and finish turned out soo nice.",
+        "name": "Heba"
+      },
+      {
+        "text": "I had an amazing experience in the Atelier 11 Salon, Clonmel. Caden is very talented and puts a lot of dedication in his work. He understands exactly what his clients want.",
+        "name": "Sariya"
+      },
+      {
+        "text": "I can't recommend Caden and Atelier 11 Salon enough! I recently made the big transition from brunette to blonde, and Caden was absolutely incredible throughout the whole process.",
+        "name": "Rose"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Atelier 11 Salon, Geri Walsh, Rose Logue).",
+    "accent": "#87415F",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJQSF6u-YxQ0gR4qGvboZOFg8",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Atelier 11 Salon",
+    "_auto": true,
+    "whatsapp": "+353831067045",
+    "instagram": "https://www.instagram.com/atelier11.salon?igsh=ZTlrNW9oajJvcXZl"
+  },
+  {
+    "slug": "dmn-do-my-nails-salon-tralee",
+    "name": "DMN Do My Nails Salon Tralee",
+    "type": "Nail salon",
+    "area": "Tralee",
+    "address": "Pembroke Street, Tralee V92 CPX0",
+    "city": "Tralee",
+    "country": "Ireland",
+    "lang": "en-IE",
+    "phone": "089 403 5153",
+    "rating": 4.9,
+    "review_count": 95,
+    "maps_link": "https://maps.google.com/?cid=17236661638468206478&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJXc1tTGM1RUgRjv9_um_sNO8",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "Closed"
+      },
+      {
+        "day": "Tuesday",
+        "time": "10:00-18:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "10:00-18:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:00-18:00"
+      },
+      {
+        "day": "Friday",
+        "time": "10:00-18:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-17:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "BIAB, gel and nail extensions in Tralee.",
+    "subline": "DMN Do My Nails Salon Tralee is a nail salon in Tralee, rated 4.9 from 95 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 4.9 from 95 Google reviews.",
+      "Specialists in BIAB, gel and nail extensions.",
+      "Open Tuesday to Saturday."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Nails",
+        "items": [
+          {
+            "name": "BIAB"
+          },
+          {
+            "name": "Gel polish"
+          },
+          {
+            "name": "Nail extensions"
+          },
+          {
+            "name": "Nail art"
+          }
+        ]
+      },
+      {
+        "category": "Feet",
+        "items": [
+          {
+            "name": "Gel toes"
+          },
+          {
+            "name": "Pedicure"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Festive nail art"
+        },
+        {
+          "name": "Gel polish"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "I have being going to DMN Salon and Renata for over 8 years now. It’s one of my favourite appointments ! Not only does Renata do an excellent job but she is so sociable also we have great chats !",
+        "name": "Ann"
+      },
+      {
+        "text": "Thank you Ola for my amazing French nails done today! I had a very warm and nice conversation and high quality service! Highly recommend DMN Salon very nice atmosphere and quality !",
+        "name": "Anastasiia"
+      },
+      {
+        "text": "Maria did my nails for my wedding and I was so happy with them. It was my first time ever getting them done and I was very impressed with how long they lasted and how good they looked. She was brilliant 😊",
+        "name": "Nicole"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Anastasiia Dvizova, Aoife Maria, DMN Do My Nails Salon Tralee).",
+    "accent": "#A8664D",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJXc1tTGM1RUgRjv9_um_sNO8",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at DMN Do My Nails Salon Tralee",
+    "_auto": true,
+    "whatsapp": "+353894035153"
+  },
+  {
+    "slug": "kitten-claw-nail-spa-kilkenny",
+    "name": "Kitten Claw Nail Spa",
+    "type": "Nail salon",
+    "area": "Kilkenny",
+    "address": "Unit 1 Friary Street, Kilkenny R95 D90V",
+    "city": "Kilkenny",
+    "country": "Ireland",
+    "lang": "en-IE",
+    "phone": "083 400 0059",
+    "rating": 4.9,
+    "review_count": 75,
+    "maps_link": "https://maps.google.com/?cid=12170349854314793551&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJY4gDKOUxXUgRTwqpErbE5ag",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "10:00-19:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "10:00-19:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "10:00-19:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:00-19:00"
+      },
+      {
+        "day": "Friday",
+        "time": "10:00-19:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "10:00-19:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "10:00-17:00"
+      }
+    ],
+    "headline": "BIAB, gel and nail extensions in Kilkenny.",
+    "subline": "Kitten Claw Nail Spa is a nail salon in Kilkenny, rated 4.9 from 75 Google reviews. Book online or give us a ring.",
+    "highlights": [
+      "Rated 4.9 from 75 Google reviews.",
+      "Specialists in BIAB, gel and nail extensions.",
+      "Late appointments until 7pm on Mondays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Nails",
+        "items": [
+          {
+            "name": "BIAB"
+          },
+          {
+            "name": "Gel polish"
+          },
+          {
+            "name": "Nail extensions"
+          },
+          {
+            "name": "Nail art"
+          }
+        ]
+      },
+      {
+        "category": "Feet",
+        "items": [
+          {
+            "name": "Gel toes"
+          },
+          {
+            "name": "Pedicure"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Festive nail art"
+        },
+        {
+          "name": "Gel polish"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "Very good service and such kind staff. This is the only place I go for nails now as the quality is extremely good.",
+        "name": "Ellie"
+      },
+      {
+        "text": "I had a really good time! The service was great and everyone was really nice! They took the time to make something great an they did! I would really recommend this place!!",
+        "name": "Elayah"
+      },
+      {
+        "text": "So professional So clean Really friendly staff Been here multiple times and loved it",
+        "name": "Caitlin"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Dan Ivanova, Kim Mcarthy, Kitten Claw Nail Spa).",
+    "accent": "#A56750",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJY4gDKOUxXUgRTwqpErbE5ag",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Kitten Claw Nail Spa",
+    "_auto": true,
+    "whatsapp": "+353834000059",
+    "booking_link": "https://www.fresha.com/en-GB/a/kitten-claw-nail-spa-kilkenny-unit-1-regency-court-friary-street-zul9k1y9/all-offer?menu=true&share=true&pId=2851438&utm_content=link_in_bio&utm_medium=social&utm_source=ig",
+    "booking_label": "Book on Fresha"
+  },
+  {
+    "slug": "n-v-beauty-and-brows-navan",
+    "name": "N. V Beauty and Brows",
+    "type": "Beauty salon",
+    "area": "Navan",
+    "address": "Commons Lane, Navan",
+    "city": "Navan",
+    "country": "Ireland",
+    "lang": "en-IE",
+    "phone": "085 193 6872",
+    "rating": 4.9,
+    "review_count": 72,
+    "maps_link": "https://maps.google.com/?cid=5398851134657357222&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJez8MZ0xbZ0gRpmV3rICS7Eo",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "Closed"
+      },
+      {
+        "day": "Tuesday",
+        "time": "Closed"
+      },
+      {
+        "day": "Wednesday",
+        "time": "Closed"
+      },
+      {
+        "day": "Thursday",
+        "time": "11:00-20:00"
+      },
+      {
+        "day": "Friday",
+        "time": "09:30-18:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-17:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Lashes, brows, nails and facials in Navan.",
+    "subline": "N. V Beauty and Brows is a beauty salon in Navan, rated 4.9 from 72 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 4.9 from 72 Google reviews.",
+      "Specialists in lashes, brows, nails and facials.",
+      "Late appointments until 8pm on Thursdays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Lashes & brows",
+        "items": [
+          {
+            "name": "Lash extensions"
+          },
+          {
+            "name": "Lash lift"
+          },
+          {
+            "name": "Brow lamination"
+          },
+          {
+            "name": "Brow wax and tint"
+          }
+        ]
+      },
+      {
+        "category": "Beauty",
+        "items": [
+          {
+            "name": "Gel nails"
+          },
+          {
+            "name": "Facials"
+          },
+          {
+            "name": "Waxing"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party lashes"
+        },
+        {
+          "name": "Gel nails"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "Visited the wonderful Ceara today to have Lip Blush. Ceara is amazing at what she does & talked me through the whole process making it all so effortless. Im so happy with the end result & would highly recommend Ceara and N.V.",
+        "name": "Kelly"
+      },
+      {
+        "text": "It's always a pleasure visiting Ceara for treatments. She is professional, friendly, and kind and never fails to put you at ease. Her new sanctuary is a haven of peace and elegance.",
+        "name": "Teresa"
+      },
+      {
+        "text": "I've been a client of N.V Beauty and Brows for over 6 years. I've never had a treatment I was not 100% happy with. The girls have have been very accommodating with appointments always.",
+        "name": "Linda"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Ceara Duffy, N. V Beauty and Brows, Xesconta).",
+    "accent": "#C7502E",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJez8MZ0xbZ0gRpmV3rICS7Eo",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at N. V Beauty and Brows",
+    "_auto": true,
+    "whatsapp": "+353851936872"
+  },
+  {
+    "slug": "vanessa-s-hair-glow-athlone",
+    "name": "Vanessa's Hair Glow",
+    "type": "Hair salon",
+    "area": "Athlone",
+    "address": "Athlone N37 N8P5",
+    "city": "Athlone",
+    "country": "Ireland",
+    "lang": "en-IE",
+    "phone": "086 200 3684",
+    "rating": 4.9,
+    "review_count": 71,
+    "maps_link": "https://maps.google.com/?cid=4633715348947495234&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJe_sMrbFJXEgRQmlKNI9DTkA",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "10:00-18:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "10:00-18:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "10:00-18:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:00-20:00"
+      },
+      {
+        "day": "Friday",
+        "time": "10:00-18:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "08:00-17:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Cuts, colour and blow-dries in Athlone.",
+    "subline": "Vanessa's Hair Glow is a hair salon in Athlone, rated 4.9 from 71 Google reviews. Book online or give us a ring.",
+    "highlights": [
+      "Rated 4.9 from 71 Google reviews.",
+      "Specialists in cuts, colour and blow-dries.",
+      "Late appointments until 8pm on Thursdays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Hair",
+        "items": [
+          {
+            "name": "Ladies' cut and blow-dry"
+          },
+          {
+            "name": "Wash and blow-dry"
+          },
+          {
+            "name": "Men's cut"
+          },
+          {
+            "name": "Children's cut"
+          }
+        ]
+      },
+      {
+        "category": "Colour",
+        "items": [
+          {
+            "name": "Full head colour"
+          },
+          {
+            "name": "Highlights"
+          },
+          {
+            "name": "Balayage"
+          },
+          {
+            "name": "Toner and gloss"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party blow-dry"
+        },
+        {
+          "name": "Hair up"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "Just had my first visit with Vanessa and I honestly couldn’t be happier with my hair! My blonde has been completely transformed — it looks brighter, healthier, more natural and exactly what I was hoping for.",
+        "name": "Bethany"
+      },
+      {
+        "text": "I attended Vanessa Hair Glow today for the first time after booking online. It was so easy to book and my experience was way above what I was expecting.",
+        "name": "Rosie"
+      },
+      {
+        "text": "Top class service, 5 stars. Went for a graduation hair style but since ceremony was in the morning, vanessa came in early and did it for me. Absolutely beautiful and stunning work. Received lots of compliments.",
+        "name": "Elizebeth"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Vanessa's Hair Glow).",
+    "accent": "#A57F50",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJe_sMrbFJXEgRQmlKNI9DTkA",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Vanessa's Hair Glow",
+    "_auto": true,
+    "whatsapp": "+353862003684",
+    "booking_link": "https://www.phorest.com/salon/vanessashairglowlimited",
+    "booking_label": "Book online"
+  },
+  {
+    "slug": "lulus-hair-salon-wexford",
+    "name": "Lulu’s hair salon Wexford",
+    "type": "Hair salon",
+    "area": "Wexford",
+    "address": "Abbey Street, Wexford Y35 C5PF",
+    "city": "Wexford",
+    "country": "Ireland",
+    "lang": "en-IE",
+    "phone": "083 327 0514",
+    "rating": 4.9,
+    "review_count": 65,
+    "maps_link": "https://maps.google.com/?cid=423142789914764345&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJM_Z_t1obaEgROSQjIiBO3wU",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "Closed"
+      },
+      {
+        "day": "Tuesday",
+        "time": "10:00-17:30"
+      },
+      {
+        "day": "Wednesday",
+        "time": "10:00-17:30"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:00-17:30"
+      },
+      {
+        "day": "Friday",
+        "time": "10:00-17:30"
+      },
+      {
+        "day": "Saturday",
+        "time": "10:00-17:30"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Cuts, colour and blow-dries in Wexford.",
+    "subline": "Lulu’s hair salon Wexford is a hair salon in Wexford, rated 4.9 from 65 Google reviews. Book online or give us a ring.",
+    "highlights": [
+      "Rated 4.9 from 65 Google reviews.",
+      "Specialists in cuts, colour and blow-dries.",
+      "Open Tuesday to Saturday."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Hair",
+        "items": [
+          {
+            "name": "Ladies' cut and blow-dry"
+          },
+          {
+            "name": "Wash and blow-dry"
+          },
+          {
+            "name": "Men's cut"
+          },
+          {
+            "name": "Children's cut"
+          }
+        ]
+      },
+      {
+        "category": "Colour",
+        "items": [
+          {
+            "name": "Full head colour"
+          },
+          {
+            "name": "Highlights"
+          },
+          {
+            "name": "Balayage"
+          },
+          {
+            "name": "Toner and gloss"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party blow-dry"
+        },
+        {
+          "name": "Hair up"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "Honestly, my experience with Clara exceeded my expectations. I left feeling amazed at how she completely transformed my hair. During the consultation, she listened to me, asked questions and made suggestions.",
+        "name": "Caroline"
+      },
+      {
+        "text": "When I first started going to Lulu’s Hair, my hair was in really poor condition. It was overloaded with colour, limp and lifeless, and being naturally very fine, it really needed a lot TLC !!",
+        "name": "Enquiry"
+      },
+      {
+        "text": "Warm, friendly, and professional atmosphere. Went in for a curly cut and treatment as my ends were very damaged. Hadn't seen my natural curls in years due to damage and poor methods.",
+        "name": "Ria"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Lulu’s hair salon Wexford).",
+    "accent": "#7C4B2E",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJM_Z_t1obaEgROSQjIiBO3wU",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Lulu’s hair salon Wexford",
+    "_auto": true,
+    "whatsapp": "+353833270514",
+    "booking_link": "https://lulushairdressing.setmore.com/",
+    "booking_label": "Book online"
+  },
+  {
+    "slug": "k-lennon-atelier-kilkenny",
+    "name": "K. Lennon Atelier",
+    "type": "Nail salon",
+    "area": "Kilkenny",
+    "address": "25 James's Street, Kilkenny R95 VOTK",
+    "city": "Kilkenny",
+    "country": "Ireland",
+    "lang": "en-IE",
+    "phone": "087 486 9999",
+    "rating": 4.9,
+    "review_count": 63,
+    "maps_link": "https://maps.google.com/?cid=1621960729307778279&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJF-j1aQA7XUgR5wwGlrBcghY",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "09:00-17:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-17:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-20:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-20:00"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-20:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-17:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "10:00-17:00"
+      }
+    ],
+    "headline": "BIAB, gel and nail extensions in Kilkenny.",
+    "subline": "K. Lennon Atelier is a nail salon in Kilkenny, rated 4.9 from 63 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 4.9 from 63 Google reviews.",
+      "Specialists in BIAB, gel and nail extensions.",
+      "Late appointments until 8pm on Wednesdays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Nails",
+        "items": [
+          {
+            "name": "BIAB"
+          },
+          {
+            "name": "Gel polish"
+          },
+          {
+            "name": "Nail extensions"
+          },
+          {
+            "name": "Nail art"
+          }
+        ]
+      },
+      {
+        "category": "Feet",
+        "items": [
+          {
+            "name": "Gel toes"
+          },
+          {
+            "name": "Pedicure"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Festive nail art"
+        },
+        {
+          "name": "Gel polish"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "Absolutely delighted with my nails! 💅😍 Kayleigh did an amazing job, so professional, friendly and really pays attention to detail. My nails turned out exactly how I wanted them, and I couldn’t be happier!",
+        "name": "Majella"
+      },
+      {
+        "text": "Lovely experience! Easy to book, nails were perfect and salon is a lovely experience, really clean and great ambience. A proper nail salon with high quality products- Will definitely be back again.",
+        "name": "Caroline"
+      },
+      {
+        "text": "K Lennon Atelier is a hidden gem! I started getting BIAB done with Anna after I came in following a poor experience elsewhere. The attention to detail is unmatched, the salon is clean and modern and you don't feel rushed.",
+        "name": "Lisa"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by K.LENNON ATELIER).",
+    "accent": "#76492D",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJF-j1aQA7XUgR5wwGlrBcghY",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at K. Lennon Atelier",
+    "_auto": true,
+    "whatsapp": "+353874869999"
+  },
+  {
+    "slug": "beauty-by-sb-clonmel",
+    "name": "Beauty By SB Clonmel",
+    "type": "Beauty salon",
+    "area": "Clonmel",
+    "address": "8 Mary Street, Clonmel E91 C3X7",
+    "city": "Clonmel",
+    "country": "Ireland",
+    "lang": "en-IE",
+    "phone": "083 399 0392",
+    "rating": 4.9,
+    "review_count": 63,
+    "maps_link": "https://maps.google.com/?cid=6747122823909909298&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJX5ADtVkxQ0gRMqMU53WYol0",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "10:00-16:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:30-19:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:30-19:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:30-19:00"
+      },
+      {
+        "day": "Friday",
+        "time": "09:30-19:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:30-17:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Lashes, brows, nails and facials in Clonmel.",
+    "subline": "Beauty By SB Clonmel is a beauty salon in Clonmel, rated 4.9 from 63 Google reviews. Book online or give us a ring.",
+    "highlights": [
+      "Rated 4.9 from 63 Google reviews.",
+      "Specialists in lashes, brows, nails and facials.",
+      "Late appointments until 7pm on Tuesdays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Lashes & brows",
+        "items": [
+          {
+            "name": "Lash extensions"
+          },
+          {
+            "name": "Lash lift"
+          },
+          {
+            "name": "Brow lamination"
+          },
+          {
+            "name": "Brow wax and tint"
+          }
+        ]
+      },
+      {
+        "category": "Beauty",
+        "items": [
+          {
+            "name": "Gel nails"
+          },
+          {
+            "name": "Facials"
+          },
+          {
+            "name": "Waxing"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party lashes"
+        },
+        {
+          "name": "Gel nails"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "Have gotten a few different treatments at salon over the past year, Shabana is an amazing professional that will explain the treatments and ensure that you are relaxed and comfortable throughout.",
+        "name": "Francise"
+      },
+      {
+        "text": "I Started going to Shabana a few months ago for ultrasonic facials , she has completely transferred by skin and the whole experience is so relaxing and peaceful. My skin looks brighter and healthier.",
+        "name": "Sophia"
+      },
+      {
+        "text": "Just after completing my laser sessions with the fabulous Shabana. I am delighted with the results. Even better than I expected. All treatments were done with such care but took no time at all to complete.",
+        "name": "Chloe"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Beauty By SB Clonmel).",
+    "accent": "#724F32",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJX5ADtVkxQ0gRMqMU53WYol0",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Beauty By SB Clonmel",
+    "_auto": true,
+    "whatsapp": "+353833990392",
+    "booking_link": "https://bookings.gettimely.com/beautybysb1/bb/book",
+    "booking_label": "Book online"
+  },
+  {
+    "slug": "b-beauty-pedicure-and-beauty-rooms-ennis",
+    "name": "B. Beauty pedicure and beauty rooms",
+    "type": "Beauty rooms",
+    "area": "Ennis",
+    "address": "Unit 2 Tulla Road, Ennis V95 ET2R",
+    "city": "Ennis",
+    "country": "Ireland",
+    "lang": "en-IE",
+    "phone": "087 061 8298",
+    "rating": 4.9,
+    "review_count": 60,
+    "maps_link": "https://maps.google.com/?cid=15184381873481008287&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJrxHzrjBtW0gRn0S3Ft3CudI",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "09:30-18:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:30-18:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:30-18:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:30-18:00"
+      },
+      {
+        "day": "Friday",
+        "time": "09:30-19:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-16:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Pedicures, gel nails and beauty treatments in Ennis.",
+    "subline": "B. Beauty pedicure and beauty rooms is a beauty salon in Ennis, rated 4.9 from 60 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 4.9 from 60 Google reviews.",
+      "Specialists in pedicures, gel nails and beauty treatments.",
+      "Late appointments until 7pm on Fridays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Feet",
+        "items": [
+          {
+            "name": "Pedicure"
+          },
+          {
+            "name": "Gel toes"
+          },
+          {
+            "name": "Medical-style pedicure"
+          }
+        ]
+      },
+      {
+        "category": "Hands & beauty",
+        "items": [
+          {
+            "name": "Gel polish"
+          },
+          {
+            "name": "BIAB"
+          },
+          {
+            "name": "Brow wax and tint"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Festive gel nails"
+        },
+        {
+          "name": "Pedicure"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "Really happy with the service here. I’ve been coming in for a Japanese manicure and toe tidy-up, and I’m always very happy with the results. Everything is done with great attention to detail.",
+        "name": "Libraxneo"
+      },
+      {
+        "text": "I had the most amazing experience at Bbeauty Salon and I honestly can’t recommend them enough! ⭐️⭐️⭐️⭐️⭐️ I went in for eyebrow shape and tint, lash tint, and waxing and every single treatment was done to absolute perfection.",
+        "name": "Maya"
+      },
+      {
+        "text": "I had the most incredible facial at Bbeauty Salon using PHYT’S products – honestly one of the best treatments I’ve ever had!",
+        "name": "Anastasija"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by B. Beauty pedicure and beauty rooms, Beata Swiatkowska, Katarina Barutova).",
+    "accent": "#BE6A37",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJrxHzrjBtW0gRn0S3Ft3CudI",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at B. Beauty pedicure and beauty rooms",
+    "_auto": true,
+    "whatsapp": "+353870618298"
+  },
+  {
+    "slug": "elenas-nail-bar-and-beauty-wexford",
+    "name": "Elena’s Nail Bar & Beauty",
+    "type": "Nail bar",
+    "area": "Wexford",
+    "address": "21 Trinity Street, Wexford Y35 Y322",
+    "city": "Wexford",
+    "country": "Ireland",
+    "lang": "en-IE",
+    "phone": "083 146 4739",
+    "rating": 5,
+    "review_count": 50,
+    "maps_link": "https://maps.google.com/?cid=9373546848228522624&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJe4X0k9kbaEgRgLok_jGHFYI",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "Closed"
+      },
+      {
+        "day": "Tuesday",
+        "time": "10:00-18:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "10:00-18:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "Closed"
+      },
+      {
+        "day": "Friday",
+        "time": "10:00-18:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "10:00-18:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "BIAB, gel and nail extensions in Wexford.",
+    "subline": "Elena’s Nail Bar & Beauty is a nail bar in Wexford, rated 5 from 50 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 5 from 50 Google reviews.",
+      "Specialists in BIAB, gel and nail extensions.",
+      "Open Tuesday to Saturday."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Nails",
+        "items": [
+          {
+            "name": "BIAB"
+          },
+          {
+            "name": "Gel polish"
+          },
+          {
+            "name": "Nail extensions"
+          },
+          {
+            "name": "Nail art"
+          }
+        ]
+      },
+      {
+        "category": "Feet",
+        "items": [
+          {
+            "name": "Gel toes"
+          },
+          {
+            "name": "Pedicure"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Festive nail art"
+        },
+        {
+          "name": "Gel polish"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "I had a wonderful experience at this salon! The place is very clean, and Elena is so friendly and welcoming. She took her time and paid great attention to detail. My gel manicure still looks flawless weeks later!",
+        "name": "Heh"
+      },
+      {
+        "text": "I am giving Elena 5 stars because she is so professional and lovely to talk to. She takes her time doing your nails and she is fantastic, a real perfectionist. I am always so happy with my nails when I leave her salon.",
+        "name": "Sarah"
+      },
+      {
+        "text": "Love getting my nails done with Elena. She’s super friendly her attention to detail is amazing. Couldn’t recommend her enough 💕",
+        "name": "Martha"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Elena’s Nail Bar & Beauty).",
+    "accent": "#6E3835",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJe4X0k9kbaEgRgLok_jGHFYI",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Elena’s Nail Bar & Beauty",
+    "_auto": true,
+    "whatsapp": "+353831464739"
+  },
+  {
+    "slug": "v-and-p-lash-studio-tralee",
+    "name": "V&P Lash Studio",
+    "type": "Lash studio",
+    "area": "Tralee",
+    "address": "24 Pembroke Street, Tralee V92 NXY4",
+    "city": "Tralee",
+    "country": "Ireland",
+    "lang": "en-IE",
+    "phone": "083 415 1058",
+    "rating": 5,
+    "review_count": 46,
+    "maps_link": "https://maps.google.com/?cid=2409888697557000031&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJZdDJ0aQ1RUgRXx8dlgClcSE",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "09:00-16:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00-16:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:00-16:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:00-16:00"
+      },
+      {
+        "day": "Friday",
+        "time": "09:00-16:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:00-16:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Lash extensions, lash lifts and brows in Tralee.",
+    "subline": "V&P Lash Studio is a lash studio in Tralee, rated 5 from 46 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 5 from 46 Google reviews.",
+      "Specialists in lash extensions, lash lifts and brows.",
+      "Open Monday to Saturday."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Lashes",
+        "items": [
+          {
+            "name": "Classic lash extensions"
+          },
+          {
+            "name": "Hybrid & volume sets"
+          },
+          {
+            "name": "Infills"
+          },
+          {
+            "name": "Lash lift and tint"
+          }
+        ]
+      },
+      {
+        "category": "Brows",
+        "items": [
+          {
+            "name": "Brow lamination"
+          },
+          {
+            "name": "Brow wax and tint"
+          },
+          {
+            "name": "Brow henna"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party lashes"
+        },
+        {
+          "name": "Lash lift"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "I got my lashes done with Jolanta today for my sisters wedding and im absolutely delighted with the results and i can't thank her enough for fitting me in with such short notice 🥰 great service and experience and higly recommend!!",
+        "name": "Sarah"
+      },
+      {
+        "text": "I’ve been going to Jolanta and Patricia for lashes for nearly a year now and couldn’t recommend them enough. They’re both so lovely and make you feel comfortable straight away. The salon itself is always so warm and welcoming.",
+        "name": "Caitlin"
+      },
+      {
+        "text": "I recently visited V&P Lash Studio and I couldn’t be happier with the results! I had classic lash extensions done along with an eyebrow tint and shape, and both turned out absolutely beautiful.",
+        "name": "Sheila"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Ava Forde, Siobhan Moore Art, V&P LASH STUDIO).",
+    "accent": "#A57150",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJZdDJ0aQ1RUgRXx8dlgClcSE",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at V&P Lash Studio",
+    "_auto": true,
+    "whatsapp": "+353834151058",
+    "instagram": "https://www.instagram.com/vp_lash_studio_/"
+  },
+  {
+    "slug": "cosmo-hair-salon-ennis",
+    "name": "Cosmo Hair Salon",
+    "type": "Hair salon",
+    "area": "Ennis",
+    "address": "Ennis V95 F98V",
+    "city": "Ennis",
+    "country": "Ireland",
+    "lang": "en-IE",
+    "phone": "089 488 4838",
+    "rating": 5,
+    "review_count": 45,
+    "maps_link": "https://maps.google.com/?cid=5643955546667974833&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJCzFsd7wTW0gRsYA9r6pbU04",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "Closed"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:30-18:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:30-18:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:30-18:00"
+      },
+      {
+        "day": "Friday",
+        "time": "09:30-18:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:30-18:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Cuts, colour and blow-dries in Ennis.",
+    "subline": "Cosmo Hair Salon is a hair salon in Ennis, rated 5 from 45 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 5 from 45 Google reviews.",
+      "Specialists in cuts, colour and blow-dries.",
+      "Open Tuesday to Saturday."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Hair",
+        "items": [
+          {
+            "name": "Ladies' cut and blow-dry"
+          },
+          {
+            "name": "Wash and blow-dry"
+          },
+          {
+            "name": "Men's cut"
+          },
+          {
+            "name": "Children's cut"
+          }
+        ]
+      },
+      {
+        "category": "Colour",
+        "items": [
+          {
+            "name": "Full head colour"
+          },
+          {
+            "name": "Highlights"
+          },
+          {
+            "name": "Balayage"
+          },
+          {
+            "name": "Toner and gloss"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party blow-dry"
+        },
+        {
+          "name": "Hair up"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "I will never let anyone other than Mira touch my hair again. She did such a fabulous job. I was in desperate need of a wash, trim and blow dry and Mira was able to get me in the same week before I went on a trip.",
+        "name": "Savannah"
+      },
+      {
+        "text": "Mira is very kind and lovely. I love my new haircut; she followed the exact length I requested and gave me tips on products and how to style my hair. I highly recommend her! 🤩🤩😍😍😍",
+        "name": "Mabilly"
+      },
+      {
+        "text": "Mira listened carefully to my needs, recommended the best solution, and chose the perfect color and cut. The salon has an incredibly pleasant, relaxing atmosphere, and the staff are courteous and welcoming from the very start.",
+        "name": "Małgorzata"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Andra Casey, COSMO Hair Salon, M K).",
+    "accent": "#6E4A35",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJCzFsd7wTW0gRsYA9r6pbU04",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Cosmo Hair Salon",
+    "_auto": true,
+    "whatsapp": "+353894884838"
+  },
+  {
+    "slug": "yana-levchenko-lash-and-brow-sligo",
+    "name": "Yana Levchenko • Lash & Brow",
+    "type": "Lash & brow studio",
+    "area": "Sligo",
+    "address": "6 Wine Street, Sligo F91 FYK8",
+    "city": "Sligo",
+    "country": "Ireland",
+    "lang": "en-IE",
+    "phone": "085 736 2530",
+    "rating": 5,
+    "review_count": 44,
+    "maps_link": "https://maps.google.com/?cid=4797489068666420047&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJDz4eXgDpXkgRT3uux-MalEI",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "10:00-18:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "10:00-18:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "10:00-18:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:00-18:00"
+      },
+      {
+        "day": "Friday",
+        "time": "10:00-18:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "10:00-18:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Lash extensions, lash lifts and brows in Sligo.",
+    "subline": "Yana Levchenko • Lash & Brow is a lash & brow studio in Sligo, rated 5 from 44 Google reviews. Book online or give us a ring.",
+    "highlights": [
+      "Rated 5 from 44 Google reviews.",
+      "Specialists in lash extensions, lash lifts and brows.",
+      "Open Monday to Saturday."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Lashes",
+        "items": [
+          {
+            "name": "Classic lash extensions"
+          },
+          {
+            "name": "Hybrid & volume sets"
+          },
+          {
+            "name": "Infills"
+          },
+          {
+            "name": "Lash lift and tint"
+          }
+        ]
+      },
+      {
+        "category": "Brows",
+        "items": [
+          {
+            "name": "Brow lamination"
+          },
+          {
+            "name": "Brow wax and tint"
+          },
+          {
+            "name": "Brow henna"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party lashes"
+        },
+        {
+          "name": "Lash lift"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "I have been going to her almost a year now for lash lamination and brow waxing and she has the most exact attention to detail. She never makes you feel rush and treats it like a luxurious experience.",
+        "name": "India"
+      },
+      {
+        "text": "I would like to sincerely thank Yana for her professionalism and attention to detail! 🌸 My lashes and brows look absolutely beautiful—exactly the way I wanted them.",
+        "name": "Катя"
+      },
+      {
+        "text": "I had my lashes laminated by Anastasia and I’m absolutely delighted with the result! ✨ Anastasia is such a attentive, professional, and caring lash artist.",
+        "name": "Аня"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Yana Levchenko • Lash & Brow, Яна Левченко).",
+    "accent": "#783B2B",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJDz4eXgDpXkgRT3uux-MalEI",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Yana Levchenko • Lash & Brow",
+    "_auto": true,
+    "whatsapp": "+353857362530",
+    "booking_link": "http://yanalevchenkolashandbrow.booksy.com/a/",
+    "booking_label": "Book on Booksy"
+  },
+  {
+    "slug": "the-nail-cabin-portlaoise",
+    "name": "The Nail Cabin",
+    "type": "Nail salon",
+    "area": "Portlaoise",
+    "address": "75 Main Street, Portlaoise R32 K351",
+    "city": "Portlaoise",
+    "country": "Ireland",
+    "lang": "en-IE",
+    "phone": "089 470 9919",
+    "rating": 5,
+    "review_count": 35,
+    "maps_link": "https://maps.google.com/?cid=6695896879693444579&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJP1FgQiQNXUgR4zXGVrya7Fw",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "09:30-19:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:30-19:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:30-19:00"
+      },
+      {
+        "day": "Thursday",
+        "time": "09:30-19:00"
+      },
+      {
+        "day": "Friday",
+        "time": "09:30-19:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "09:30-18:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "10:30-17:00"
+      }
+    ],
+    "headline": "BIAB, gel and nail extensions in Portlaoise.",
+    "subline": "The Nail Cabin is a nail salon in Portlaoise, rated 5 from 35 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 5 from 35 Google reviews.",
+      "Specialists in BIAB, gel and nail extensions.",
+      "Late appointments until 7pm on Mondays."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Nails",
+        "items": [
+          {
+            "name": "BIAB"
+          },
+          {
+            "name": "Gel polish"
+          },
+          {
+            "name": "Nail extensions"
+          },
+          {
+            "name": "Nail art"
+          }
+        ]
+      },
+      {
+        "category": "Feet",
+        "items": [
+          {
+            "name": "Gel toes"
+          },
+          {
+            "name": "Pedicure"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Festive nail art"
+        },
+        {
+          "name": "Gel polish"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "⭐⭐⭐⭐⭐ Absolutely love The Nail Cabin! 💅🏼 I’m always so happy with my nails!! they’re done to perfection every single time and last so well.",
+        "name": "Katie"
+      },
+      {
+        "text": "such a great experience! the staff are so nice! nail tech was very professional, nails were done in a little under an hour, i got acrylics with nail art, small bit pricey but i appreciate the work done so i didn’t mind!!",
+        "name": "Valerie"
+      },
+      {
+        "text": "Got my nails done and I’m so happy with them! The staff are so talented with what they do. Salon is lovely and so clean, will definitely be back again !",
+        "name": "Tierna"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by The Nail Cabin, Áine Loveland).",
+    "accent": "#C05535",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJP1FgQiQNXUgR4zXGVrya7Fw",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at The Nail Cabin",
+    "_auto": true,
+    "whatsapp": "+353894709919",
+    "instagram": "https://www.instagram.com/the.nail.cabin.portlaoise?igsh=OXR6Nm10NThncmw2&utm_source=qr"
+  },
+  {
+    "slug": "kasia-hairdresser-navan",
+    "name": "Kasia Hairdresser",
+    "type": "Hair salon",
+    "area": "Navan",
+    "address": "39 Trimgate Street, Navan C15 X367",
+    "city": "Navan",
+    "country": "Ireland",
+    "lang": "en-IE",
+    "phone": "085 768 9368",
+    "rating": 4.8,
+    "review_count": 36,
+    "maps_link": "https://maps.google.com/?cid=1135898916294500908&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJaw9Eb0xbZ0gRLCJ8zguGww8",
+    "hours": [
+      {
+        "day": "Monday",
+        "time": "09:15-17:00"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:15-17:00"
+      },
+      {
+        "day": "Wednesday",
+        "time": "Closed"
+      },
+      {
+        "day": "Thursday",
+        "time": "10:00-17:00"
+      },
+      {
+        "day": "Friday",
+        "time": "10:00-17:00"
+      },
+      {
+        "day": "Saturday",
+        "time": "10:00-16:00"
+      },
+      {
+        "day": "Sunday",
+        "time": "Closed"
+      }
+    ],
+    "headline": "Cuts, colour and blow-dries in Navan.",
+    "subline": "Kasia Hairdresser is a hair salon in Navan, rated 4.8 from 36 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+    "highlights": [
+      "Rated 4.8 from 36 Google reviews.",
+      "Specialists in cuts, colour and blow-dries.",
+      "Open Monday to Saturday."
+    ],
+    "services_note": "Call or message the salon for prices.",
+    "services": [
+      {
+        "category": "Hair",
+        "items": [
+          {
+            "name": "Ladies' cut and blow-dry"
+          },
+          {
+            "name": "Wash and blow-dry"
+          },
+          {
+            "name": "Men's cut"
+          },
+          {
+            "name": "Children's cut"
+          }
+        ]
+      },
+      {
+        "category": "Colour",
+        "items": [
+          {
+            "name": "Full head colour"
+          },
+          {
+            "name": "Highlights"
+          },
+          {
+            "name": "Balayage"
+          },
+          {
+            "name": "Toner and gloss"
+          }
+        ]
+      }
+    ],
+    "bridal": {
+      "nav": "Christmas",
+      "kicker": "Christmas & New Year",
+      "title": "Festive appointments go fast.",
+      "text": "Work dos, Christmas Day and New Year's Eve: book early, because December evenings and Saturdays fill up first.",
+      "packages": [
+        {
+          "name": "Party blow-dry"
+        },
+        {
+          "name": "Hair up"
+        },
+        {
+          "name": "Gift vouchers"
+        }
+      ]
+    },
+    "reviews": [
+      {
+        "text": "⭐⭐⭐⭐⭐ Wonderful place and a fantastic hairdresser! She has an amazing, patient, and warm approach with kids—hairdressers like her are genuinely hard to find in Navan.",
+        "name": "Szymon"
+      },
+      {
+        "text": "Have been going to Kasia for the past 8 years now. She gives the best value for money in Navan and is always up for a chat. Always a pleasure x",
+        "name": "Valerie"
+      },
+      {
+        "text": "As always, great service. Fab colour, lovely blow dry and good chats. Great hairdresser.",
+        "name": "Sharron"
+      }
+    ],
+    "gallery_title": "Inside the salon",
+    "gallery_text": "Photos from the salon's Google listing (by Kasia Hairdresser, Rafal Wojcicki).",
+    "accent": "#A57D50",
+    "mood": "light",
+    "photos": 4,
+    "place_id": "ChIJaw9Eb0xbZ0gRLCJ8zguGww8",
+    "pitch": {
+      "name": "Aryadev",
+      "whatsapp": "+91 86378 59578"
+    },
+    "hero_alt": "Recent work at Kasia Hairdresser",
+    "_auto": true,
+    "whatsapp": "+353857689368"
   }
 ]
