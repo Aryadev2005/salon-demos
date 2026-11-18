@@ -66,8 +66,9 @@ def details(pid, key, budget):
 
 
 def latin_name(name):
-    parts = [w for w in re.split(r"\s+", name) if re.search(r"[A-Za-z]", w)]
-    return " ".join(parts).strip(" -|()") or name
+    s = " ".join(w for w in name.split() if not re.search(r"[\u0600-\u06FF]", w)).strip(" -|")
+    s = re.sub(r"\(\s*\)", "", s).replace("( ", "(").strip()
+    return (s + ")" if s.count("(") > s.count(")") else s) or name
 
 
 def main():
