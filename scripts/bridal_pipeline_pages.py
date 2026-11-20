@@ -18,12 +18,17 @@ ARTISTS = [
         tagline="Hair &amp; makeup artistry · Adelaide", kicker="Bridal hair &amp; makeup · Findon, Adelaide",
         h1="Award-winning <em>bridal</em> hair and makeup, booked in two minutes.",
         lead="Elegant, timeless hair and makeup for brides, bridesmaids and mums, in Gaetana's Findon studio or at your venue anywhere in Adelaide. Tell her about your day and she'll come back with availability and a quote.",
-        facts=[("ABIA 2023", "Best Bridal Make-Up, SA"), ("10 years", "in weddings"), ("Studio + mobile", "across Adelaide")],
+        facts=[("ABIA Winner", "Best Bridal Make-Up, SA"), ("10 years", "in weddings"), ("Mobile", "or Findon studio")],
         svc_mode="both", ig="gaetanamarjas", region="Adelaide",
+        hero_media=[("img", "sarah-lewis", "Bride and groom walking hand in hand"), ("video", "reel-fluff", "Bridal hair being styled"), ("img", "olive-grove", "Bride in an olive grove")],
+        gallery=[("video", "reel-sarah", "Sarah's wedding at Stoney Creek Estate"), ("img", "sarah-lewis", "Sarah and Lewis at Stoney Creek Estate"),
+                 ("img", "olive-twirl", "Bride twirling her gown"), ("img", "on-the-lawn", "Bride on the lawn with her bouquet"),
+                 ("video", "reel-fluff", "Sleek, then fluff, then gorgeous")],
+        award_img="award",
         title="Gaetana Marjas · Bridal hair &amp; makeup, Adelaide",
         desc="Award-winning bridal hair and makeup by Gaetana Marjas, Findon studio or mobile across Adelaide. Check your date and plan your wedding morning.",
         proof_kicker="Recognition", proof_h="Adelaide's award-winning bridal artist.",
-        proof=[("ABIA Winner", "Best Bridal Make-Up Artist, South Australia 2023"),
+        proof=[("ABIA Winner", "Best Bridal Make-Up Artist, South Australia"),
                ("10 years", "in the wedding industry, specialising in bridal hair and makeup"),
                ("Studio or mobile", "Home studio in Findon, or at your home, hotel or venue across Adelaide")],
         quotes=[("“Gaetana is AMAZING! She knew exactly what I wanted and delivered!”", "Oneflare review")],
@@ -58,6 +63,18 @@ ARTISTS = [
 ]
 
 HERO_CARD_CSS = """
+.trio video{width:100%;aspect-ratio:3/4.1;object-fit:cover;border-radius:999px 999px 4px 4px;transform:translateY(-28px);box-shadow:0 24px 40px -28px rgba(47,40,38,.45);background:var(--blush)}
+@media (max-width:900px){.trio video{transform:translateY(-16px)}}
+.media{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.media figure{margin:0;position:relative;border-radius:6px;overflow:hidden;background:var(--blush)}
+.media img,.media video{width:100%;height:100%;object-fit:cover;aspect-ratio:3/4;display:block}
+.media figure:first-child{grid-row:span 2}.media figure:first-child video,.media figure:first-child img{aspect-ratio:auto;height:100%}
+.media figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;background:linear-gradient(transparent,rgba(30,22,20,.7));color:#fff;font-size:13px}
+@media (max-width:640px){.media{grid-template-columns:1fr 1fr}.media figure:first-child{grid-column:span 2;grid-row:auto}.media figure:first-child video{aspect-ratio:9/12}}
+.award{display:grid;grid-template-columns:.8fr 1.2fr;gap:28px;align-items:center;margin-bottom:24px}
+.award img{width:100%;border-radius:8px;aspect-ratio:1;object-fit:cover}
+.award .proofs{grid-template-columns:1fr;margin:0}
+@media (max-width:900px){.award{grid-template-columns:1fr}}
 .mcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:30px 30px 24px;box-shadow:0 30px 60px -40px rgba(47,40,38,.45);max-width:440px;justify-self:end;width:100%;position:relative}
 .mcard::before{content:"";position:absolute;inset:-14px 24px auto auto;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,var(--blush),transparent 70%);z-index:-1}
 .mcard .k{font:500 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
@@ -95,6 +112,17 @@ def hero_card(a):
   </div>'''
 
 
+def media_tag(kind, name, alt, cls=""):
+    if kind == "video":
+        return (f'<video src="img/{name}.mp4" poster="img/{name}.jpg" autoplay muted loop playsinline preload="metadata" '
+                f'aria-label="{html.escape(alt)}"></video>')
+    return f'<img src="img/{name}.jpg" alt="{html.escape(alt)}" loading="lazy">'
+
+
+def hero_trio(a):
+    return '<div class="trio">' + "".join(media_tag(k, n, al) for k, n, al in a["hero_media"]) + "</div>"
+
+
 def build(a):
     h = BASE
     h = h.replace('<html lang="en-AU">', '<html lang="en-AU">')
@@ -103,7 +131,7 @@ def build(a):
     h = h.replace("</style>", HERO_CARD_CSS + "</style>", 1)
     # pitch strip
     h = h.replace("This is a free preview made for Glam by Zetta. Want it live, linked from your Google listing and Instagram?",
-                  f"This is a free preview made for {a['name']}. Want it live, with your own photos, on Google and in your Instagram bio?")
+                  f"This is a free preview made for {a['name']}. Want it live" + ("" if a.get("gallery") else ", with your own photos") + ", on Google and in your Instagram bio?")
     h = h.replace("made%20for%20Glam%20by%20Zetta", "made%20for%20" + a["name"].replace(" ", "%20"))
     # header
     h = h.replace('aria-label="Glam by Zetta, back to top"', f'aria-label="{a["name"]}, back to top"')
@@ -117,7 +145,8 @@ def build(a):
     h = re.sub(r'(<section class="wrap hero">\s*<div>.*?</h1>\s*)<p>.*?</p>', lambda m: m.group(1) + f"<p>{a['lead']}</p>", h, count=1, flags=re.S)
     h = h.replace('<a class="btn ghost" href="#work">See her brides</a>', f'<a class="btn ghost" href="#pipeline">See {a["who"]}\'s view</a>')
     facts = "".join(f"<div><b>{k}</b>{v}</div>" for k, v in a["facts"])
-    h = re.sub(r'<div class="facts">.*?</div>\s*</div>\s*<div class="trio".*?</div>', f'<div class="facts">{facts}</div>\n  </div>\n  {hero_card(a)}', h, count=1, flags=re.S)
+    right = hero_trio(a) if a.get("hero_media") else hero_card(a)
+    h = re.sub(r'<div class="facts">.*?</div>\s*</div>\s*<div class="trio".*?</div>', f'<div class="facts">{facts}</div>\n  </div>\n  {right}', h, count=1, flags=re.S)
     # how it works + planner copy
     h = h.replace("Everything Zetta needs, in one go.", f"Everything {a['who']} needs, in one go.")
     h = h.replace("Your enquiry goes to Zetta on WhatsApp, and she replies", f"Your enquiry goes to {a['who']} on Instagram, and she replies")
@@ -150,10 +179,21 @@ def build(a):
     h = h.replace("'</time>Zetta arrives and sets up</li>'", f"'</time>{a['who']} arrives and sets up</li>'")
     h = h.replace("so Zetta may suggest a second artist", f"so {a['who']} may suggest a second artist")
     h = h.replace('"Hi Zetta! 💐', f'"Hi {a["who"]}! 💐')
-    # no Google photos: drop the gallery; the pitch strip says the live version uses their own photos
-    h = re.sub(r'<section class="block alt" id="work">.*?</section>\s*', "", h, count=1, flags=re.S)
+    if a.get("gallery"):
+        figs = "".join(f"<figure>{media_tag(k, n, al)}<figcaption>{html.escape(al)}</figcaption></figure>" for k, n, al in a["gallery"])
+        h = re.sub(r'<section class="block alt" id="work">.*?</section>', f'''<section class="block alt" id="work">
+  <div class="wrap">
+    <div class="head"><span class="kicker">Brides</span><h2>Recent brides.</h2><p>More on <a href="https://www.instagram.com/{a["ig"]}/" target="_blank" rel="noopener">@{a["ig"]}</a>.</p></div>
+    <div class="media">{figs}</div>
+  </div>
+</section>''', h, count=1, flags=re.S)
+        h = h.replace('<a href="#reviews">', '<a href="#work">Brides</a><a href="#reviews">', 1)
+    else:  # no photos: drop the gallery; the pitch strip says the live version uses their own photos
+        h = re.sub(r'<section class="block alt" id="work">.*?</section>\s*', "", h, count=1, flags=re.S)
     # proof / reviews
     proofs = ('<div class="proofs">' + "".join(f"<div><b>{k}</b><span>{v}</span></div>" for k, v in a["proof"]) + "</div>") if a["proof"] else ""
+    if a.get("award_img") and proofs:
+        proofs = f'<div class="award"><img src="img/{a["award_img"]}.jpg" alt="{a["who"]} with her ABIA award">{proofs}</div>'
     qs = "".join(f'<figure class="rev"><div class="st">★★★★★</div><blockquote>{q}</blockquote><figcaption>{c}</figcaption></figure>' for q, c in a["quotes"])
     grid = f'<div class="revs"{" style=\"grid-template-columns:1fr\"" if len(a["quotes"]) == 1 else ""}>{qs}</div>'
     h = re.sub(r'<section class="block" id="reviews">.*?</section>', f'''<section class="block" id="reviews">
@@ -162,8 +202,9 @@ def build(a):
     {proofs}{grid}
   </div>
 </section>''', h, count=1, flags=re.S)
-    h = h.replace('<section class="block" id="reviews">', '<section class="block alt" id="reviews">')
-    h = h.replace('<section class="block alt" id="pipeline">', '<section class="block" id="pipeline">')
+    if not a.get("gallery"):
+        h = h.replace('<section class="block" id="reviews">', '<section class="block alt" id="reviews">')
+        h = h.replace('<section class="block alt" id="pipeline">', '<section class="block" id="pipeline">')
     # pipeline
     h = h.replace("<span class=\"kicker\">Zetta's view</span>", f"<span class=\"kicker\">{a['who']}'s view</span>")
     h = h.replace("notify Zetta by text or email", f"notify {a['who']} by text or email")

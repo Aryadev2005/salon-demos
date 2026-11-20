@@ -177,6 +177,18 @@ footer a{color:#fff;text-decoration:none}
 footer .fine{grid-column:1/-1;border-top:1px solid #4C403C;padding-top:18px;font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 @media (max-width:760px){footer .wrap{grid-template-columns:1fr}}
 
+.trio video{width:100%;aspect-ratio:3/4.1;object-fit:cover;border-radius:999px 999px 4px 4px;transform:translateY(-28px);box-shadow:0 24px 40px -28px rgba(47,40,38,.45);background:var(--blush)}
+@media (max-width:900px){.trio video{transform:translateY(-16px)}}
+.media{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.media figure{margin:0;position:relative;border-radius:6px;overflow:hidden;background:var(--blush)}
+.media img,.media video{width:100%;height:100%;object-fit:cover;aspect-ratio:3/4;display:block}
+.media figure:first-child{grid-row:span 2}.media figure:first-child video,.media figure:first-child img{aspect-ratio:auto;height:100%}
+.media figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;background:linear-gradient(transparent,rgba(30,22,20,.7));color:#fff;font-size:13px}
+@media (max-width:640px){.media{grid-template-columns:1fr 1fr}.media figure:first-child{grid-column:span 2;grid-row:auto}.media figure:first-child video{aspect-ratio:9/12}}
+.award{display:grid;grid-template-columns:.8fr 1.2fr;gap:28px;align-items:center;margin-bottom:24px}
+.award img{width:100%;border-radius:8px;aspect-ratio:1;object-fit:cover}
+.award .proofs{grid-template-columns:1fr;margin:0}
+@media (max-width:900px){.award{grid-template-columns:1fr}}
 .mcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:30px 30px 24px;box-shadow:0 30px 60px -40px rgba(47,40,38,.45);max-width:440px;justify-self:end;width:100%;position:relative}
 .mcard::before{content:"";position:absolute;inset:-14px 24px auto auto;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,var(--blush),transparent 70%);z-index:-1}
 .mcard .k{font:500 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
@@ -199,7 +211,7 @@ footer .fine{grid-column:1/-1;border-top:1px solid #4C403C;padding-top:18px;font
 </head>
 <body>
 
-<div class="pitch"><div class="wrap"><span>This is a free preview made for Gaetana Marjas. Want it live, with your own photos, on Google and in your Instagram bio?</span><a href="https://wa.me/918637859578?text=Hi%20Aryadev%2C%20I%20saw%20the%20bridal%20booking%20page%20you%20made%20for%20Gaetana%20Marjas." target="_blank" rel="noopener">WhatsApp Aryadev</a></div></div>
+<div class="pitch"><div class="wrap"><span>This is a free preview made for Gaetana Marjas. Want it live, on Google and in your Instagram bio?</span><a href="https://wa.me/918637859578?text=Hi%20Aryadev%2C%20I%20saw%20the%20bridal%20booking%20page%20you%20made%20for%20Gaetana%20Marjas." target="_blank" rel="noopener">WhatsApp Aryadev</a></div></div>
 
 <header>
   <div class="wrap">
@@ -207,7 +219,7 @@ footer .fine{grid-column:1/-1;border-top:1px solid #4C403C;padding-top:18px;font
       <span class="mono" aria-hidden="true">G</span>
       <span><b>Gaetana Marjas</b><small>Hair &amp; makeup artistry · Adelaide</small></span>
     </a>
-    <nav aria-label="Sections"><a href="#how">How it works</a><a href="#plan">Check your date</a><a href="#reviews">Recognition</a><a href="#pipeline">Gaetana's view</a></nav>
+    <nav aria-label="Sections"><a href="#how">How it works</a><a href="#plan">Check your date</a><a href="#work">Brides</a><a href="#reviews">Recognition</a><a href="#pipeline">Gaetana's view</a></nav>
   </div>
 </header>
 
@@ -218,16 +230,9 @@ footer .fine{grid-column:1/-1;border-top:1px solid #4C403C;padding-top:18px;font
     <h1>Award-winning <em>bridal</em> hair and makeup, booked in two minutes.</h1>
     <p>Elegant, timeless hair and makeup for brides, bridesmaids and mums, in Gaetana's Findon studio or at your venue anywhere in Adelaide. Tell her about your day and she'll come back with availability and a quote.</p>
     <div class="cta"><a class="btn" href="#plan">Check my date</a><a class="btn ghost" href="#pipeline">See Gaetana's view</a></div>
-    <div class="facts"><div><b>ABIA 2023</b>Best Bridal Make-Up, SA</div><div><b>10 years</b>in weddings</div><div><b>Studio + mobile</b>across Adelaide</div></div>
+    <div class="facts"><div><b>ABIA Winner</b>Best Bridal Make-Up, SA</div><div><b>10 years</b>in weddings</div><div><b>Mobile</b>or Findon studio</div></div>
   </div>
-  <div class="mcard" aria-label="Example of a planned wedding morning">
-    <span class="k">Sample wedding morning</span>
-    <h3>Saturday, 1pm photos</h3>
-    <p class="sub">Bride + 3 bridesmaids + mum</p>
-    <span class="pill">Hair &amp; makeup</span><span class="pill">Trial booked</span><span class="pill">Soft waves</span>
-    <ol class="tl" style="margin-top:12px"><li><time>7:10am</time>Gaetana arrives</li><li><time>7:30am</time>Mum</li><li><time>8:30am</time>Bridesmaids</li><li><time>10:45am</time>Bride</li><li><time>12:40pm</time>Veil &amp; touch-ups</li><li class="ready"><time>1pm</time>Ready for photos ✨</li></ol>
-    <div class="foot"><span>Planned in 2 minutes by the bride</span><b>Sent to Gaetana ✓</b></div>
-  </div>
+  <div class="trio"><img src="img/sarah-lewis.jpg" alt="Bride and groom walking hand in hand" loading="lazy"><video src="img/reel-fluff.mp4" poster="img/reel-fluff.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Bridal hair being styled"></video><img src="img/olive-grove.jpg" alt="Bride in an olive grove" loading="lazy"></div>
 </section>
 
 <section class="block alt" id="how">
@@ -324,14 +329,21 @@ footer .fine{grid-column:1/-1;border-top:1px solid #4C403C;padding-top:18px;font
   </div>
 </section>
 
-<section class="block alt" id="reviews">
+<section class="block alt" id="work">
   <div class="wrap">
-    <div class="head"><span class="kicker">Recognition</span><h2>Adelaide's award-winning bridal artist.</h2></div>
-    <div class="proofs"><div><b>ABIA Winner</b><span>Best Bridal Make-Up Artist, South Australia 2023</span></div><div><b>10 years</b><span>in the wedding industry, specialising in bridal hair and makeup</span></div><div><b>Studio or mobile</b><span>Home studio in Findon, or at your home, hotel or venue across Adelaide</span></div></div><div class="revs" style="grid-template-columns:1fr"><figure class="rev"><div class="st">★★★★★</div><blockquote>“Gaetana is AMAZING! She knew exactly what I wanted and delivered!”</blockquote><figcaption>Oneflare review</figcaption></figure></div>
+    <div class="head"><span class="kicker">Brides</span><h2>Recent brides.</h2><p>More on <a href="https://www.instagram.com/gaetanamarjas/" target="_blank" rel="noopener">@gaetanamarjas</a>.</p></div>
+    <div class="media"><figure><video src="img/reel-sarah.mp4" poster="img/reel-sarah.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Sarah&#x27;s wedding at Stoney Creek Estate"></video><figcaption>Sarah&#x27;s wedding at Stoney Creek Estate</figcaption></figure><figure><img src="img/sarah-lewis.jpg" alt="Sarah and Lewis at Stoney Creek Estate" loading="lazy"><figcaption>Sarah and Lewis at Stoney Creek Estate</figcaption></figure><figure><img src="img/olive-twirl.jpg" alt="Bride twirling her gown" loading="lazy"><figcaption>Bride twirling her gown</figcaption></figure><figure><img src="img/on-the-lawn.jpg" alt="Bride on the lawn with her bouquet" loading="lazy"><figcaption>Bride on the lawn with her bouquet</figcaption></figure><figure><video src="img/reel-fluff.mp4" poster="img/reel-fluff.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Sleek, then fluff, then gorgeous"></video><figcaption>Sleek, then fluff, then gorgeous</figcaption></figure></div>
   </div>
 </section>
 
-<section class="block" id="pipeline">
+<section class="block" id="reviews">
+  <div class="wrap">
+    <div class="head"><span class="kicker">Recognition</span><h2>Adelaide's award-winning bridal artist.</h2></div>
+    <div class="award"><img src="img/award.jpg" alt="Gaetana with her ABIA award"><div class="proofs"><div><b>ABIA Winner</b><span>Best Bridal Make-Up Artist, South Australia</span></div><div><b>10 years</b><span>in the wedding industry, specialising in bridal hair and makeup</span></div><div><b>Studio or mobile</b><span>Home studio in Findon, or at your home, hotel or venue across Adelaide</span></div></div></div><div class="revs" style="grid-template-columns:1fr"><figure class="rev"><div class="st">★★★★★</div><blockquote>“Gaetana is AMAZING! She knew exactly what I wanted and delivered!”</blockquote><figcaption>Oneflare review</figcaption></figure></div>
+  </div>
+</section>
+
+<section class="block alt" id="pipeline">
   <div class="wrap">
     <div class="pipe-head">
       <div class="head" style="margin:0"><span class="kicker">Gaetana's view</span><h2>Your bridal pipeline.</h2><p>Every enquiry lands here, so nothing gets lost in the DMs. Move each bride along as you go, from first message to wedding day.</p></div>
