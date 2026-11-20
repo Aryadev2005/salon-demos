@@ -17685,5 +17685,164 @@
   "_auto": true,
   "whatsapp": "+61456784666",
   "_market": "au"
+ },
+ {
+  "slug": "glam-by-zetta-darra-au",
+  "name": "Glam by Zetta",
+  "type": "Bridal makeup artist",
+  "area": "Darra",
+  "address": "Darra, QLD",
+  "city": "Darra",
+  "country": "Australia",
+  "lang": "en-AU",
+  "phone": "0406 528 538",
+  "rating": 5,
+  "review_count": 233,
+  "maps_link": "https://maps.google.com/?cid=14238414224418568501&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+  "google_review_link": "https://search.google.com/local/writereview?placeid=ChIJ6SjzkBJFkWsRNXlWe0wCmcU",
+  "hours": [
+   {
+    "day": "Monday",
+    "time": "07:00-17:00"
+   },
+   {
+    "day": "Tuesday",
+    "time": "07:00-17:00"
+   },
+   {
+    "day": "Wednesday",
+    "time": "07:00-17:00"
+   },
+   {
+    "day": "Thursday",
+    "time": "07:00-17:00"
+   },
+   {
+    "day": "Friday",
+    "time": "07:00-17:00"
+   },
+   {
+    "day": "Saturday",
+    "time": "07:00-17:00"
+   },
+   {
+    "day": "Sunday",
+    "time": "07:00-17:00"
+   }
+  ],
+  "headline": "Bridal hair and makeup in Darra.",
+  "subline": "Glam by Zetta is a bridal makeup artist in Darra, rated 5 from 233 Google reviews. Pick a service and a time below and we'll confirm on WhatsApp.",
+  "highlights": [
+   "Rated 5 from 233 Google reviews.",
+   "Specialists in bridal hair and makeup.",
+   "Open seven days a week."
+  ],
+  "services_note": "Call or message the salon for prices.",
+  "services": [
+   {
+    "category": "Bridal",
+    "items": [
+     {
+      "name": "Bridal makeup"
+     },
+     {
+      "name": "Bridal trial"
+     },
+     {
+      "name": "Bridesmaids and mothers"
+     },
+     {
+      "name": "On-location wedding mornings"
+     }
+    ]
+   },
+   {
+    "category": "Hair",
+    "items": [
+     {
+      "name": "Bridal hair"
+     },
+     {
+      "name": "Updos and styling"
+     },
+     {
+      "name": "Bridal party hair"
+     }
+    ]
+   },
+   {
+    "category": "Occasions",
+    "items": [
+     {
+      "name": "Formal and event makeup"
+     },
+     {
+      "name": "Engagement and photoshoot makeup"
+     },
+     {
+      "name": "Soft glam"
+     }
+    ]
+   },
+   {
+    "category": "Extras",
+    "items": [
+     {
+      "name": "Lashes"
+     },
+     {
+      "name": "Touch-up kit for the day"
+     }
+    ]
+   }
+  ],
+  "bridal": {
+   "nav": "Weddings",
+   "kicker": "Wedding season",
+   "title": "Lock in your wedding date early.",
+   "text": "Spring and summer weekends book out months ahead. Send us your date and we'll hold it while we plan your trial.",
+   "packages": [
+    {
+     "name": "Bride"
+    },
+    {
+     "name": "Bridal party"
+    },
+    {
+     "name": "Mothers of the bride and groom"
+    },
+    {
+     "name": "Trial session"
+    }
+   ]
+  },
+  "reviews": [
+   {
+    "text": "Absolutely amazing! I couldn’t be happier with my daughter’s hair and makeup for formal From the moment Zetta arrived, she was so lovely and professional, she made my daughter feel completely comfortable.",
+    "name": "Chez"
+   },
+   {
+    "text": "I honestly cannot recommend Glam by Zetta enough! Zetta absolutely SLAYED our looks on my wedding day! She did hair and makeup for myself and all three of my bridesmaids, and every single one of us looked amazing.",
+    "name": "Prynissa"
+   },
+   {
+    "text": "I had such a wonderful experience with Zetta! ❤️ She did an amazing job with my makeup and made me feel so beautiful and confident on my special day.",
+    "name": "Sodalin"
+   }
+  ],
+  "gallery_title": "Inside the salon",
+  "gallery_text": "Photos from the salon's Google listing (by Glam by Zetta | Brisbane Makeup Artist and Hairstylist, Oscar Chan).",
+  "accent": "#7E3A2C",
+  "mood": "light",
+  "photos": 4,
+  "place_id": "ChIJ6SjzkBJFkWsRNXlWe0wCmcU",
+  "pitch": {
+   "name": "Aryadev",
+   "whatsapp": "+91 86378 59578"
+  },
+  "hero_alt": "Recent work at Glam by Zetta",
+  "_auto": true,
+  "whatsapp": "+61406528538",
+  "_market": "au"
  }
 ]
