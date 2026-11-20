@@ -523,11 +523,12 @@ textarea.note:focus{outline:none;border-color:var(--accent)}
   (function(){
     var now=new Date(),h=hoursFor(now.getDay()),pill=$('#openPill'),txt=pill.querySelector('span'),m=now.getHours()*60+now.getMinutes();
     if(!h.open){pill.classList.add('closed');txt.textContent='Closed today';}
+    else if(h.appt){txt.textContent='Booking by appointment';}
     else if(m<toMin(h.open)){txt.textContent='Opens today at '+fmt(toMin(h.open));}
     else if(m<toMin(h.close)){txt.textContent='Open now, until '+fmt(toMin(h.close));}
     else{pill.classList.add('closed');txt.textContent='Closed now';}
     var row=$('tr[data-d="'+now.getDay()+'"]');if(row)row.classList.add('today');
-    $('#footHours').textContent=h.open?'Today '+fmt(toMin(h.open))+' to '+fmt(toMin(h.close)):'Closed today';
+    $('#footHours').textContent=h.appt?'By appointment':(h.open?'Today '+fmt(toMin(h.open))+' to '+fmt(toMin(h.close)):'Closed today');
   })();
 
   // hero video: no motion for people who ask for less

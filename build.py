@@ -230,7 +230,11 @@ def fmt_time(hhmm):
 
 
 def fmt_range(d):
-    return "Closed" if not d["open"] else f"{fmt_time(d['open'])} to {fmt_time(d['close'])}"
+    if not d["open"]:
+        return "Closed"
+    if d["open"] in ("0:00", "00:00") and d["close"] == "23:59":
+        return "By appointment"
+    return f"{fmt_time(d['open'])} to {fmt_time(d['close'])}"
 
 
 def days_open_phrase(parsed):
@@ -587,7 +591,7 @@ def render(lead):
         "name": name,
         "whatsapp": wa,
         "google_review": lead.get("google_review_link") or lead["maps_link"],
-        "hours": [{"open": d["open"], "close": d["close"]} for d in parsed],  # Monday-first
+        "hours": [({"open": "06:00", "close": "20:00", "appt": True} if d["open"] in ("0:00", "00:00") and d["close"] == "23:59" else {"open": d["open"], "close": d["close"]}) for d in parsed],  # Monday-first; "by appointment" days offer 6am-8pm slots
         "gallery": [f"img/g{i}.jpg" for i in range(2, lead["photos"] + 1)],
     }
 
@@ -639,6 +643,8 @@ def render(lead):
 
     tpl = TEMPLATE.read_text(encoding="utf-8")
     out = re.sub(r"\{\{\s*([a-z_0-9]+)\s*\}\}", lambda m: lookup(values, m.group(1), slug), tpl)
+    if lead.get("_market") == "au":  # makeup artists work from a studio or on location, not a salon
+        out = out.replace("the salon", "the studio").replace("in the salon", "in the studio")
     (folder / "index.html").write_text(out, encoding="utf-8")
     return folder / "index.html"
 
