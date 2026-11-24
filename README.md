@@ -270,7 +270,7 @@ Both use generated placeholder images and made-up details.
   first colour, reference + .ics; WhatsApp message examples (confirmation, reminder, allergy test, due again, review,
   waiting list); gift vouchers; her real reviews and 4.6 / 128 Treatwell rating; an honest Treatwell calculator (website
   widget bookings are 0%, counts marketplace 35% + BTW, 2% prepaid, subscription); `#salon` diary (sample clients, cancel
-  to waiting list, due-again rebook, phone bookings). Prices live in `CONFIG` at the top of the script (€399 + €29/month).
+  to waiting list, due-again rebook, phone bookings). Offer lives in `CONFIG` at the top of the script: €399 at go-live, €100/week for 4 weeks, then €0 until the system has made her €1,000 in extra bookings (ongoing price agreed after that, based on results).
   Treatment durations are estimates. Logo is hotlinked from visionkapsalon.nl.
 - `bridal-hairstyles`: Bridal Hairstyles by Alice Paonessa, 2 Wilberforce Rd, Wilford, Nottingham NG11 7GU
   (07546 606107, bridalhairstyles.co.uk). She already has a website, so this is a proposal page addressed to her
