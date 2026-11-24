@@ -306,8 +306,8 @@ footer a{color:var(--gold-l)}
     <p class="lead">Your clients pick a treatment and a time on your own website, get a WhatsApp confirmation and a reminder, and pay a small deposit for keratin, perms and bridal. You keep your website just as it is, and you keep your clients.</p>
     <div class="ctas"><a class="btn solid" href="#try">Try it as a client</a><a class="btn" href="#salon">See your side</a></div>
     <div class="qs" aria-label="Your questions">
-      <a href="#answers"><b class="cfg-setup">€399</b> one-time setup</a>
-      <a href="#answers"><b class="cfg-week">€100</b>/week for <span class="cfg-weeks">4</span> weeks, then €0 until it has made you <b class="cfg-target">€1,000</b></a>
+      <a href="#answers"><b class="cfg-setup">€399</b> in total, paid <b class="cfg-week">€100</b>/week once it's live</a>
+      <a href="#answers">Then <b>€0</b> until it has made you <b class="cfg-target">€1,000</b></a>
       <a href="#answers">Works with your <b>current website</b></a>
       <a href="#answers">Your <b>data</b>, your system</a>
       <a href="#maths">Savings <b>vs Treatwell</b></a>
@@ -457,8 +457,8 @@ Aanbetaling €20 ontvangen ✓<span class="t">22:47</span></div>
   <div class="sh"><p class="kick">Your questions</p><h2>Straight answers, <span class="it">before any call.</span></h2></div>
   <div class="qa">
     <div>
-      <details open><summary>What is the one-time setup cost?</summary><p><span class="cfg-setup">€399</span>, and you only pay it once the whole system is live on your website. That covers your booking page with all your services and prices, WhatsApp confirmations and reminders, deposits, gift vouchers, your reviews on the site, and connecting it all to your website.</p></details>
-      <details open><summary>Are there any other fees or booking commissions?</summary><p>For the first <span class="cfg-weeks">4</span> weeks after go-live it's <span class="cfg-week">€100</span> a week, while you watch the results live on your dashboard. After that you pay nothing until the system has brought you <span class="cfg-target">€1,000</span> in extra bookings. Once it has, we sit down and agree the ongoing price together, based on what it actually made you. No commission on any booking, ever.</p></details>
+      <details open><summary>What is the one-time setup cost?</summary><p><span class="cfg-setup">€399</span> in total, and nothing is paid until the whole system is live on your website. Then you pay it in weekly parts of <span class="cfg-week">€100</span> (about <span class="cfg-weeks">4</span> weeks), while you watch the results come in on your dashboard. It covers your booking page with all your services and prices, WhatsApp confirmations and reminders, deposits, gift vouchers, your reviews on the site, and connecting it all to your website.</p></details>
+      <details open><summary>Are there any other fees or booking commissions?</summary><p>No. Once the <span class="cfg-setup">€399</span> is paid, you pay nothing more until the system has brought you <span class="cfg-target">€1,000</span> in extra bookings. Once it has, we sit down and agree the next step together, based on what it actually made you. No commission on any booking, ever.</p></details>
       <details><summary>How do you count the €1,000?</summary><p>Only bookings the system creates count: cancelled slots refilled from your waiting list, quiet times filled by a WhatsApp offer, and clients who rebook after a reminder. Your normal bookings don't count. Every one is tagged on your dashboard, so you see the total grow.</p></details>
       <details><summary>Can it be integrated with my existing website?</summary><p>Yes. Your website stays exactly as it is. We point your "Maak een afspraak" buttons to your booking page, or show the booking right inside your page. We can do it ourselves or send Giling Media a short code snippet.</p></details>
     </div>
@@ -469,8 +469,8 @@ Aanbetaling €20 ontvangen ✓<span class="t">22:47</span></div>
     </div>
   </div>
   <div class="price">
-    <div><span class="k">Once it's live</span><b class="cfg-setup">€399</b><small>Paid only when the whole system is running on your website</small></div>
-    <div><span class="k">First <span class="cfg-weeks">4</span> weeks</span><b><span class="cfg-week">€100</span><span style="font-size:20px">/week</span></b><small>While you watch the results live</small></div>
+    <div><span class="k">Until it's live</span><b>€0</b><small>Nothing to pay while we set it up</small></div>
+    <div><span class="k">Once it's live</span><b><span class="cfg-week">€100</span><span style="font-size:20px">/week</span></b><small>Until <span class="cfg-setup">€399</span> is paid (about <span class="cfg-weeks">4</span> weeks), while you watch the results live</small></div>
     <div><span class="k">Then</span><b>€0</b><small>Nothing until it has brought you <span class="cfg-target">€1,000</span> in extra bookings. No commission, ever.</small></div>
   </div>
 </div></section>
@@ -514,7 +514,8 @@ Aanbetaling €20 ontvangen ✓<span class="t">22:47</span></div>
 
 <script>
 /* ===== Settings Aryadev can change ===== */
-const CONFIG = { setup: 399, weekly: 100, weeks: 4, target: 1000 };
+const CONFIG = { setup: 399, weekly: 100, target: 1000 };
+CONFIG.weeks = Math.ceil(CONFIG.setup / CONFIG.weekly);
 
 /* ===== Salon data (from visionkapsalon.nl/prijzen.html) ===== */
 // [name NL, name EN, price, "vanaf"?, minutes (estimate), deposit]
@@ -774,7 +775,7 @@ function calc(){
   const n=+$('#r1').value,r=+$('#r2').value,sp=+$('#r3').value,pp=+$('#r4').value,sub=+$('#r5').value;
   $('#v1').textContent=n;$('#v2').textContent=r;$('#v3').textContent='€'+sp;$('#v4').textContent=pp;$('#v5').textContent='€'+sub;
   const comm=(n+r)*sp*0.35*1.21, fee=pp*sp*0.02, tw=comm+fee+sub;
-  const ownT=CONFIG.setup+CONFIG.weekly*CONFIG.weeks, twT=tw*3;
+  const ownT=CONFIG.setup, twT=tw*3;
   const r0=x=>'€'+Math.round(x).toLocaleString('nl-NL');
   $('#out').innerHTML=`<h4>Treatwell, a month</h4>
     <div class="row"><span>Commission on ${n+r} "new" clients</span><span>${r0(comm)}</span></div>
@@ -782,8 +783,8 @@ function calc(){
     <div class="row"><span>Subscription</span><span>${r0(sub)}</span></div>
     <div class="big">${r0(tw)}</div><span style="font-size:13px;color:#bfb3a4">a month · ${r0(tw*12)} a year</span>
     <h4>Your own system, first 3 months</h4>
-    <div class="row"><span>At go-live</span><span>${r0(CONFIG.setup)}</span></div>
-    <div class="row"><span>${CONFIG.weeks} weeks × ${r0(CONFIG.weekly)}</span><span>${r0(CONFIG.weekly*CONFIG.weeks)}</span></div>
+    <div class="row"><span>While we set it up</span><span>€0</span></div>
+    <div class="row"><span>Once live, ${r0(CONFIG.weekly)} a week</span><span>${r0(CONFIG.setup)} in total</span></div>
     <div class="row"><span>Then, until it has made you ${r0(CONFIG.target)}</span><span>€0</span></div>
     <div class="big" style="font-size:38px">${r0(ownT)}</div>
     <span style="font-size:13px;color:#bfb3a4">vs about ${r0(twT)} to Treatwell over the same 3 months, before counting the empty slots it fills</span>`;
