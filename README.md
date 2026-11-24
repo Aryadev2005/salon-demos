@@ -261,6 +261,17 @@ Both use generated placeholder images and made-up details.
   and first-timer second visits, 48-hour skin-test tracking with a CSV log, Christmas vouchers and memberships,
   missed-call text-back and 10pm replies, reviews and referrals, a wedding/prom quote builder with timings, a
   stylist scorecard and a revenue calculator. Prices, hours and stylists are the salon's; clients are sample data.
+- `vision-kapsalon`: Vision Kapsalon, Nassaulaan 3-5, Haarlem (Marmar, +31 6 20626870). She already has a website
+  (Giling Media) whose "Maak een afspraak" buttons open a Treatwell widget, so this is a proposal page addressed to her
+  ("Hi Marmar!") in a warm black and gold palette (theme colour #17130f from her site). It answers her four WhatsApp
+  questions (setup cost, monthly fees/commission, integration with her site, data ownership) plus savings vs Treatwell.
+  NL/EN booking flow with her real prices from prijzen.html, real hours (Tue to Sat 9 to 18, Thu to 21), add-ons
+  (haarmasker, hoofdmassage), demo deposits (keratin €50, perm €25, colour €20, bridal trial €25), allergy-test check for
+  first colour, reference + .ics; WhatsApp message examples (confirmation, reminder, allergy test, due again, review,
+  waiting list); gift vouchers; her real reviews and 4.6 / 128 Treatwell rating; an honest Treatwell calculator (website
+  widget bookings are 0%, counts marketplace 35% + BTW, 2% prepaid, subscription); `#salon` diary (sample clients, cancel
+  to waiting list, due-again rebook, phone bookings). Prices live in `CONFIG` at the top of the script (€399 + €29/month).
+  Treatment durations are estimates. Logo is hotlinked from visionkapsalon.nl.
 - `bridal-hairstyles`: Bridal Hairstyles by Alice Paonessa, 2 Wilberforce Rd, Wilford, Nottingham NG11 7GU
   (07546 606107, bridalhairstyles.co.uk). She already has a website, so this is a proposal page addressed to her
   ("Ciao Alice!") in her own palette (white, blush, peach; Cormorant Garamond + Jost). It sells a booking engine

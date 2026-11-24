@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#17130f">
+<title>For Marmar · Your own booking system for Vision Kapsalon</title>
+<meta name="description" content="A private demo for Marmar of Vision Kapsalon, Nassaulaan 3-5, Haarlem.">
+<meta property="og:title" content="For Marmar · Vision Kapsalon booking demo">
+<meta property="og:description" content="Direct booking on your own website, WhatsApp reminders, deposits, gift vouchers. No commission.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#17130f; --ink2:#2a231c; --cream:#f6f1ea; --cream2:#ece3d6; --paper:#fffdf9;
+  --gold:#b08d57; --gold-d:#8c6c3e; --gold-l:#d8c09a;
+  --text:#2b2520; --muted:#7b7067; --line:#e6ddd0; --ok:#4f6e4c; --okbg:#e7efe5; --warn:#9a5b2c; --warnbg:#f6e9dc;
+  --wa:#075e54; --wabg:#e7ddd3; --wabub:#dcf8c6;
+  --serif:"Cormorant Garamond",Georgia,serif; --sans:Jost,system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--text);font:300 16.5px/1.65 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.08;margin:0}
+h2{font-size:clamp(34px,4.4vw,52px)}
+.it{font-style:italic;color:var(--gold)}
+.kick{font:500 11.5px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--gold-d);margin:0 0 16px}
+.lead{font-family:var(--serif);font-size:22px;line-height:1.45;font-weight:300}
+.muted{color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid var(--ink);background:transparent;color:var(--ink);padding:14px 24px;font:400 13.5px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:.2s}
+.btn:hover{background:var(--cream2)}
+.btn.solid{background:var(--ink);color:var(--cream)}
+.btn.solid:hover{background:var(--ink2)}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:#fff}
+.btn.gold:hover{background:var(--gold-d)}
+.btn:disabled{opacity:.35;cursor:not-allowed}
+.btn.sm{padding:10px 14px;font-size:12px}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+section{padding:96px 0}
+.sh{max-width:740px;margin-bottom:46px}
+.sh p{margin:18px 0 0}
+
+.pbar{background:var(--ink);color:#e9e0d3;font-size:13px;letter-spacing:.03em}
+.pbar .wrap{display:flex;justify-content:space-between;gap:12px;padding-top:9px;padding-bottom:9px;flex-wrap:wrap}
+.pbar b{color:var(--gold-l);font-weight:500}
+nav.top{position:sticky;top:0;z-index:40;background:rgba(255,253,249,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:18px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo img{height:40px;width:auto}
+.logo span{font:500 20px/1 var(--serif);letter-spacing:.14em;text-transform:uppercase}
+nav.top ul{display:flex;gap:24px;list-style:none;margin:0;padding:0}
+nav.top ul a{font:400 13px/1 var(--sans);text-transform:uppercase;letter-spacing:.14em;text-decoration:none}
+nav.top ul a:hover{color:var(--gold-d)}
+
+.hero{padding:64px 0 84px;background:linear-gradient(180deg,var(--cream) 0%,var(--paper) 100%)}
+.hero .g{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center}
+.hello{font:italic 300 clamp(46px,6vw,74px)/1 var(--serif);color:var(--gold);margin:0 0 12px}
+.hero h1{font-size:clamp(36px,4.4vw,56px)}
+.hero .lead{margin:22px 0 30px;max-width:560px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.qs{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}
+.qs a{font-size:13px;text-decoration:none;border:1px solid var(--line);background:#fff;padding:8px 12px;border-radius:999px}
+.qs a:hover{border-color:var(--gold)}
+.qs a b{font-weight:500;color:var(--gold-d)}
+
+/* hero phone */
+.phone{width:310px;margin:0 auto;background:var(--ink);border-radius:38px;padding:12px;box-shadow:0 30px 70px -30px rgba(23,19,15,.55)}
+.phone .scr{background:var(--wabg);border-radius:28px;overflow:hidden;min-height:520px;display:flex;flex-direction:column}
+.wah{background:var(--wa);color:#fff;padding:14px 16px;display:flex;gap:10px;align-items:center;font-size:14px}
+.wah i{width:34px;height:34px;border-radius:50%;background:var(--ink);display:grid;place-items:center;font:500 15px/1 var(--serif);color:var(--gold-l);font-style:normal;flex:none}
+.wah small{display:block;opacity:.75;font-size:11.5px}
+.msgs{padding:14px 12px;display:flex;flex-direction:column;gap:9px;flex:1}
+.day{align-self:center;background:#fff8;font-size:11px;padding:3px 10px;border-radius:7px;color:#555}
+.bub{background:#fff;border-radius:9px;padding:8px 10px 6px;font:400 13.4px/1.45 system-ui,sans-serif;color:#111;max-width:88%;box-shadow:0 1px 1px #0001;white-space:pre-line}
+.bub.me{align-self:flex-end;background:var(--wabub)}
+.bub .t{display:block;text-align:right;font-size:10.5px;color:#777;margin-top:2px}
+.bub .act{display:block;border-top:1px solid #eee;margin-top:6px;padding-top:6px;text-align:center;color:#0a7cff;font-weight:500}
+.bub b{font-weight:600}
+
+/* before / after */
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.ba .col{border:1px solid var(--line);background:#fff;padding:30px 30px 26px}
+.ba .col.after{background:var(--ink);color:#efe7dc;border-color:var(--ink)}
+.ba h3{font-size:30px}
+.ba .sub{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:6px 0 18px}
+.ba .after .sub{color:var(--gold-l)}
+.ba ol{margin:0;padding-left:20px}
+.ba li{margin:0 0 10px}
+.ba small{display:block;font-size:13px;color:var(--warn)}
+.ba .after small{color:var(--gold-l)}
+.same{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.same span{border:1px solid var(--line);padding:7px 13px;font-size:13px;background:var(--cream)}
+
+/* booker */
+#try{background:var(--cream)}
+.tryhead{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:30px}
+.tryhead p{max-width:560px;margin:14px 0 0}
+.lang{display:inline-flex;border:1px solid var(--ink);background:#fff}
+.lang button{border:0;background:none;padding:9px 14px;font-size:12.5px;letter-spacing:.12em;cursor:pointer}
+.lang button.on{background:var(--ink);color:var(--cream)}
+.booker{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:22px;align-items:start}
+.booker>*{min-width:0}
+.panel{background:#fff;border:1px solid var(--line);padding:28px;min-height:520px}
+.steps{display:flex;gap:6px;margin-bottom:22px}
+.steps span{flex:1;height:3px;background:var(--line)}
+.steps span.on{background:var(--gold)}
+.panel h3{font-size:30px;margin-bottom:6px}
+.panel .hint{font-size:14px;color:var(--muted);margin:0 0 18px}
+.cats{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.cats button{border:1px solid var(--line);background:var(--paper);padding:8px 13px;font-size:13.5px;cursor:pointer}
+.cats button.on{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.svc{display:flex;justify-content:space-between;gap:12px;align-items:center;width:100%;text-align:left;border:1px solid var(--line);background:#fff;padding:13px 15px;margin-bottom:8px;cursor:pointer}
+.svc:hover{border-color:var(--gold-l)}
+.svc.on{border-color:var(--gold);background:#fbf6ee;box-shadow:inset 3px 0 0 var(--gold)}
+.svc .n{font-weight:400}
+.svc .m{font-size:12.5px;color:var(--muted)}
+.svc .p{font:500 19px/1 var(--serif);white-space:nowrap}
+.tag{display:inline-block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:2px 7px;margin-left:6px;background:var(--warnbg);color:var(--warn)}
+.addons{margin-top:16px;border-top:1px dashed var(--line);padding-top:14px}
+.addons label{display:flex;gap:10px;align-items:center;font-size:14.5px;margin:6px 0;cursor:pointer}
+.dates{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:16px;scrollbar-width:thin}
+.dates button{flex:none;width:64px;border:1px solid var(--line);background:#fff;padding:9px 0;text-align:center;cursor:pointer;line-height:1.2}
+.dates button b{display:block;font:500 22px/1.1 var(--serif)}
+.dates button small{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.dates button.on{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.dates button.on small{color:var(--gold-l)}
+.dates button:disabled{opacity:.35;cursor:not-allowed;background:var(--cream)}
+.times{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px}
+.times button{border:1px solid var(--line);background:#fff;padding:9px 0;cursor:pointer;font-size:14.5px}
+.times button.on{background:var(--gold);border-color:var(--gold);color:#fff}
+.times button:disabled{text-decoration:line-through;opacity:.35;cursor:not-allowed}
+.part{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:14px 0 8px}
+.f{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.f label{display:block;font-size:13px;color:var(--muted)}
+.f input,.f textarea,.f select{width:100%;margin-top:5px;border:1px solid var(--line);background:var(--paper);padding:11px 12px;font-size:15px}
+.f .full{grid-column:1/-1}
+.chk{display:flex;gap:10px;align-items:flex-start;font-size:14px;margin-top:12px}
+.nav2{display:flex;justify-content:space-between;gap:10px;margin-top:24px}
+.note{background:var(--warnbg);border-left:3px solid var(--warn);padding:11px 14px;font-size:14px;margin:14px 0}
+.note.ok{background:var(--okbg);border-color:var(--ok)}
+.card{border:1px dashed var(--gold);background:#fbf6ee;padding:18px;margin:16px 0}
+.card .row{display:flex;justify-content:space-between;font-size:14.5px;margin:3px 0}
+.done{text-align:center;padding:10px 0}
+.done .tick{width:62px;height:62px;border-radius:50%;background:var(--okbg);color:var(--ok);display:grid;place-items:center;font-size:30px;margin:0 auto 14px}
+.ref{font:500 22px/1 var(--serif);letter-spacing:.12em;color:var(--gold-d)}
+.sum{background:var(--ink);color:#eee5d9;padding:24px;position:sticky;top:86px}
+.sum h4{font-size:24px;color:#fff;margin-bottom:12px}
+.sum .row{display:flex;justify-content:space-between;gap:10px;font-size:14px;padding:7px 0;border-bottom:1px solid #ffffff1a}
+.sum .row span:first-child{color:#bfb3a4}
+.sum .tot{font:500 26px/1 var(--serif);color:var(--gold-l)}
+.sum .small{font-size:12.5px;color:#a99d8e;margin-top:14px}
+
+/* what she gets */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.pts{list-style:none;padding:0;margin:22px 0 0}
+.pts li{padding:10px 0 10px 28px;position:relative;border-bottom:1px solid var(--line)}
+.pts li:before{content:"";position:absolute;left:2px;top:19px;width:12px;height:1px;background:var(--gold)}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:22px 0 0}
+.tabs button{border:1px solid var(--line);background:#fff;padding:8px 12px;font-size:13px;cursor:pointer}
+.tabs button.on{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.gloss{font-size:13.5px;color:var(--muted);margin-top:10px;min-height:44px}
+
+/* diary preview */
+#salonprev{background:var(--ink);color:#e9e0d3}
+#salonprev h2{color:#fff}
+#salonprev .pts li{border-color:#ffffff1f}
+.mock{background:var(--paper);color:var(--text);padding:20px;box-shadow:0 30px 60px -30px #000}
+.mrow{display:grid;grid-template-columns:54px 1fr auto;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.mrow b{font-weight:500}
+.pill{font-size:11px;padding:3px 8px;border-radius:999px;background:var(--cream2);white-space:nowrap}
+.pill.ok{background:var(--okbg);color:var(--ok)}
+.pill.dep{background:#f3e7d2;color:var(--gold-d)}
+.pill.new{background:var(--gold);color:#fff}
+
+/* extras */
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.c3{border:1px solid var(--line);background:#fff;padding:26px}
+.c3 .ic{font:italic 400 40px/1 var(--serif);color:var(--gold)}
+.c3 h3{font-size:26px;margin:12px 0 8px}
+.c3 p{margin:0;font-size:15px}
+.c3 .k{margin-top:14px;font-size:13px;color:var(--gold-d);letter-spacing:.06em}
+
+/* voucher */
+#vouchers{background:var(--cream)}
+.vg{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.amts{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
+.amts button{border:1px solid var(--line);background:#fff;padding:10px 16px;font:500 20px/1 var(--serif);cursor:pointer}
+.amts button.on{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.vcard{aspect-ratio:1.6/1;background:radial-gradient(120% 140% at 100% 0%,#3a3027 0%,var(--ink) 60%);color:#efe5d6;padding:28px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 30px 60px -28px #000;position:relative;overflow:hidden}
+.vcard:after{content:"";position:absolute;inset:12px;border:1px solid #b08d5766;pointer-events:none}
+.vcard .top{display:flex;justify-content:space-between;align-items:start}
+.vcard .brand{font:500 20px/1 var(--serif);letter-spacing:.2em;text-transform:uppercase;color:var(--gold-l)}
+.vcard .val{font:400 64px/1 var(--serif);color:#fff}
+.vcard .msg{font:italic 300 19px/1.3 var(--serif);min-height:25px}
+.vcard .bot{display:flex;justify-content:space-between;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#bfae95}
+
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.rev{border-top:2px solid var(--gold);padding:18px 4px 0}
+.rev .s{color:var(--gold);letter-spacing:3px}
+.rev p{font:italic 300 19px/1.4 var(--serif);margin:10px 0}
+.rev small{color:var(--muted)}
+.rating{display:flex;gap:30px;flex-wrap:wrap;align-items:center;margin-bottom:36px}
+.rating b{font:400 54px/1 var(--serif)}
+
+/* calc */
+.calc{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:start}
+.range{margin-bottom:22px}
+.range label{display:flex;justify-content:space-between;gap:10px;font-size:15px}
+.range label b{font:500 20px/1 var(--serif);color:var(--gold-d);white-space:nowrap}
+.range small{display:block;font-size:12.5px;color:var(--muted)}
+input[type=range]{width:100%;accent-color:var(--gold);margin-top:8px}
+.out{background:var(--ink);color:#eee5d9;padding:28px}
+.out .row{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid #ffffff1a;font-size:14.5px}
+.out .big{font:400 46px/1 var(--serif);color:var(--gold-l);margin:6px 0 4px}
+.out h4{font-size:15px;font-family:var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#bfb3a4;margin:22px 0 4px;font-weight:400}
+.out h4:first-child{margin-top:0}
+.honest{font-size:14px;color:var(--muted);border-left:2px solid var(--gold);padding-left:14px;margin-top:20px}
+
+/* answers */
+.qa{display:grid;grid-template-columns:1fr 1fr;gap:16px 40px}
+details{border-bottom:1px solid var(--line);padding:16px 0}
+summary{cursor:pointer;font:400 23px/1.25 var(--serif);list-style:none;display:flex;justify-content:space-between;gap:14px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--gold);font-size:26px;line-height:1}
+details[open] summary:after{content:"–"}
+details p{margin:10px 0 0;font-size:15.5px}
+.price{display:flex;gap:16px;flex-wrap:wrap;margin:46px 0 0}
+.price div{flex:1;min-width:220px;border:1px solid var(--ink);padding:22px;background:#fff}
+.price b{display:block;font:400 44px/1 var(--serif);margin:6px 0}
+.price small{color:var(--muted);font-size:13.5px}
+.price .k{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-d)}
+
+#next{background:var(--cream);text-align:center}
+#next .wrap{max-width:860px}
+.steps3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:40px 0;text-align:left}
+.steps3 .n{font:italic 300 40px/1 var(--serif);color:var(--gold)}
+.steps3 h4{font-size:24px;margin:8px 0}
+.steps3 p{margin:0;font-size:15px}
+footer{background:var(--ink);color:#a99d8e;font-size:13px;padding:24px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer a{color:var(--gold-l)}
+
+/* salon view */
+#salon{display:none;position:fixed;inset:0;z-index:100;background:var(--paper);overflow:auto}
+#salon:target{display:block}
+.sv-top{background:var(--ink);color:#eee5d9;position:sticky;top:0;z-index:2}
+.sv-top .wrap{display:flex;justify-content:space-between;align-items:center;height:58px;gap:12px}
+.sv-top a{color:var(--gold-l);font-size:14px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:26px 0 14px}
+.kpi{border:1px solid var(--line);background:#fff;padding:16px}
+.kpi b{display:block;font:400 36px/1 var(--serif)}
+.kpi span{font-size:13px;color:var(--muted)}
+.svg{display:grid;grid-template-columns:1.3fr 1fr;gap:20px;padding-bottom:60px}
+.box{border:1px solid var(--line);background:#fff;padding:20px;margin-bottom:20px}
+.box h3{font-size:26px}
+.box .hint{font-size:13.5px;color:var(--muted);margin:4px 0 12px}
+.drow{display:grid;grid-template-columns:52px 1fr auto;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.drow .who b{font-weight:500}
+.drow .who small{display:block;color:var(--muted);font-size:12.5px}
+.due{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
+.due small{display:block;color:var(--muted);font-size:12.5px}
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(30px);opacity:0;background:var(--ink);color:#fff;padding:12px 18px;font-size:14px;z-index:200;transition:.3s;max-width:92vw}
+#toast.on{opacity:1;transform:translateX(-50%)}
+
+@media (max-width:960px){
+  nav.top ul{display:none}
+  .hero .g,.two,.vg,.calc,.booker,.svg{grid-template-columns:1fr}
+  .sum{position:static}
+  .ba,.qa{grid-template-columns:1fr}
+  .cards3,.steps3{grid-template-columns:1fr}
+  .revs{grid-template-columns:1fr 1fr}
+  .kpis{grid-template-columns:1fr 1fr}
+  section{padding:70px 0}
+}
+@media (max-width:560px){
+  .wrap{padding:0 18px}
+  .panel{padding:20px 16px}
+  .f{grid-template-columns:1fr}
+  .revs{grid-template-columns:1fr}
+  .phone{width:290px}
+  .vcard .val{font-size:48px}
+  .logo span{font-size:16px}
+  .logo img{height:32px}
+}
+</style>
+</head>
+<body>
+<div class="pbar"><div class="wrap"><span>A private demo, made for <b>Marmar</b> · Vision Kapsalon, Haarlem</span><span>by Aryadev · Codzo</span></div></div>
+<nav class="top"><div class="wrap">
+  <a class="logo" href="#"><img src="https://visionkapsalon.nl/logo-PNG-1-e1792943477981.png" alt="" onerror="this.remove()"><span>Vision Kapsalon</span></a>
+  <ul><li><a href="#how">The idea</a></li><li><a href="#try">Try it</a></li><li><a href="#messages">WhatsApp</a></li><li><a href="#maths">vs Treatwell</a></li><li><a href="#answers">Your questions</a></li></ul>
+  <a class="btn solid sm" href="#salon">Your diary →</a>
+</div></nav>
+
+<header class="hero"><div class="wrap g">
+  <div>
+    <p class="hello">Hi Marmar!</p>
+    <h1>Your website, with its own booking system. No Treatwell in between.</h1>
+    <p class="lead">Your clients pick a treatment and a time on your own website, get a WhatsApp confirmation and a reminder, and pay a small deposit for keratin, perms and bridal. You keep your website just as it is, and you keep your clients.</p>
+    <div class="ctas"><a class="btn solid" href="#try">Try it as a client</a><a class="btn" href="#salon">See your side</a></div>
+    <div class="qs" aria-label="Your questions">
+      <a href="#answers"><b class="cfg-setup">€399</b> one-time setup</a>
+      <a href="#answers"><b class="cfg-month">€29</b>/month, no commission</a>
+      <a href="#answers">Works with your <b>current website</b></a>
+      <a href="#answers">Your <b>data</b>, your system</a>
+      <a href="#maths">Savings <b>vs Treatwell</b></a>
+    </div>
+  </div>
+  <div class="phone" aria-label="Example WhatsApp confirmation">
+    <div class="scr">
+      <div class="wah"><i>V</i><div><b>Vision Kapsalon</b><small>WhatsApp Business</small></div></div>
+      <div class="msgs">
+        <span class="day">TODAY</span>
+        <div class="bub">Hoi Sanne! Je afspraak staat 🙌
+<b>Kleuren lang haar</b> + haarmasker
+<b>do 3 dec, 18:30</b> · Nassaulaan 3-5
+Aanbetaling €20 ontvangen ✓<span class="t">22:47</span></div>
+        <div class="bub">Kleur je voor het eerst bij ons? Kom dan 48 uur vooraf even langs voor een allergietest, het kost niets.<span class="t">22:47</span></div>
+        <div class="bub me">Top, dank je!<span class="t">22:48 ✓✓</span></div>
+        <span class="day">WED 2 DEC</span>
+        <div class="bub">Herinnering: morgen om 18:30 bij Vision Kapsalon. Tot dan! ✨<span class="act">Verzetten</span><span class="t">10:00</span></div>
+      </div>
+    </div>
+  </div>
+</div></header>
+
+<section id="how"><div class="wrap">
+  <div class="sh"><p class="kick">The idea</p><h2>Same salon, same prices. <span class="it">No middleman.</span></h2>
+  <p class="muted">Today your "Maak een afspraak" buttons send clients to Treatwell. With this, they book on your own page, in your colours, with your prices from prijzen.html.</p></div>
+  <div class="ba">
+    <div class="col">
+      <h3>Today</h3><div class="sub">Booking through Treatwell or WhatsApp</div>
+      <ol>
+        <li>A client taps "Maak een afspraak" and lands on Treatwell.<small>Next to other Haarlem salons, all one tap away.</small></li>
+        <li>Or she WhatsApps you, and you reply between clients.</li>
+        <li>A new marketplace client costs you 35% + BTW of her first visit.<small>And again if a regular comes back through the app after a year.</small></li>
+        <li>No deposit on a €265 keratin slot, so a no-show is a lost afternoon.</li>
+        <li>When her colour is due, nobody reminds her.</li>
+      </ol>
+    </div>
+    <div class="col after">
+      <h3>With your own system</h3><div class="sub">Everything on your website</div>
+      <ol>
+        <li>She books on your page: treatment, day, time, done.<small>In Dutch or English, for Haarlem's expats too.</small></li>
+        <li>WhatsApp messages answer her for you: confirmation, reminder, reschedule link.</li>
+        <li>No commission on any booking. One flat monthly price.</li>
+        <li>A deposit for keratin, perms, colour and bridal, so no-shows are covered.</li>
+        <li>A friendly nudge when her colour or cut is due again.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="same"><span>Your website stays</span><span>Your prices</span><span>Your opening hours</span><span>Your WhatsApp number</span><span>Your client list</span><span>0% commission</span></div>
+</div></section>
+
+<section id="try"><div class="wrap">
+  <div class="tryhead">
+    <div><p class="kick">Try it</p><h2>Book as one of your clients.</h2>
+    <p>This is what your "Maak een afspraak" button would open. Prices and hours are yours. Try a keratin treatment to see the deposit step, or a colour to see the allergy-test check.</p></div>
+    <div class="lang" role="group" aria-label="Language"><button data-l="nl" class="on">NL</button><button data-l="en">EN</button></div>
+  </div>
+  <div class="booker"><div class="panel" id="flow" aria-live="polite"></div><aside class="sum" id="sum"></aside></div>
+</div></section>
+
+<section id="messages"><div class="wrap two">
+  <div>
+    <p class="kick">On WhatsApp, automatically</p>
+    <h2>Messages that do <span class="it">the back-and-forth for you.</span></h2>
+    <p class="lead" style="margin-top:20px">Sent from your salon's WhatsApp Business number, in your words. You approve every message once, then they go out on their own.</p>
+    <div class="tabs" id="mtabs"></div>
+    <p class="gloss" id="gloss"></p>
+  </div>
+  <div class="phone"><div class="scr"><div class="wah"><i>V</i><div><b>Vision Kapsalon</b><small>WhatsApp Business</small></div></div><div class="msgs" id="mbox"></div></div></div>
+</div></section>
+
+<section id="salonprev"><div class="wrap two">
+  <div class="mock" aria-hidden="true">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px"><b style="font:400 24px/1 var(--serif)">Thursday, late opening</b><span class="muted" style="font-size:12.5px">Marmar's view</span></div>
+    <div id="mockrows"></div>
+  </div>
+  <div>
+    <p class="kick" style="color:var(--gold-l)">Your side</p>
+    <h2>Your whole day, <span class="it">in one calendar.</span></h2>
+    <p class="lead" style="margin-top:20px">A private page on your phone with every booking, from the website, WhatsApp or the phone, in one place.</p>
+    <ul class="pts">
+      <li>See who has paid a deposit and who needs an allergy test first.</li>
+      <li>A cancellation? The slot goes to your waiting list straight away.</li>
+      <li>"Due again" list: clients whose colour or cut is due, with a one-tap WhatsApp.</li>
+      <li>Add a phone booking in a few seconds, so nothing is double-booked.</li>
+    </ul>
+    <p style="margin-top:26px"><a class="btn gold" href="#salon">Open your diary</a></p>
+  </div>
+</div></section>
+
+<section id="more"><div class="wrap">
+  <div class="sh"><p class="kick">More than booking</p><h2>Small things that <span class="it">bring clients back.</span></h2></div>
+  <div class="cards3">
+    <div class="c3"><div class="ic">01</div><h3>Rebooking nudges</h3><p>Six weeks after an "Uitgroei kleuren", she gets a friendly message with a link to book. Regulars come back without you chasing them.</p><div class="k">Uitgroei kleuren · €81</div></div>
+    <div class="c3"><div class="ic">02</div><h3>Deposits on long treatments</h3><p>A deposit is taken when booking keratin, perms, colour and bridal trials, and counted towards the bill. No-shows on your biggest slots are covered.</p><div class="k">Keratine · €250–€275</div></div>
+    <div class="c3"><div class="ic">03</div><h3>Your reviews, live</h3><p>Your Google reviews shown on your site, and a review request the day after each visit, so happy clients say so where new clients look.</p><div class="k">"Ze luistert goed en doet wat ze belooft!"</div></div>
+  </div>
+</div></section>
+
+<section id="vouchers"><div class="wrap vg">
+  <div>
+    <p class="kick">Cadeaubonnen</p>
+    <h2>Gift vouchers, <span class="it">sold while you sleep.</span></h2>
+    <p class="muted" style="margin-top:16px">December is close. Clients buy a voucher on your site and get a card to send or print. Redeemed with a code at the till. Try it:</p>
+    <div class="amts" id="amts"></div>
+    <div class="f">
+      <label>Voor<input id="vto" placeholder="Lisa" maxlength="22"></label>
+      <label>Van<input id="vfrom" placeholder="Mam" maxlength="22"></label>
+      <label class="full">Bericht<input id="vmsg" placeholder="Fijne feestdagen! Gun jezelf iets moois." maxlength="60"></label>
+    </div>
+    <p style="margin-top:18px"><button class="btn solid" id="vbuy">Koop cadeaubon (demo)</button></p>
+  </div>
+  <div class="vcard" aria-label="Voucher preview">
+    <div class="top"><span class="brand">Vision Kapsalon</span><span style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#bfae95">Cadeaubon</span></div>
+    <div><div class="val" id="vval">€50</div><div class="msg" id="vtext"></div></div>
+    <div class="bot"><span id="vnames">Voor Lisa · van Mam</span><span id="vcode">VK-····</span></div>
+  </div>
+</div></section>
+
+<section id="reviews"><div class="wrap">
+  <div class="rating"><div><b>4.6</b> <span class="it" style="font-size:22px">★★★★★</span><div class="muted" style="font-size:14px">128 reviews on Treatwell</div></div><p class="lead" style="max-width:560px;margin:0">Your clients already say it best. On your own site these reviews would sit right next to the "book" button.</p></div>
+  <div class="revs">
+    <div class="rev"><span class="s">★★★★★</span><p>“Ik heb krullen en goede krullenkappers zijn schaars.”</p><small>Liesbeth van Damme</small></div>
+    <div class="rev"><span class="s">★★★★★</span><p>“Ze luistert goed en doet wat ze belooft! Een mooi resultaat, elke keer weer.”</p><small>Stijn Akkermans</small></div>
+    <div class="rev"><span class="s">★★★★★</span><p>“Ik ben al jaren klant bij Vision Kapsalon en ben echt tevreden over hoe Marmar mij knipt.”</p><small>Amanda Dijkstra</small></div>
+    <div class="rev"><span class="s">★★★★★</span><p>“Uitstekende kapster! Ik laat hier altijd mijn haar en wenkbrauwen doen.”</p><small>Joke de Vries</small></div>
+  </div>
+</div></section>
+
+<section id="maths" style="background:var(--cream)"><div class="wrap">
+  <div class="sh"><p class="kick">Compared with Treatwell, honestly</p><h2>What Treatwell costs you. <span class="it">You set the numbers.</span></h2>
+  <p class="muted">I don't know your numbers, so move the sliders to match your month. Bookings through the Treatwell widget on your own website are already commission-free, so this only counts what Treatwell actually charges: new marketplace clients, prepaid bookings and the subscription.</p></div>
+  <div class="calc">
+    <div>
+      <div class="range"><label>New clients from the Treatwell app a month <b id="v1"></b></label><input type="range" id="r1" min="0" max="30" value="6"><small>35% + 21% BTW on their first visit</small></div>
+      <div class="range"><label>Regulars who return through the app after 12+ months away <b id="v2"></b></label><input type="range" id="r2" min="0" max="10" value="1"><small>Treatwell counts them as new clients again</small></div>
+      <div class="range"><label>Average first-visit spend <b id="v3"></b></label><input type="range" id="r3" min="20" max="200" step="5" value="65"><small>Dames knippen €47 · kleuren lang haar €95</small></div>
+      <div class="range"><label>Bookings paid online in advance a month <b id="v4"></b></label><input type="range" id="r4" min="0" max="120" step="5" value="20"><small>2% processing fee on each</small></div>
+      <div class="range"><label>Your Treatwell subscription a month <b id="v5"></b></label><input type="range" id="r5" min="0" max="120" step="5" value="35"><small>Check your Treatwell invoice for the exact amount</small></div>
+    </div>
+    <div class="out" id="out"></div>
+  </div>
+  <p class="honest"><b>An honest note:</b> Treatwell does bring you new clients, and you can keep your Treatwell listing for that. The point is that your regulars and everyone who finds you through Google or your website don't need to go through Treatwell at all.</p>
+</div></section>
+
+<section id="answers"><div class="wrap">
+  <div class="sh"><p class="kick">Your questions</p><h2>Straight answers, <span class="it">before any call.</span></h2></div>
+  <div class="qa">
+    <div>
+      <details open><summary>What is the one-time setup cost?</summary><p><span class="cfg-setup">€399</span>, once. That covers your booking page with all your services and prices, WhatsApp confirmations and reminders, deposits, gift vouchers, your reviews on the site, and connecting it to your website. You see it working before you pay.</p></details>
+      <details open><summary>Are there monthly fees or booking commissions?</summary><p><span class="cfg-month">€29</span> a month, flat. That covers hosting, the WhatsApp messages and support. No commission on any booking, ever, and no contract: you can stop any month.</p></details>
+      <details><summary>Can it be integrated with my existing website?</summary><p>Yes. Your website stays exactly as it is. We point your "Maak een afspraak" buttons to your booking page, or show the booking right inside your page. We can do it ourselves or send Giling Media a short code snippet.</p></details>
+    </div>
+    <div>
+      <details open><summary>Will I have full ownership and control of the system and my client data?</summary><p>Yes. Your clients, bookings and vouchers belong to you. You can export everything as a spreadsheet at any time, and if you ever stop, you take it all with you. Data is stored in the EU, under the AVG (GDPR).</p></details>
+      <details><summary>How much could I save compared with Treatwell?</summary><p>It depends on how many new clients come through the Treatwell app. Use <a href="#maths">the calculator above</a> with your own numbers. As a rough example, one new €90 colour client through the marketplace costs about €38 in commission, more than a month of this system.</p></details>
+      <details><summary>What in this demo is real?</summary><p>Your services, prices, opening hours, address and reviews come from your website and Treatwell page. Treatment durations are my estimates (you set your own), and the clients and bookings in the diary are made up. No card is charged here.</p></details>
+    </div>
+  </div>
+  <div class="price">
+    <div><span class="k">Setup, once</span><b class="cfg-setup">€399</b><small>Built with your services, prices and messages</small></div>
+    <div><span class="k">Every month</span><b class="cfg-month">€29</b><small>Hosting, WhatsApp messages, support. Cancel any month.</small></div>
+    <div><span class="k">Per booking</span><b>€0</b><small>No commission, on any client, ever</small></div>
+  </div>
+</div></section>
+
+<section id="next"><div class="wrap">
+  <p class="kick">If you like it</p>
+  <h2>Three simple steps, <span class="it">no pressure.</span></h2>
+  <div class="steps3">
+    <div><span class="n">01</span><h4>A 10-minute call</h4><p>You tell me what you'd change: treatment times, deposits, the wording of the messages.</p></div>
+    <div><span class="n">02</span><h4>We set it up</h4><p>With your real diary and your WhatsApp number. You test it as a client before anyone else sees it.</p></div>
+    <div><span class="n">03</span><h4>Live when you say</h4><p>Your buttons point to your own booking page. Keep Treatwell alongside for as long as you like.</p></div>
+  </div>
+  <p class="lead">Just reply on WhatsApp with any thoughts or questions. Dank je wel for taking a look!</p>
+  <p style="font:italic 300 30px/1 var(--serif);color:var(--gold-d);margin-top:16px">Aryadev</p>
+</div></section>
+
+<footer><div class="wrap"><span>Prepared for Vision Kapsalon · Nassaulaan 3-5, 2011 PB Haarlem · 023 – 53 10 606</span><span>Prices and reviews from visionkapsalon.nl · Demo by Codzo</span></div></footer>
+
+<!-- Marmar's side -->
+<div id="salon">
+  <div class="sv-top"><div class="wrap"><span><b>Your diary</b> <span style="opacity:.6;font-size:13px;margin-left:6px">demo</span></span><a href="#try">← Back</a></div></div>
+  <div class="wrap">
+    <div class="kpis" id="kpis"></div>
+    <p class="muted" style="font-size:13.5px;margin:0 0 12px">Sample clients for the demo. Anything you book on the demo in this browser shows up here, tagged "New". Try "Cancel" to see the waiting list in action.</p>
+    <div class="svg">
+      <div>
+        <div class="box"><h3 id="dtitle">Today</h3><p class="hint">Every booking, from the website, WhatsApp or the phone.</p><div id="diary"></div></div>
+        <div class="box"><h3>Add a phone booking</h3><p class="hint">Someone calls? Add it here so the slot disappears online too.</p>
+          <div class="f"><label>Naam<input id="pname" placeholder="Mevr. Bakker"></label><label>Tijd<select id="ptime"></select></label><label class="full">Behandeling<select id="psvc"></select></label></div>
+          <p style="margin-top:14px"><button class="btn solid sm" id="padd">Add to today</button></p></div>
+      </div>
+      <div>
+        <div class="box"><h3>Due again</h3><p class="hint">Clients whose colour or cut is due. One tap sends your rebook message.</p><div id="dueList"></div></div>
+        <div class="box"><h3>Waiting list</h3><p class="hint">Offered the first free slot when someone cancels.</p><div id="waitList"></div></div>
+        <div class="box"><h3>Messages sent</h3><p class="hint">What went out automatically today.</p><div id="log"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="toast" role="status"></div>
+
+<script>
+/* ===== Settings Aryadev can change ===== */
+const CONFIG = { setup: 399, monthly: 29 };
+
+/* ===== Salon data (from visionkapsalon.nl/prijzen.html) ===== */
+// [name NL, name EN, price, "vanaf"?, minutes (estimate), deposit]
+const CATS = [
+  {id:'knip', nl:'Knippen', en:'Haircuts', items:[
+    ['Dames knippen (incl. wassen)','Women\'s cut (incl. wash)',47,1,45,0],
+    ['Heren knippen','Men\'s cut',35,0,30,0],
+    ['Kinderen knippen','Children\'s cut',30,0,30,0],
+    ['Tondeuse','Clipper cut',22,0,20,0]]},
+  {id:'styl', nl:'Wassen & styling', en:'Wash & styling', items:[
+    ['Wassen, knippen & finishing','Wash, cut & finish',47,0,45,0],
+    ['Wassen, knippen & stylen','Wash, cut & style',75,0,60,0],
+    ['Wassen & föhnen (kort haar)','Wash & blow-dry (short hair)',38,0,30,0],
+    ['Wassen, föhnen & stylen (halflang haar)','Wash, blow-dry & style (medium)',42,0,40,0],
+    ['Wassen, föhnen & stylen (lang haar)','Wash, blow-dry & style (long)',45,0,45,0],
+    ['Watergolf','Finger waves',45,0,45,0]]},
+  {id:'kleur', nl:'Kleuren', en:'Colour', colour:1, items:[
+    ['Uitgroei kleuren','Root colour',81,0,90,20],
+    ['Kleuren kort haar','Colour, short hair',80,1,90,20],
+    ['Kleuren lang haar','Colour, long hair',95,1,120,20],
+    ['Highlights / Lowlights','Highlights / lowlights',60,1,120,20]]},
+  {id:'ker', nl:'Keratine', en:'Keratin', items:[
+    ['Keratine behandeling, kort haar','Keratin treatment, short hair',250,0,150,50],
+    ['Keratine behandeling, halflang haar','Keratin treatment, medium hair',265,0,180,50],
+    ['Keratine behandeling, lang haar','Keratin treatment, long hair',275,0,210,50]]},
+  {id:'perm', nl:'Permanent', en:'Perm', items:[
+    ['Permanent, kort haar','Perm, short hair',85,0,90,25],
+    ['Permanent, halflang haar','Perm, medium hair',95,0,105,25],
+    ['Permanent, lang haar','Perm, long hair',130,0,120,25]]},
+  {id:'draad', nl:'Draadontharen', en:'Threading', items:[
+    ['Wenkbrauwen','Eyebrows',22,0,15,0],
+    ['Bovenlip (draadontharing)','Upper lip (threading)',12,0,10,0],
+    ['Gezicht (draadontharing)','Full face (threading)',30,0,25,0]]},
+  {id:'overig', nl:'Overig', en:'Other', items:[
+    ['Wimpers','Lashes',16,0,15,0],
+    ['Uitgebreide gezichtsbehandeling','Extended facial',85,0,60,0]]},
+  {id:'bruid', nl:'Bruidskapsel', en:'Bridal', items:[
+    ['Bruidskapsel · kennismaking & proefkapsel','Bridal hair · consultation & trial',null,0,60,25]]}
+];
+const ADDONS = [['Haarmasker','Hair mask',12],['Hoofdmassage','Head massage',12]];
+// Tue–Sat 9–18, Thu until 21 (0=Sun)
+const HOURS = {2:[9,18],3:[9,18],4:[9,21],5:[9,18],6:[9,18]};
+
+const T = {
+ nl:{s1:'Kies je behandeling',s1h:'Alle prijzen zijn van onze prijslijst.',s2:'Kies een dag en tijd',s2h:'Doorgestreepte tijden zijn al bezet.',s3:'Je gegevens',s3h:'Je krijgt je bevestiging via WhatsApp.',s4:'Aanbetaling',
+  addons:'Maak het af met',morning:'Ochtend',afternoon:'Middag',evening:'Avond',next:'Verder',back:'Terug',book:'Afspraak maken',pay:'Betaal aanbetaling',
+  name:'Naam',phone:'Mobiel (WhatsApp)',email:'E-mail',notes:'Opmerking (optioneel)',notesph:'Bijv. foto van gewenste kleur, krullen, allergieën',
+  first:'Ik kleur voor het eerst bij Vision Kapsalon',firstNote:'Kom 48 uur vooraf even langs voor een gratis allergietest. We sturen je een WhatsApp om die in te plannen.',
+  consent:'Ik ga akkoord met de annuleringsvoorwaarden: tot 24 uur vooraf gratis verzetten.',
+  depNote:d=>`Voor deze behandeling vragen we €${d} aanbetaling. Dit wordt verrekend met je rekening.`,
+  demoPay:'Demo: er wordt niets afgeschreven.',bridalNote:'Prijs in overleg. Marmar bespreekt je wensen tijdens de kennismaking.',
+  done:'Je afspraak staat!',doneP:'Je ontvangt nu een bevestiging via WhatsApp, en een dag van tevoren een herinnering.',ref:'Referentie',ics:'Zet in agenda',again:'Nog een afspraak',seeSalon:'Bekijk Marmar\'s kant →',
+  sum:'Je afspraak',svc:'Behandeling',when:'Wanneer',total:'Totaal',dep:'Aanbetaling',from:'v.a.',onReq:'in overleg',none:'Nog niets gekozen',min:'min',
+  sumSmall:'Betalen in de salon, aanbetaling wordt verrekend. Gratis verzetten tot 24 uur vooraf.',closed:'Gesloten',
+  days:['zo','ma','di','wo','do','vr','za'],months:['jan','feb','mrt','apr','mei','jun','jul','aug','sep','okt','nov','dec']},
+ en:{s1:'Choose your treatment',s1h:'All prices are from the salon\'s price list.',s2:'Choose a day and time',s2h:'Struck-through times are taken.',s3:'Your details',s3h:'Your confirmation arrives on WhatsApp.',s4:'Deposit',
+  addons:'Add a finishing touch',morning:'Morning',afternoon:'Afternoon',evening:'Evening',next:'Next',back:'Back',book:'Book appointment',pay:'Pay deposit',
+  name:'Name',phone:'Mobile (WhatsApp)',email:'Email',notes:'Note (optional)',notesph:'E.g. a photo of the colour you want, curls, allergies',
+  first:'This is my first colour at Vision Kapsalon',firstNote:'Please pop in 48 hours before for a free allergy test. We\'ll WhatsApp you to arrange it.',
+  consent:'I accept the cancellation terms: free to reschedule up to 24 hours before.',
+  depNote:d=>`This treatment needs a €${d} deposit. It comes off your bill.`,
+  demoPay:'Demo: nothing is charged.',bridalNote:'Price on request. Marmar talks through your wishes at the consultation.',
+  done:'You\'re booked!',doneP:'Your WhatsApp confirmation is on its way, with a reminder the day before.',ref:'Reference',ics:'Add to calendar',again:'Book another',seeSalon:'See Marmar\'s side →',
+  sum:'Your appointment',svc:'Treatment',when:'When',total:'Total',dep:'Deposit',from:'from',onReq:'on request',none:'Nothing chosen yet',min:'min',
+  sumSmall:'Pay in the salon; the deposit comes off your bill. Free to reschedule up to 24 hours before.',closed:'Closed',
+  days:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],months:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']}
+};
+
+let L='nl';
+const st={step:1,cat:'knip',svc:null,addons:[],date:null,time:null,name:'',phone:'',email:'',notes:'',first:false,consent:false,ref:null};
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const euro=n=>'€'+n;
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(toast.h);toast.h=setTimeout(()=>t.classList.remove('on'),2600)}
+function store(k,v){try{if(v===undefined)return JSON.parse(localStorage.getItem(k)||'null');localStorage.setItem(k,JSON.stringify(v))}catch(e){return null}}
+
+function svcObj(){if(!st.svc)return null;const [ci,ii]=st.svc;const c=CATS[ci],it=c.items[ii];return {cat:c,nl:it[0],en:it[1],price:it[2],from:it[3],min:it[4],dep:it[5]}}
+function svcName(s){return L==='nl'?s.nl:s.en}
+function duration(){const s=svcObj();return s?s.min+st.addons.length*10:0}
+function total(){const s=svcObj();if(!s||s.price==null)return null;return s.price+st.addons.reduce((a,i)=>a+ADDONS[i][2],0)}
+function fmtDate(d){const t=T[L];return `${t.days[d.getDay()]} ${d.getDate()} ${t.months[d.getMonth()]}`}
+function pad(n){return String(n).padStart(2,'0')}
+function hm(m){return pad(Math.floor(m/60))+':'+pad(m%60)}
+
+function days(){const out=[];const d=new Date();d.setHours(0,0,0,0);for(let i=0;i<21;i++){const x=new Date(d);x.setDate(d.getDate()+i);out.push(x)}return out}
+function seeded(n){let x=Math.sin(n)*10000;return x-Math.floor(x)}
+function slots(date){
+  const h=HOURS[date.getDay()];if(!h)return[];
+  const dur=duration()||30;const open=h[0]*60,close=h[1]*60;const now=new Date();
+  const key=date.getFullYear()*1000+date.getMonth()*40+date.getDate();
+  // a few busy blocks per day so it looks like a real diary
+  const busy=[];const n=2+Math.floor(seeded(key)*2);
+  for(let i=0;i<n;i++){const s=open+Math.floor(seeded(key+i*7.3)*((close-open)/15-4))*15;busy.push([s,s+30+Math.floor(seeded(key+i*3.1)*3)*15])}
+  (store('vk_bookings')||[]).forEach(b=>{if(b.date===date.toDateString())busy.push([b.start,b.start+b.min])});
+  const out=[];for(let m=open;m+dur<=close;m+=15){
+    const taken=busy.some(([a,b])=>m<b&&m+dur>a);
+    const past=date.toDateString()===now.toDateString()&&m<=now.getHours()*60+now.getMinutes()+60;
+    out.push({m,ok:!taken&&!past})}
+  return out}
+
+function render(){
+  const t=T[L],f=$('#flow');let h=`<div class="steps">${[1,2,3,4].map(i=>`<span class="${st.step>=i?'on':''}"></span>`).join('')}</div>`;
+  const s=svcObj();
+  if(st.step===1){
+    h+=`<h3>${t.s1}</h3><p class="hint">${t.s1h}</p><div class="cats">${CATS.map(c=>`<button data-cat="${c.id}" class="${st.cat===c.id?'on':''}">${L==='nl'?c.nl:c.en}</button>`).join('')}</div>`;
+    const ci=CATS.findIndex(c=>c.id===st.cat);
+    CATS[ci].items.forEach((it,ii)=>{const on=st.svc&&st.svc[0]===ci&&st.svc[1]===ii;
+      h+=`<button class="svc ${on?'on':''}" data-svc="${ci},${ii}"><span><span class="n">${esc(L==='nl'?it[0]:it[1])}</span>${it[5]?`<span class="tag">${t.dep} €${it[5]}</span>`:''}<br><span class="m">± ${it[4]} ${t.min}</span></span><span class="p">${it[2]==null?t.onReq:(it[3]?t.from+' ':'')+euro(it[2])}</span></button>`});
+    if(s&&['knip','styl','kleur','ker','perm'].includes(s.cat.id)){
+      h+=`<div class="addons"><div class="part" style="margin-top:0">${t.addons}</div>${ADDONS.map((a,i)=>`<label><input type="checkbox" data-add="${i}" ${st.addons.includes(i)?'checked':''}> ${L==='nl'?a[0]:a[1]} <span class="muted">+€${a[2]}</span></label>`).join('')}</div>`}
+    h+=`<div class="nav2"><span></span><button class="btn solid" data-go="2" ${s?'':'disabled'}>${t.next}</button></div>`;
+  }
+  if(st.step===2){
+    h+=`<h3>${t.s2}</h3><p class="hint">${t.s2h} · ${esc(svcName(s))}, ± ${duration()} ${t.min}</p><div class="dates">`;
+    days().forEach(d=>{const open=!!HOURS[d.getDay()];const free=open&&slots(d).some(x=>x.ok);const on=st.date&&st.date===d.toDateString();
+      h+=`<button data-date="${d.toDateString()}" class="${on?'on':''}" ${free?'':'disabled'} title="${open?'':t.closed}"><small>${t.days[d.getDay()]}</small><b>${d.getDate()}</b><small>${t.months[d.getMonth()]}</small></button>`});
+    h+=`</div>`;
+    if(st.date){const sl=slots(new Date(st.date));
+      [[t.morning,0,720],[t.afternoon,720,1020],[t.evening,1020,1440]].forEach(([lab,a,b])=>{const part=sl.filter(x=>x.m>=a&&x.m<b);if(!part.length)return;
+        h+=`<div class="part">${lab}</div><div class="times">${part.map(x=>`<button data-time="${x.m}" class="${st.time===x.m?'on':''}" ${x.ok?'':'disabled'}>${hm(x.m)}</button>`).join('')}</div>`})}
+    h+=`<div class="nav2"><button class="btn" data-go="1">${t.back}</button><button class="btn solid" data-go="3" ${st.time!=null?'':'disabled'}>${t.next}</button></div>`;
+  }
+  if(st.step===3){
+    h+=`<h3>${t.s3}</h3><p class="hint">${t.s3h}</p><div class="f">
+      <label>${t.name}<input id="i_name" value="${esc(st.name)}" autocomplete="name"></label>
+      <label>${t.phone}<input id="i_phone" value="${esc(st.phone)}" inputmode="tel" placeholder="06 12345678" autocomplete="tel"></label>
+      <label class="full">${t.email}<input id="i_email" value="${esc(st.email)}" type="email" autocomplete="email"></label>
+      <label class="full">${t.notes}<textarea id="i_notes" rows="2" placeholder="${t.notesph}">${esc(st.notes)}</textarea></label></div>`;
+    if(s.cat.colour){h+=`<label class="chk"><input type="checkbox" id="i_first" ${st.first?'checked':''}> ${t.first}</label>${st.first?`<div class="note">${t.firstNote}</div>`:''}`}
+    if(s.price==null)h+=`<div class="note ok">${t.bridalNote}</div>`;
+    h+=`<label class="chk"><input type="checkbox" id="i_consent" ${st.consent?'checked':''}> ${t.consent}</label>`;
+    const ok=st.name.trim().length>1&&st.phone.replace(/\D/g,'').length>=9&&st.consent;
+    h+=`<div class="nav2"><button class="btn" data-go="2">${t.back}</button><button class="btn solid" data-go="4" ${ok?'':'disabled'}>${s.dep?t.next:t.book}</button></div>`;
+  }
+  if(st.step===4&&!st.ref){
+    h+=`<h3>${t.s4}</h3><p class="hint">${t.depNote(s.dep)}</p><div class="card"><div class="row"><span>${esc(svcName(s))}</span><b>${t.dep} €${s.dep}</b></div><div class="row muted"><span>iDEAL · Bancontact · card</span><span>${t.demoPay}</span></div></div>
+      <div class="nav2"><button class="btn" data-go="3">${t.back}</button><button class="btn gold" id="paybtn">${t.pay} €${s.dep}</button></div>`;
+  }
+  if(st.ref){
+    const d=new Date(st.date);
+    h=`<div class="done"><div class="tick">✓</div><h3>${t.done}</h3><p class="hint" style="max-width:420px;margin:8px auto 14px">${t.doneP}</p>
+      <p class="muted" style="margin:0">${t.ref}</p><p class="ref">${st.ref}</p>
+      <p style="margin:6px 0 20px">${esc(svcName(s))}<br><b style="font-weight:500">${fmtDate(d)} · ${hm(st.time)}</b></p>
+      <div class="ctas" style="justify-content:center"><button class="btn" id="icsbtn">${t.ics}</button><button class="btn" id="againbtn">${t.again}</button><a class="btn solid" href="#salon">${t.seeSalon}</a></div></div>`;
+  }
+  f.innerHTML=h;renderSum();
+}
+function renderSum(){
+  const t=T[L],s=svcObj();let h=`<h4>${t.sum}</h4>`;
+  if(!s){$('#sum').innerHTML=h+`<p class="small" style="margin:0">${t.none}</p>`;return}
+  h+=`<div class="row"><span>${t.svc}</span><span>${esc(svcName(s))}</span></div>`;
+  st.addons.forEach(i=>h+=`<div class="row"><span>+</span><span>${L==='nl'?ADDONS[i][0]:ADDONS[i][1]} €${ADDONS[i][2]}</span></div>`);
+  if(st.date&&st.time!=null)h+=`<div class="row"><span>${t.when}</span><span>${fmtDate(new Date(st.date))} · ${hm(st.time)}</span></div>`;
+  if(s.dep)h+=`<div class="row"><span>${t.dep}</span><span>€${s.dep}</span></div>`;
+  const tot=total();h+=`<div class="row" style="border:0;padding-top:14px"><span>${t.total}</span><span class="tot">${tot==null?t.onReq:(s.from?t.from+' ':'')+euro(tot)}</span></div><p class="small">${t.sumSmall}</p>`;
+  $('#sum').innerHTML=h;
+}
+function finish(){
+  const s=svcObj();st.ref='VK-'+Math.random().toString(36).slice(2,6).toUpperCase();
+  const list=store('vk_bookings')||[];
+  list.push({ref:st.ref,name:st.name.trim(),svc:s.nl,date:st.date,start:st.time,min:duration(),dep:s.dep,first:st.first,colour:!!s.cat.colour});
+  store('vk_bookings',list);st.step=5;render();renderSalon();
+}
+document.addEventListener('click',e=>{
+  const b=e.target.closest('button');if(!b||!b.closest('#flow'))return;
+  if(b.dataset.cat){st.cat=b.dataset.cat;render()}
+  else if(b.dataset.svc){st.svc=b.dataset.svc.split(',').map(Number);st.addons=[];st.time=null;render()}
+  else if(b.dataset.date){st.date=b.dataset.date;st.time=null;render()}
+  else if(b.dataset.time){st.time=+b.dataset.time;render()}
+  else if(b.dataset.go){const g=+b.dataset.go;if(g===4&&!svcObj().dep){finish();return}st.step=g;render();$('#try').scrollIntoView({behavior:'smooth',block:'start'})}
+  else if(b.id==='paybtn'){b.disabled=true;b.textContent='…';setTimeout(finish,900)}
+  else if(b.id==='againbtn'){Object.assign(st,{step:1,svc:null,addons:[],date:null,time:null,first:false,consent:false,ref:null});render()}
+  else if(b.id==='icsbtn'){const s=svcObj(),d=new Date(st.date);const a=new Date(d);a.setMinutes(st.time);const z=new Date(a.getTime()+duration()*60000);
+    const f=x=>x.getFullYear()+pad(x.getMonth()+1)+pad(x.getDate())+'T'+pad(x.getHours())+pad(x.getMinutes())+'00';
+    const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Vision Kapsalon//NL','BEGIN:VEVENT','UID:'+st.ref+'@visionkapsalon.nl','DTSTART:'+f(a),'DTEND:'+f(z),'SUMMARY:'+s.nl+' · Vision Kapsalon','LOCATION:Nassaulaan 3-5\\, 2011 PB Haarlem','END:VEVENT','END:VCALENDAR'].join('\r\n');
+    const u=URL.createObjectURL(new Blob([ics],{type:'text/calendar'}));const l=document.createElement('a');l.href=u;l.download='vision-kapsalon.ics';l.click();setTimeout(()=>URL.revokeObjectURL(u),1000)}
+});
+document.addEventListener('change',e=>{
+  if(!e.target.closest('#flow'))return;const el=e.target;
+  if(el.dataset.add){const i=+el.dataset.add;st.addons=el.checked?[...st.addons,i]:st.addons.filter(x=>x!==i);render()}
+  if(el.id==='i_first'){st.first=el.checked;render()}
+  if(el.id==='i_consent'){st.consent=el.checked;render()}
+});
+document.addEventListener('input',e=>{
+  const el=e.target;const m={i_name:'name',i_phone:'phone',i_email:'email',i_notes:'notes'}[el.id];if(!m)return;st[m]=el.value;
+  const s=svcObj();const ok=st.name.trim().length>1&&st.phone.replace(/\D/g,'').length>=9&&st.consent;const btn=$('#flow [data-go="4"]');if(btn)btn.disabled=!ok;
+});
+document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>{L=b.dataset.l;document.querySelectorAll('.lang button').forEach(x=>x.classList.toggle('on',x===b));render()});
+
+/* ===== WhatsApp message examples ===== */
+const MSGS=[
+ {k:'Confirmation',g:'Sent the moment she books: treatment, day, time, address and her deposit.',m:[['d','TODAY'],['b','Hoi Sanne! Je afspraak staat 🙌\n<b>Uitgroei kleuren</b>\n<b>vr 4 dec, 10:30</b> · Nassaulaan 3-5\nAanbetaling €20 ontvangen ✓','22:47'],['me','Super, tot dan!','22:48']]},
+ {k:'Reminder',g:'The day before, with a link to reschedule. Fewer no-shows, and no phone calls to move appointments.',m:[['d','THU 3 DEC'],['b','Herinnering: morgen om 10:30 bij Vision Kapsalon ✨\nLukt het toch niet? Verzet je afspraak hier tot 24 uur vooraf.\n<span class="act">Verzetten</span>','10:00'],['me','👍','10:12']]},
+ {k:'Allergy test',g:'For first-time colour clients: a reminder to come in for the allergy test 48 hours before.',m:[['d','TUE 1 DEC'],['b','Hoi Sanne, omdat je voor het eerst bij ons kleurt: kom je vandaag of morgen even langs voor een korte allergietest? Duurt 5 minuten en is gratis.','09:30'],['me','Ik kom morgen om 12 uur langs','09:41']]},
+ {k:'Due again',g:'Six weeks after her colour, a friendly nudge with a link to book. Regulars come back without you chasing them.',m:[['d','FRI 15 JAN'],['b','Hoi Sanne! Je uitgroei is ongeveer weer toe 😊 Zin om een nieuwe afspraak te maken?\n<span class="act">Plan je afspraak</span>','11:00'],['me','Ja graag, ik boek meteen','11:20']]},
+ {k:'Review',g:'The day after her visit, a thank-you with a one-tap link to your Google reviews.',m:[['d','SAT 5 DEC'],['b','Dank je wel voor je bezoek gisteren, Sanne! Blij met je kleur? We zouden een review op Google heel fijn vinden ⭐\n<span class="act">Schrijf een review</span>','12:00'],['me','Heel blij! Doe ik 💛','12:30']]},
+ {k:'Waiting list',g:'Someone cancels? The first client on the waiting list gets the slot offered within seconds.',m:[['d','TODAY'],['b','Goed nieuws! Er is donderdag om 19:00 een plek vrijgekomen voor <b>Dames knippen</b>. Wil je die?\n<span class="act">Ja, boek deze tijd</span>','15:02'],['me','Ja!!','15:03']]}
+];
+function showMsg(i){const x=MSGS[i];
+  $('#mtabs').innerHTML=MSGS.map((y,j)=>`<button class="${i===j?'on':''}" data-m="${j}">${y.k}</button>`).join('');
+  $('#gloss').textContent=x.g;
+  $('#mbox').innerHTML=x.m.map(([w,txt,tm])=>w==='d'?`<span class="day">${txt}</span>`:`<div class="bub ${w==='me'?'me':''}">${txt}<span class="t">${tm}${w==='me'?' ✓✓':''}</span></div>`).join('');
+  document.querySelectorAll('#mtabs button').forEach(b=>b.onclick=()=>showMsg(+b.dataset.m));
+}
+
+/* ===== Diary (sample data) ===== */
+const SAMPLE=[
+ [540,'Ingrid M.','Dames knippen (incl. wassen)',45,'ok',''],
+ [600,'Fatima K.','Keratine behandeling, lang haar',210,'dep','€50 deposit'],
+ [615,'Pieter B.','Heren knippen',30,'ok','Phone booking'],
+ [840,'Noor V.','Wenkbrauwen',15,'ok',''],
+ [900,'Emma de J.','Kleuren lang haar + haarmasker',130,'dep','€20 · allergy test done'],
+ [1080,'Lotte S.','Uitgroei kleuren',90,'dep','€20 deposit'],
+ [1110,'Daan & Mila','Kinderen knippen ×2',60,'ok','Cat chair 🐱'],
+ [1185,'Sophie R.','Wassen, föhnen & stylen (lang haar)',45,'ok','']
+];
+let cancelled=store('vk_cancel')||[],sent=[];
+const DUE=[['Marieke H.','Uitgroei kleuren','Last visit 6 weeks ago'],['Anouk P.','Dames knippen','Last visit 8 weeks ago'],['Jeroen T.','Heren knippen','Last visit 5 weeks ago'],['Yasmin E.','Wenkbrauwen','Last visit 4 weeks ago']];
+const WAIT=[['Rosa L.','Dames knippen · Thursday evening'],['Hanna W.','Uitgroei kleuren · any morning']];
+function renderSalon(){
+  const mine=(store('vk_bookings')||[]);
+  const rows=SAMPLE.map((r,i)=>({id:'s'+i,start:r[0],name:r[1],svc:r[2],min:r[3],pill:r[4],note:r[5]}))
+    .concat(mine.map(b=>({id:b.ref,start:b.start,name:b.name,svc:b.svc,min:b.min,pill:'new',note:new Date(b.date).toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short'})+(b.dep?` · €${b.dep} deposit`:'')+(b.first?' · allergy test needed':'')})))
+    .filter(r=>!cancelled.includes(r.id)).sort((a,b)=>a.start-b.start);
+  $('#diary').innerHTML=rows.map(r=>`<div class="drow"><b style="font:500 18px/1 var(--serif)">${hm(r.start)}</b><div class="who"><b>${esc(r.name)}</b> · ${esc(r.svc)}<small>${r.min} min${r.note?' · '+esc(r.note):''}</small></div><div style="display:flex;gap:6px;align-items:center"><span class="pill ${r.pill}">${r.pill==='dep'?'Deposit paid':r.pill==='new'?'New':'Confirmed'}</span><button class="btn sm" data-cancel="${r.id}" style="padding:6px 9px;font-size:11px">Cancel</button></div></div>`).join('');
+  const deps=SAMPLE.filter(r=>r[4]==='dep').length+mine.filter(b=>b.dep).length;
+  $('#kpis').innerHTML=[[rows.length,'appointments today'],[deps,'deposits paid'],[mine.length+12,'online bookings this week'],['€0','commission paid']].map(k=>`<div class="kpi"><b>${k[0]}</b><span>${k[1]}</span></div>`).join('');
+  $('#dueList').innerHTML=DUE.map((d,i)=>`<div class="due"><div><b style="font-weight:500">${d[0]}</b> · ${d[1]}<small>${d[2]}</small></div><button class="btn sm" data-due="${i}" ${sent.includes('d'+i)?'disabled':''}>${sent.includes('d'+i)?'Sent ✓':'WhatsApp'}</button></div>`).join('');
+  $('#waitList').innerHTML=WAIT.map(w=>`<div class="due"><div><b style="font-weight:500">${w[0]}</b><small>${w[1]}</small></div><span class="pill">Waiting</span></div>`).join('');
+  const base=['08:00 · Reminders sent to tomorrow\'s 9 clients','09:30 · Allergy-test reminder to Emma de J.','12:00 · Review request to 6 clients from yesterday'];
+  $('#log').innerHTML=base.concat(sent.map(x=>x.msg).filter(Boolean)).map(l=>`<div class="due" style="font-size:13.5px">${esc(l)}</div>`).join('');
+  $('#mockrows').innerHTML=SAMPLE.slice(3,8).map(r=>`<div class="mrow"><b style="font:500 17px/1 var(--serif)">${hm(r[0])}</b><span><b>${r[1]}</b><br><span class="muted" style="font-size:12.5px">${r[2]}</span></span><span class="pill ${r[4]}">${r[4]==='dep'?'Deposit paid':'Confirmed'}</span></div>`).join('');
+  const sel=$('#ptime');if(!sel.options.length){for(let m=540;m<=1230;m+=15)sel.add(new Option(hm(m),m));CATS.forEach(c=>c.items.forEach(it=>$('#psvc').add(new Option(it[0],it[0]+'|'+it[4]))))}
+}
+document.addEventListener('click',e=>{
+  const b=e.target.closest('button');if(!b||!b.closest('#salon'))return;
+  if(b.dataset.cancel){cancelled.push(b.dataset.cancel);store('vk_cancel',cancelled);const w=WAIT[0];sent.push({msg:`Now · Slot offered to ${w[0]} from the waiting list`});renderSalon();toast(`Cancelled. Slot offered to ${w[0]} on WhatsApp.`)}
+  if(b.dataset.due){const d=DUE[+b.dataset.due];sent.push('d'+b.dataset.due);sent.push({msg:`Now · Rebook message to ${d[0]}`});renderSalon();toast(`Rebook message sent to ${d[0]}.`)}
+  if(b.id==='padd'){const n=$('#pname').value.trim()||'Phone client';const [svc,min]=$('#psvc').value.split('|');SAMPLE.push([+$('#ptime').value,n,svc,+min,'ok','Phone booking']);$('#pname').value='';renderSalon();toast('Added. That time is no longer bookable online.')}
+});
+
+/* ===== Vouchers ===== */
+let vAmt=50;
+function renderV(){
+  $('#amts').innerHTML=[25,50,75,100].map(a=>`<button class="${a===vAmt?'on':''}" data-a="${a}">€${a}</button>`).join('');
+  document.querySelectorAll('#amts button').forEach(b=>b.onclick=()=>{vAmt=+b.dataset.a;renderV()});
+  $('#vval').textContent='€'+vAmt;
+  const to=$('#vto').value.trim()||'Lisa',fr=$('#vfrom').value.trim()||'Mam';
+  $('#vnames').textContent=`Voor ${to} · van ${fr}`;
+  $('#vtext').textContent=$('#vmsg').value.trim()||'Fijne feestdagen! Gun jezelf iets moois.';
+}
+['#vto','#vfrom','#vmsg'].forEach(s=>$(s).addEventListener('input',renderV));
+$('#vbuy').onclick=()=>{$('#vcode').textContent='VK-'+Math.random().toString(36).slice(2,7).toUpperCase();toast('Demo: voucher created, ready to send by WhatsApp or email.')};
+
+/* ===== Calculator ===== */
+function calc(){
+  const n=+$('#r1').value,r=+$('#r2').value,sp=+$('#r3').value,pp=+$('#r4').value,sub=+$('#r5').value;
+  $('#v1').textContent=n;$('#v2').textContent=r;$('#v3').textContent='€'+sp;$('#v4').textContent=pp;$('#v5').textContent='€'+sub;
+  const comm=(n+r)*sp*0.35*1.21, fee=pp*sp*0.02, tw=comm+fee+sub;
+  const ownY=CONFIG.setup+CONFIG.monthly*12, ownM=CONFIG.monthly;
+  const r0=x=>'€'+Math.round(x).toLocaleString('nl-NL');
+  $('#out').innerHTML=`<h4>Treatwell, a month</h4>
+    <div class="row"><span>Commission on ${n+r} "new" clients</span><span>${r0(comm)}</span></div>
+    <div class="row"><span>2% on ${pp} prepaid bookings</span><span>${r0(fee)}</span></div>
+    <div class="row"><span>Subscription</span><span>${r0(sub)}</span></div>
+    <div class="big">${r0(tw)}</div><span style="font-size:13px;color:#bfb3a4">a month · ${r0(tw*12)} a year</span>
+    <h4>Your own system</h4>
+    <div class="row"><span>Monthly, no commission</span><span>${r0(ownM)}</span></div>
+    <div class="row"><span>First year incl. ${r0(CONFIG.setup)} setup</span><span>${r0(ownY)}</span></div>
+    <h4>Difference in year one</h4>
+    <div class="big" style="font-size:38px">${tw*12-ownY>0?r0(tw*12-ownY)+' saved':'About even'}</div>
+    <span style="font-size:13px;color:#bfb3a4">${tw*12-ownY>0?'and '+r0(tw*12-ownM*12)+' a year after that':'Treatwell is cheap for you at these numbers'}</span>`;
+}
+['#r1','#r2','#r3','#r4','#r5'].forEach(s=>$(s).addEventListener('input',calc));
+
+/* ===== Init ===== */
+document.querySelectorAll('.cfg-setup').forEach(e=>e.textContent='€'+CONFIG.setup);
+document.querySelectorAll('.cfg-month').forEach(e=>e.textContent='€'+CONFIG.monthly);
+render();showMsg(0);renderSalon();renderV();calc();
+</script>
+</body>
+</html>
