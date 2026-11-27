@@ -17685,5 +17685,217 @@
   "_auto": true,
   "whatsapp": "+61456784666",
   "_market": "au"
+ },
+ {
+  "slug": "j-beauty-by-nilima-birmingham",
+  "name": "J Beauty by Nilima",
+  "type": "Beauty salon",
+  "area": "The Minories",
+  "address": "10 The Minories",
+  "city": "Birmingham",
+  "country": "United Kingdom",
+  "lang": "en-GB",
+  "monogram": "JB",
+  "rating": 4.9,
+  "review_count": 870,
+  "review_source": "Google",
+  "maps_link": "https://www.google.com/maps/search/?api=1&query=J%20Beauty%20by%20Nilima%2010%20The%20Minories%20Birmingham",
+  "phone": "07301 279040",
+  "whatsapp": "+44 7301 279040",
+  "hours": [
+   {
+    "day": "Monday",
+    "time": "10:00-18:00"
+   },
+   {
+    "day": "Tuesday",
+    "time": "10:00-19:00"
+   },
+   {
+    "day": "Wednesday",
+    "time": "10:00-19:00"
+   },
+   {
+    "day": "Thursday",
+    "time": "10:00-19:00"
+   },
+   {
+    "day": "Friday",
+    "time": "10:00-19:00"
+   },
+   {
+    "day": "Saturday",
+    "time": "10:00-18:00"
+   },
+   {
+    "day": "Sunday",
+    "time": "Closed"
+   }
+  ],
+  "headline": "Brows, lashes and threading, done properly since 2013.",
+  "subline": "Nilima's team in the heart of Birmingham city centre for threading, HD Brows, lash extensions, waxing and Dermalogica facials. Book straight with the salon in under a minute.",
+  "highlights": [
+   "Rated 4.9 from 870 Google reviews.",
+   "Registered HD Brows stylists, including the latest HD Brows lamination.",
+   "Threading, lashes, waxing, microblading and Dermalogica facials under one roof."
+  ],
+  "services_note": "Prices in GBP from the salon's price list. Lashes, waxing and lamination are priced on booking.",
+  "services": [
+   {
+    "category": "Threading",
+    "items": [
+     {
+      "name": "Eyebrow shape",
+      "price": "£10"
+     },
+     {
+      "name": "Upper or lower lip",
+      "price": "£6"
+     },
+     {
+      "name": "Forehead",
+      "price": "£6"
+     },
+     {
+      "name": "Chin",
+      "price": "£6"
+     },
+     {
+      "name": "Sides",
+      "price": "£10"
+     },
+     {
+      "name": "Neck",
+      "price": "£10"
+     },
+     {
+      "name": "Full face",
+      "price": "£35"
+     }
+    ]
+   },
+   {
+    "category": "Brows & tints",
+    "items": [
+     {
+      "name": "Eyebrow mapping",
+      "price": "£21"
+     },
+     {
+      "name": "Eyebrow tint",
+      "price": "£12"
+     },
+     {
+      "name": "Eyelash tint",
+      "price": "£18"
+     },
+     {
+      "name": "HD Brows hybrid tint",
+      "price": "£25"
+     },
+     {
+      "name": "Brow shape & tint",
+      "price": "£22"
+     },
+     {
+      "name": "Brow shape, brow tint & lash tint",
+      "price": "£35"
+     }
+    ]
+   },
+   {
+    "category": "Microblading",
+    "items": [
+     {
+      "name": "Microblading brows",
+      "price": "£199"
+     },
+     {
+      "name": "Powder ombré brows",
+      "price": "£225"
+     },
+     {
+      "name": "Combination brows",
+      "price": "£249"
+     },
+     {
+      "name": "Top up",
+      "price": "from £100"
+     }
+    ]
+   },
+   {
+    "category": "Lashes, waxing & facials",
+    "items": [
+     {
+      "name": "Lash extensions & lash lift"
+     },
+     {
+      "name": "Waxing, including Hollywood"
+     },
+     {
+      "name": "Dermalogica facials",
+      "price": "from £45"
+     },
+     {
+      "name": "Indian head massage",
+      "price": "£25"
+     }
+    ]
+   }
+  ],
+  "bridal": {
+   "kicker": "Christmas & New Year",
+   "title": "Party-ready brows and lashes",
+   "text": "December books up fast. Reserve your brows, lashes or facial before the Christmas parties, and get on the waitlist for any last-minute gaps.",
+   "packages": [
+    {
+     "name": "Brow shape, brow tint & lash tint",
+     "price": "£35"
+    },
+    {
+     "name": "HD Brows hybrid tint",
+     "price": "£25"
+    }
+   ],
+   "nav": "Christmas"
+  },
+  "team": [
+   {
+    "name": "Nilima",
+    "role": "Founder",
+    "note": "Brows, lashes and threading since 2013."
+   },
+   {
+    "name": "Preet",
+    "role": "Beauty therapist",
+    "note": "Lash extensions, HD Brows and waxing."
+   },
+   {
+    "name": "Hetal",
+    "role": "Beauty therapist",
+    "note": "Facials for sensitive skin."
+   }
+  ],
+  "gallery_title": "Our work & the salon",
+  "gallery_text": "Brows, lashes, our HD Brows kit and the salon on The Minories. Tap any photo to see it larger.",
+  "reviews": [
+   {
+    "text": "I've been coming here for years and honestly wouldn't trust anyone else with my lashes!",
+    "name": "Nafisa"
+   },
+   {
+    "text": "The whole appointment was amazing, Preet was the one that did my eyebrows and she did an amazing job!",
+    "name": "Giusy"
+   },
+   {
+    "text": "Had my first facial appointment today with Hetal. She was amazing, and soo gentle with my skin.",
+    "name": "Pritha"
+   }
+  ],
+  "accent": "#8B1E6E",
+  "mood": "light",
+  "photos": 6,
+  "hero_alt": "The J Beauty by Nilima team by the Christmas tree in Birmingham"
  }
 ]
